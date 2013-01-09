@@ -22,15 +22,46 @@
 
 #include <stdio.h>
 #include "platform.h"
+#include "Chilipepper.h"
 
 void print(char *str);
 
 int main()
 {
+
+	int i1;
+
     init_platform();
 
-    print("Hello World\n\r");
+	if ( Chilipepper_Initialize() != 0 )
+		return -1;
 
+	// Continuously send out packets (do it once and then stall for a bit)
+	while(1)
+	{
+		for (i1=0; i1<5000; i1++)
+		{
+			if (i1 == 0)
+			{
+				//XGpio_DiscreteWrite(&gpio_blinky, 1, 1);
+				Chilipepper_WriteTestPacket( 1 );
+				//XGpio_DiscreteWrite(&gpio_blinky, 1, 0);
+			}
+		}
+	}
+	// flip the LED1 so the user knows the processor is alive
+/*
+	testBlinkCount += 1;
+	if (testBlinkCount > 2000)
+	{
+		if (aliveLed == 0)
+			aliveLed = 1;
+		else
+			aliveLed = 0;
+		testBlinkCount = 1;
+		//XGpio_DiscreteWrite(&gpio_blinky, 2, aliveLed);
+	}
+*/
     cleanup_platform();
 
     return 0;
