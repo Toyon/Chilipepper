@@ -1,6 +1,9 @@
 The goal of these laboratory exercises is to demonstrate a flow that uses Mathworks HDL Coder with MATLAB to HDL code generation, Xilinx tools, and the Toyon Chilipepper board. The exercises should be run in progression and include:
 
-0. Blink LEDs on the ZED board
+A "Lab_0" to introduce the user to the flow by Blinking LEDs on the ZED board
+
+The remaining labs include:
+
 1. Output a tone
 2. Receive a tone
 3. Output a QPSK pattern
