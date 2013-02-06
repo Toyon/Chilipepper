@@ -82,7 +82,7 @@ for i1 = 1:num_samp
         tx_en_in = 1;
     end    
 end
-if 1 % load data that was transmitted and captured from chipscope
+if 0 % load data that was transmitted and captured from chipscope
     if 1
         fid = fopen('tx.prn');
         M = textscan(fid,'%d %d %d %d %d %d %d %d %d %d','Headerlines',1);
