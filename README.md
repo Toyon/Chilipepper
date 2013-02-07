@@ -18,4 +18,4 @@ Support
 
 The Chilipepper User's Guide and firmware for the microcontroller can be found in the ChilipepperSupport directory. You may submit issues and feature requests through github or contact us at <embedded@toyon.com>. 
 
-![Alt text](mcp.jpg)
+[![Mathworks Connection Program partner](mcp.jpg)](http://www.mathworks.com)
