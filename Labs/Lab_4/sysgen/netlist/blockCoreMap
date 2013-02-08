@@ -1,0 +1,4 @@
+{
+  'chipscope' => 'SELECT ILA_(ChipScope_Pro_-_Integrated_Logic_Analyzer) zynq Xilinx,_Inc. 1.05.a',
+  'counter' => 'SELECT Binary_Counter zynq Xilinx_Inc. 11.0'
+}

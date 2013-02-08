@@ -1,0 +1,7 @@
+INFILE=C:\QPSK_Projects\project_2\EDK\implementation\system.ncd
+OUTFILE=C:\QPSK_Projects\project_2\EDK\implementation\system.bit
+FAMILY=Zynq
+PART=xc7z020-1clg484
+WORKINGDIR=C:\QPSK_Projects\project_2\EDK\implementation
+LICENSE=WebPack
+USER_INFO=174128595_174128596_210550869_166

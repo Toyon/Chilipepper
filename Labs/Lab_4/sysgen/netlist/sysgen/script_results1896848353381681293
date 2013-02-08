@@ -1,0 +1,65 @@
+[
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  undef,
+  [
+    [
+      'xlpersistentdff.ngc',
+      undef,
+    ],
+    'C:/QPSK_Projects/project_2/sysgen/netlist/sysgen/perl_results.vhd',
+  ],
+  [
+    [
+      'cntr_11_0_8d5792a6ba24605d.ngc',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'cntr_11_0_8d5792a6ba24605d.vhd',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'icon_1_06_a_69d945462da1db7c.ngc',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'icon_1_06_a_69d945462da1db7c.vhd',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'ila_1_05_a_04082f38f51d3966.ngc',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+    [
+      'ila_1_05_a_04082f38f51d3966.vhd',
+      {
+        'producer' => 'coregen',
+      },
+    ],
+  ],
+]

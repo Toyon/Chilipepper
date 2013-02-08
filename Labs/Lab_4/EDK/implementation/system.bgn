@@ -1,0 +1,106 @@
+Release 14.4 - Bitgen P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+PMSPEC -- Overriding Xilinx file <C:/Xilinx/14.4/ISE_DS/EDK/zynq/data/zynq.acd>
+with local file <C:/Xilinx/14.4/ISE_DS/ISE/zynq/data/zynq.acd>
+Loading device for application Rf_Device from file '7z020.nph' in environment
+C:\Xilinx\14.4\ISE_DS\ISE\;C:\Xilinx\14.4\ISE_DS\EDK.
+   "system" is an NCD, version 3.2, device xc7z020, package clg484, speed -1
+Opened constraints file system.pcf.
+
+Fri Feb 08 12:58:08 2013
+
+C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -w system.ncd 
+
+ERROR:Bitgen:342 - This design contains pins which have locations (LOC) that are
+   not user-assigned or I/O Standards (IOSTANDARD) that are not user-assigned. 
+   This may cause I/O contention or incompatibility with the board power or
+   connectivity affecting performance, signal integrity or in extreme cases
+   cause damage to the device or the components to which it is connected.  To
+   prevent this error, it is highly suggested to specify all pin locations and
+   I/O standards to avoid potential contention or conflicts and allow proper
+   bitstream creation.  To demote this error to a warning and allow bitstream
+   creation with unspecified I/O location or standards, you may apply the
+   following bitgen switch: -g UnconstrainedPins:Allow
+This message applies to the following I/O ports:
+   clock_generator_0_RST_pin
+ERROR:Bitgen:157 - Bitgen will terminate because of the above errors.
+Summary of Bitgen Options:
++----------------------+----------------------+
+| Option Name          | Current Setting      |
++----------------------+----------------------+
+| Compress             | (Not Specified)*     |
++----------------------+----------------------+
+| Readback             | (Not Specified)*     |
++----------------------+----------------------+
+| CRC                  | Enable*              |
++----------------------+----------------------+
+| StartupClk           | Cclk*                |
++----------------------+----------------------+
+| DonePin              | Pullup*              |
++----------------------+----------------------+
+| ProgPin              | Pullup*              |
++----------------------+----------------------+
+| InitPin              | Pullup*              |
++----------------------+----------------------+
+| TckPin               | Pullup*              |
++----------------------+----------------------+
+| TdiPin               | Pullup*              |
++----------------------+----------------------+
+| TdoPin               | Pullup*              |
++----------------------+----------------------+
+| TmsPin               | Pullup*              |
++----------------------+----------------------+
+| UnusedPin            | Pulldown*            |
++----------------------+----------------------+
+| GWE_cycle            | 6*                   |
++----------------------+----------------------+
+| GTS_cycle            | 5*                   |
++----------------------+----------------------+
+| OverTempPowerDown    | Disable*             |
++----------------------+----------------------+
+| LCK_cycle            | NoWait*              |
++----------------------+----------------------+
+| Match_cycle          | NoWait               |
++----------------------+----------------------+
+| DONE_cycle           | 4*                   |
++----------------------+----------------------+
+| DonePipe             | Yes*                 |
++----------------------+----------------------+
+| Security             | None*                |
++----------------------+----------------------+
+| UserID               | 0xFFFFFFFF*          |
++----------------------+----------------------+
+| ActiveReconfig       | No*                  |
++----------------------+----------------------+
+| DCIUpdateMode        | AsRequired*          |
++----------------------+----------------------+
+| ICAP_Select          | Auto*                |
++----------------------+----------------------+
+| InitSignalsError     | Enable*              |
++----------------------+----------------------+
+| XADCPartialReconfig  | Disable*             |
++----------------------+----------------------+
+| XADCEnhancedLinearity | Off*                 |
++----------------------+----------------------+
+| JTAG_XADC            | Enable*              |
++----------------------+----------------------+
+| Disable_JTAG         | No*                  |
++----------------------+----------------------+
+| XADCPowerDown        | Disable*             |
++----------------------+----------------------+
+| Partial              | (Not Specified)*     |
++----------------------+----------------------+
+| USR_ACCESS           | None*                |
++----------------------+----------------------+
+| TimeStamp            | Default*             |
++----------------------+----------------------+
+| IEEE1532             | No*                  |
++----------------------+----------------------+
+| Binary               | No*                  |
++----------------------+----------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+There were 0 CONFIG constraint(s) processed from system.pcf.
+
+
