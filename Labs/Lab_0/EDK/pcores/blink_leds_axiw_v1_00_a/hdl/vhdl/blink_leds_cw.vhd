@@ -1,6 +1,6 @@
 
 -------------------------------------------------------------------
--- System Generator version 14.2 VHDL source file.
+-- System Generator version 14.3 VHDL source file.
 --
 -- Copyright(C) 2012 by Xilinx, Inc.  All rights reserved.  This
 -- text/file contains proprietary, confidential information of Xilinx,
@@ -36,7 +36,7 @@
 -------------------------------------------------------------------
 
 -------------------------------------------------------------------
--- System Generator version 14.2 VHDL source file.
+-- System Generator version 14.3 VHDL source file.
 --
 -- Copyright(C) 2012 by Xilinx, Inc.  All rights reserved.  This
 -- text/file contains proprietary, confidential information of Xilinx,

@@ -37,40 +37,55 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 
---entity axiaddrpref is
---    generic (
---        C_BASEADDR : std_logic_vector(31 downto 0) := X"80000000";
---        C_HIGHADDR : std_logic_vector(31 downto 0) := X"8000FFFF";
---        C_S_AXI_ID_WIDTH: integer := 1;
---        C_S_AXI_NATIVE_ID_WIDTH: integer := 8
---    );
---    port (
---        -- arid
---        sg_s_axi_arid: in std_logic_vector(C_S_AXI_ID_WIDTH-1 downto 0);
---        s_axi_arid: out std_logic_vector(C_S_AXI_NATIVE_ID_WIDTH-1 downto 0);
---        -- awid
---        sg_s_axi_awid: in std_logic_vector(C_S_AXI_ID_WIDTH-1 downto 0);
---        s_axi_awid: out std_logic_vector(C_S_AXI_NATIVE_ID_WIDTH-1 downto 0);
---        -- rid
---        sg_s_axi_rid: out std_logic_vector(C_S_AXI_ID_WIDTH-1 downto 0);
---        s_axi_rid: in std_logic_vector(C_S_AXI_NATIVE_ID_WIDTH-1 downto 0);
---        -- bid
---        sg_s_axi_bid: out std_logic_vector(C_S_AXI_ID_WIDTH-1 downto 0);
---        s_axi_bid: in std_logic_vector(C_S_AXI_NATIVE_ID_WIDTH-1 downto 0)
---    );
---end axiaddrpref;
---
---architecture behavior of axiaddrpref is
---
---begin
---
---s_axi_arid(C_S_AXI_ID_WIDTH-1 downto 0) <= sg_s_axi_arid;
---s_axi_awid(C_S_AXI_ID_WIDTH-1 downto 0) <= sg_s_axi_awid;
---
---sg_s_axi_rid <= s_axi_rid(C_S_AXI_ID_WIDTH-1 downto 0);
---sg_s_axi_bid <= s_axi_bid(C_S_AXI_ID_WIDTH-1 downto 0);
---
---end behavior;
+entity axiaddrpref is
+    generic (
+        C_BASEADDR : std_logic_vector(31 downto 0) := X"80000000";
+        C_HIGHADDR : std_logic_vector(31 downto 0) := X"8000FFFF";
+        C_S_AXI_ID_WIDTH: integer := 1;
+        C_S_AXI_NATIVE_ID_WIDTH: integer := 8
+    );
+    port (
+        -- arid
+        sg_s_axi_arid: in std_logic_vector(C_S_AXI_ID_WIDTH-1 downto 0);
+        s_axi_arid: out std_logic_vector(C_S_AXI_NATIVE_ID_WIDTH-1 downto 0);
+        -- awid
+        sg_s_axi_awid: in std_logic_vector(C_S_AXI_ID_WIDTH-1 downto 0);
+        s_axi_awid: out std_logic_vector(C_S_AXI_NATIVE_ID_WIDTH-1 downto 0);
+        -- rid
+        sg_s_axi_rid: out std_logic_vector(C_S_AXI_ID_WIDTH-1 downto 0);
+        s_axi_rid: in std_logic_vector(C_S_AXI_NATIVE_ID_WIDTH-1 downto 0);
+        -- bid
+        sg_s_axi_bid: out std_logic_vector(C_S_AXI_ID_WIDTH-1 downto 0);
+        s_axi_bid: in std_logic_vector(C_S_AXI_NATIVE_ID_WIDTH-1 downto 0)
+    );
+end axiaddrpref;
+
+architecture behavior of axiaddrpref is
+
+begin
+
+axiaddrpref_less: if (C_S_AXI_ID_WIDTH <= C_S_AXI_NATIVE_ID_WIDTH) generate
+  s_axi_arid(C_S_AXI_ID_WIDTH-1 downto 0) <= sg_s_axi_arid;
+  s_axi_awid(C_S_AXI_ID_WIDTH-1 downto 0) <= sg_s_axi_awid;
+
+  sg_s_axi_rid <= s_axi_rid(C_S_AXI_ID_WIDTH-1 downto 0);
+  sg_s_axi_bid <= s_axi_bid(C_S_AXI_ID_WIDTH-1 downto 0);
+end generate axiaddrpref_less;
+
+axiaddrpref_greater: if (C_S_AXI_ID_WIDTH > C_S_AXI_NATIVE_ID_WIDTH) generate
+  s_axi_arid <= sg_s_axi_arid(C_S_AXI_NATIVE_ID_WIDTH-1 downto 0);
+  s_axi_awid <= sg_s_axi_awid(C_S_AXI_NATIVE_ID_WIDTH-1 downto 0);
+
+  sg_s_axi_rid(C_S_AXI_NATIVE_ID_WIDTH-1 downto 0) <= s_axi_rid;
+  sg_s_axi_bid(C_S_AXI_NATIVE_ID_WIDTH-1 downto 0) <= s_axi_bid;
+
+-- Set upper 4 bits to 1000 for general performance, 0000 for high performance
+  sg_s_axi_rid(C_S_AXI_ID_WIDTH - 1 downto C_S_AXI_ID_WIDTH - 4) <= "1000";
+  sg_s_axi_bid(C_S_AXI_ID_WIDTH - 1 downto C_S_AXI_ID_WIDTH - 4) <= "1000";
+
+end generate axiaddrpref_greater;
+
+end behavior;
 
 library IEEE;
 use IEEE.std_logic_1164.all;
@@ -214,22 +229,22 @@ begin
   s_axi_rvalid <= s_axi_rvalid_x0;
   s_axi_wready <= s_axi_wready_x0;
 
---  axiaddrpref_x0: entity work.axiaddrpref
---    generic map (
---      C_BASEADDR => C_BASEADDR,
---      C_HIGHADDR => C_HIGHADDR,
---      C_S_AXI_ID_WIDTH => C_S_AXI_ID_WIDTH
---    )
---    port map (
---      s_axi_arid => axiaddrpref_s_axi_arid_net,
---      s_axi_awid => axiaddrpref_s_axi_awid_net,
---      sg_s_axi_bid => axiaddrpref_sg_s_axi_bid_net,
---      sg_s_axi_rid => axiaddrpref_sg_s_axi_rid_net,
---      s_axi_bid => axiaddrpref_s_axi_bid_net,
---      s_axi_rid => axiaddrpref_s_axi_rid_net,
---      sg_s_axi_arid => axiaddrpref_sg_s_axi_arid_net,
---      sg_s_axi_awid => axiaddrpref_sg_s_axi_awid_net
---    );
+  axiaddrpref_x0: entity work.axiaddrpref
+    generic map (
+      C_BASEADDR => C_BASEADDR,
+      C_HIGHADDR => C_HIGHADDR,
+      C_S_AXI_ID_WIDTH => C_S_AXI_ID_WIDTH
+    )
+    port map (
+      s_axi_arid => axiaddrpref_s_axi_arid_net,
+      s_axi_awid => axiaddrpref_s_axi_awid_net,
+      sg_s_axi_bid => axiaddrpref_sg_s_axi_bid_net,
+      sg_s_axi_rid => axiaddrpref_sg_s_axi_rid_net,
+      s_axi_bid => axiaddrpref_s_axi_bid_net,
+      s_axi_rid => axiaddrpref_s_axi_rid_net,
+      sg_s_axi_arid => axiaddrpref_sg_s_axi_arid_net,
+      sg_s_axi_awid => axiaddrpref_sg_s_axi_awid_net
+    );
 
   sysgen_dut: entity work.blink_leds_cw
     port map (

@@ -8,7 +8,7 @@ TIMESPEC TS_blink_leds_axiw_0_sysgen_clk = PERIOD blink_leds_axiw_0_sysgen_clk 1
 ######################################################################
 # LEDs
 ######################################################################
-NET blink_leds_axiw_0_leds_out_pin[0] LOC = T22  |  IOSTANDARD = LVCMOS25;
-NET blink_leds_axiw_0_leds_out_pin[1] LOC = T21  |  IOSTANDARD = LVCMOS25;
-NET blink_leds_axiw_0_leds_out_pin[2] LOC = U22  |  IOSTANDARD = LVCMOS25;
-NET blink_leds_axiw_0_leds_out_pin[3] LOC = U21  |  IOSTANDARD = LVCMOS25;
+NET blink_leds_axiw_0_leds_out_pin[0] LOC = T22  |  IOSTANDARD = LVCMOS33;
+NET blink_leds_axiw_0_leds_out_pin[1] LOC = T21  |  IOSTANDARD = LVCMOS33;
+NET blink_leds_axiw_0_leds_out_pin[2] LOC = U22  |  IOSTANDARD = LVCMOS33;
+NET blink_leds_axiw_0_leds_out_pin[3] LOC = U21  |  IOSTANDARD = LVCMOS33;

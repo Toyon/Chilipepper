@@ -1,5 +1,5 @@
 #############################################################
-# Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 # 
 # You may copy and modify these files for your own internal
 # use solely with Xilinx programmable logic devices and
@@ -10,7 +10,7 @@
 #
 # Peripheral Analyze Order (PAO) file
 # created by System Generator
-# Nov 30, 2012 2:51:37 PM
+# Feb 15, 2013 11:59:54 AM
 #############################################################
 
 lib blink_leds_axiw_v1_00_a blink_leds vhdl
