@@ -1,0 +1,1 @@
+run -ifn xst_mcu.prj -ifmt mixed -ofn mcu_cw.ngc -ofmt NGC -p xc7z020-1clg484 -ent mcu_cw -keep_hierarchy NO -iobuf YES -bus_delimiter () -top mcu_cw -hierarchy_separator / -report_timing_constraint_problems warning -register_balancing no -iob Auto -uc mcu_cw.xcf -write_timing_constraints yes
