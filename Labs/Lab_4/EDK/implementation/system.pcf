@@ -1,0 +1,1609 @@
+//! **************************************************************************
+// Written by: Map P.49d on Thu Feb 14 15:26:31 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "processing_system7_0_DDR_DM<0>" LOCATE = SITE "B1" LEVEL 1;
+COMP "processing_system7_0_DDR_DM<3>" LOCATE = SITE "AA2" LEVEL 1;
+COMP "processing_system7_0_DDR_DM<2>" LOCATE = SITE "P1" LEVEL 1;
+COMP "processing_system7_0_DDR_DM<1>" LOCATE = SITE "H3" LEVEL 1;
+COMP "processing_system7_0_MIO<6>" LOCATE = SITE "A4" LEVEL 1;
+COMP "processing_system7_0_MIO<5>" LOCATE = SITE "A3" LEVEL 1;
+COMP "processing_system7_0_MIO<8>" LOCATE = SITE "E5" LEVEL 1;
+COMP "processing_system7_0_MIO<7>" LOCATE = SITE "D5" LEVEL 1;
+COMP "processing_system7_0_MIO<9>" LOCATE = SITE "C4" LEVEL 1;
+COMP "processing_system7_0_MIO<0>" LOCATE = SITE "G6" LEVEL 1;
+COMP "processing_system7_0_MIO<2>" LOCATE = SITE "A2" LEVEL 1;
+COMP "processing_system7_0_MIO<1>" LOCATE = SITE "A1" LEVEL 1;
+COMP "processing_system7_0_MIO<4>" LOCATE = SITE "E4" LEVEL 1;
+COMP "processing_system7_0_MIO<3>" LOCATE = SITE "F6" LEVEL 1;
+COMP "mcu_axiw_0_tr_sw_pin" LOCATE = SITE "D20" LEVEL 1;
+COMP "processing_system7_0_DDR_ODT" LOCATE = SITE "P5" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS_n<0>" LOCATE = SITE "D2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS_n<1>" LOCATE = SITE "J2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS_n<2>" LOCATE = SITE "P2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS_n<3>" LOCATE = SITE "W2" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<9>" LOCATE = SITE "H5" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<8>" LOCATE = SITE "J5" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<7>" LOCATE = SITE "J6" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<6>" LOCATE = SITE "J7" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<5>" LOCATE = SITE "K5" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<4>" LOCATE = SITE "K6" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<3>" LOCATE = SITE "L4" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<2>" LOCATE = SITE "K4" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<1>" LOCATE = SITE "M5" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<0>" LOCATE = SITE "M4" LEVEL 1;
+COMP "processing_system7_0_DDR_WEB_pin" LOCATE = SITE "R4" LEVEL 1;
+COMP "adc_driver_axiw_0_rxd_pin<11>" LOCATE = SITE "J16" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS<0>" LOCATE = SITE "C2" LEVEL 1;
+COMP "adc_driver_axiw_0_rxd_pin<10>" LOCATE = SITE "N18" LEVEL 1;
+COMP "mcu_axiw_0_init_done_pin" LOCATE = SITE "K19" LEVEL 1;
+COMP "processing_system7_0_DDR_CAS_n" LOCATE = SITE "P3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS<3>" LOCATE = SITE "V2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS<2>" LOCATE = SITE "N2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQS<1>" LOCATE = SITE "H2" LEVEL 1;
+COMP "processing_system7_0_DDR_RAS_n" LOCATE = SITE "R5" LEVEL 1;
+COMP "adc_driver_axiw_0_rx_iq_sel_pin" LOCATE = SITE "N19" LEVEL 1;
+COMP "mcu_axiw_0_blinky_mcu_pin" LOCATE = SITE "T21" LEVEL 1;
+COMP "mcu_axiw_0_mcu_reset_pin" LOCATE = SITE "K20" LEVEL 1;
+COMP "processing_system7_0_DDR_BankAddr<1>" LOCATE = SITE "L6" LEVEL 1;
+COMP "processing_system7_0_DDR_BankAddr<2>" LOCATE = SITE "M6" LEVEL 1;
+COMP "processing_system7_0_DDR_BankAddr<0>" LOCATE = SITE "L7" LEVEL 1;
+COMP "clock_generator_0_rx_clk_pin" LOCATE = SITE "J18" LEVEL 1;
+COMP "processing_system7_0_DDR_Clk" LOCATE = SITE "N4" LEVEL 1;
+COMP "mcu_axiw_0_rx_en_pin" LOCATE = SITE "C22" LEVEL 1;
+COMP "mcu_axiw_0_tx_en_pin" LOCATE = SITE "D22" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<0>" LOCATE = SITE "D1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<4>" LOCATE = SITE "E3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<3>" LOCATE = SITE "D3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<2>" LOCATE = SITE "B2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<1>" LOCATE = SITE "C3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<8>" LOCATE = SITE "G2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<7>" LOCATE = SITE "F1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<6>" LOCATE = SITE "F2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<5>" LOCATE = SITE "E1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<9>" LOCATE = SITE "G1" LEVEL 1;
+COMP "processing_system7_0_MIO<50>" LOCATE = SITE "D13" LEVEL 1;
+COMP "processing_system7_0_MIO<52>" LOCATE = SITE "D10" LEVEL 1;
+COMP "processing_system7_0_MIO<51>" LOCATE = SITE "C10" LEVEL 1;
+COMP "processing_system7_0_MIO<53>" LOCATE = SITE "C12" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<30>" LOCATE = SITE "W3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<31>" LOCATE = SITE "Y1" LEVEL 1;
+COMP "processing_system7_0_DDR_VRN" LOCATE = SITE "M7" LEVEL 1;
+COMP "processing_system7_0_DDR_VRP" LOCATE = SITE "N7" LEVEL 1;
+COMP "mcu_axiw_0_pa_en_pin" LOCATE = SITE "E21" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<20>" LOCATE = SITE "R3" LEVEL 1;
+COMP "processing_system7_0_DDR_Clk_n" LOCATE = SITE "N5" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<24>" LOCATE = SITE "AA3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<23>" LOCATE = SITE "R1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<22>" LOCATE = SITE "M2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<21>" LOCATE = SITE "T2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<28>" LOCATE = SITE "W1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<27>" LOCATE = SITE "U2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<26>" LOCATE = SITE "AA1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<25>" LOCATE = SITE "U1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<29>" LOCATE = SITE "Y3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<10>" LOCATE = SITE "L1" LEVEL 1;
+COMP "processing_system7_0_DDR_CS_n" LOCATE = SITE "P6" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<14>" LOCATE = SITE "J1" LEVEL 1;
+COMP "clock_generator_0_LOCKED_pin" LOCATE = SITE "T22" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<13>" LOCATE = SITE "K1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<12>" LOCATE = SITE "L3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<11>" LOCATE = SITE "L2" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<18>" LOCATE = SITE "N3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<17>" LOCATE = SITE "T3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<16>" LOCATE = SITE "M1" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<15>" LOCATE = SITE "K3" LEVEL 1;
+COMP "processing_system7_0_DDR_DQ<19>" LOCATE = SITE "T1" LEVEL 1;
+COMP "adc_driver_axiw_0_blinky_adc_driver_pin" LOCATE = SITE "V22" LEVEL 1;
+COMP "axi_uartlite_0_TX_pin" LOCATE = SITE "L21" LEVEL 1;
+COMP "axi_uartlite_0_RX_pin" LOCATE = SITE "R19" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<13>" LOCATE = SITE "F4" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<14>" LOCATE = SITE "G4" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<11>" LOCATE = SITE "G5" LEVEL 1;
+COMP "processing_system7_0_DDR_CKE" LOCATE = SITE "V3" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<12>" LOCATE = SITE "H4" LEVEL 1;
+COMP "processing_system7_0_DDR_Addr<10>" LOCATE = SITE "J3" LEVEL 1;
+COMP "axi_gpio_0_GPIO2_IO_pin" LOCATE = SITE "U19" LEVEL 1;
+COMP "clock_generator_0_pll_pin" LOCATE = SITE "D18" LEVEL 1;
+COMP "processing_system7_0_MIO<26>" LOCATE = SITE "A13" LEVEL 1;
+COMP "processing_system7_0_MIO<25>" LOCATE = SITE "F12" LEVEL 1;
+COMP "processing_system7_0_MIO<28>" LOCATE = SITE "A12" LEVEL 1;
+COMP "processing_system7_0_MIO<27>" LOCATE = SITE "D7" LEVEL 1;
+COMP "processing_system7_0_MIO<29>" LOCATE = SITE "E8" LEVEL 1;
+COMP "processing_system7_0_MIO<20>" LOCATE = SITE "A8" LEVEL 1;
+COMP "processing_system7_0_MIO<22>" LOCATE = SITE "A14" LEVEL 1;
+COMP "processing_system7_0_MIO<21>" LOCATE = SITE "F11" LEVEL 1;
+COMP "processing_system7_0_MIO<24>" LOCATE = SITE "B7" LEVEL 1;
+COMP "processing_system7_0_MIO<23>" LOCATE = SITE "E11" LEVEL 1;
+COMP "processing_system7_0_MIO<16>" LOCATE = SITE "D6" LEVEL 1;
+COMP "processing_system7_0_MIO<15>" LOCATE = SITE "E6" LEVEL 1;
+COMP "processing_system7_0_MIO<18>" LOCATE = SITE "A7" LEVEL 1;
+COMP "processing_system7_0_MIO<17>" LOCATE = SITE "E9" LEVEL 1;
+COMP "processing_system7_0_MIO<19>" LOCATE = SITE "E10" LEVEL 1;
+COMP "adc_driver_axiw_0_rxd_pin<1>" LOCATE = SITE "J21" LEVEL 1;
+COMP "adc_driver_axiw_0_rxd_pin<2>" LOCATE = SITE "M22" LEVEL 1;
+COMP "processing_system7_0_MIO<10>" LOCATE = SITE "G7" LEVEL 1;
+COMP "adc_driver_axiw_0_rxd_pin<3>" LOCATE = SITE "J22" LEVEL 1;
+COMP "adc_driver_axiw_0_rxd_pin<4>" LOCATE = SITE "T16" LEVEL 1;
+COMP "processing_system7_0_MIO<12>" LOCATE = SITE "C5" LEVEL 1;
+COMP "processing_system7_0_MIO<11>" LOCATE = SITE "B4" LEVEL 1;
+COMP "processing_system7_0_MIO<14>" LOCATE = SITE "B6" LEVEL 1;
+COMP "processing_system7_0_MIO<13>" LOCATE = SITE "A6" LEVEL 1;
+COMP "processing_system7_0_DDR_DRSTB" LOCATE = SITE "F3" LEVEL 1;
+COMP "adc_driver_axiw_0_rxd_pin<0>" LOCATE = SITE "M21" LEVEL 1;
+COMP "processing_system7_0_MIO<46>" LOCATE = SITE "D12" LEVEL 1;
+COMP "adc_driver_axiw_0_rxd_pin<9>" LOCATE = SITE "P21" LEVEL 1;
+COMP "processing_system7_0_MIO<45>" LOCATE = SITE "B9" LEVEL 1;
+COMP "processing_system7_0_MIO<48>" LOCATE = SITE "D11" LEVEL 1;
+COMP "processing_system7_0_MIO<47>" LOCATE = SITE "B10" LEVEL 1;
+COMP "adc_driver_axiw_0_rxd_pin<5>" LOCATE = SITE "P20" LEVEL 1;
+COMP "processing_system7_0_MIO<49>" LOCATE = SITE "C14" LEVEL 1;
+COMP "adc_driver_axiw_0_rxd_pin<6>" LOCATE = SITE "T17" LEVEL 1;
+COMP "adc_driver_axiw_0_rxd_pin<7>" LOCATE = SITE "N17" LEVEL 1;
+COMP "adc_driver_axiw_0_rxd_pin<8>" LOCATE = SITE "J20" LEVEL 1;
+COMP "processing_system7_0_MIO<40>" LOCATE = SITE "E14" LEVEL 1;
+COMP "processing_system7_0_MIO<42>" LOCATE = SITE "D8" LEVEL 1;
+COMP "processing_system7_0_MIO<41>" LOCATE = SITE "C8" LEVEL 1;
+COMP "processing_system7_0_MIO<44>" LOCATE = SITE "E13" LEVEL 1;
+COMP "processing_system7_0_MIO<43>" LOCATE = SITE "B11" LEVEL 1;
+COMP "axi_gpio_0_GPIO_IO_pin" LOCATE = SITE "U14" LEVEL 1;
+COMP "processing_system7_0_MIO<36>" LOCATE = SITE "A9" LEVEL 1;
+COMP "processing_system7_0_MIO<35>" LOCATE = SITE "F14" LEVEL 1;
+COMP "processing_system7_0_MIO<38>" LOCATE = SITE "F13" LEVEL 1;
+COMP "processing_system7_0_MIO<37>" LOCATE = SITE "B14" LEVEL 1;
+COMP "processing_system7_0_MIO<39>" LOCATE = SITE "C13" LEVEL 1;
+COMP "processing_system7_0_MIO<30>" LOCATE = SITE "A11" LEVEL 1;
+COMP "processing_system7_0_MIO<32>" LOCATE = SITE "C7" LEVEL 1;
+COMP "processing_system7_0_MIO<31>" LOCATE = SITE "F9" LEVEL 1;
+COMP "processing_system7_0_MIO<34>" LOCATE = SITE "B12" LEVEL 1;
+COMP "processing_system7_0_MIO<33>" LOCATE = SITE "G13" LEVEL 1;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B18KGT0.u_ramb18/U_RAMB18E1_pins<33>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B18KGT0.u_ramb18/U_RAMB18E1"
+        PINNAME CLKBWRCLK;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36_pins<65>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKU;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36_pins<64>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKL;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36_pins<65>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKU;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36_pins<64>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKL;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36_pins<65>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKU;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36_pins<64>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKL;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36_pins<65>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKU;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36_pins<64>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKL;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36_pins<65>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKU;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36_pins<64>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKL;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36_pins<65>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKU;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36_pins<64>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKL;
+TIMEGRP clock_generator_0_clock_generator_0_SIG_PLLE0_CLKOUT2 = BEL
+        "clock_generator_0/clock_generator_0/PLLE0_CLKOUT2_BUFG_INST" BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000034"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000035"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000036"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000037"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000038"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000039"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk0000003a"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk0000003b"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk0000003c"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk0000003d"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk0000003e"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk0000003f"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000040"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000041"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000042"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000043"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000044"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000045"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000046"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000047"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000048"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000049"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk0000004a"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk0000004b"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk0000004c"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/init_done_x0/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter1/count_reg_20_23_0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_TSEQ_NEQ2.U_TC_EQUATION/I_SRLT_NE_1.I_NMU_1_TO_4.U_TCL/I_OUTREG.U_DOUT"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_STORAGE_QUAL/I_SRLT_NE_1.I_NMU_1_TO_4.U_TCL/I_OUTREG.U_DOUT"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_STORAGE_QUAL/I_SRLT_NE_1.I_NMU_1_TO_4.U_TRIGQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_TSEQ_NEQ2.U_TC_EQUATION/I_SRLT_NE_1.I_NMU_1_TO_4.U_TRIGQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_CAP_DLY"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/I_MC_NO.U_NO_MC_REG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/I_MC_NO.U_NO_MC_REG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/F_NO_TCMC.U_FDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[23].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[22].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[21].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[20].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[19].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[18].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[17].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[16].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[15].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[14].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[13].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[12].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[11].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[10].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[9].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[8].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[7].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[6].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[5].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[4].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[3].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[2].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[1].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[0].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[23].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[22].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[21].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[20].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[19].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[18].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[17].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[16].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[15].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[14].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[13].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[12].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[11].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[10].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[9].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[8].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[7].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[6].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[5].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[4].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[3].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[2].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[1].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[0].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_RPM_EQ0.U_GAND_SRL_UNSET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE_RPM_UNSET/I_IS_TERMINATION_SLICE_NE0.I_USE_OUTPUT_REG_NE0.U_OREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_RPM_EQ0.U_GAND_SRL_UNSET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE_RPM_UNSET/I_IS_TERMINATION_SLICE_NE0.I_USE_OUTPUT_REG_NE0.U_OREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_RFDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_GEN_DELAY[1].U_FD"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_STATE0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_STATE1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[0].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[1].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[2].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[3].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[4].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[5].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[6].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[7].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[8].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[9].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[10].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[11].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[12].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_CR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL3"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL2"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[7].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[6].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[5].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[4].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[3].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[2].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[1].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[0].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[2].U_FD"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[1].U_FD"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_RFDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[4].U_FD"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[2].U_FD"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[1].U_FD"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_RFDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_CDONE/I_YESLUT6.I_NO_RPM.I_YES_OREG.OUT_REG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_NS1/I_YESLUT6.I_NO_RPM.I_YES_OREG.OUT_REG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_NS0/I_YESLUT6.I_NO_RPM.I_YES_OREG.OUT_REG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_TRIG1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_TRIG0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_INTCAP_F.U_CAPWE1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_INTCAP_F.U_CAPWE0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_SCNT_CMP_Q"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_WCNT_LCMP_Q"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_WCNT_HCMP_Q"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[12].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[12].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[11].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[11].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[10].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[10].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[9].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[9].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[8].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[8].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[7].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[7].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[6].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[6].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[5].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[5].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[4].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[4].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[3].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[3].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[2].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[2].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[1].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[1].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[0].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[0].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[0].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[1].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[2].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[3].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[4].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[5].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[6].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[7].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[8].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[9].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[10].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[11].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[12].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[0].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[1].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[2].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[3].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[4].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[5].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[6].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[7].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[8].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[9].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[10].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[11].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[12].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_ECR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_FULL"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_TRIGGER"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_ARM"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[11].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[10].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[9].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[8].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[7].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[6].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[5].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[4].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[3].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[2].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[1].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[0].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[11].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[10].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[9].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[8].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[7].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[6].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[5].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[4].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[3].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[2].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[1].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[0].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[11].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[10].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[9].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[8].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[7].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[6].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[5].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[4].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[3].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[2].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[1].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[0].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[11].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[10].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[9].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[8].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[7].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[6].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[5].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[4].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[3].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[2].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[1].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[0].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_RISING"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_POR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT0"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B18KGT0.u_ramb18/U_RAMB18E1_pins<33>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36_pins<65>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36_pins<64>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36_pins<65>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36_pins<64>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36_pins<65>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36_pins<64>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36_pins<65>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36_pins<64>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36_pins<65>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36_pins<64>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36_pins<65>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36_pins<64>";
+TIMEGRP clock_generator_0_clock_generator_0_SIG_PLLE0_CLKOUT1 = BEL
+        "clock_generator_0/clock_generator_0/PLLE0_CLKOUT1_BUFG_INST" BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/default_clock_driver_adc_driver_x0/xlclockdriver_2/pipelined_ce_logic.ce_logic_pipeline[5].ce_logic_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/default_clock_driver_adc_driver_x0/xlclockdriver_2/pipelined_ce.ce_pipeline[1].ce_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/default_clock_driver_adc_driver_x0/xlclockdriver_2/pipelined_ce.ce_pipeline[3].ce_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/default_clock_driver_adc_driver_x0/xlclockdriver_2/pipelined_ce.ce_pipeline[5].ce_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/default_clock_driver_adc_driver_x0/xlclockdriver_2/pipelined_ce.ce_pipeline[4].ce_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_1.fdse_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/default_clock_driver_adc_driver_x0/xlclockdriver_2/pipelined_ce.ce_pipeline[2].ce_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_1.fdse_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000035"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000036"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000037"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000038"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000039"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000003a"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000003b"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000003c"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000003d"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000003e"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000003f"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000040"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000041"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000042"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000043"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000044"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000045"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000046"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000047"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000048"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000049"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000004a"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000004b"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000004c"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000004d"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[11].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[10].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[9].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[7].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[6].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[5].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[4].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[3].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[2].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[1].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[11].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[10].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[9].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[7].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[6].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[5].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[4].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[3].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[2].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[1].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[11].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[10].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[9].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[7].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[6].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[5].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[4].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[3].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[2].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[1].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[11].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[10].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[9].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[8].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[7].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[6].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[5].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[4].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[3].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[2].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[1].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[0].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[11].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[10].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[9].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[8].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[7].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[6].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[5].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[4].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[3].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[2].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[1].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[0].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[11].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[10].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[9].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[8].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[7].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[6].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[5].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[4].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[3].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[2].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[1].fde_used.u2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[0].fde_used.u2";
+PIN processing_system7_0/processing_system7_0/PS7_i_pins<357> = BEL
+        "processing_system7_0/processing_system7_0/PS7_i" PINNAME MAXIGP0ACLK;
+TIMEGRP clk_fpga_0 = BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_7"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_6"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_5"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_4"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_3"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_1"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_0"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/write_state_FSM_FFd1"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/write_state_FSM_FFd2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state_FSM_FFd1"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state_FSM_FFd2"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_prep_counter_1"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_prep_counter_0"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/S_AXI_RLAST_i"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/S_AXI_BVALID_i"
+        BEL
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/write_ready"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/tx_en_x0/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/rx_en_x0/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_reset_x0/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/tr_sw_x0/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/pa_en_x0/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_data_counter_7"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_data_counter_6"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_data_counter_5"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_data_counter_4"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_data_counter_3"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_data_counter_2"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_data_counter_1"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_data_counter_0"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/write_state_FSM_FFd1"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/write_linear_addr_i_7"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/write_linear_addr_i_6"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/write_linear_addr_i_5"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/write_linear_addr_i_4"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/write_linear_addr_i_3"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/write_linear_addr_i_2"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/write_linear_addr_i_1"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/write_linear_addr_i_0"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/write_state_FSM_FFd2"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_state_FSM_FFd2"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_state_FSM_FFd1"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_linear_addr_i_7"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/S_AXI_RDATA_i_0"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/sm_tx_en_en_i"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/sm_rx_en_en_i"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/sm_tr_sw_en_i"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/sm_pa_en_en_i"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/sm_mcu_reset_en_i"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_bank_addr_i_1"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_bank_addr_i_0"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/write_bank_addr_i_1"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/write_bank_addr_i_0"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/sm_rx_en_din_i_0"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/sm_mcu_reset_din_i_0"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/sm_tx_en_din_i_0"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/sm_pa_en_din_i_0"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/sm_tr_sw_din_i_0"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_prep_counter_1"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_prep_counter_0"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/write_addr_valid"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/S_AXI_RLAST_i"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/S_AXI_BVALID_i"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/reg_bank_out_i"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/write_ready"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_linear_addr_i_0"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_addr_counter_0"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_linear_addr_i_4"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_linear_addr_i_1"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_addr_counter_6"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_addr_counter_4"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_addr_counter_1"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_linear_addr_i_6"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_linear_addr_i_5"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_linear_addr_i_3"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_linear_addr_i_2"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_addr_counter_7"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_addr_counter_5"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_addr_counter_3"
+        BEL
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/edk_processor_017753ff76/memmap/read_addr_counter_2"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_1"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_7"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_6"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_5"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_4"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_3"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_2"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_1"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_3"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_2"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/ce_out_i_1"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/BAUD_RATE_I/EN_16x_Baud"
+        BEL "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/clr_Status" BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/mux_sel_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/mux_sel_1"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/mux_sel_2"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/serial_Data"
+        BEL "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/TX"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/FIFO_Full"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_0_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_1_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_2_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_3_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_4_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_5_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_6_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_7_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/CNTR_INCR_DECR_ADDN_F_I/STRUCTURAL_A_GEN.Addr_Counters[0].FDS_I"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/CNTR_INCR_DECR_ADDN_F_I/STRUCTURAL_A_GEN.Addr_Counters[1].FDS_I"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/CNTR_INCR_DECR_ADDN_F_I/STRUCTURAL_A_GEN.Addr_Counters[2].FDS_I"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/CNTR_INCR_DECR_ADDN_F_I/STRUCTURAL_A_GEN.Addr_Counters[3].FDS_I"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/CNTR_INCR_DECR_ADDN_F_I/STRUCTURAL_A_GEN.Addr_Counters[4].FDS_I"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/CNTR_INCR_DECR_ADDN_F_I/STRUCTURAL_A_GEN.Addr_Counters[4].FDS_I"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/CNTR_INCR_DECR_ADDN_F_I/STRUCTURAL_A_GEN.Addr_Counters[3].FDS_I"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/CNTR_INCR_DECR_ADDN_F_I/STRUCTURAL_A_GEN.Addr_Counters[2].FDS_I"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/CNTR_INCR_DECR_ADDN_F_I/STRUCTURAL_A_GEN.Addr_Counters[1].FDS_I"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/CNTR_INCR_DECR_ADDN_F_I/STRUCTURAL_A_GEN.Addr_Counters[0].FDS_I"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_7_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_6_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_5_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_4_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_3_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_2_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_1_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/DYNSHREG_F_I/Mshreg_Dout_0_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/FIFO_Full"
+        BEL "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/rx_9"
+        BEL "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/rx_8"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/fifo_din_8"
+        BEL "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/rx_7"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/fifo_din_7"
+        BEL "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/rx_6"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/fifo_din_6"
+        BEL "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/rx_5"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/fifo_din_5"
+        BEL "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/rx_4"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/fifo_din_4"
+        BEL "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/rx_3"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/fifo_din_3"
+        BEL "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/rx_2"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/fifo_din_2"
+        BEL "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/rx_1"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/RX_D2"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/start_Edge_Detected"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/RX_D1"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/fifo_Write"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/DELAY_16_I/INFERRED_GEN.data<0>_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/BAUD_RATE_I/count_9"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/BAUD_RATE_I/count_7"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/BAUD_RATE_I/count_3"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/BAUD_RATE_I/count_1"
+        BEL "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/status_reg_1" BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/reset_RX_FIFO" BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/reset_TX_FIFO" BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/frame_err_ocrd"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/fifo_din_1"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/valid_rx"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/running"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_1"
+        BEL "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/enable_interrupts"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/fifo_Read"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/tx_DataBits"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/tx_Start"
+        BEL "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/status_reg_2" BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/tx_Data_Enable"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/stop_Bit_Position"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/BAUD_RATE_I/count_8"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/BAUD_RATE_I/count_6"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/BAUD_RATE_I/count_5"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/BAUD_RATE_I/count_2"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/BAUD_RATE_I/count_4"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/BAUD_RATE_I/count_0"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/Bus_RNW_reg_1"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/MID_START_BIT_SRL16_I/Mshreg_INFERRED_GEN.data_15"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_TX_I/MID_START_BIT_SRL16_I/INFERRED_GEN.data_15"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/DELAY_16_I/Mshreg_INFERRED_GEN.data_15"
+        BEL
+        "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/DELAY_16_I/INFERRED_GEN.data_15"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_register_slice_bank/gen_reg_slot[3].register_slice_inst/reset"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_register_slice_bank/gen_reg_slot[2].register_slice_inst/reset"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_pipe_2"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_pipe_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_pipe_0"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_2"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_0"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[2].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/areset_d_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[3].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/areset_d_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_converter_bank/gen_conv_slot[0].clock_conv_inst/m_axi_reset_out_n_i"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_converter_bank/gen_conv_slot[1].clock_conv_inst/m_axi_reset_out_n_i"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/m_axi_reset_out_n_i"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_converter_bank/gen_conv_slot[2].clock_conv_inst/m_axi_reset_out_n_i"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_converter_bank/gen_conv_slot[3].clock_conv_inst/m_axi_reset_out_n_i"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_2"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_5"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_4"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_3"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_2"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/reset"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/s_awvalid_reg_0"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/s_arvalid_reg_0"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_53"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_52"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_47"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_46"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_45"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_44"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_43"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_42"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_41"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_40"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_39"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_38"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_37"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_36"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_35"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_34"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_33"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_32"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_31"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_30"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_29"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_28"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_23"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_22"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_21"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_20"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_19"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_18"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_17"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_16"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_15"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_14"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_11"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_10"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_9"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_8"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_7"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_6"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_5"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_4"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_3"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_2"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_0"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/s_ready_i_0"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_3"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_2"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_0"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/write_cs_FSM_FFd1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/write_cs_FSM_FFd2"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/s_axi_awready_i"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[2].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_active"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[2].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/read_active"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[2].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/busy"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[3].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_active"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[3].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/read_active"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[3].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/busy"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_grant_hot_i_0"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/s_axi_rlast_i"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/s_axi_arready_i"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cs_0"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d_2"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_aw/m_ready_d_0"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.splitter_ar/m_ready_d_0"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_valid_i_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1_2"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_7"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_6"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_5"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_4"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_3"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_2"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/write_state_FSM_FFd1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/write_state_FSM_FFd2"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_state_FSM_FFd1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_state_FSM_FFd2"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_prep_counter_1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_prep_counter_0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/S_AXI_RLAST_i"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/S_AXI_BVALID_i"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/write_ready"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/S_AXI_RVALID_i"
+        BEL "axi_gpio_led/axi_gpio_led/ip2bus_data_i_D1_31" BEL
+        "axi_gpio_led/axi_gpio_led/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
+        BEL
+        "axi_gpio_led/axi_gpio_led/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd2"
+        BEL
+        "axi_gpio_led/axi_gpio_led/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/cs_out_i_0"
+        BEL "axi_gpio_led/axi_gpio_led/gpio_core_1/gpio_xferAck_Reg" BEL
+        "axi_gpio_led/axi_gpio_led/gpio_core_1/iGPIO_xferAck" BEL
+        "axi_gpio_led/axi_gpio_led/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bvalid_i"
+        BEL
+        "axi_gpio_led/axi_gpio_led/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rvalid_i"
+        BEL
+        "axi_gpio_led/axi_gpio_led/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_0"
+        BEL "axi_gpio_led/axi_gpio_led/gpio_core_1/Dual.gpio2_OE_0" BEL
+        "axi_gpio_led/axi_gpio_led/gpio_core_1/gpio_OE_0" BEL
+        "axi_gpio_led/axi_gpio_led/gpio_core_1/Dual.gpio2_Data_Out_0" BEL
+        "axi_gpio_led/axi_gpio_led/gpio_core_1/gpio_Data_Out_0" BEL
+        "axi_gpio_led/axi_gpio_led/ip2bus_wrack_i_D1" BEL
+        "axi_gpio_led/axi_gpio_led/ip2bus_rdack_i_D1" BEL
+        "axi_gpio_led/axi_gpio_led/bus2ip_reset" BEL
+        "axi_gpio_led/axi_gpio_led/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_3"
+        BEL
+        "axi_gpio_led/axi_gpio_led/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_2"
+        BEL
+        "axi_gpio_led/axi_gpio_led/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_1"
+        BEL
+        "axi_gpio_led/axi_gpio_led/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/INCLUDE_DPHASE_TIMER.dpto_cnt_0"
+        BEL "axi_gpio_led/axi_gpio_led/gpio_core_1/Dual.GPIO2_DBus_i_31" BEL
+        "axi_gpio_led/axi_gpio_led/gpio_core_1/GPIO_DBus_i_31" BEL
+        "axi_gpio_led/axi_gpio_led/gpio_core_1/Mshreg_Dual.gpio2_Data_In_0"
+        BEL "axi_gpio_led/axi_gpio_led/gpio_core_1/Dual.gpio2_Data_In_0" BEL
+        "axi_gpio_led/axi_gpio_led/gpio_core_1/Mshreg_gpio_Data_In_0" BEL
+        "axi_gpio_led/axi_gpio_led/gpio_core_1/gpio_Data_In_0" PIN
+        "processing_system7_0/processing_system7_0/PS7_i_pins<357>";
+TIMEGRP axi_interconnect_1_reset_resync = BEL
+        "axi_interconnect_1/axi_interconnect_1/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_2"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_1"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_resync_0";
+PIN clock_generator_0/clock_generator_0/PLLE0_INST/PLLE2_ADV_inst_pins<2> =
+        BEL "clock_generator_0/clock_generator_0/PLLE0_INST/PLLE2_ADV_inst"
+        PINNAME CLKIN1;
+TIMEGRP clock_generator_0_pll = PIN
+        "clock_generator_0/clock_generator_0/PLLE0_INST/PLLE2_ADV_inst_pins<2>";
+TIMEGRP axi_interconnect_1_reset_source = FFS(*) PADS(*);
+PATH TS_axi_interconnect_1_reset_resync_path = FROM TIMEGRP
+        "axi_interconnect_1_reset_source" TO TIMEGRP
+        "axi_interconnect_1_reset_resync";
+PATH "TS_axi_interconnect_1_reset_resync_path" TIG;
+TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_0" 100 MHz HIGH 50%;
+TS_clock_generator_0_pll = PERIOD TIMEGRP "clock_generator_0_pll" 40 MHz HIGH
+        50%;
+TS_clock_generator_0_clock_generator_0_SIG_PLLE0_CLKOUT1 = PERIOD TIMEGRP
+        "clock_generator_0_clock_generator_0_SIG_PLLE0_CLKOUT1"
+        TS_clock_generator_0_pll HIGH 50%;
+TS_clock_generator_0_clock_generator_0_SIG_PLLE0_CLKOUT2 = PERIOD TIMEGRP
+        "clock_generator_0_clock_generator_0_SIG_PLLE0_CLKOUT2"
+        TS_clock_generator_0_pll * 0.5 HIGH 50%;
+SCHEMATIC END;
+

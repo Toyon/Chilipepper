@@ -1,0 +1,312 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:\GIT\Chilipepper\Labs\Lab_4\EDK\synthesis\xst_temp_dir\
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_clock_generator_0_wrapper_xst.prj"
+Verilog Include Directory          : {"C:\GIT\Chilipepper\Labs\Lab_4\EDK\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc7z020clg484-1
+Output File Name                   : "../implementation/system_clock_generator_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_clock_generator_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/dcm_module.vhd" into library clock_generator_v4_03_a
+Parsing entity <dcm_module>.
+Parsing architecture <STRUCT> of entity <dcm_module>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/pll_module.vhd" into library clock_generator_v4_03_a
+Parsing entity <pll_module>.
+Parsing architecture <STRUCT> of entity <pll_module>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/mmcm_module.vhd" into library clock_generator_v4_03_a
+Parsing entity <mmcm_module>.
+Parsing architecture <STRUCT> of entity <mmcm_module>.
+Parsing VHDL file "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/plle2_module.vhd" into library clock_generator_v4_03_a
+Parsing entity <plle2_module>.
+Parsing architecture <STRUCT> of entity <plle2_module>.
+Parsing VHDL file "C:/GIT/Chilipepper/Labs/Lab_4/EDK/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" into library clock_generator_0_v4_03_a
+Parsing entity <clock_generator>.
+Parsing architecture <STRUCTURE> of entity <clock_generator>.
+Parsing VHDL file "C:\GIT\Chilipepper\Labs\Lab_4\EDK\hdl\system_clock_generator_0_wrapper.vhd" into library work
+Parsing entity <system_clock_generator_0_wrapper>.
+Parsing architecture <STRUCTURE> of entity <system_clock_generator_0_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <system_clock_generator_0_wrapper> (architecture <STRUCTURE>) from library <work>.
+
+Elaborating entity <clock_generator> (architecture <STRUCTURE>) with generics from library <clock_generator_0_v4_03_a>.
+WARNING:HDLCompiler:1127 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 225: Assignment to net_gnd0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 229: Assignment to net_vdd0 ignored, since the identifier is never used
+
+Elaborating entity <plle2_module> (architecture <STRUCT>) with generics from library <clock_generator_v4_03_a>.
+WARNING:HDLCompiler:89 - "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/plle2_module.vhd" Line 147: <plle2_adv> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:1127 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 342: Assignment to sig_plle0_clkout3_buf ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 348: Assignment to sig_plle0_clkout4_buf ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 354: Assignment to sig_plle0_clkout5_buf ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" Line 360: Assignment to sig_plle0_clkfbout_buf ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system_clock_generator_0_wrapper>.
+    Related source file is "C:\GIT\Chilipepper\Labs\Lab_4\EDK\hdl\system_clock_generator_0_wrapper.vhd".
+    Summary:
+	no macro.
+Unit <system_clock_generator_0_wrapper> synthesized.
+
+Synthesizing Unit <clock_generator>.
+    Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd".
+        C_FAMILY = "zynq"
+        C_DEVICE = "7z020"
+        C_PACKAGE = "clg484"
+        C_SPEEDGRADE = "-1"
+        C_CLK_GEN = "PASSED"
+WARNING:Xst:647 - Input <CLKFBIN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PSCLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PSEN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <PSINCDEC> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" line 254: Output port <CLKOUT3> of the instance <PLLE0_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" line 254: Output port <CLKOUT4> of the instance <PLLE0_INST> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/hdl/elaborate/clock_generator_0_v4_03_a/hdl/vhdl/clock_generator.vhd" line 254: Output port <CLKOUT5> of the instance <PLLE0_INST> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <clock_generator> synthesized.
+
+Synthesizing Unit <plle2_module>.
+    Related source file is "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/plle2_module.vhd".
+        C_BANDWIDTH = "OPTIMIZED"
+        C_COMPENSATION = "ZHOLD"
+        C_STARTUP_WAIT = "false"
+        C_CLKOUT0_DIVIDE = 40
+        C_CLKOUT1_DIVIDE = 40
+        C_CLKOUT2_DIVIDE = 80
+        C_CLKOUT3_DIVIDE = 1
+        C_CLKOUT4_DIVIDE = 1
+        C_CLKOUT5_DIVIDE = 1
+        C_DIVCLK_DIVIDE = 1
+        C_CLKFBOUT_MULT = 40
+        C_CLKFBOUT_PHASE = 0.0
+        C_CLKIN1_PERIOD = 25.0
+        C_CLKOUT0_DUTY_CYCLE = 0.5
+        C_CLKOUT0_PHASE = 90.0
+        C_CLKOUT1_DUTY_CYCLE = 0.5
+        C_CLKOUT1_PHASE = 0.0
+        C_CLKOUT2_DUTY_CYCLE = 0.5
+        C_CLKOUT2_PHASE = 0.0
+        C_CLKOUT3_DUTY_CYCLE = 0.5
+        C_CLKOUT3_PHASE = 0.0
+        C_CLKOUT4_DUTY_CYCLE = 0.5
+        C_CLKOUT4_PHASE = 0.0
+        C_CLKOUT5_DUTY_CYCLE = 0.5
+        C_CLKOUT5_PHASE = 0.0
+        C_REF_JITTER1 = 0.01
+        C_CLKIN1_BUF = false
+        C_CLKFBOUT_BUF = false
+        C_CLKOUT0_BUF = false
+        C_CLKOUT1_BUF = false
+        C_CLKOUT2_BUF = false
+        C_CLKOUT3_BUF = false
+        C_CLKOUT4_BUF = false
+        C_CLKOUT5_BUF = false
+        C_EXT_RESET_HIGH = 1
+        C_FAMILY = "zynq"
+INFO:Xst:3210 - "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/plle2_module.vhd" line 245: Output port <DO> of the instance <PLLE2_ADV_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Xilinx/14.4/ISE_DS/EDK/hw/XilinxProcessorIPLib/pcores/clock_generator_v4_03_a/hdl/vhdl/plle2_module.vhd" line 245: Output port <DRDY> of the instance <PLLE2_ADV_inst> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <plle2_module> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <system_clock_generator_0_wrapper> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block system_clock_generator_0_wrapper, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : system_clock_generator_0_wrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2
+#      GND                         : 1
+#      VCC                         : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# Others                           : 1
+#      PLLE2_ADV                   : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7z020clg484-1 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          25
+ Number of bonded IOBs:                   0  out of    200     0%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.91 secs
+ 
+--> 
+
+Total memory usage is 467412 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   11 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

@@ -1,0 +1,18 @@
+#############################################################
+# Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+# 
+# You may copy and modify these files for your own internal
+# use solely with Xilinx programmable logic devices and
+# Xilinx EDK system or create IP modules solely for Xilinx
+# programmable logic devices and Xilinx EDK system.
+# No rights are granted to distribute any files unless they
+# are distributed in Xilinx programmable logic devices.
+#
+# Peripheral Analyze Order (PAO) file
+# created by System Generator
+# Nov 16, 2012 11:39:45 AM
+#############################################################
+
+lib mcu_axiw_v1_00_a mcu vhdl
+lib mcu_axiw_v1_00_a mcu_cw vhdl
+lib mcu_axiw_v1_00_a mcu_axiw vhdl

@@ -1,0 +1,22 @@
+
+<RENDERBATCH>
+
+  <RENDERIMG RASNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\processing_system7_0.jpg" SVGNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\processing_system7_0.svg" TMPSVGFN="C:\GIT\Chilipepper\Labs\Lab_4\EDK\__xps\.dswkshop\processing_system7_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\adc_driver_axiw_0.jpg" SVGNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\adc_driver_axiw_0.svg" TMPSVGFN="C:\GIT\Chilipepper\Labs\Lab_4\EDK\__xps\.dswkshop\adc_driver_axiw_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\axi_interconnect_1.jpg" SVGNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\axi_interconnect_1.svg" TMPSVGFN="C:\GIT\Chilipepper\Labs\Lab_4\EDK\__xps\.dswkshop\axi_interconnect_1.svg"/>
+
+  <RENDERIMG RASNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\mcu_axiw_0.jpg" SVGNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\mcu_axiw_0.svg" TMPSVGFN="C:\GIT\Chilipepper\Labs\Lab_4\EDK\__xps\.dswkshop\mcu_axiw_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\clock_generator_0.jpg" SVGNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\clock_generator_0.svg" TMPSVGFN="C:\GIT\Chilipepper\Labs\Lab_4\EDK\__xps\.dswkshop\clock_generator_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\axi_gpio_led.jpg" SVGNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\axi_gpio_led.svg" TMPSVGFN="C:\GIT\Chilipepper\Labs\Lab_4\EDK\__xps\.dswkshop\axi_gpio_led.svg"/>
+
+  <RENDERIMG RASNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\axi_uartlite_0.jpg" SVGNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\axi_uartlite_0.svg" TMPSVGFN="C:\GIT\Chilipepper\Labs\Lab_4\EDK\__xps\.dswkshop\axi_uartlite_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\rx_axiw_0.jpg" SVGNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\rx_axiw_0.svg" TMPSVGFN="C:\GIT\Chilipepper\Labs\Lab_4\EDK\__xps\.dswkshop\rx_axiw_0.svg"/>
+
+  <RENDERIMG RASNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\system_blkd.jpg" SVGNAME="C:\GIT\Chilipepper\Labs\Lab_4\EDK\SDK\SDK_Export\hw\imgs\system_blkd.svg" TMPSVGFN="C:\GIT\Chilipepper\Labs\Lab_4\EDK\__xps\.dswkshop\system_blkd.svg"/>
+
+</RENDERBATCH>
