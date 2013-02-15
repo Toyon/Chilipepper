@@ -1,0 +1,1 @@
+run -ifn xst_adc_driver.prj -ifmt mixed -ofn adc_driver_cw.ngc -ofmt NGC -p xc7z020-1clg484 -ent adc_driver_cw -keep_hierarchy NO -iobuf YES -bus_delimiter () -top adc_driver_cw -hierarchy_separator / -report_timing_constraint_problems warning -register_balancing no -iob Auto -uc adc_driver_cw.xcf -write_timing_constraints yes
