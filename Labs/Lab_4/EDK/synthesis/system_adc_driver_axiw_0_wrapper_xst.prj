@@ -1,4 +1,0 @@
-vhdl adc_driver_axiw_v1_00_a C:\GIT\Chilipepper\Labs\Lab_4\EDK\pcores\adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd
-vhdl adc_driver_axiw_v1_00_a C:\GIT\Chilipepper\Labs\Lab_4\EDK\pcores\adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_cw.vhd
-vhdl adc_driver_axiw_v1_00_a C:\GIT\Chilipepper\Labs\Lab_4\EDK\pcores\adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_axiw.vhd
-vhdl work ../hdl/system_adc_driver_axiw_0_wrapper.vhd

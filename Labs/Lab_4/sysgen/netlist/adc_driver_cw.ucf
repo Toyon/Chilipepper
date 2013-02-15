@@ -1,9 +1,0 @@
-
-
-# Global period constraint
-NET "clk" TNM_NET = "clk_365eec2f";
-TIMESPEC "TS_clk_365eec2f" = PERIOD "clk_365eec2f" 10.0 ns HIGH 50 %;
-
-# ce_2_365eec2f_group and inner group constraint
-NET "ce_2_sg_x0*" TNM_NET = "ce_2_365eec2f_group";
-TIMESPEC "TS_ce_2_365eec2f_group_to_ce_2_365eec2f_group" = FROM "ce_2_365eec2f_group" TO "ce_2_365eec2f_group" 20.0 ns;
