@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.49d on Fri Feb 08 12:56:50 2013
+// Written by: Map P.49d on Thu Feb 14 15:26:31 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -158,6 +158,71 @@ COMP "processing_system7_0_MIO<32>" LOCATE = SITE "C7" LEVEL 1;
 COMP "processing_system7_0_MIO<31>" LOCATE = SITE "F9" LEVEL 1;
 COMP "processing_system7_0_MIO<34>" LOCATE = SITE "B12" LEVEL 1;
 COMP "processing_system7_0_MIO<33>" LOCATE = SITE "G13" LEVEL 1;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B18KGT0.u_ramb18/U_RAMB18E1_pins<33>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B18KGT0.u_ramb18/U_RAMB18E1"
+        PINNAME CLKBWRCLK;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36_pins<65>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKU;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36_pins<64>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKL;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36_pins<65>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKU;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36_pins<64>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKL;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36_pins<65>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKU;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36_pins<64>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKL;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36_pins<65>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKU;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36_pins<64>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKL;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36_pins<65>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKU;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36_pins<64>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKL;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36_pins<65>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKU;
+PIN
+        rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36_pins<64>
+        = BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36"
+        PINNAME CLKBWRCLKL;
 TIMEGRP clock_generator_0_clock_generator_0_SIG_PLLE0_CLKOUT2 = BEL
         "clock_generator_0/clock_generator_0/PLLE0_CLKOUT2_BUFG_INST" BEL
         "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter/comp0.core_instance0/blk00000034"
@@ -212,22 +277,475 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLLE0_CLKOUT2 = BEL
         BEL
         "mcu_axiw_0/mcu_axiw_0/sysgen_dut/init_done_x0/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
         BEL
-        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter1/count_reg_20_23_0";
-PIN
-        adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B18KGT0.u_ramb18/U_RAMB18E1_pins<33>
-        = BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B18KGT0.u_ramb18/U_RAMB18E1"
-        PINNAME CLKBWRCLK;
-PIN
-        adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36_pins<65>
-        = BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36"
-        PINNAME CLKBWRCLKU;
-PIN
-        adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36_pins<64>
-        = BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36"
-        PINNAME CLKBWRCLKL;
+        "mcu_axiw_0/mcu_axiw_0/sysgen_dut/mcu_x0/counter1/count_reg_20_23_0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_TSEQ_NEQ2.U_TC_EQUATION/I_SRLT_NE_1.I_NMU_1_TO_4.U_TCL/I_OUTREG.U_DOUT"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_STORAGE_QUAL/I_SRLT_NE_1.I_NMU_1_TO_4.U_TCL/I_OUTREG.U_DOUT"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_STORAGE_QUAL/I_SRLT_NE_1.I_NMU_1_TO_4.U_TRIGQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_TSEQ_NEQ2.U_TC_EQUATION/I_SRLT_NE_1.I_NMU_1_TO_4.U_TRIGQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_CAP_DLY"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/I_MC_NO.U_NO_MC_REG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/I_MC_NO.U_NO_MC_REG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/F_NO_TCMC.U_FDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[23].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[22].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[21].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[20].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[19].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[18].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[17].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[16].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[15].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[14].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[13].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[12].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[11].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[10].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[9].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[8].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[7].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[6].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[5].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[4].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[3].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[2].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[1].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[0].I_SRLT_NE_0.DLY9/SRL16E"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[23].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[22].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[21].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[20].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[19].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[18].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[17].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[16].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[15].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[14].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[13].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[12].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[11].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[10].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[9].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[8].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[7].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[6].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[5].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[4].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[3].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[2].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[1].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[0].I_SRLT_NE_0.FF"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_RPM_EQ0.U_GAND_SRL_UNSET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE_RPM_UNSET/I_IS_TERMINATION_SLICE_NE0.I_USE_OUTPUT_REG_NE0.U_OREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_RPM_EQ0.U_GAND_SRL_UNSET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE_RPM_UNSET/I_IS_TERMINATION_SLICE_NE0.I_USE_OUTPUT_REG_NE0.U_OREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_RFDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_GEN_DELAY[1].U_FD"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_STATE0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_STATE1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[0].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[1].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[2].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[3].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[4].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[5].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[6].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[7].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[8].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[9].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[10].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[11].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[12].U_NSQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_CR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL3"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL2"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[7].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[6].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[5].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[4].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[3].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[2].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[1].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[0].U_RST"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[2].U_FD"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[1].U_FD"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_RFDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[4].U_FD"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[2].U_FD"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[1].U_FD"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_RFDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_CDONE/I_YESLUT6.I_NO_RPM.I_YES_OREG.OUT_REG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_NS1/I_YESLUT6.I_NO_RPM.I_YES_OREG.OUT_REG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_NS0/I_YESLUT6.I_NO_RPM.I_YES_OREG.OUT_REG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_TRIG1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_TRIG0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_INTCAP_F.U_CAPWE1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_INTCAP_F.U_CAPWE0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_SCNT_CMP_Q"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_WCNT_LCMP_Q"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_WCNT_HCMP_Q"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[12].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[12].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[11].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[11].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[10].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[10].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[9].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[9].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[8].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[8].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[7].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[7].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[6].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[6].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[5].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[5].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[4].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[4].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[3].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[3].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[2].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[2].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[1].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[1].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[0].U_CAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[0].U_iCAP_ADDR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[0].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[1].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[2].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[3].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[4].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[5].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[6].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[7].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[8].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[9].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[10].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[11].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[12].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[0].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[1].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[2].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[3].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[4].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[5].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[6].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[7].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[8].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[9].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[10].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[11].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[12].U_FDRE"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_ECR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_FULL"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_TRIGGER"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_ARM"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[11].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[10].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[9].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[8].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[7].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[6].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[5].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[4].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[3].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[2].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[1].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ1.G_TW[0].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[11].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[10].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[9].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[8].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[7].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[6].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[5].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[4].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[3].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[2].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[1].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_TQ0.G_TW[0].U_TQ"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[11].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[10].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[9].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[8].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[7].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[6].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[5].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[4].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[3].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[2].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[1].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[0].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[11].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[10].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[9].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[8].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[7].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[6].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[5].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[4].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[3].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[2].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[1].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[0].U_GAND_IREG"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_RISING"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_POR"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT0"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B18KGT0.u_ramb18/U_RAMB18E1_pins<33>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36_pins<65>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36_pins<64>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36_pins<65>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36_pins<64>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36_pins<65>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36_pins<64>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36_pins<65>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36_pins<64>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36_pins<65>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36_pins<64>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36_pins<65>"
+        PIN
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36_pins<64>";
 TIMEGRP clock_generator_0_clock_generator_0_SIG_PLLE0_CLKOUT1 = BEL
         "clock_generator_0/clock_generator_0/PLLE0_CLKOUT1_BUFG_INST" BEL
         "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/default_clock_driver_adc_driver_x0/xlclockdriver_2/pipelined_ce_logic.ce_logic_pipeline[5].ce_logic_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
@@ -242,705 +760,177 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLLE0_CLKOUT1 = BEL
         BEL
         "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/default_clock_driver_adc_driver_x0/xlclockdriver_2/pipelined_ce.ce_pipeline[2].ce_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_1.fdse_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000034"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000035"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000035"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000036"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000036"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000037"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000037"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000038"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000038"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000039"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000039"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000003a"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk0000003a"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000003b"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk0000003b"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000003c"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk0000003c"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000003d"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk0000003d"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000003e"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk0000003e"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000003f"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk0000003f"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000040"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000040"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000041"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000041"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000042"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000042"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000043"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000043"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000044"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000044"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000045"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000045"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000046"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000046"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000047"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000047"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000048"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000048"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk00000049"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk00000049"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000004a"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk0000004a"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000004b"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk0000004b"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000004c"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/counter1/comp0.core_instance0/blk0000004c"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/blinky_fab3b312e2/led_counter/comp0.core_instance0/blk00000001/blk0000004d"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_TSEQ_NEQ2.U_TC_EQUATION/I_SRLT_NE_1.I_NMU_1_TO_4.U_TCL/I_OUTREG.U_DOUT"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_STORAGE_QUAL/I_SRLT_NE_1.I_NMU_1_TO_4.U_TCL/I_OUTREG.U_DOUT"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[11].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_STORAGE_QUAL/I_SRLT_NE_1.I_NMU_1_TO_4.U_TRIGQ"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[10].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_TSEQ_NEQ2.U_TC_EQUATION/I_SRLT_NE_1.I_NMU_1_TO_4.U_TRIGQ"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[9].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TC/I_STORAGE_QUAL.U_CAP_DLY"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/I_MC_NO.U_NO_MC_REG"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[7].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/I_MC_NO.U_NO_MC_REG"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[6].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/I_MC_NO.U_NO_MC_REG"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[5].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/I_MC_NO.U_NO_MC_REG"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[4].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/F_NO_TCMC.U_FDR"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[3].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[36].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[2].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[35].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[1].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[34].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[33].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[11].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[32].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[10].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[31].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[9].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[30].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[29].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[7].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[28].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[6].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[27].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[5].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[26].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[4].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[25].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[3].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[24].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[2].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[23].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[1].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[22].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[21].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[11].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[20].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[10].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[19].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[9].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[18].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[17].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[7].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[16].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[6].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[15].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[5].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[14].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[4].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[13].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[3].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[12].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[2].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[11].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[1].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[10].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[9].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[11].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[8].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[10].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[7].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[9].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[6].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[8].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[5].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[7].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[4].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[6].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[3].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[5].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[2].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[4].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[1].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[3].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[0].I_SRLT_NE_0.DLY9/SRL16E"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[2].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[36].I_SRLT_NE_0.FF"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[1].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[35].I_SRLT_NE_0.FF"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample2/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[0].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[34].I_SRLT_NE_0.FF"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[11].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[33].I_SRLT_NE_0.FF"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[10].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[32].I_SRLT_NE_0.FF"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[9].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[31].I_SRLT_NE_0.FF"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[8].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[30].I_SRLT_NE_0.FF"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[7].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[29].I_SRLT_NE_0.FF"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[6].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[28].I_SRLT_NE_0.FF"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[5].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[27].I_SRLT_NE_0.FF"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[4].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[26].I_SRLT_NE_0.FF"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[3].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[25].I_SRLT_NE_0.FF"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[2].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[24].I_SRLT_NE_0.FF"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[1].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[23].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[22].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[21].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[20].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[19].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[18].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[17].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[16].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[15].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[14].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[13].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[12].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[11].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[10].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[9].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[8].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[7].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[6].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[5].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[4].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[3].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[2].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[1].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[0].I_SRLT_NE_0.FF"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_RPM_EQ0.U_GAND_SRL_UNSET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE_RPM_UNSET/I_IS_TERMINATION_SLICE_NE0.I_USE_OUTPUT_REG_NE0.U_OREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_RPM_EQ0.U_GAND_SRL_UNSET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE_RPM_UNSET/I_IS_TERMINATION_SLICE_NE0.I_USE_OUTPUT_REG_NE0.U_OREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_RPM_EQ0.U_GAND_SRL_UNSET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE_RPM_UNSET/I_IS_TERMINATION_SLICE_NE0.I_USE_OUTPUT_REG_NE0.U_OREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_RPM_EQ0.U_GAND_SRL_UNSET/I_PARTIAL_SLICE.U_GAND_SRL_SLICE_RPM_UNSET/I_IS_TERMINATION_SLICE_NE0.I_USE_OUTPUT_REG_NE0.U_OREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_RFDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_GEN_DELAY[1].U_FD"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_STATE0"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_STATE1"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[0].U_NSQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[1].U_NSQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[2].U_NSQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[3].U_NSQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[4].U_NSQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[5].U_NSQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[6].U_NSQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[7].U_NSQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[8].U_NSQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/G_NS[9].U_NSQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_CR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL3"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[7].U_RST"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[6].U_RST"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[5].U_RST"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[4].U_RST"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[3].U_RST"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[2].U_RST"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[1].U_RST"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/G_RST[0].U_RST"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[2].U_FD"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_GEN_DELAY[1].U_FD"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_RFDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[4].U_FD"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[3].U_FD"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[2].U_FD"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_GEN_DELAY[1].U_FD"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_RFDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_CDONE/I_YESLUT6.I_NO_RPM.I_YES_OREG.OUT_REG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_NS1/I_YESLUT6.I_NO_RPM.I_YES_OREG.OUT_REG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_SRLT_NE_1.U_NS0/I_YESLUT6.I_NO_RPM.I_YES_OREG.OUT_REG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_TRIG1"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_TRIG0"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_INTCAP_F.U_CAPWE1"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_INTCAP_F.U_CAPWE0"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_SCNT_CMP_Q"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_WCNT_LCMP_Q"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_WCNT_HCMP_Q"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[9].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[8].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[7].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[6].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[5].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[4].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[3].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[2].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[1].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_NO_TSEQ.I_SRLT_NE_1.U_SCNT/G[0].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[9].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[8].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[7].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[6].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[5].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[4].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[3].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[2].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[1].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_SRLT_NE_1.U_WCNT/G[0].U_FDRE"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[9].U_CAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[9].U_iCAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[8].U_CAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[8].U_iCAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[7].U_CAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[7].U_iCAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[6].U_CAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[6].U_iCAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[5].U_CAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[5].U_iCAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[4].U_CAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[4].U_iCAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[3].U_CAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[3].U_iCAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[2].U_CAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[2].U_iCAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[1].U_CAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[1].U_iCAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[0].U_CAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/I_INTCAP.F_CAP_ADDR[0].U_iCAP_ADDR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_ECR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_FULL"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_TRIGGER"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_ARM"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[0].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[1].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_OREG.I_YES_OREG.U_OREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ3.G_TW[11].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ3.G_TW[10].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ3.G_TW[9].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ3.G_TW[8].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ3.G_TW[7].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ3.G_TW[6].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ3.G_TW[5].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ3.G_TW[4].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ3.G_TW[3].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ3.G_TW[2].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ3.G_TW[1].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ3.G_TW[0].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ2.G_TW[11].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ2.G_TW[10].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ2.G_TW[9].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ2.G_TW[8].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ2.G_TW[7].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ2.G_TW[6].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ2.G_TW[5].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ2.G_TW[4].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ2.G_TW[3].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ2.G_TW[2].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ2.G_TW[1].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ2.G_TW[0].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ0.G_TW[11].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ0.G_TW[10].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ0.G_TW[9].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ0.G_TW[8].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ0.G_TW[7].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ0.G_TW[6].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ0.G_TW[5].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ0.G_TW[4].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ0.G_TW[3].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ0.G_TW[2].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ0.G_TW[1].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ0.G_TW[0].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_TQ1.G_TW[0].U_TQ"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[11].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[10].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[9].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[8].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[7].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[6].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[5].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[4].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[3].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[2].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[1].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[3].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[0].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[11].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[10].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[9].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[8].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[7].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[6].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[5].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[4].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[3].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[2].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[1].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[2].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[0].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[11].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[10].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[9].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[8].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[7].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[6].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[5].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[4].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[3].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[2].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[1].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_TRIG/U_TM/G_NMU[0].U_M/U_MU/I_MUT_GAND.U_match/I_CS_GAND.U_CS_GAND_SRL/I_ZQ.U_CS_GAND_SRL_ZQ/I_USE_INPUT_REG_NE0.G_GAND_DLY[0].U_GAND_IREG"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT0"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_DOUT1"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_STAT/U_RISING"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_POR"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT1"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_DOUT0"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT1"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_RST/U_ARM_XFER/U_DOUT0"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[11].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[10].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[9].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[7].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[6].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[5].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[4].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[3].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[2].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[1].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_x0/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[11].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[10].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[9].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[7].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[6].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[5].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[4].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[3].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[2].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[1].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[11].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[10].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[9].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[8].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[7].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[6].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[5].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[4].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[3].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[2].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[1].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register3/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[11].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[10].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[9].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[8].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[7].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[6].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[5].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[4].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[3].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[2].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[1].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[0].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[11].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[10].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[9].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[8].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[7].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[6].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[5].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[4].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[3].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[2].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[1].fde_used.u2"
-        BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[0].fde_used.u2"
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[0].fde_used.u2"
         BEL
         "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[11].fde_used.u2"
         BEL
@@ -964,13 +954,7 @@ TIMEGRP clock_generator_0_clock_generator_0_SIG_PLLE0_CLKOUT1 = BEL
         BEL
         "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[1].fde_used.u2"
         BEL
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[0].fde_used.u2"
-        PIN
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B18KGT0.u_ramb18/U_RAMB18E1_pins<33>"
-        PIN
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36_pins<65>"
-        PIN
-        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/i_ila/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_ZQ.U_CS_BRAM_CASCADE_ZQ/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36_pins<64>";
+        "adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/delay/srl_delay.synth_reg_srl_inst/partial_one.last_srl17e/reg_array[0].fde_used.u2";
 PIN processing_system7_0/processing_system7_0/PS7_i_pins<357> = BEL
         "processing_system7_0/processing_system7_0/PS7_i" PINNAME MAXIGP0ACLK;
 TIMEGRP clk_fpga_0 = BEL
@@ -1325,6 +1309,10 @@ TIMEGRP clk_fpga_0 = BEL
         BEL
         "axi_uartlite_0/axi_uartlite_0/UARTLITE_CORE_I/UARTLITE_RX_I/DELAY_16_I/INFERRED_GEN.data_15"
         BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_register_slice_bank/gen_reg_slot[3].register_slice_inst/reset"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_register_slice_bank/gen_reg_slot[2].register_slice_inst/reset"
+        BEL
         "axi_interconnect_1/axi_interconnect_1/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_pipe_2"
         BEL
         "axi_interconnect_1/axi_interconnect_1/si_converter_bank/gen_conv_slot[0].clock_conv_inst/interconnect_aresetn_pipe_1"
@@ -1345,6 +1333,8 @@ TIMEGRP clk_fpga_0 = BEL
         BEL
         "axi_interconnect_1/axi_interconnect_1/mi_converter_bank/gen_conv_slot[1].clock_conv_inst/m_axi_reset_out_n_i"
         BEL
+        "axi_interconnect_1/axi_interconnect_1/mi_converter_bank/gen_conv_slot[4].clock_conv_inst/m_axi_reset_out_n_i"
+        BEL
         "axi_interconnect_1/axi_interconnect_1/mi_converter_bank/gen_conv_slot[2].clock_conv_inst/m_axi_reset_out_n_i"
         BEL
         "axi_interconnect_1/axi_interconnect_1/mi_converter_bank/gen_conv_slot[3].clock_conv_inst/m_axi_reset_out_n_i"
@@ -1355,6 +1345,8 @@ TIMEGRP clk_fpga_0 = BEL
         BEL
         "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0"
         BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_5"
+        BEL
         "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_4"
         BEL
         "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_3"
@@ -1364,6 +1356,8 @@ TIMEGRP clk_fpga_0 = BEL
         "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_1"
         BEL
         "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_hot_0"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/reset"
         BEL
         "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/s_awvalid_reg_0"
         BEL
@@ -1457,6 +1451,8 @@ TIMEGRP clk_fpga_0 = BEL
         BEL
         "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/m_amesg_i_0"
         BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/s_ready_i_0"
+        BEL
         "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/grant_rnw"
         BEL
         "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/read_cnt_3"
@@ -1470,6 +1466,8 @@ TIMEGRP clk_fpga_0 = BEL
         "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/write_cs_FSM_FFd1"
         BEL
         "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/write_cs_FSM_FFd2"
+        BEL
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/s_axi_awready_i"
         BEL
         "axi_interconnect_1/axi_interconnect_1/mi_protocol_conv_bank/gen_protocol_slot[2].gen_prot_conv.conv_inst/gen_axilite.gen_axilite_conv.axilite_conv_inst/write_active"
         BEL
@@ -1511,15 +1509,43 @@ TIMEGRP clk_fpga_0 = BEL
         BEL
         "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_0_1"
         BEL
-        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.gen_decerr.decerr_slave_inst/s_axi_awready_i"
+        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/m_atarget_enc_1_2"
         BEL
-        "axi_interconnect_1/axi_interconnect_1/mi_register_slice_bank/gen_reg_slot[3].register_slice_inst/reset"
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_7"
         BEL
-        "axi_interconnect_1/axi_interconnect_1/mi_register_slice_bank/gen_reg_slot[2].register_slice_inst/reset"
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_6"
         BEL
-        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/reset"
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_5"
         BEL
-        "axi_interconnect_1/axi_interconnect_1/crossbar_samd/gen_sasd.crossbar_sasd_0/gen_crossbar.addr_arbiter_inst/s_ready_i_0"
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_4"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_3"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_2"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_data_counter_0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/write_state_FSM_FFd1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/write_state_FSM_FFd2"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_state_FSM_FFd1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_state_FSM_FFd2"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_prep_counter_1"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/read_prep_counter_0"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/S_AXI_RLAST_i"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/S_AXI_BVALID_i"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/write_ready"
+        BEL
+        "rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/edk_processor_b6dc80b1d4/memmap/S_AXI_RVALID_i"
         BEL "axi_gpio_led/axi_gpio_led/ip2bus_data_i_D1_31" BEL
         "axi_gpio_led/axi_gpio_led/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/state_FSM_FFd1"
         BEL

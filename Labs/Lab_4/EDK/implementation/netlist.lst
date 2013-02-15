@@ -1,9 +1,10 @@
-C:\GIT\Chilipepper\Labs\Lab_4\EDK\implementation\system.ngc 1360356900
-C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_processing_system7_0_wrapper.ngc 1360356783
-C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_clock_generator_0_wrapper.ngc 1360356878
-C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_adc_driver_axiw_0_wrapper.ngc 1360356856
-C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_mcu_axiw_0_wrapper.ngc 1360356869
-C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_axi_uartlite_0_wrapper.ngc 1360356850
-C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_axi_interconnect_1_wrapper.ngc 1360356861
-C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_axi_gpio_led_wrapper.ngc 1360356783
+C:\GIT\Chilipepper\Labs\Lab_4\EDK\implementation\system.ngc 1360884298
+C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_processing_system7_0_wrapper.ngc 1360884211
+C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_clock_generator_0_wrapper.ngc 1360884273
+C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_adc_driver_axiw_0_wrapper.ngc 1360884258
+C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_mcu_axiw_0_wrapper.ngc 1360884265
+C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_axi_uartlite_0_wrapper.ngc 1360884211
+C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_axi_interconnect_1_wrapper.ngc 1360884211
+C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_rx_axiw_0_wrapper.ngc 1360884281
+C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_axi_gpio_led_wrapper.ngc 1360884211
 OK

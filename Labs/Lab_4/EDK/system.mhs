@@ -35,7 +35,6 @@
  PORT mcu_axiw_0_tx_en_pin = mcu_axiw_0_tx_en, DIR = O
  PORT mcu_axiw_0_tr_sw_pin = mcu_axiw_0_tr_sw, DIR = O
  PORT clock_generator_0_rx_clk_pin = clock_generator_0_CLKOUT0, DIR = O, SIGIS = CLK, CLK_FREQ = 40000000
- PORT clock_generator_0_RST_pin = clock_generator_0_RST, DIR = I, SIGIS = RST
  PORT mcu_axiw_0_rx_en_pin = mcu_axiw_0_rx_en, DIR = O
  PORT axi_gpio_0_GPIO_IO_pin = axi_gpio_0_GPIO_IO, DIR = IO
  PORT axi_gpio_0_GPIO2_IO_pin = axi_gpio_0_GPIO2_IO, DIR = IO
@@ -142,6 +141,8 @@ BEGIN adc_driver_axiw
  PORT rxd = net_adc_driver_axiw_0_rxd_pin
  PORT blinky_adc_driver = adc_driver_axiw_0_blinky_adc_driver
  PORT sysgen_clk = clock_generator_0_CLKOUT1
+ PORT rx_q = adc_driver_axiw_0_rx_q
+ PORT rx_i = adc_driver_axiw_0_rx_i_0
 END
 
 BEGIN axi_interconnect
@@ -185,7 +186,7 @@ BEGIN clock_generator
  PARAMETER C_CLKOUT2_GROUP = PLLE0
  PORT CLKFBOUT = clock_generator_0_CLKFBOUT
  PORT CLKFBIN = clock_generator_0_CLKFBOUT
- PORT RST = clock_generator_0_RST
+ PORT RST = net_gnd
  PORT LOCKED = clock_generator_0_LOCKED
  PORT CLKIN = net_clock_generator_0_CLKIN_pin
  PORT CLKOUT0 = clock_generator_0_CLKOUT0
@@ -216,5 +217,17 @@ BEGIN axi_uartlite
  PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
  PORT RX = axi_uartlite_0_RX
  PORT TX = axi_uartlite_0_TX
+END
+
+BEGIN rx_axiw
+ PARAMETER INSTANCE = rx_axiw_0
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_BASEADDR = 0x72400000
+ PARAMETER C_HIGHADDR = 0x7240ffff
+ BUS_INTERFACE S_AXI = axi_interconnect_1
+ PORT axi_aclk = processing_system7_0_FCLK_CLK0
+ PORT rx_i = adc_driver_axiw_0_rx_i_0
+ PORT rx_q = adc_driver_axiw_0_rx_q
+ PORT sysgen_clk = clock_generator_0_CLKOUT2
 END
 

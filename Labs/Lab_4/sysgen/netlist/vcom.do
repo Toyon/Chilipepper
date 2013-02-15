@@ -6,5 +6,5 @@
 
 vlib work
 
-vcom  -nowarn 1 adc_driver.vhd
-vcom  -nowarn 1 adc_driver_cw.vhd
+vcom  -nowarn 1 rx.vhd
+vcom  -nowarn 1 rx_cw.vhd

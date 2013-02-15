@@ -1147,11 +1147,11 @@ sysgen_clk     |    1.164|         |         |         |
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.25 secs
+Total CPU time to Xst completion: 7.88 secs
  
 --> 
 
-Total memory usage is 471060 kilobytes
+Total memory usage is 471636 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  378 (   0 filtered)

@@ -1,2 +1,2 @@
-adc_driver.vhd
-adc_driver_cw.vhd
+rx.vhd
+rx_cw.vhd

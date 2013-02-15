@@ -311,16 +311,16 @@ namespace eval ::xilinx::dsptool::iseproject {
     #   Project
     #     ISE project name.
     #
-    #   Family
+    #   DSPFamily
     #     Device family into which the design is implemented.
     #
-    #   Device
+    #   DSPDevice
     #     Device into which the design is implemented.
     #
-    #   Package
+    #   DSPPackage
     #     Package for the device being targeted.
     #
-    #   Speed
+    #   DSPSpeed
     #     Speed grade of the device being targeted.
     #
     #   ProjectFiles
@@ -459,10 +459,10 @@ namespace eval ::xilinx::dsptool::iseproject {
         optional_parameter param::_VERBOSITY $[namespace current]::VERBOSITY_ERROR
 
         required_parameter param::Project
-        required_parameter param::Family lowercase_pp
-        required_parameter param::Device lowercase_pp
-        required_parameter param::Package lowercase_pp
-        required_parameter param::Speed
+        required_parameter param::DSPFamily lowercase_pp
+        required_parameter param::DSPDevice lowercase_pp
+        required_parameter param::DSPPackage lowercase_pp
+        required_parameter param::DSPSpeed
         required_parameter param::ProjectFiles
 
         optional_parameter param::CompilationFlow {general}
@@ -557,10 +557,10 @@ namespace eval ::xilinx::dsptool::iseproject {
     # Sets the general project settings.
     #-------------------------------------------------------------------------
     proc set_project_settings {} {
-        ise::project set family $param::Family
-        ise::project set device $param::Device
-        ise::project set package $param::Package
-        ise::project set speed $param::Speed
+        ise::project set family $param::DSPFamily
+        ise::project set device $param::DSPDevice
+        ise::project set package $param::DSPPackage
+        ise::project set speed $param::DSPSpeed
     }
 
     #-------------------------------------------------------------------------
@@ -663,7 +663,7 @@ namespace eval ::xilinx::dsptool::iseproject {
         }
 
         # Determine the type of value the "Map Register Duplication" property accepts
-        switch -- $param::Family {
+        switch -- $param::DSPFamily {
             "virtex" - "virtexe" - "spartan2" - "spartan2e" {
             }
             default {
@@ -679,7 +679,7 @@ namespace eval ::xilinx::dsptool::iseproject {
         }
 
         # Map properties
-        switch -glob -- $param::Family {
+        switch -glob -- $param::DSPFamily {
             "*virtex4*" - "*spartan3*" {
                 ise::project set {Map Effort Level} $param::MapEffortLevel
                 ise::project set {Perform Timing-Driven Packing and Placement} True
@@ -706,7 +706,7 @@ namespace eval ::xilinx::dsptool::iseproject {
             "hwcosim" {
                 ise::project set {FPGA Start-Up Clock} {JTAG Clock}
                 ise::project set {Drive Done Pin High} True
-                switch -- $param::Family {
+                switch -- $param::DSPFamily {
                     "virtex2" - "virtex2p" - "virtex4" - "virtex5" {
                         ise::project set {Configuration Pin M0} {Pull Up}
                         ise::project set {Configuration Pin M1} {Pull Down}

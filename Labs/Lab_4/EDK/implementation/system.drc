@@ -1,13 +1,13 @@
-Release 14.3 Drc P.40xd (nt64)
+Release 14.4 Drc P.49d (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Wed Dec 12 13:38:49 2012
+Thu Feb 14 15:27:48 2013
 
 drc -z system.ncd system.pcf
 
 WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   adc_driver_axiw_0/adc_driver_axiw_0/sysgen_dut/adc_driver_x0/chipscope/contro
-   l<13> is sourced by a combinatorial pin. This is not good design practice.
-   Use the CE pin to control the loading of data into the flip-flop.
+   rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/control<13> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 DRC detected 0 errors and 1 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

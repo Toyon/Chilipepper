@@ -7,23 +7,10 @@ C:\Xilinx\14.4\ISE_DS\ISE\;C:\Xilinx\14.4\ISE_DS\EDK.
    "system" is an NCD, version 3.2, device xc7z020, package clg484, speed -1
 Opened constraints file system.pcf.
 
-Fri Feb 08 12:58:08 2013
+Thu Feb 14 15:27:48 2013
 
 C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -w system.ncd 
 
-ERROR:Bitgen:342 - This design contains pins which have locations (LOC) that are
-   not user-assigned or I/O Standards (IOSTANDARD) that are not user-assigned. 
-   This may cause I/O contention or incompatibility with the board power or
-   connectivity affecting performance, signal integrity or in extreme cases
-   cause damage to the device or the components to which it is connected.  To
-   prevent this error, it is highly suggested to specify all pin locations and
-   I/O standards to avoid potential contention or conflicts and allow proper
-   bitstream creation.  To demote this error to a warning and allow bitstream
-   creation with unspecified I/O location or standards, you may apply the
-   following bitgen switch: -g UnconstrainedPins:Allow
-This message applies to the following I/O ports:
-   clock_generator_0_RST_pin
-ERROR:Bitgen:157 - Bitgen will terminate because of the above errors.
 Summary of Bitgen Options:
 +----------------------+----------------------+
 | Option Name          | Current Setting      |
@@ -104,3 +91,13 @@ Summary of Bitgen Options:
 There were 0 CONFIG constraint(s) processed from system.pcf.
 
 
+Running DRC.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   rx_axiw_0/rx_axiw_0/sysgen_dut/rx_x0/chipscope/control<13> is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+DRC detected 0 errors and 1 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
+Creating bit map...
+Saving bit stream in "system.bit".
+Bitstream generation is complete.

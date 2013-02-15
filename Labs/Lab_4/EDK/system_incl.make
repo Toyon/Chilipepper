@@ -61,19 +61,36 @@ SIMGEN_OPTIONS = -p $(DEVICE) -lang $(XPS_HDL_LANG) -intstyle $(INTSTYLE) $(SEAR
 
 
 CORE_STATE_DEVELOPMENT_FILES = pcores/adc_driver_axiw_v1_00_a/netlist/xlpersistentdff.ngc \
+pcores/adc_driver_axiw_v1_00_a/netlist/ila_1_05_a_872c74a73e70f3f7.ngc \
 pcores/adc_driver_axiw_v1_00_a/netlist/ila_1_05_a_7cccf39db74784bd.ngc \
 pcores/adc_driver_axiw_v1_00_a/netlist/ila_1_05_a_1729a366724ceaac.ngc \
 pcores/adc_driver_axiw_v1_00_a/netlist/ila_1_05_a_04082f38f51d3966.ngc \
+pcores/adc_driver_axiw_v1_00_a/netlist/icon_1_06_a_a814991b9aa9824e.ngc \
 pcores/adc_driver_axiw_v1_00_a/netlist/icon_1_06_a_69d945462da1db7c.ngc \
 pcores/adc_driver_axiw_v1_00_a/netlist/cntr_11_0_8d5792a6ba24605d.ngc \
+pcores/adc_driver_axiw_v1_00_a/netlist/cntr_11_0_7715ef4ac490a039.ngc \
 pcores/mcu_axiw_v1_00_a/netlist/xlpersistentdff.ngc \
 pcores/mcu_axiw_v1_00_a/netlist/cntr_11_0_8d5792a6ba24605d.ngc \
+pcores/rx_axiw_v1_00_a/netlist/xlpersistentdff.ngc \
+pcores/rx_axiw_v1_00_a/netlist/ila_1_05_a_e89dd420ec1efd2c.ngc \
+pcores/rx_axiw_v1_00_a/netlist/ila_1_05_a_872c74a73e70f3f7.ngc \
+pcores/rx_axiw_v1_00_a/netlist/ila_1_05_a_7cccf39db74784bd.ngc \
+pcores/rx_axiw_v1_00_a/netlist/ila_1_05_a_4ce42aa68269ef5d.ngc \
+pcores/rx_axiw_v1_00_a/netlist/ila_1_05_a_1729a366724ceaac.ngc \
+pcores/rx_axiw_v1_00_a/netlist/ila_1_05_a_04082f38f51d3966.ngc \
+pcores/rx_axiw_v1_00_a/netlist/icon_1_06_a_a814991b9aa9824e.ngc \
+pcores/rx_axiw_v1_00_a/netlist/icon_1_06_a_69d945462da1db7c.ngc \
+pcores/rx_axiw_v1_00_a/netlist/cntr_11_0_8d5792a6ba24605d.ngc \
+pcores/rx_axiw_v1_00_a/netlist/cntr_11_0_7715ef4ac490a039.ngc \
 pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd \
 pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_cw.vhd \
 pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_axiw.vhd \
 pcores/mcu_axiw_v1_00_a/hdl/vhdl/mcu.vhd \
 pcores/mcu_axiw_v1_00_a/hdl/vhdl/mcu_cw.vhd \
-pcores/mcu_axiw_v1_00_a/hdl/vhdl/mcu_axiw.vhd
+pcores/mcu_axiw_v1_00_a/hdl/vhdl/mcu_axiw.vhd \
+pcores/rx_axiw_v1_00_a/hdl/vhdl/rx.vhd \
+pcores/rx_axiw_v1_00_a/hdl/vhdl/rx_cw.vhd \
+pcores/rx_axiw_v1_00_a/hdl/vhdl/rx_axiw.vhd
 
 WRAPPER_NGC_FILES = implementation/system_processing_system7_0_wrapper.ngc \
 implementation/system_adc_driver_axiw_0_wrapper.ngc \
@@ -81,7 +98,8 @@ implementation/system_axi_interconnect_1_wrapper.ngc \
 implementation/system_mcu_axiw_0_wrapper.ngc \
 implementation/system_clock_generator_0_wrapper.ngc \
 implementation/system_axi_gpio_led_wrapper.ngc \
-implementation/system_axi_uartlite_0_wrapper.ngc
+implementation/system_axi_uartlite_0_wrapper.ngc \
+implementation/system_rx_axiw_0_wrapper.ngc
 
 POSTSYN_NETLIST = implementation/$(SYSTEM).ngc
 

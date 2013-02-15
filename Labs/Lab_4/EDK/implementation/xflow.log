@@ -48,6 +48,9 @@ Loading design module
 "C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_axi_interconnect_1_wrap
 per.ngc"...
 Loading design module
+"C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_rx_axiw_0_wrapper.ngc".
+..
+Loading design module
 "C:/GIT/Chilipepper/Labs/Lab_4/EDK/implementation/system_axi_gpio_led_wrapper.ng
 c"...
 Applying constraints in
@@ -145,6 +148,14 @@ WARNING:NgdBuild:443 - SFF primitive
    'mcu_axiw_0/mcu_axiw_0/sysgen_dut/default_clock_driver_mcu_x0/xlclockdriver_1
    /clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_com
    p' has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'rx_axiw_0/rx_axiw_0/sysgen_dut/default_clock_driver_rx_x0/xlclockdriver_1/cl
+   r_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp'
+   has unconnected output pin
+WARNING:NgdBuild:443 - SFF primitive
+   'rx_axiw_0/rx_axiw_0/sysgen_dut/plb_clock_driver_rx_x0/xlclockdriver_1/clr_re
+   g/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp' has
+   unconnected output pin
 WARNING:NgdBuild:452 - logical net 'clock_generator_0_CLKFBOUT' has no driver
 WARNING:NgdBuild:452 - logical net 'N131' has no driver
 WARNING:NgdBuild:452 - logical net 'N132' has no driver
@@ -282,11 +293,11 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings: 138
+  Number of warnings: 140
 
 Writing NGD file "system.ngd" ...
-Total REAL time to NGDBUILD completion:  26 sec
-Total CPU time to NGDBUILD completion:   26 sec
+Total REAL time to NGDBUILD completion:  20 sec
+Total CPU time to NGDBUILD completion:   19 sec
 
 Writing NGDBUILD log file "system.bld"...
 
@@ -316,10 +327,6 @@ WARNING:LIT:701 - PAD symbol "processing_system7_0_PS_PORB_pin" has an undefined
    IOSTANDARD.
 WARNING:LIT:702 - PAD symbol "processing_system7_0_PS_PORB_pin" is not
    constrained (LOC) to a specific location.
-WARNING:LIT:701 - PAD symbol "clock_generator_0_RST_pin" has an undefined
-   IOSTANDARD.
-WARNING:LIT:702 - PAD symbol "clock_generator_0_RST_pin" is not constrained
-   (LOC) to a specific location.
 Mapping design into LUTs...
 Writing file system_map.ngm...
 Running directed packing...
@@ -332,92 +339,88 @@ Total REAL time at the beginning of Placer: 31 secs
 Total CPU  time at the beginning of Placer: 30 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:a7a5a1bc) REAL time: 34 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:70cf788c) REAL time: 33 secs 
 
 Phase 2.7  Design Feasibility Check
-INFO:Place:834 - Only a subset of IOs are locked. Out of 29 IOs, 28 are locked
-   and 1 are not locked. If you would like to print the names of these IOs,
-   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:a7a5a1bc) REAL time: 34 secs 
+Phase 2.7  Design Feasibility Check (Checksum:70cf788c) REAL time: 34 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:c97d2164) REAL time: 34 secs 
+Phase 3.31  Local Placement Optimization (Checksum:96a59eb) REAL time: 34 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-......
+
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:75a3dbee) REAL time: 39 secs 
+(Checksum:376a9057) REAL time: 39 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:75a3dbee) REAL time: 39 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:376a9057) REAL time: 39 secs 
 
 Phase 6.3  Local Placement Optimization
-......
-Phase 6.3  Local Placement Optimization (Checksum:7bedf436) REAL time: 40 secs 
+Phase 6.3  Local Placement Optimization (Checksum:376a9057) REAL time: 39 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:75eda68e) REAL time: 40 secs 
+Phase 7.5  Local Placement Optimization (Checksum:376a9057) REAL time: 39 secs 
 
 Phase 8.8  Global Placement
-....................................
-.....................
-...........................................................................................................................................................................
-..................................................................
-Phase 8.8  Global Placement (Checksum:ffbe4667) REAL time: 1 mins 14 secs 
+.................................
+........................
+...............................................................................................
+..............................................................................................................................................................
+Phase 8.8  Global Placement (Checksum:f982f711) REAL time: 1 mins 6 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:ffbe4667) REAL time: 1 mins 14 secs 
+Phase 9.5  Local Placement Optimization (Checksum:f982f711) REAL time: 1 mins 6 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:2a1784cd) REAL time: 1 mins 17 secs 
+Phase 10.18  Placement Optimization (Checksum:380b88ef) REAL time: 1 mins 8 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:2a1784cd) REAL time: 1 mins 17 secs 
+Phase 11.5  Local Placement Optimization (Checksum:380b88ef) REAL time: 1 mins 8 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:2a1784cd) REAL time: 1 mins 17 secs 
+Phase 12.34  Placement Validation (Checksum:380b88ef) REAL time: 1 mins 8 secs 
 
-Total REAL time to Placer completion: 1 mins 17 secs 
-Total CPU  time to Placer completion: 1 mins 17 secs 
+Total REAL time to Placer completion: 1 mins 9 secs 
+Total CPU  time to Placer completion: 1 mins 8 secs 
 Running post-placement packing...
 Writing output files...
 
 Design Summary:
 Number of errors:      0
-Number of warnings:   10
+Number of warnings:    7
 Slice Logic Utilization:
-  Number of Slice Registers:                   717 out of 106,400    1%
-    Number used as Flip Flops:                 716
+  Number of Slice Registers:                   708 out of 106,400    1%
+    Number used as Flip Flops:                 707
     Number used as Latches:                      1
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        806 out of  53,200    1%
-    Number used as logic:                      702 out of  53,200    1%
-      Number using O6 output only:             509
-      Number using O5 output only:              98
-      Number using O5 and O6:                   95
+  Number of Slice LUTs:                        839 out of  53,200    1%
+    Number used as logic:                      742 out of  53,200    1%
+      Number using O6 output only:             527
+      Number using O5 output only:             105
+      Number using O5 and O6:                  110
       Number used as ROM:                        0
-    Number used as Memory:                      86 out of  17,400    1%
+    Number used as Memory:                      81 out of  17,400    1%
       Number used as Dual Port RAM:              0
       Number used as Single Port RAM:            0
-      Number used as Shift Register:            86
-        Number using O6 output only:            65
+      Number used as Shift Register:            81
+        Number using O6 output only:            76
         Number using O5 output only:             0
-        Number using O5 and O6:                 21
-    Number used exclusively as route-thrus:     18
-      Number with same-slice register load:      4
+        Number using O5 and O6:                  5
+    Number used exclusively as route-thrus:     16
+      Number with same-slice register load:      5
       Number with same-slice carry load:         9
-      Number with other load:                    5
+      Number with other load:                    2
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   437 out of  13,300    3%
-  Number of LUT Flip Flop pairs used:        1,086
-    Number with an unused Flip Flop:           401 out of   1,086   36%
-    Number with an unused LUT:                 280 out of   1,086   25%
-    Number of fully used LUT-FF pairs:         405 out of   1,086   37%
-    Number of unique control sets:              98
+  Number of occupied Slices:                   425 out of  13,300    3%
+  Number of LUT Flip Flop pairs used:        1,081
+    Number with an unused Flip Flop:           390 out of   1,081   36%
+    Number with an unused LUT:                 242 out of   1,081   22%
+    Number of fully used LUT-FF pairs:         449 out of   1,081   41%
+    Number of unique control sets:             100
     Number of slice register sites lost
-      to control set restrictions:             464 out of 106,400    1%
+      to control set restrictions:             454 out of 106,400    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -428,14 +431,14 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        29 out of     200   14%
-    Number of LOCed IOBs:                       28 out of      29   96%
+  Number of bonded IOBs:                        28 out of     200   14%
+    Number of LOCed IOBs:                       28 out of      28  100%
   Number of bonded IOPAD:                      130 out of     130  100%
     IOB Flip Flops:                             21
 
 Specific Feature Utilization:
-  Number of RAMB36E1/FIFO36E1s:                  1 out of     140    1%
-    Number using RAMB36E1 only:                  1
+  Number of RAMB36E1/FIFO36E1s:                  6 out of     140    4%
+    Number using RAMB36E1 only:                  6
     Number using FIFO36E1 only:                  0
   Number of RAMB18E1/FIFO18E1s:                  1 out of     280    1%
     Number using RAMB18E1 only:                  1
@@ -475,11 +478,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                2.74
+Average Fanout of Non-Clock Nets:                3.08
 
-Peak Memory Usage:  842 MB
-Total REAL time to MAP completion:  1 mins 21 secs 
-Total CPU time to MAP completion:   1 mins 20 secs 
+Peak Memory Usage:  844 MB
+Total REAL time to MAP completion:  1 mins 10 secs 
+Total CPU time to MAP completion:   1 mins 10 secs 
 
 Mapping completed.
 See MAP report file "system_map.mrp" for details.
@@ -515,9 +518,6 @@ Device Utilization Summary:
    Number of BSCANs                          1 out of 4      25%
    Number of BUFGs                           5 out of 32     15%
    Number of ILOGICE2s                      15 out of 200     7%
-   Number of External IOBs                   1 out of 200     1%
-      Number of LOCed IOBs                   0 out of 1       0%
-
    Number of External IOB33s                28 out of 200    14%
       Number of LOCed IOB33s                28 out of 28    100%
 
@@ -528,15 +528,15 @@ Device Utilization Summary:
    Number of PLLE2_ADVs                      1 out of 4      25%
    Number of PS7s                            1 out of 1     100%
    Number of RAMB18E1s                       1 out of 280     1%
-   Number of RAMB36E1s                       1 out of 140     1%
-   Number of Slices                        437 out of 13300   3%
-   Number of Slice Registers               717 out of 106400  1%
-      Number used as Flip Flops            716
+   Number of RAMB36E1s                       6 out of 140     4%
+   Number of Slices                        425 out of 13300   3%
+   Number of Slice Registers               708 out of 106400  1%
+      Number used as Flip Flops            707
       Number used as Latches                 1
       Number used as LatchThrus              0
 
-   Number of Slice LUTS                    806 out of 53200   1%
-   Number of Slice LUT-Flip Flop pairs    1054 out of 53200   1%
+   Number of Slice LUTS                    839 out of 53200   1%
+   Number of Slice LUT-Flip Flop pairs    1046 out of 53200   1%
 
 
 Overall effort level (-ol):   High 
@@ -544,33 +544,33 @@ Router effort level (-rl):    High
 
 INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more information, see the TSI report.  Please consult the Xilinx
    Command Line Tools User Guide for information on generating a TSI report.
-Starting initial Timing Analysis.  REAL time: 21 secs 
-Finished initial Timing Analysis.  REAL time: 21 secs 
+Starting initial Timing Analysis.  REAL time: 16 secs 
+Finished initial Timing Analysis.  REAL time: 16 secs 
 
 Starting Router
 
 
-Phase  1  : 6397 unrouted;      REAL time: 23 secs 
+Phase  1  : 7439 unrouted;      REAL time: 17 secs 
 
-Phase  2  : 3623 unrouted;      REAL time: 24 secs 
+Phase  2  : 4094 unrouted;      REAL time: 18 secs 
 
-Phase  3  : 973 unrouted;      REAL time: 26 secs 
+Phase  3  : 1009 unrouted;      REAL time: 21 secs 
 
-Phase  4  : 973 unrouted; (Setup:0, Hold:7991, Component Switching Limit:0)     REAL time: 31 secs 
+Phase  4  : 1009 unrouted; (Setup:0, Hold:10506, Component Switching Limit:0)     REAL time: 25 secs 
 
 Updating file: system.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:7356, Component Switching Limit:0)     REAL time: 32 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:9566, Component Switching Limit:0)     REAL time: 26 secs 
 
-Phase  6  : 0 unrouted; (Setup:0, Hold:7356, Component Switching Limit:0)     REAL time: 32 secs 
+Phase  6  : 0 unrouted; (Setup:0, Hold:9566, Component Switching Limit:0)     REAL time: 26 secs 
 
-Phase  7  : 0 unrouted; (Setup:0, Hold:7356, Component Switching Limit:0)     REAL time: 32 secs 
+Phase  7  : 0 unrouted; (Setup:0, Hold:9566, Component Switching Limit:0)     REAL time: 26 secs 
 
-Phase  8  : 0 unrouted; (Setup:0, Hold:7356, Component Switching Limit:0)     REAL time: 32 secs 
+Phase  8  : 0 unrouted; (Setup:0, Hold:9566, Component Switching Limit:0)     REAL time: 26 secs 
 
-Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 33 secs 
-Total REAL time to Router completion: 33 secs 
-Total CPU time to Router completion: 32 secs 
+Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 26 secs 
+Total REAL time to Router completion: 26 secs 
+Total CPU time to Router completion: 26 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -589,39 +589,33 @@ Generating Clock Report
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
 |processing_system7_0 |              |      |      |            |             |
-|          _FCLK_CLK0 |BUFGCTRL_X0Y28| No   |  153 |  0.432     |  2.072      |
+|          _FCLK_CLK0 |BUFGCTRL_X0Y28| No   |  169 |  0.446     |  2.072      |
 +---------------------+--------------+------+------+------------+-------------+
 |clock_generator_0_CL |              |      |      |            |             |
-|               KOUT1 |BUFGCTRL_X0Y31| No   |  128 |  0.262     |  1.887      |
+|               KOUT2 |BUFGCTRL_X0Y29| No   |  102 |  0.192     |  1.883      |
 +---------------------+--------------+------+------+------------+-------------+
-|adc_driver_axiw_0/ad |              |      |      |            |             |
-|c_driver_axiw_0/sysg |              |      |      |            |             |
-|en_dut/adc_driver_x0 |              |      |      |            |             |
-|/chipscope/control<0 |              |      |      |            |             |
-|                   > | BUFGCTRL_X0Y0| No   |   53 |  0.146     |  1.768      |
+|rx_axiw_0/rx_axiw_0/ |              |      |      |            |             |
+|sysgen_dut/rx_x0/chi |              |      |      |            |             |
+|   pscope/control<0> | BUFGCTRL_X0Y0| No   |   58 |  0.133     |  1.825      |
 +---------------------+--------------+------+------+------------+-------------+
 |clock_generator_0_CL |              |      |      |            |             |
-|               KOUT2 |BUFGCTRL_X0Y29| No   |    9 |  0.035     |  1.883      |
-+---------------------+--------------+------+------+------------+-------------+
-|adc_driver_axiw_0/ad |              |      |      |            |             |
-|c_driver_axiw_0/sysg |              |      |      |            |             |
-|en_dut/adc_driver_x0 |              |      |      |            |             |
-|/chipscope/i_icon_fo |              |      |      |            |             |
-|r_syn/U0/iUPDATE_OUT |              |      |      |            |             |
-|                     |         Local|      |    1 |  0.000     |  0.909      |
-+---------------------+--------------+------+------+------------+-------------+
-|adc_driver_axiw_0/ad |              |      |      |            |             |
-|c_driver_axiw_0/sysg |              |      |      |            |             |
-|en_dut/adc_driver_x0 |              |      |      |            |             |
-|/chipscope/control<1 |              |      |      |            |             |
-|                  3> |         Local|      |    5 |  0.000     |  0.860      |
+|               KOUT1 |BUFGCTRL_X0Y31| No   |   37 |  0.122     |  1.887      |
 +---------------------+--------------+------+------+------------+-------------+
 |clock_generator_0_pl |              |      |      |            |             |
 |          l_pin_IBUF |         Local|      |    1 |  0.000     |  1.306      |
 +---------------------+--------------+------+------+------------+-------------+
+|rx_axiw_0/rx_axiw_0/ |              |      |      |            |             |
+|sysgen_dut/rx_x0/chi |              |      |      |            |             |
+|pscope/i_icon_for_sy |              |      |      |            |             |
+|    n/U0/iUPDATE_OUT |         Local|      |    1 |  0.000     |  0.723      |
++---------------------+--------------+------+------+------------+-------------+
 |clock_generator_0/cl |              |      |      |            |             |
 |ock_generator_0/SIG_ |              |      |      |            |             |
 |      PLLE0_CLKFBOUT |         Local|      |    1 |  0.000     |  0.014      |
++---------------------+--------------+------+------+------------+-------------+
+|rx_axiw_0/rx_axiw_0/ |              |      |      |            |             |
+|sysgen_dut/rx_x0/chi |              |      |      |            |             |
+|  pscope/control<13> |         Local|      |    5 |  0.000     |  1.064      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -643,26 +637,26 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_ | SETUP       |     1.855ns|     8.145ns|       0|           0
-  0" 100 MHz HIGH 50%                       | HOLD        |     0.014ns|            |       0|           0
+  TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_ | SETUP       |     1.426ns|     8.574ns|       0|           0
+  0" 100 MHz HIGH 50%                       | HOLD        |     0.066ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   TS_clock_generator_0_pll = PERIOD TIMEGRP | MINLOWPULSE |    15.000ns|    10.000ns|       0|           0
    "clock_generator_0_pll" 40 MHz HIGH      |             |            |            |        |            
       50%                                   |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_clock_generator_0_clock_generator_0_SI | SETUP       |    21.070ns|     3.930ns|       0|           0
-  G_PLLE0_CLKOUT1 = PERIOD TIMEGRP          | HOLD        |     0.006ns|            |       0|           0
-  "clock_generator_0_clock_generator_0_SIG_ |             |            |            |        |            
-  PLLE0_CLKOUT1"         TS_clock_generator |             |            |            |        |            
-  _0_pll HIGH 50%                           |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_clock_generator_0_clock_generator_0_SI | SETUP       |    47.378ns|     2.622ns|       0|           0
-  G_PLLE0_CLKOUT2 = PERIOD TIMEGRP          | HOLD        |     0.264ns|            |       0|           0
+  TS_clock_generator_0_clock_generator_0_SI | SETUP       |    19.523ns|    10.954ns|       0|           0
+  G_PLLE0_CLKOUT2 = PERIOD TIMEGRP          | HOLD        |     0.019ns|            |       0|           0
   "clock_generator_0_clock_generator_0_SIG_ |             |            |            |        |            
   PLLE0_CLKOUT2"         TS_clock_generator |             |            |            |        |            
   _0_pll * 0.5 HIGH 50%                     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_axi_interconnect_1_reset_resync_ | SETUP       |         N/A|     1.100ns|     N/A|           0
+  TS_clock_generator_0_clock_generator_0_SI | SETUP       |    21.869ns|     3.131ns|       0|           0
+  G_PLLE0_CLKOUT1 = PERIOD TIMEGRP          | HOLD        |     0.174ns|            |       0|           0
+  "clock_generator_0_clock_generator_0_SIG_ |             |            |            |        |            
+  PLLE0_CLKOUT1"         TS_clock_generator |             |            |            |        |            
+  _0_pll HIGH 50%                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  PATH "TS_axi_interconnect_1_reset_resync_ | SETUP       |         N/A|     1.061ns|     N/A|           0
   path" TIG                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
 
@@ -677,10 +671,10 @@ Derived Constraints for TS_clock_generator_0_pll
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_clock_generator_0_pll       |     25.000ns|     10.000ns|      3.930ns|            0|            0|            0|         1674|
-| TS_clock_generator_0_clock_gen|     25.000ns|      3.930ns|          N/A|            0|            0|         1347|            0|
+|TS_clock_generator_0_pll       |     25.000ns|     10.000ns|      5.477ns|            0|            0|            0|         1961|
+| TS_clock_generator_0_clock_gen|     25.000ns|      3.131ns|          N/A|            0|            0|          439|            0|
 | erator_0_SIG_PLLE0_CLKOUT1    |             |             |             |             |             |             |             |
-| TS_clock_generator_0_clock_gen|     50.000ns|      2.622ns|          N/A|            0|            0|          327|            0|
+| TS_clock_generator_0_clock_gen|     50.000ns|     10.954ns|          N/A|            0|            0|         1522|            0|
 | erator_0_SIG_PLLE0_CLKOUT2    |             |             |             |             |             |             |             |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
@@ -696,8 +690,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 36 secs 
-Total CPU time to PAR completion: 34 secs 
+Total REAL time to PAR completion: 30 secs 
+Total CPU time to PAR completion: 27 secs 
 
 Peak Memory Usage:  682 MB
 
@@ -759,19 +753,19 @@ Timing summary:
 
 Timing errors: 0  Score: 0 (Setup/Max: 0, Hold: 0)
 
-Constraints cover 8445 paths, 0 nets, and 3342 connections
+Constraints cover 9551 paths, 0 nets, and 3652 connections
 
 Design statistics:
-   Minimum period:  10.000ns (Maximum frequency: 100.000MHz)
+   Minimum period:  10.954ns (Maximum frequency:  91.291MHz)
 
 
-Analysis completed Fri Feb 08 12:57:53 2013
+Analysis completed Thu Feb 14 15:27:31 2013
 --------------------------------------------------------------------------------
 
 Generating Report ...
 
 Number of warnings: 0
 Number of info messages: 4
-Total time: 15 secs 
+Total time: 20 secs 
 
 

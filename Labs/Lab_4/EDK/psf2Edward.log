@@ -1,63 +1,63 @@
 WARNING:EDK:4092 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 46 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 45 
 WARNING:EDK:4092 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 147 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 148 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 172 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 173 
 WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_led - Pre-Production
    version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 196 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 197 
 WARNING:EDK:4092 - IPNAME: axi_uartlite, INSTANCE: axi_uartlite_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 210 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 211 
 WARNING:EDK:4092 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 46 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 45 
 WARNING:EDK:4092 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 147 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 148 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 172 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 173 
 WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_led - Pre-Production
    version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 196 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 197 
 WARNING:EDK:4092 - IPNAME: axi_uartlite, INSTANCE: axi_uartlite_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 210 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 211 
 WARNING:EDK:4092 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 46 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 45 
 WARNING:EDK:4092 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 147 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 148 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 172 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 173 
 WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_led - Pre-Production
    version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 196 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 197 
 WARNING:EDK:4092 - IPNAME: axi_uartlite, INSTANCE: axi_uartlite_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 210 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 211 
 WARNING:EDK:4092 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 46 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 45 
 WARNING:EDK:4092 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 147 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 148 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 172 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 173 
 WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_led - Pre-Production
    version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 196 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 197 
 WARNING:EDK:4092 - IPNAME: axi_uartlite, INSTANCE: axi_uartlite_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 210 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 211 
 WARNING:EDK:2486 - The bitwidth 52 of new value 0xc00000000fe81 is greater than
    32
 WARNING:EDK:4131 - IPNAME: ps7_usb_0, PROPERTY: C_INTERCONNECT_M_AXI_BASE_ID -
@@ -530,6 +530,7 @@ axi_uartlite_0	ps7_axi_interconnect_0->axi_interconnect_1
   (0x61600000-0x6160ffff) mcu_axiw_0	ps7_axi_interconnect_0->axi_interconnect_1
   (0x70e00000-0x70e0ffff)
 adc_driver_axiw_0	ps7_axi_interconnect_0->axi_interconnect_1
+  (0x72400000-0x7240ffff) rx_axiw_0	ps7_axi_interconnect_0->axi_interconnect_1
   (0xe0001000-0xe0001fff) ps7_uart_1	ps7_axi_interconnect_0
   (0xe0002000-0xe0002fff) ps7_usb_0	ps7_axi_interconnect_0
   (0xe000a000-0xe000afff) ps7_gpio_0	ps7_axi_interconnect_0
@@ -562,6 +563,7 @@ axi_uartlite_0	ps7_axi_interconnect_0->axi_interconnect_1
   (0x61600000-0x6160ffff) mcu_axiw_0	ps7_axi_interconnect_0->axi_interconnect_1
   (0x70e00000-0x70e0ffff)
 adc_driver_axiw_0	ps7_axi_interconnect_0->axi_interconnect_1
+  (0x72400000-0x7240ffff) rx_axiw_0	ps7_axi_interconnect_0->axi_interconnect_1
   (0xe0001000-0xe0001fff) ps7_uart_1	ps7_axi_interconnect_0
   (0xe0002000-0xe0002fff) ps7_usb_0	ps7_axi_interconnect_0
   (0xe000a000-0xe000afff) ps7_gpio_0	ps7_axi_interconnect_0

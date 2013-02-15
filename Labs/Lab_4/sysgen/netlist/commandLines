@@ -6,3 +6,8 @@ C:/Xilinx/14.2/ISE_DS/ISE/sysgen/bin/nt64/saferun.exe -a C:/QPSK_Projects/projec
 C:/Xilinx/14.2/ISE_DS/ISE/sysgen/bin/nt64/saferun.exe -a C:/QPSK_Projects/project_2/sysgen/netlist/adc_driver_cw_import.log -- c:/xilinx/14.2/ise_ds/ise//bin/nt64/xtclsh.exe ProjectGeneration.tcl
 C:/Xilinx/14.2/ISE_DS/ISE/sysgen/bin/nt64/saferun.exe -a C:/QPSK_Projects/project_2/sysgen/netlist/adc_driver_cw_import.log -- c:/xilinx/14.2/ise_ds/ise//bin/nt64/xtclsh.exe ProjectGeneration.tcl
 C:/Xilinx/14.2/ISE_DS/ISE/sysgen/bin/nt64/saferun.exe -a C:/QPSK_Projects/project_2/sysgen/netlist/adc_driver_cw_import.log -- c:/xilinx/14.2/ise_ds/ise//bin/nt64/xtclsh.exe ProjectGeneration.tcl
+C:/Xilinx/14.4/ISE_DS/ISE/sysgen/bin/nt64/saferun.exe -a C:/GIT/Chilipepper/Labs/Lab_4/sysgen/netlist/adc_driver_cw_import.log -- c:/xilinx/14.4/ise_ds/ise//bin/nt64/xtclsh.exe ProjectGeneration.tcl
+C:/Xilinx/14.4/ISE_DS/ISE/sysgen/bin/nt64/saferun.exe -a C:/GIT/Chilipepper/Labs/Lab_4/sysgen/netlist/adc_driver_cw_import.log -- c:/xilinx/14.4/ise_ds/ise//bin/nt64/xtclsh.exe ProjectGeneration.tcl
+C:/Xilinx/14.4/ISE_DS/ISE/sysgen/bin/nt64/saferun.exe -a C:/GIT/Chilipepper/Labs/Lab_4/sysgen/netlist/adc_driver_cw_import.log -- c:/xilinx/14.4/ise_ds/ise//bin/nt64/xtclsh.exe ProjectGeneration.tcl
+C:/Xilinx/14.4/ISE_DS/ISE/sysgen/bin/nt64/saferun.exe -a C:/GIT/Chilipepper/Labs/Lab_4/sysgen/netlist/rx_cw_import.log -- c:/xilinx/14.4/ise_ds/ise//bin/nt64/xtclsh.exe ProjectGeneration.tcl
+C:/Xilinx/14.4/ISE_DS/ISE/sysgen/bin/nt64/saferun.exe -a C:/GIT/Chilipepper/Labs/Lab_4/sysgen/netlist/rx_cw_import.log -- c:/xilinx/14.4/ise_ds/ise//bin/nt64/xtclsh.exe ProjectGeneration.tcl

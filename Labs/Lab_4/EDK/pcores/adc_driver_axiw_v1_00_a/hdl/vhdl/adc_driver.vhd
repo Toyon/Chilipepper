@@ -22,12 +22,12 @@
 --    devices, or systems.  Use in such applications are expressly            --
 --    prohibited.                                                             --
 --                                                                            --
---    (c) Copyright 1995-2012 Xilinx, Inc.                                    --
+--    (c) Copyright 1995-2013 Xilinx, Inc.                                    --
 --    All rights reserved.                                                    --
 --------------------------------------------------------------------------------
 --------------------------------------------------------------------------------
--- You must compile the wrapper file cntr_11_0_8d5792a6ba24605d.vhd when simulating
--- the core, cntr_11_0_8d5792a6ba24605d. When compiling the wrapper file, be sure to
+-- You must compile the wrapper file cntr_11_0_7715ef4ac490a039.vhd when simulating
+-- the core, cntr_11_0_7715ef4ac490a039. When compiling the wrapper file, be sure to
 -- reference the XilinxCoreLib VHDL simulation library. For detailed
 -- instructions, please refer to the "CORE Generator Help".
 
@@ -40,18 +40,18 @@ USE ieee.std_logic_1164.ALL;
 -- synthesis translate_off
 LIBRARY XilinxCoreLib;
 -- synthesis translate_on
-ENTITY cntr_11_0_8d5792a6ba24605d IS
+ENTITY cntr_11_0_7715ef4ac490a039 IS
   PORT (
     clk : IN STD_LOGIC;
     ce : IN STD_LOGIC;
     sinit : IN STD_LOGIC;
     q : OUT STD_LOGIC_VECTOR(24 DOWNTO 0)
   );
-END cntr_11_0_8d5792a6ba24605d;
+END cntr_11_0_7715ef4ac490a039;
 
-ARCHITECTURE cntr_11_0_8d5792a6ba24605d_a OF cntr_11_0_8d5792a6ba24605d IS
+ARCHITECTURE cntr_11_0_7715ef4ac490a039_a OF cntr_11_0_7715ef4ac490a039 IS
 -- synthesis translate_off
-COMPONENT wrapped_cntr_11_0_8d5792a6ba24605d
+COMPONENT wrapped_cntr_11_0_7715ef4ac490a039
   PORT (
     clk : IN STD_LOGIC;
     ce : IN STD_LOGIC;
@@ -61,7 +61,7 @@ COMPONENT wrapped_cntr_11_0_8d5792a6ba24605d
 END COMPONENT;
 
 -- Configuration specification
-  FOR ALL : wrapped_cntr_11_0_8d5792a6ba24605d USE ENTITY XilinxCoreLib.c_counter_binary_v11_0(behavioral)
+  FOR ALL : wrapped_cntr_11_0_7715ef4ac490a039 USE ENTITY XilinxCoreLib.c_counter_binary_v11_0(behavioral)
     GENERIC MAP (
       c_ainit_val => "0",
       c_ce_overrides_sync => 0,
@@ -89,7 +89,7 @@ END COMPONENT;
 -- synthesis translate_on
 BEGIN
 -- synthesis translate_off
-U0 : wrapped_cntr_11_0_8d5792a6ba24605d
+U0 : wrapped_cntr_11_0_7715ef4ac490a039
   PORT MAP (
     clk => clk,
     ce => ce,
@@ -98,73 +98,10 @@ U0 : wrapped_cntr_11_0_8d5792a6ba24605d
   );
 -- synthesis translate_on
 
-END cntr_11_0_8d5792a6ba24605d_a;
--------------------------------------------------------------------------------
--- Copyright (c) 2012 Xilinx, Inc.
--- All Rights Reserved
--------------------------------------------------------------------------------
---   ____  ____
---  /   /\/   /
--- /___/  \  /    Vendor     : Xilinx
--- \   \   \/     Version    : 14.2
---  \   \         Application: XILINX CORE Generator
---  /   /         Filename   : icon_1_06_a_69d945462da1db7c.vhd
--- /___/   /\     Timestamp  : Wed Oct 17 11:16:59 Pacific Daylight Time 2012
--- \   \  /  \
---  \___\/\___\
---
--- Design Name: VHDL Synthesis Wrapper
--------------------------------------------------------------------------------
--- This wrapper is used to integrate with Project Navigator and PlanAhead
-
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
-ENTITY icon_1_06_a_69d945462da1db7c IS
-  port (
-    CONTROL0: inout std_logic_vector(35 downto 0));
-END icon_1_06_a_69d945462da1db7c;
-
-ARCHITECTURE icon_1_06_a_69d945462da1db7c_a OF icon_1_06_a_69d945462da1db7c IS
-BEGIN
-
-END icon_1_06_a_69d945462da1db7c_a;
--------------------------------------------------------------------------------
--- Copyright (c) 2012 Xilinx, Inc.
--- All Rights Reserved
--------------------------------------------------------------------------------
---   ____  ____
---  /   /\/   /
--- /___/  \  /    Vendor     : Xilinx
--- \   \   \/     Version    : 14.2
---  \   \         Application: XILINX CORE Generator
---  /   /         Filename   : ila_1_05_a_04082f38f51d3966.vhd
--- /___/   /\     Timestamp  : Fri Oct 26 10:19:02 Pacific Daylight Time 2012
--- \   \  /  \
---  \___\/\___\
---
--- Design Name: VHDL Synthesis Wrapper
--------------------------------------------------------------------------------
--- This wrapper is used to integrate with Project Navigator and PlanAhead
-
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
-ENTITY ila_1_05_a_04082f38f51d3966 IS
-  port (
-    CONTROL: inout std_logic_vector(35 downto 0);
-    CLK: in std_logic;
-    TRIG0: in std_logic_vector(11 downto 0);
-    TRIG1: in std_logic_vector(0 to 0);
-    TRIG2: in std_logic_vector(11 downto 0);
-    TRIG3: in std_logic_vector(11 downto 0));
-END ila_1_05_a_04082f38f51d3966;
-
-ARCHITECTURE ila_1_05_a_04082f38f51d3966_a OF ila_1_05_a_04082f38f51d3966 IS
-BEGIN
-
-END ila_1_05_a_04082f38f51d3966_a;
+END cntr_11_0_7715ef4ac490a039_a;
 
 -------------------------------------------------------------------
--- System Generator version 14.2 VHDL source file.
+-- System Generator version 14.3 VHDL source file.
 --
 -- Copyright(C) 2012 by Xilinx, Inc.  All rights reserved.  This
 -- text/file contains proprietary, confidential information of Xilinx,
@@ -1601,7 +1538,7 @@ package body conv_pkg is
 end conv_pkg;
 
 -------------------------------------------------------------------
--- System Generator version 14.2 VHDL source file.
+-- System Generator version 14.3 VHDL source file.
 --
 -- Copyright(C) 2012 by Xilinx, Inc.  All rights reserved.  This
 -- text/file contains proprietary, confidential information of Xilinx,
@@ -1815,7 +1752,7 @@ begin
 end behav;
 
 -------------------------------------------------------------------
--- System Generator version 14.2 VHDL source file.
+-- System Generator version 14.3 VHDL source file.
 --
 -- Copyright(C) 2012 by Xilinx, Inc.  All rights reserved.  This
 -- text/file contains proprietary, confidential information of Xilinx,
@@ -2003,7 +1940,7 @@ begin
 end structural;
 
 -------------------------------------------------------------------
--- System Generator version 14.2 VHDL source file.
+-- System Generator version 14.3 VHDL source file.
 --
 -- Copyright(C) 2012 by Xilinx, Inc.  All rights reserved.  This
 -- text/file contains proprietary, confidential information of Xilinx,
@@ -2062,7 +1999,7 @@ entity xlcounter_free_adc_driver is
   );
 end xlcounter_free_adc_driver ;
 architecture behavior of xlcounter_free_adc_driver is
-  component cntr_11_0_8d5792a6ba24605d
+  component cntr_11_0_7715ef4ac490a039
     port (
       clk: in std_logic;
       ce: in std_logic;
@@ -2071,11 +2008,11 @@ architecture behavior of xlcounter_free_adc_driver is
     );
   end component;
 
-  attribute syn_black_box of cntr_11_0_8d5792a6ba24605d:
+  attribute syn_black_box of cntr_11_0_7715ef4ac490a039:
     component is true;
-  attribute fpga_dont_touch of cntr_11_0_8d5792a6ba24605d:
+  attribute fpga_dont_touch of cntr_11_0_7715ef4ac490a039:
     component is "true";
-  attribute box_type of cntr_11_0_8d5792a6ba24605d:
+  attribute box_type of cntr_11_0_7715ef4ac490a039:
     component  is "black_box";
 -- synopsys translate_off
   constant zeroVec: std_logic_vector(op_width - 1 downto 0) := (others => '0');
@@ -2092,8 +2029,8 @@ begin
   core_ce <= ce and en(0);
   core_sinit <= (clr or rst(0)) and ce;
   op <= op_net;
-  comp0: if ((core_name0 = "cntr_11_0_8d5792a6ba24605d")) generate
-    core_instance0: cntr_11_0_8d5792a6ba24605d
+  comp0: if ((core_name0 = "cntr_11_0_7715ef4ac490a039")) generate
+    core_instance0: cntr_11_0_7715ef4ac490a039
       port map (
         clk => clk,
         ce => core_ce,
@@ -2104,7 +2041,7 @@ begin
 end behavior;
 
 -------------------------------------------------------------------
--- System Generator version 14.2 VHDL source file.
+-- System Generator version 14.3 VHDL source file.
 --
 -- Copyright(C) 2012 by Xilinx, Inc.  All rights reserved.  This
 -- text/file contains proprietary, confidential information of Xilinx,
@@ -2158,7 +2095,7 @@ begin
 end  behavior;
 
 -------------------------------------------------------------------
--- System Generator version 14.2 VHDL source file.
+-- System Generator version 14.3 VHDL source file.
 --
 -- Copyright(C) 2012 by Xilinx, Inc.  All rights reserved.  This
 -- text/file contains proprietary, confidential information of Xilinx,
@@ -2610,102 +2547,7 @@ end architecture IMP;
 
 
 -------------------------------------------------------------------
--- System Generator version 14.2 VHDL source file.
---
--- Copyright(C) 2012 by Xilinx, Inc.  All rights reserved.  This
--- text/file contains proprietary, confidential information of Xilinx,
--- Inc., is distributed under license from Xilinx, Inc., and may be used,
--- copied and/or disclosed only pursuant to the terms of a valid license
--- agreement with Xilinx, Inc.  Xilinx hereby grants you a license to use
--- this text/file solely for design, simulation, implementation and
--- creation of design files limited to Xilinx devices or technologies.
--- Use with non-Xilinx devices or technologies is expressly prohibited
--- and immediately terminates your license unless covered by a separate
--- agreement.
---
--- Xilinx is providing this design, code, or information "as is" solely
--- for use in developing programs and solutions for Xilinx devices.  By
--- providing this design, code, or information as one possible
--- implementation of this feature, application or standard, Xilinx is
--- making no representation that this implementation is free from any
--- claims of infringement.  You are responsible for obtaining any rights
--- you may require for your implementation.  Xilinx expressly disclaims
--- any warranty whatsoever with respect to the adequacy of the
--- implementation, including but not limited to warranties of
--- merchantability or fitness for a particular purpose.
---
--- Xilinx products are not intended for use in life support appliances,
--- devices, or systems.  Use in such applications is expressly prohibited.
---
--- Any modifications that are made to the source code are done at the user's
--- sole risk and will be unsupported.
---
--- This copyright and support notice must be retained as part of this
--- text at all times.  (c) Copyright 1995-2012 Xilinx, Inc.  All rights
--- reserved.
--------------------------------------------------------------------
-library IEEE;
-use IEEE.std_logic_1164.all;
-entity xlchipscope is
-    port (
-	trig0 : in std_logic_vector(12-1 downto 0);
-	trig1 : in std_logic_vector(1-1 downto 0);
-	trig2 : in std_logic_vector(12-1 downto 0);
-	trig3 : in std_logic_vector(12-1 downto 0);
-
-
-          ce       : in std_logic;
-          clr      : in std_logic;
-          clk      : in std_logic);
-end xlchipscope;
-architecture behavior of xlchipscope is
-    attribute syn_noprune : boolean;
-    attribute syn_black_box : boolean;
-    attribute box_type : string;
-    attribute syn_noprune of behavior : architecture is true;
-    signal data     : std_logic_vector (37-1 downto 0);
-    signal control  : std_logic_vector (35 downto 0);
-    component ila_1_05_a_04082f38f51d3966
-    port (control     : inout std_logic_vector(35 downto 0);
-	trig0 : in std_logic_vector(12-1 downto 0);
-	trig1 : in std_logic_vector(1-1 downto 0);
-	trig2 : in std_logic_vector(12-1 downto 0);
-	trig3 : in std_logic_vector(12-1 downto 0);
-
-          clk         : in    std_logic
-    );
-    end component;
-    attribute syn_black_box of ila_1_05_a_04082f38f51d3966 : component is TRUE;
-    attribute box_type of ila_1_05_a_04082f38f51d3966 : component  is "black_box";
-    attribute syn_noprune of ila_1_05_a_04082f38f51d3966 : component is TRUE;
-    component icon_1_06_a_69d945462da1db7c
-    port (control0    :  inout std_logic_vector(35 downto 0)
-    );
-    end component;
-    attribute syn_black_box of icon_1_06_a_69d945462da1db7c : component is TRUE;
-    attribute box_type of icon_1_06_a_69d945462da1db7c : component  is "black_box";
-    attribute syn_noprune of icon_1_06_a_69d945462da1db7c : component is TRUE;
-
-begin
-
- i_ila : ila_1_05_a_04082f38f51d3966
-    port map
-    (   control   => control,
-        trig0     => trig0,
-        trig1     => trig1,
-        trig2     => trig2,
-        trig3     => trig3,
-        clk       => clk
-    );
-  i_icon_for_syn : icon_1_06_a_69d945462da1db7c
-    port map
-    (
-      control0   => control
-    );
-end architecture behavior;
-
--------------------------------------------------------------------
--- System Generator version 14.2 VHDL source file.
+-- System Generator version 14.3 VHDL source file.
 --
 -- Copyright(C) 2012 by Xilinx, Inc.  All rights reserved.  This
 -- text/file contains proprietary, confidential information of Xilinx,
@@ -2862,7 +2704,7 @@ begin
 end  behavior;
 
 -------------------------------------------------------------------
--- System Generator version 14.2 VHDL source file.
+-- System Generator version 14.3 VHDL source file.
 --
 -- Copyright(C) 2012 by Xilinx, Inc.  All rights reserved.  This
 -- text/file contains proprietary, confidential information of Xilinx,
@@ -2960,7 +2802,7 @@ begin
 end architecture behavior;
 
 -------------------------------------------------------------------
--- System Generator version 14.2 VHDL source file.
+-- System Generator version 14.3 VHDL source file.
 --
 -- Copyright(C) 2012 by Xilinx, Inc.  All rights reserved.  This
 -- text/file contains proprietary, confidential information of Xilinx,
@@ -3168,7 +3010,7 @@ end behavior;
 
 
 -------------------------------------------------------------------
--- System Generator version 14.2 VHDL source file.
+-- System Generator version 14.3 VHDL source file.
 --
 -- Copyright(C) 2012 by Xilinx, Inc.  All rights reserved.  This
 -- text/file contains proprietary, confidential information of Xilinx,
@@ -3263,7 +3105,7 @@ end blinky_entity_fab3b312e2;
 architecture structural of blinky_entity_fab3b312e2 is
   signal ce_1_sg_x0: std_logic;
   signal clk_1_sg_x0: std_logic;
-  signal counter1_op_net: std_logic_vector(24 downto 0);
+  signal led_counter_op_net: std_logic_vector(24 downto 0);
   signal slice_y_net_x0: std_logic;
 
 begin
@@ -3271,9 +3113,9 @@ begin
   clk_1_sg_x0 <= clk_1;
   slice_x0 <= slice_y_net_x0;
 
-  counter1: entity work.xlcounter_free_adc_driver
+  led_counter: entity work.xlcounter_free_adc_driver
     generic map (
-      core_name0 => "cntr_11_0_8d5792a6ba24605d",
+      core_name0 => "cntr_11_0_7715ef4ac490a039",
       op_arith => xlUnsigned,
       op_width => 25
     )
@@ -3283,7 +3125,7 @@ begin
       clr => '0',
       en => "1",
       rst => "0",
-      op => counter1_op_net
+      op => led_counter_op_net
     );
 
   slice: entity work.xlslice
@@ -3294,7 +3136,7 @@ begin
       y_width => 1
     )
     port map (
-      x => counter1_op_net,
+      x => led_counter_op_net,
       y(0) => slice_y_net_x0
     );
 
@@ -3531,7 +3373,7 @@ end adc_driver;
 
 architecture structural of adc_driver is
   attribute core_generation_info: string;
-  attribute core_generation_info of structural : architecture is "adc_driver,sysgen_core,{clock_period=10.00000000,clocking=Clock_Enables,sample_periods=1.00000000000 2.00000000000 1.00000000000,testbench=0,total_blocks=122,xilinx_bit_slice_extractor_block=1,xilinx_chipscope_block=1,xilinx_counter_block=1,xilinx_delay_block=1,xilinx_down_sampler_block=2,xilinx_edk_core_block=1,xilinx_edk_processor_block=1,xilinx_gateway_in_block=27,xilinx_gateway_out_block=14,xilinx_inverter_block=1,xilinx_register_block=4,xilinx_system_generator_block=1,xilinx_type_converter_block=2,}";
+  attribute core_generation_info of structural : architecture is "adc_driver,sysgen_core,{clock_period=10.00000000,clocking=Clock_Enables,sample_periods=1.00000000000 2.00000000000 1.00000000000,testbench=0,total_blocks=121,xilinx_bit_slice_extractor_block=1,xilinx_counter_block=1,xilinx_delay_block=1,xilinx_down_sampler_block=2,xilinx_edk_core_block=1,xilinx_edk_processor_block=1,xilinx_gateway_in_block=27,xilinx_gateway_out_block=14,xilinx_inverter_block=1,xilinx_register_block=4,xilinx_system_generator_block=1,xilinx_type_converter_block=2,}";
 
   signal axi_aresetn_net: std_logic;
   signal blinky_adc_driver_net: std_logic;
@@ -3539,16 +3381,16 @@ architecture structural of adc_driver is
   signal ce_2_sg_x0: std_logic;
   signal clk_1_sg_x1: std_logic;
   signal clk_2_sg_x0: std_logic;
-  signal convert1_dout_net: std_logic;
-  signal convert_dout_net: std_logic;
+  signal convert_1_dout_net: std_logic;
+  signal convert_2_dout_net: std_logic;
   signal delay_q_net: std_logic_vector(11 downto 0);
-  signal inverter_op_net: std_logic;
+  signal inverter_1_op_net: std_logic;
   signal plb_ce_1_sg_x1: std_logic;
   signal plb_clk_1_sg_x1: std_logic;
-  signal register1_q_net: std_logic_vector(11 downto 0);
-  signal register2_q_net: std_logic;
-  signal register3_q_net: std_logic_vector(11 downto 0);
-  signal register_q_net: std_logic_vector(11 downto 0);
+  signal register_1_q_net: std_logic;
+  signal register_2_q_net: std_logic_vector(11 downto 0);
+  signal register_3_q_net: std_logic_vector(11 downto 0);
+  signal register_4_q_net: std_logic_vector(11 downto 0);
   signal rx_i_net: std_logic_vector(11 downto 0);
   signal rx_iq_sel_net: std_logic;
   signal rx_q_net: std_logic_vector(11 downto 0);
@@ -3645,18 +3487,7 @@ begin
       slice_x0 => blinky_adc_driver_net
     );
 
-  chipscope: entity work.xlchipscope
-    port map (
-      ce => ce_1_sg_x1,
-      clk => clk_1_sg_x1,
-      clr => '0',
-      trig0 => rxd_net,
-      trig1(0) => rx_iq_sel_net,
-      trig2 => rx_i_net,
-      trig3 => rx_q_net
-    );
-
-  convert: entity work.xlconvert
+  convert_1: entity work.xlconvert
     generic map (
       bool_conversion => 1,
       din_arith => 1,
@@ -3673,12 +3504,12 @@ begin
       ce => ce_1_sg_x1,
       clk => clk_1_sg_x1,
       clr => '0',
-      din(0) => register2_q_net,
+      din(0) => register_1_q_net,
       en => "1",
-      dout(0) => convert_dout_net
+      dout(0) => convert_1_dout_net
     );
 
-  convert1: entity work.xlconvert
+  convert_2: entity work.xlconvert
     generic map (
       bool_conversion => 1,
       din_arith => 1,
@@ -3695,9 +3526,9 @@ begin
       ce => ce_1_sg_x1,
       clk => clk_1_sg_x1,
       clr => '0',
-      din(0) => inverter_op_net,
+      din(0) => inverter_1_op_net,
       en => "1",
-      dout(0) => convert1_dout_net
+      dout(0) => convert_2_dout_net
     );
 
   delay: entity work.xldelay
@@ -3710,13 +3541,37 @@ begin
     port map (
       ce => ce_1_sg_x1,
       clk => clk_1_sg_x1,
-      d => register_q_net,
+      d => register_3_q_net,
       en => '1',
       rst => '1',
       q => delay_q_net
     );
 
-  down_sample: entity work.xldsamp
+  down_sample2: entity work.xldsamp
+    generic map (
+      d_arith => xlSigned,
+      d_bin_pt => 0,
+      d_width => 12,
+      ds_ratio => 2,
+      latency => 1,
+      phase => 1,
+      q_arith => xlSigned,
+      q_bin_pt => 0,
+      q_width => 12
+    )
+    port map (
+      d => register_4_q_net,
+      dest_ce => ce_2_sg_x0,
+      dest_clk => clk_2_sg_x0,
+      dest_clr => '0',
+      en => "1",
+      src_ce => ce_1_sg_x1,
+      src_clk => clk_1_sg_x1,
+      src_clr => '0',
+      q => rx_q_net
+    );
+
+  down_sample_1: entity work.xldsamp
     generic map (
       d_arith => xlSigned,
       d_bin_pt => 0,
@@ -3738,30 +3593,6 @@ begin
       src_clk => clk_1_sg_x1,
       src_clr => '0',
       q => rx_i_net
-    );
-
-  down_sample1: entity work.xldsamp
-    generic map (
-      d_arith => xlSigned,
-      d_bin_pt => 0,
-      d_width => 12,
-      ds_ratio => 2,
-      latency => 1,
-      phase => 1,
-      q_arith => xlSigned,
-      q_bin_pt => 0,
-      q_width => 12
-    )
-    port map (
-      d => register1_q_net,
-      dest_ce => ce_2_sg_x0,
-      dest_clk => clk_2_sg_x0,
-      dest_clr => '0',
-      en => "1",
-      src_ce => ce_1_sg_x1,
-      src_clk => clk_1_sg_x1,
-      src_clr => '0',
-      q => rx_q_net
     );
 
   edk_processor_5f959d9b6e: entity work.edk_processor_entity_5f959d9b6e
@@ -3806,30 +3637,16 @@ begin
       memmap_x9 => s_axi_rvalid_net
     );
 
-  inverter: entity work.inverter_e2b989a05e
+  inverter_1: entity work.inverter_e2b989a05e
     port map (
       ce => ce_1_sg_x1,
       clk => clk_1_sg_x1,
       clr => '0',
-      ip(0) => register2_q_net,
-      op(0) => inverter_op_net
+      ip(0) => register_1_q_net,
+      op(0) => inverter_1_op_net
     );
 
-  register1: entity work.xlregister
-    generic map (
-      d_width => 12,
-      init_value => b"000000000000"
-    )
-    port map (
-      ce => ce_1_sg_x1,
-      clk => clk_1_sg_x1,
-      d => register3_q_net,
-      en(0) => convert1_dout_net,
-      rst => "0",
-      q => register1_q_net
-    );
-
-  register2: entity work.xlregister
+  register_1: entity work.xlregister
     generic map (
       d_width => 1,
       init_value => b"0"
@@ -3840,10 +3657,10 @@ begin
       d(0) => rx_iq_sel_net,
       en => "1",
       rst => "0",
-      q(0) => register2_q_net
+      q(0) => register_1_q_net
     );
 
-  register3: entity work.xlregister
+  register_2: entity work.xlregister
     generic map (
       d_width => 12,
       init_value => b"000000000000"
@@ -3854,10 +3671,10 @@ begin
       d => rxd_net,
       en => "1",
       rst => "0",
-      q => register3_q_net
+      q => register_2_q_net
     );
 
-  register_x0: entity work.xlregister
+  register_3: entity work.xlregister
     generic map (
       d_width => 12,
       init_value => b"000000000000"
@@ -3865,10 +3682,24 @@ begin
     port map (
       ce => ce_1_sg_x1,
       clk => clk_1_sg_x1,
-      d => register3_q_net,
-      en(0) => convert_dout_net,
+      d => register_2_q_net,
+      en(0) => convert_1_dout_net,
       rst => "0",
-      q => register_q_net
+      q => register_3_q_net
+    );
+
+  register_4: entity work.xlregister
+    generic map (
+      d_width => 12,
+      init_value => b"000000000000"
+    )
+    port map (
+      ce => ce_1_sg_x1,
+      clk => clk_1_sg_x1,
+      d => register_2_q_net,
+      en(0) => convert_2_dout_net,
+      rst => "0",
+      q => register_4_q_net
     );
 
 end structural;

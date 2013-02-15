@@ -13,9 +13,9 @@
       'added' => [
       ],
       'common' => [
-        'adc_driver.vhd',
-        'adc_driver_cw.vhd',
-        'adc_driver_cw.ucf',
+        'rx_cw.vhd',
+        'rx_cw.ucf',
+        'rx.vhd',
       ],
       'removed' => [
       ],

@@ -63,12 +63,8 @@ Cores Search Directories           : {../implementation}
 *                          HDL Parsing                                  *
 =========================================================================
 Parsing VHDL file "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" into library adc_driver_axiw_v1_00_a
-Parsing entity <cntr_11_0_8d5792a6ba24605d>.
-Parsing architecture <cntr_11_0_8d5792a6ba24605d_a> of entity <cntr_11_0_8d5792a6ba24605d>.
-Parsing entity <icon_1_06_a_69d945462da1db7c>.
-Parsing architecture <icon_1_06_a_69d945462da1db7c_a> of entity <icon_1_06_a_69d945462da1db7c>.
-Parsing entity <ila_1_05_a_04082f38f51d3966>.
-Parsing architecture <ila_1_05_a_04082f38f51d3966_a> of entity <ila_1_05_a_04082f38f51d3966>.
+Parsing entity <cntr_11_0_7715ef4ac490a039>.
+Parsing architecture <cntr_11_0_7715ef4ac490a039_a> of entity <cntr_11_0_7715ef4ac490a039>.
 Parsing package <conv_pkg>.
 Parsing package body <conv_pkg>.
 Parsing entity <srl17e>.
@@ -87,8 +83,6 @@ Parsing entity <xlslice>.
 Parsing architecture <behavior> of entity <xlslice>.
 Parsing entity <axi_sgiface>.
 Parsing architecture <IMP> of entity <axi_sgiface>.
-Parsing entity <xlchipscope>.
-Parsing architecture <behavior> of entity <xlchipscope>.
 Parsing entity <convert_func_call>.
 Parsing architecture <behavior> of entity <convert_func_call>.
 Parsing entity <xlconvert>.
@@ -117,6 +111,8 @@ Parsing architecture <structural> of entity <plb_clock_driver_adc_driver>.
 Parsing entity <adc_driver_cw>.
 Parsing architecture <structural> of entity <adc_driver_cw>.
 Parsing VHDL file "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_axiw.vhd" into library adc_driver_axiw_v1_00_a
+Parsing entity <axiaddrpref>.
+Parsing architecture <behavior> of entity <axiaddrpref>.
 Parsing entity <adc_driver_axiw>.
 Parsing architecture <structural> of entity <adc_driver_axiw>.
 Parsing VHDL file "C:\GIT\Chilipepper\Labs\Lab_4\EDK\hdl\system_adc_driver_axiw_0_wrapper.vhd" into library work
@@ -130,8 +126,8 @@ Parsing architecture <STRUCTURE> of entity <system_adc_driver_axiw_0_wrapper>.
 Elaborating entity <system_adc_driver_axiw_0_wrapper> (architecture <STRUCTURE>) from library <work>.
 
 Elaborating entity <adc_driver_axiw> (architecture <structural>) with generics from library <adc_driver_axiw_v1_00_a>.
-WARNING:HDLCompiler:1127 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_axiw.vhd" Line 192: Assignment to axiaddrpref_sg_s_axi_arid_net ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_axiw.vhd" Line 201: Assignment to axiaddrpref_sg_s_axi_awid_net ignored, since the identifier is never used
+
+Elaborating entity <axiaddrpref> (architecture <behavior>) with generics from library <adc_driver_axiw_v1_00_a>.
 
 Elaborating entity <adc_driver_cw> (architecture <structural>) from library <adc_driver_axiw_v1_00_a>.
 
@@ -141,15 +137,9 @@ Elaborating entity <blinky_entity_fab3b312e2> (architecture <structural>) from l
 
 Elaborating entity <xlcounter_free_adc_driver> (architecture <behavior>) with generics from library <adc_driver_axiw_v1_00_a>.
 
-Elaborating entity <cntr_11_0_8d5792a6ba24605d> (architecture <>) from library <adc_driver_axiw_v1_00_a>.
+Elaborating entity <cntr_11_0_7715ef4ac490a039> (architecture <>) from library <adc_driver_axiw_v1_00_a>.
 
 Elaborating entity <xlslice> (architecture <behavior>) with generics from library <adc_driver_axiw_v1_00_a>.
-
-Elaborating entity <xlchipscope> (architecture <behavior>) from library <adc_driver_axiw_v1_00_a>.
-
-Elaborating entity <ila_1_05_a_04082f38f51d3966> (architecture <>) from library <adc_driver_axiw_v1_00_a>.
-
-Elaborating entity <icon_1_06_a_69d945462da1db7c> (architecture <>) from library <adc_driver_axiw_v1_00_a>.
 
 Elaborating entity <xlconvert> (architecture <behavior>) with generics from library <adc_driver_axiw_v1_00_a>.
 
@@ -158,28 +148,28 @@ Elaborating entity <xldelay> (architecture <behavior>) with generics from librar
 Elaborating entity <synth_reg> (architecture <structural>) with generics from library <adc_driver_axiw_v1_00_a>.
 
 Elaborating entity <srl17e> (architecture <structural>) with generics from library <adc_driver_axiw_v1_00_a>.
-WARNING:HDLCompiler:89 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 1666: <fde> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 1603: <fde> remains a black-box since it has no binding entity.
 
 Elaborating entity <xldsamp> (architecture <struct>) with generics from library <adc_driver_axiw_v1_00_a>.
 
 Elaborating entity <edk_processor_entity_5f959d9b6e> (architecture <structural>) from library <adc_driver_axiw_v1_00_a>.
 
 Elaborating entity <axi_sgiface> (architecture <IMP>) with generics from library <adc_driver_axiw_v1_00_a>.
-WARNING:HDLCompiler:1127 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 2381: Assignment to write_addr_valid ignored, since the identifier is never used
-WARNING:HDLCompiler:92 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 2483: s_axi_rready should be on the sensitivity list of the process
-WARNING:HDLCompiler:92 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 2485: s_axi_wvalid should be on the sensitivity list of the process
-WARNING:HDLCompiler:1127 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 2491: Assignment to s_axi_arlen_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 2318: Assignment to write_addr_valid ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 2420: s_axi_rready should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 2422: s_axi_wvalid should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 2428: Assignment to s_axi_arlen_i ignored, since the identifier is never used
 
 Elaborating entity <inverter_e2b989a05e> (architecture <behavior>) from library <adc_driver_axiw_v1_00_a>.
-WARNING:HDLCompiler:1127 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 3153: Assignment to op_mem_22_20_back ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 3147: Net <op_mem_22_20_front_din[0]> does not have a driver.
+WARNING:HDLCompiler:1127 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 2995: Assignment to op_mem_22_20_back ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 2989: Net <op_mem_22_20_front_din[0]> does not have a driver.
 
 Elaborating entity <xlregister> (architecture <behavior>) with generics from library <adc_driver_axiw_v1_00_a>.
 
 Elaborating entity <synth_reg_w_init> (architecture <structural>) with generics from library <adc_driver_axiw_v1_00_a>.
 
 Elaborating entity <single_reg_w_init> (architecture <structural>) with generics from library <adc_driver_axiw_v1_00_a>.
-WARNING:HDLCompiler:89 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 1891: <fdre> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 1828: <fdre> remains a black-box since it has no binding entity.
 
 Elaborating entity <xlregister> (architecture <behavior>) with generics from library <adc_driver_axiw_v1_00_a>.
 
@@ -200,13 +190,9 @@ Elaborating entity <xlclockdriver> (architecture <behavior>) with generics from 
 Elaborating entity <synth_reg_w_init> (architecture <structural>) with generics from library <adc_driver_axiw_v1_00_a>.
 
 Elaborating entity <single_reg_w_init> (architecture <structural>) with generics from library <adc_driver_axiw_v1_00_a>.
-WARNING:HDLCompiler:89 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 1902: <fdse> remains a black-box since it has no binding entity.
+WARNING:HDLCompiler:89 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd" Line 1839: <fdse> remains a black-box since it has no binding entity.
 
 Elaborating entity <plb_clock_driver_adc_driver> (architecture <structural>) from library <adc_driver_axiw_v1_00_a>.
-WARNING:HDLCompiler:634 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_axiw.vhd" Line 137: Net <axiaddrpref_s_axi_arid_net[7]> does not have a driver.
-WARNING:HDLCompiler:634 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_axiw.vhd" Line 138: Net <axiaddrpref_s_axi_awid_net[7]> does not have a driver.
-WARNING:HDLCompiler:634 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_axiw.vhd" Line 143: Net <axiaddrpref_sg_s_axi_bid_net[11]> does not have a driver.
-WARNING:HDLCompiler:634 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_axiw.vhd" Line 144: Net <axiaddrpref_sg_s_axi_rid_net[11]> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -226,17 +212,21 @@ Synthesizing Unit <adc_driver_axiw>.
         C_S_AXI_DATA_WIDTH = 32
         C_S_AXI_ID_WIDTH = 12
         C_S_AXI_SUPPORT_BURST = 0
-WARNING:Xst:647 - Input <s_axi_arid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <s_axi_awid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_axiw.vhd" line 246: Output port <s_axi_bid> of the instance <sysgen_dut> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_axiw.vhd" line 246: Output port <s_axi_rid> of the instance <sysgen_dut> is unconnected or connected to loadless signal.
-WARNING:Xst:653 - Signal <axiaddrpref_s_axi_arid_net> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <axiaddrpref_s_axi_awid_net> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <axiaddrpref_sg_s_axi_bid_net> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <axiaddrpref_sg_s_axi_rid_net> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <adc_driver_axiw> synthesized.
+
+Synthesizing Unit <axiaddrpref>.
+    Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_axiw.vhd".
+        C_BASEADDR = "01110000111000000000000000000000"
+        C_HIGHADDR = "01110000111000001111111111111111"
+        C_S_AXI_ID_WIDTH = 12
+        C_S_AXI_NATIVE_ID_WIDTH = 8
+WARNING:Xst:647 - Input <sg_s_axi_arid<11:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <sg_s_axi_awid<11:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <axiaddrpref> synthesized.
 
 Synthesizing Unit <adc_driver_cw>.
     Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver_cw.vhd".
@@ -270,7 +260,7 @@ Unit <blinky_entity_fab3b312e2> synthesized.
 
 Synthesizing Unit <xlcounter_free_adc_driver>.
     Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd".
-        core_name0 = "cntr_11_0_8d5792a6ba24605d"
+        core_name0 = "cntr_11_0_7715ef4ac490a039"
         op_width = 25
         op_arith = 1
     Set property "syn_black_box = true" for instance <comp0.core_instance0>.
@@ -292,19 +282,6 @@ WARNING:Xst:647 - Input <x<23:0>> is never used. This port will be preserved and
     Summary:
 	no macro.
 Unit <xlslice> synthesized.
-
-Synthesizing Unit <xlchipscope>.
-    Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd".
-    Set property "syn_noprune = true".
-    Set property "syn_black_box = true" for instance <i_ila>.
-    Set property "syn_noprune = true" for instance <i_ila>.
-    Set property "syn_black_box = true" for instance <i_icon_for_syn>.
-    Set property "syn_noprune = true" for instance <i_icon_for_syn>.
-WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <clr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Summary:
-	no macro.
-Unit <xlchipscope> synthesized.
 
 Synthesizing Unit <xlconvert>.
     Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd".
@@ -476,10 +453,10 @@ WARNING:Xst:647 - Input <AXI_Ce> is never used. This port will be preserved and 
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 2-bit subtractor for signal <GND_61_o_GND_61_o_sub_55_OUT<1:0>> created at line 1308.
-    Found 8-bit subtractor for signal <GND_61_o_GND_61_o_sub_67_OUT<7:0>> created at line 1308.
-    Found 1-bit 4-to-1 multiplexer for signal <s_shram_en> created at line 2318.
-    Found 32-bit 4-to-1 multiplexer for signal <S_AXI_RDATA_i[31]_reg_bank_out_i[31]_mux_121_OUT> created at line 2591.
+    Found 2-bit subtractor for signal <GND_58_o_GND_58_o_sub_55_OUT<1:0>> created at line 1308.
+    Found 8-bit subtractor for signal <GND_58_o_GND_58_o_sub_67_OUT<7:0>> created at line 1308.
+    Found 1-bit 4-to-1 multiplexer for signal <s_shram_en> created at line 2255.
+    Found 32-bit 4-to-1 multiplexer for signal <S_AXI_RDATA_i[31]_reg_bank_out_i[31]_mux_121_OUT> created at line 2528.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred 160 D-type flip-flop(s).
@@ -497,13 +474,42 @@ Unit <inverter_e2b989a05e> synthesized.
 
 Synthesizing Unit <xlregister_1>.
     Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd".
-        d_width = 12
-        init_value = "000000000000"
+        d_width = 1
+        init_value = "0"
     Summary:
 	no macro.
 Unit <xlregister_1> synthesized.
 
 Synthesizing Unit <synth_reg_w_init_1>.
+    Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd".
+        width = 1
+        init_index = 2
+        init_value = "0"
+        latency = 1
+    Summary:
+	no macro.
+Unit <synth_reg_w_init_1> synthesized.
+
+Synthesizing Unit <single_reg_w_init_1>.
+    Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd".
+        width = 1
+        init_index = 2
+        init_value = "0"
+    Set property "syn_black_box = true" for instance <fd_prim_array[0].bit_is_0.fdre_comp>.
+WARNING:Xst:37 - Detected unknown constraint/property "fpga_dont_touch". This constraint/property is not supported by the current software release and will be ignored.
+    Summary:
+	no macro.
+Unit <single_reg_w_init_1> synthesized.
+
+Synthesizing Unit <xlregister_2>.
+    Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd".
+        d_width = 12
+        init_value = "000000000000"
+    Summary:
+	no macro.
+Unit <xlregister_2> synthesized.
+
+Synthesizing Unit <synth_reg_w_init_2>.
     Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd".
         width = 12
         init_index = 2
@@ -511,9 +517,9 @@ Synthesizing Unit <synth_reg_w_init_1>.
         latency = 1
     Summary:
 	no macro.
-Unit <synth_reg_w_init_1> synthesized.
+Unit <synth_reg_w_init_2> synthesized.
 
-Synthesizing Unit <single_reg_w_init_1>.
+Synthesizing Unit <single_reg_w_init_2>.
     Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd".
         width = 12
         init_index = 2
@@ -541,35 +547,6 @@ WARNING:Xst:37 - Detected unknown constraint/property "fpga_dont_touch". This co
     Set property "syn_black_box = true" for instance <fd_prim_array[10].bit_is_0.fdre_comp>.
 WARNING:Xst:37 - Detected unknown constraint/property "fpga_dont_touch". This constraint/property is not supported by the current software release and will be ignored.
     Set property "syn_black_box = true" for instance <fd_prim_array[11].bit_is_0.fdre_comp>.
-WARNING:Xst:37 - Detected unknown constraint/property "fpga_dont_touch". This constraint/property is not supported by the current software release and will be ignored.
-    Summary:
-	no macro.
-Unit <single_reg_w_init_1> synthesized.
-
-Synthesizing Unit <xlregister_2>.
-    Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd".
-        d_width = 1
-        init_value = "0"
-    Summary:
-	no macro.
-Unit <xlregister_2> synthesized.
-
-Synthesizing Unit <synth_reg_w_init_2>.
-    Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd".
-        width = 1
-        init_index = 2
-        init_value = "0"
-        latency = 1
-    Summary:
-	no macro.
-Unit <synth_reg_w_init_2> synthesized.
-
-Synthesizing Unit <single_reg_w_init_2>.
-    Related source file is "C:/GIT/Chilipepper/Labs/Lab_4/EDK/pcores/adc_driver_axiw_v1_00_a/hdl/vhdl/adc_driver.vhd".
-        width = 1
-        init_index = 2
-        init_value = "0"
-    Set property "syn_black_box = true" for instance <fd_prim_array[0].bit_is_0.fdre_comp>.
 WARNING:Xst:37 - Detected unknown constraint/property "fpga_dont_touch". This constraint/property is not supported by the current software release and will be ignored.
     Summary:
 	no macro.
@@ -640,7 +617,7 @@ Synthesizing Unit <xlclockdriver_2>.
     Set property "MAX_FANOUT = REDUCE" for signal <ce_vec_logic<1>>.
     Set property "MAX_FANOUT = REDUCE" for signal <ce_vec_logic<0>>.
     Found 1-bit register for signal <clk_num>.
-    Found 1-bit adder for signal <clk_num[0]_PWR_47_o_add_0_OUT<0>> created at line 1241.
+    Found 1-bit adder for signal <clk_num[0]_PWR_45_o_add_0_OUT<0>> created at line 1241.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   1 D-type flip-flop(s).
@@ -851,24 +828,8 @@ Optimizing FSM <adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9
  write_data     | 01
  write_response | 10
 ----------------------------
-WARNING:Xst:1710 - FF/Latch <S_AXI_RID_i_0> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RID_i_1> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RID_i_2> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RID_i_3> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RID_i_4> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RID_i_5> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RID_i_6> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RID_i_7> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_0> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_1> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_2> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_3> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_4> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_5> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_6> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_7> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
 
-Optimizing unit <single_reg_w_init_1> ...
+Optimizing unit <single_reg_w_init_2> ...
 
 Optimizing unit <srl17e> ...
 
@@ -981,9 +942,6 @@ WARNING:Xst:1710 - FF/Latch <adc_driver_axiw_0/sysgen_dut/plb_clock_driver_adc_d
 WARNING:Xst:1710 - FF/Latch <adc_driver_axiw_0/sysgen_dut/default_clock_driver_adc_driver_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_adc_driver_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <adc_driver_axiw_0/sysgen_dut/default_clock_driver_adc_driver_x0/xlclockdriver_2/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_adc_driver_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <adc_driver_axiw_0/sysgen_dut/plb_clock_driver_adc_driver_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_adc_driver_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <adc_driver_axiw_0/sysgen_dut/default_clock_driver_adc_driver_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_adc_driver_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <adc_driver_axiw_0/sysgen_dut/default_clock_driver_adc_driver_x0/xlclockdriver_2/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_adc_driver_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <adc_driver_axiw_0/sysgen_dut/plb_clock_driver_adc_driver_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_adc_driver_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
 
 Final Macro Processing ...
 
@@ -991,8 +949,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 103
- Flip-Flops                                            : 103
+# Registers                                            : 119
+ Flip-Flops                                            : 119
 
 =========================================================================
 WARNING:Xst:1710 - FF/Latch <adc_driver_axiw_0/sysgen_dut/default_clock_driver_adc_driver_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_adc_driver_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
@@ -1021,29 +979,26 @@ Top Level Output File Name         : system_adc_driver_axiw_0_wrapper.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 61
+# BELS                             : 65
 #      GND                         : 1
-#      INV                         : 5
+#      INV                         : 3
 #      LUT1                        : 1
-#      LUT2                        : 2
-#      LUT3                        : 15
-#      LUT4                        : 3
-#      LUT5                        : 5
-#      LUT6                        : 12
+#      LUT2                        : 8
+#      LUT3                        : 9
+#      LUT4                        : 2
+#      LUT5                        : 7
+#      LUT6                        : 18
 #      MUXCY                       : 7
-#      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 8
-# FlipFlops/Latches                : 103
+# FlipFlops/Latches                : 119
 #      FD                          : 2
 #      FDE                         : 36
-#      FDR                         : 7
-#      FDRE                        : 54
+#      FDR                         : 15
+#      FDRE                        : 62
 #      FDSE                        : 4
-# Others                           : 4
-#      cntr_11_0_8d5792a6ba24605d  : 1
-#      icon_1_06_a_69d945462da1db7c: 1
-#      ila_1_05_a_04082f38f51d3966 : 1
+# Others                           : 2
+#      cntr_11_0_7715ef4ac490a039  : 1
 #      xlpersistentdff             : 1
 
 Device utilization summary:
@@ -1053,15 +1008,15 @@ Selected Device : 7z020clg484-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             103  out of  106400     0%  
- Number of Slice LUTs:                   43  out of  53200     0%  
-    Number used as Logic:                43  out of  53200     0%  
+ Number of Slice Registers:             119  out of  106400     0%  
+ Number of Slice LUTs:                   48  out of  53200     0%  
+    Number used as Logic:                48  out of  53200     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    126
-   Number with an unused Flip Flop:      23  out of    126    18%  
-   Number with an unused LUT:            83  out of    126    65%  
-   Number of fully used LUT-FF pairs:    20  out of    126    15%  
+ Number of LUT Flip Flop pairs used:    131
+   Number with an unused Flip Flop:      12  out of    131     9%  
+   Number with an unused LUT:            83  out of    131    63%  
+   Number of fully used LUT-FF pairs:    36  out of    131    27%  
    Number of unique control sets:        10
 
 IO Utilization: 
@@ -1092,7 +1047,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)                                                                                                                                              | Load  |
 -----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 sysgen_clk                         | NONE(adc_driver_axiw_0/sysgen_dut/default_clock_driver_adc_driver_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp)| 85    |
-axi_aclk                           | NONE(adc_driver_axiw_0/sysgen_dut/plb_clock_driver_adc_driver_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp)    | 18    |
+axi_aclk                           | NONE(adc_driver_axiw_0/sysgen_dut/plb_clock_driver_adc_driver_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp)    | 34    |
 -----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
@@ -1104,10 +1059,10 @@ Timing Summary:
 ---------------
 Speed Grade: -1
 
-   Minimum period: 2.180ns (Maximum Frequency: 458.716MHz)
-   Minimum input arrival time before clock: 1.446ns
-   Maximum output required time after clock: 1.179ns
-   Maximum combinational path delay: 0.289ns
+   Minimum period: 2.270ns (Maximum Frequency: 440.529MHz)
+   Minimum input arrival time before clock: 1.576ns
+   Maximum output required time after clock: 1.121ns
+   Maximum combinational path delay: 0.393ns
 
 Timing Details:
 ---------------
@@ -1119,48 +1074,44 @@ Timing constraint: Default period analysis for Clock 'sysgen_clk'
   Total number of paths / destination ports: 118 / 118
 -------------------------------------------------------------------------
 Delay:               1.499ns (Levels of Logic = 1)
-  Source:            adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp (FF)
-  Destination:       adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[11].bit_is_0.fdre_comp (FF)
+  Source:            adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp (FF)
+  Destination:       adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[11].bit_is_0.fdre_comp (FF)
   Source Clock:      sysgen_clk rising
   Destination Clock: sysgen_clk rising
 
-  Data Path: adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp to adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[11].bit_is_0.fdre_comp
+  Data Path: adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp to adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[11].bit_is_0.fdre_comp
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            13   0.282   0.479  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register2_q_net)
-     INV:I->O             12   0.067   0.471  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/inverter/internal_ip_12_1_bitnot1_INV_0 (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/inverter_op_net)
-     FDRE:CE                   0.200          adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp
+     FDRE:C->Q            13   0.282   0.479  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_1_q_net)
+     INV:I->O             12   0.067   0.471  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/inverter_1/internal_ip_12_1_bitnot1_INV_0 (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/inverter_1_op_net)
+     FDRE:CE                   0.200          adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_4/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp
     ----------------------------------------
     Total                      1.499ns (0.549ns logic, 0.950ns route)
                                        (36.6% logic, 63.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'axi_aclk'
-  Clock period: 2.180ns (frequency: 458.716MHz)
-  Total number of paths / destination ports: 255 / 25
+  Clock period: 2.270ns (frequency: 440.529MHz)
+  Total number of paths / destination ports: 418 / 49
 -------------------------------------------------------------------------
-Delay:               2.180ns (Levels of Logic = 6)
-  Source:            adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state_FSM_FFd1 (FF)
-  Destination:       adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_3 (FF)
+Delay:               2.270ns (Levels of Logic = 2)
+  Source:            adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_0 (FF)
+  Destination:       adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_7 (FF)
   Source Clock:      axi_aclk rising
   Destination Clock: axi_aclk rising
 
-  Data Path: adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state_FSM_FFd1 to adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_3
+  Data Path: adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_0 to adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             19   0.282   0.518  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state_FSM_FFd1 (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state_FSM_FFd1)
-     INV:I->O              1   0.067   0.399  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state[1]_inv1_INV_0 (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state[1]_inv)
-     MUXCY:CI->O           1   0.015   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_cy<0> (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_cy<0>)
-     MUXCY:CI->O           1   0.015   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_cy<1> (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_cy<1>)
-     MUXCY:CI->O           1   0.015   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_cy<2> (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_cy<2>)
-     XORCY:CI->O           1   0.320   0.485  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_xor<3> (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter3)
-     LUT3:I1->O            1   0.053   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_3_dpot (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_3_dpot)
-     FDRE:D                    0.011          adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_3
+     FDRE:C->Q             5   0.282   0.629  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_0 (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_0)
+     LUT3:I0->O            2   0.053   0.608  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter[7]_GND_58_o_equal_66_o<7>_SW0 (N3)
+     LUT6:I3->O            8   0.053   0.445  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/_n0356_inv1 (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/_n0356_inv)
+     FDRE:CE                   0.200          adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_0
     ----------------------------------------
-    Total                      2.180ns (0.778ns logic, 1.402ns route)
-                                       (35.7% logic, 64.3% route)
+    Total                      2.270ns (0.588ns logic, 1.682ns route)
+                                       (25.9% logic, 74.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'sysgen_clk'
@@ -1168,84 +1119,80 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'sysgen_clk'
 -------------------------------------------------------------------------
 Offset:              0.011ns (Levels of Logic = 0)
   Source:            rx_iq_sel (PAD)
-  Destination:       adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp (FF)
+  Destination:       adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp (FF)
   Destination Clock: sysgen_clk rising
 
-  Data Path: rx_iq_sel to adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp
+  Data Path: rx_iq_sel to adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:D                    0.011          adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register2/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp
+     FDRE:D                    0.011          adc_driver_axiw_0/sysgen_dut/adc_driver_x0/register_1/synth_reg_inst/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp
     ----------------------------------------
     Total                      0.011ns (0.011ns logic, 0.000ns route)
                                        (100.0% logic, 0.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'axi_aclk'
-  Total number of paths / destination ports: 93 / 32
+  Total number of paths / destination ports: 164 / 80
 -------------------------------------------------------------------------
-Offset:              1.446ns (Levels of Logic = 6)
-  Source:            s_axi_arlen<7> (PAD)
-  Destination:       adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_3 (FF)
+Offset:              1.576ns (Levels of Logic = 2)
+  Source:            s_axi_awvalid (PAD)
+  Destination:       adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_7 (FF)
   Destination Clock: axi_aclk rising
 
-  Data Path: s_axi_arlen<7> to adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_3
+  Data Path: s_axi_awvalid to adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT3:I0->O            1   0.053   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_lut<0> (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_lut<0>)
-     MUXCY:S->O            1   0.291   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_cy<0> (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_cy<0>)
-     MUXCY:CI->O           1   0.015   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_cy<1> (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_cy<1>)
-     MUXCY:CI->O           1   0.015   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_cy<2> (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_cy<2>)
-     XORCY:CI->O           1   0.320   0.485  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter_xor<3> (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/Mcount_read_data_counter3)
-     LUT3:I1->O            1   0.053   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_3_dpot (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_3_dpot)
-     FDRE:D                    0.011          adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_3
+     LUT6:I0->O           12   0.053   0.485  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/_n0338_inv11 (s_axi_arready)
+     LUT6:I5->O            8   0.053   0.445  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/_n0356_inv1 (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/_n0356_inv)
+     FDRE:CE                   0.200          adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_data_counter_0
     ----------------------------------------
-    Total                      1.446ns (0.961ns logic, 0.485ns route)
-                                       (66.5% logic, 33.5% route)
+    Total                      1.576ns (0.646ns logic, 0.930ns route)
+                                       (41.0% logic, 59.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'sysgen_clk'
-  Total number of paths / destination ports: 48 / 48
+  Total number of paths / destination ports: 24 / 24
 -------------------------------------------------------------------------
 Offset:              0.282ns (Levels of Logic = 0)
-  Source:            adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[11].fde_used.u2 (FF)
+  Source:            adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[11].fde_used.u2 (FF)
   Destination:       rx_i<0> (PAD)
   Source Clock:      sysgen_clk rising
 
-  Data Path: adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[11].fde_used.u2 to rx_i<0>
+  Data Path: adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[11].fde_used.u2 to rx_i<0>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              0   0.282   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[11].fde_used.u2 (rx_i<0>)
+     FDE:C->Q              0   0.282   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/down_sample_1/latency_gt_0.latency_pipe/partial_one.last_srl17e/reg_array[11].fde_used.u2 (rx_i<0>)
     ----------------------------------------
     Total                      0.282ns (0.282ns logic, 0.000ns route)
                                        (100.0% logic, 0.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'axi_aclk'
-  Total number of paths / destination ports: 12 / 6
+  Total number of paths / destination ports: 28 / 22
 -------------------------------------------------------------------------
-Offset:              1.179ns (Levels of Logic = 1)
+Offset:              1.121ns (Levels of Logic = 1)
   Source:            adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state_FSM_FFd1 (FF)
-  Destination:       s_axi_arready (PAD)
+  Destination:       s_axi_awready (PAD)
   Source Clock:      axi_aclk rising
 
-  Data Path: adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state_FSM_FFd1 to s_axi_arready
+  Data Path: adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state_FSM_FFd1 to s_axi_awready
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q             19   0.282   0.844  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state_FSM_FFd1 (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state_FSM_FFd1)
-     LUT6:I1->O            3   0.053   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/S_AXI_ARREADY1 (s_axi_arready)
+     FDR:C->Q             26   0.282   0.786  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state_FSM_FFd1 (adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/read_state_FSM_FFd1)
+     LUT5:I1->O            1   0.053   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/write_state_FSM_FFd2-In11 (s_axi_awready)
     ----------------------------------------
-    Total                      1.179ns (0.335ns logic, 0.844ns route)
-                                       (28.4% logic, 71.6% route)
+    Total                      1.121ns (0.335ns logic, 0.786ns route)
+                                       (29.9% logic, 70.1% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 21 / 20
+  Total number of paths / destination ports: 7 / 6
 -------------------------------------------------------------------------
-Delay:               0.289ns (Levels of Logic = 1)
+Delay:               0.393ns (Levels of Logic = 1)
   Source:            s_axi_awvalid (PAD)
   Destination:       s_axi_arready (PAD)
 
@@ -1253,9 +1200,9 @@ Delay:               0.289ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LUT6:I2->O            3   0.053   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/S_AXI_ARREADY1 (s_axi_arready)
+     LUT6:I0->O           12   0.053   0.000  adc_driver_axiw_0/sysgen_dut/adc_driver_x0/edk_processor_5f959d9b6e/memmap/_n0338_inv11 (s_axi_arready)
     ----------------------------------------
-    Total                      0.289ns (0.289ns logic, 0.000ns route)
+    Total                      0.393ns (0.393ns logic, 0.000ns route)
                                        (100.0% logic, 0.0% route)
 
 =========================================================================
@@ -1268,7 +1215,7 @@ Clock to Setup on destination clock axi_aclk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-axi_aclk       |    2.180|         |         |         |
+axi_aclk       |    2.270|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock sysgen_clk
@@ -1282,14 +1229,14 @@ sysgen_clk     |    1.499|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 11.59 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.00 secs
  
 --> 
 
-Total memory usage is 471124 kilobytes
+Total memory usage is 473684 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  306 (   0 filtered)
-Number of infos    :   11 (   0 filtered)
+Number of warnings :  275 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
 

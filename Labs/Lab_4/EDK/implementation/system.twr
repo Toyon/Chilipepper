@@ -39,9 +39,9 @@ Timing constraint: TS_clk_fpga_0 = PERIOD TIMEGRP "clk_fpga_0" 100 MHz HIGH
 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 6769 paths analyzed, 1643 endpoints analyzed, 0 failing endpoints
+ 7588 paths analyzed, 1827 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   8.145ns.
+ Minimum period is   8.574ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -60,9 +60,9 @@ PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLLE0_CLKOUT1"
        TS_clock_generator_0_pll HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 1347 paths analyzed, 679 endpoints analyzed, 0 failing endpoints
+ 439 paths analyzed, 196 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   3.930ns.
+ Minimum period is   3.131ns.
 --------------------------------------------------------------------------------
 
 ================================================================================
@@ -71,9 +71,9 @@ PERIOD TIMEGRP         "clock_generator_0_clock_generator_0_SIG_PLLE0_CLKOUT2"
        TS_clock_generator_0_pll * 0.5 HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 327 paths analyzed, 84 endpoints analyzed, 0 failing endpoints
+ 1522 paths analyzed, 753 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   2.622ns.
+ Minimum period is  10.954ns.
 --------------------------------------------------------------------------------
 
 
@@ -84,10 +84,10 @@ Derived Constraints for TS_clock_generator_0_pll
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_clock_generator_0_pll       |     25.000ns|     10.000ns|      3.930ns|            0|            0|            0|         1674|
-| TS_clock_generator_0_clock_gen|     25.000ns|      3.930ns|          N/A|            0|            0|         1347|            0|
+|TS_clock_generator_0_pll       |     25.000ns|     10.000ns|      5.477ns|            0|            0|            0|         1961|
+| TS_clock_generator_0_clock_gen|     25.000ns|      3.131ns|          N/A|            0|            0|          439|            0|
 | erator_0_SIG_PLLE0_CLKOUT1    |             |             |             |             |             |             |             |
-| TS_clock_generator_0_clock_gen|     50.000ns|      2.622ns|          N/A|            0|            0|          327|            0|
+| TS_clock_generator_0_clock_gen|     50.000ns|     10.954ns|          N/A|            0|            0|         1522|            0|
 | erator_0_SIG_PLLE0_CLKOUT2    |             |             |             |             |             |             |             |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
@@ -103,7 +103,7 @@ Clock to Setup on destination clock clock_generator_0_pll_pin
                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 -------------------------+---------+---------+---------+---------+
-clock_generator_0_pll_pin|    3.930|         |         |         |
+clock_generator_0_pll_pin|    5.688|         |         |         |
 -------------------------+---------+---------+---------+---------+
 
 
@@ -112,13 +112,13 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 8445 paths, 0 nets, and 3342 connections
+Constraints cover 9551 paths, 0 nets, and 3652 connections
 
 Design statistics:
-   Minimum period:  10.000ns   (Maximum frequency: 100.000MHz)
+   Minimum period:  10.954ns   (Maximum frequency:  91.291MHz)
 
 
-Analysis completed Fri Feb 08 12:57:53 2013 
+Analysis completed Thu Feb 14 15:27:31 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:

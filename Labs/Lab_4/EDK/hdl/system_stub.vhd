@@ -42,7 +42,6 @@ entity system_stub is
     mcu_axiw_0_tx_en_pin : out std_logic;
     mcu_axiw_0_tr_sw_pin : out std_logic;
     clock_generator_0_rx_clk_pin : out std_logic;
-    clock_generator_0_RST_pin : in std_logic;
     mcu_axiw_0_rx_en_pin : out std_logic;
     axi_gpio_0_GPIO_IO_pin : inout std_logic;
     axi_gpio_0_GPIO2_IO_pin : inout std_logic;
@@ -88,7 +87,6 @@ architecture STRUCTURE of system_stub is
       mcu_axiw_0_tx_en_pin : out std_logic;
       mcu_axiw_0_tr_sw_pin : out std_logic;
       clock_generator_0_rx_clk_pin : out std_logic;
-      clock_generator_0_RST_pin : in std_logic;
       mcu_axiw_0_rx_en_pin : out std_logic;
       axi_gpio_0_GPIO_IO_pin : inout std_logic;
       axi_gpio_0_GPIO2_IO_pin : inout std_logic;
@@ -137,7 +135,6 @@ begin
       mcu_axiw_0_tx_en_pin => mcu_axiw_0_tx_en_pin,
       mcu_axiw_0_tr_sw_pin => mcu_axiw_0_tr_sw_pin,
       clock_generator_0_rx_clk_pin => clock_generator_0_rx_clk_pin,
-      clock_generator_0_RST_pin => clock_generator_0_RST_pin,
       mcu_axiw_0_rx_en_pin => mcu_axiw_0_rx_en_pin,
       axi_gpio_0_GPIO_IO_pin => axi_gpio_0_GPIO_IO_pin,
       axi_gpio_0_GPIO2_IO_pin => axi_gpio_0_GPIO2_IO_pin,

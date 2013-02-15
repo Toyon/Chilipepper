@@ -10,34 +10,34 @@ Parse C:/GIT/Chilipepper/Labs/Lab_4/EDK/system.mhs ...
 Read MPD definitions ...
 WARNING:EDK:4092 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 46 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 45 
 WARNING:EDK:4092 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 147 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 148 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 172 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 173 
 WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_led - Pre-Production
    version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 196 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 197 
 WARNING:EDK:4092 - IPNAME: axi_uartlite, INSTANCE: axi_uartlite_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 210 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 211 
 WARNING:EDK:4092 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 46 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 45 
 WARNING:EDK:4092 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 147 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 148 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 172 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 173 
 WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_led - Pre-Production
    version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 196 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 197 
 WARNING:EDK:4092 - IPNAME: axi_uartlite, INSTANCE: axi_uartlite_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 210 
+   C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 211 
 
 Overriding IP level properties ...
 INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
@@ -92,11 +92,12 @@ Address Map for Processor processing_system7_0
   (0x42c00000-0x42c0ffff) axi_uartlite_0	axi_interconnect_1
   (0x61600000-0x6160ffff) mcu_axiw_0	axi_interconnect_1
   (0x70e00000-0x70e0ffff) adc_driver_axiw_0	axi_interconnect_1
+  (0x72400000-0x7240ffff) rx_axiw_0	axi_interconnect_1
 
 Checking platform address map ...
 
 Checking platform configuration ...
-IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 - 1 master(s) : 4
+IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 - 1 master(s) : 5
 slave(s) 
 
 Checking port drivers...
@@ -149,29 +150,39 @@ Creating hardware output directories ...
 
 Managing hardware (BBD-specified) netlist files ...
 IPNAME:adc_driver_axiw INSTANCE:adc_driver_axiw_0 -
-C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 134 - Copying (BBD-specified)
+C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 133 - Copying (BBD-specified)
 netlist files.
 IPNAME:mcu_axiw INSTANCE:mcu_axiw_0 -
-C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 155 - Copying (BBD-specified)
+C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 156 - Copying (BBD-specified)
 netlist files.
+IPNAME:rx_axiw INSTANCE:rx_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs
+line 222 - Copying (BBD-specified) netlist files.
 
 Managing cache ...
 IPNAME:processing_system7 INSTANCE:processing_system7_0 -
-C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 46 - Copying cache
+C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 45 - Copying cache
 implementation netlist
 IPNAME:adc_driver_axiw INSTANCE:adc_driver_axiw_0 -
-C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 134 - Copying cache
+C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 133 - Copying cache
+implementation netlist
+IPNAME:axi_interconnect INSTANCE:axi_interconnect_1 -
+C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 148 - Copying cache
 implementation netlist
 IPNAME:mcu_axiw INSTANCE:mcu_axiw_0 -
-C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 155 - Copying cache
+C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 156 - Copying cache
 implementation netlist
 IPNAME:axi_gpio INSTANCE:axi_gpio_led -
-C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 196 - Copying cache
+C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 197 - Copying cache
 implementation netlist
+IPNAME:axi_uartlite INSTANCE:axi_uartlite_0 -
+C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 211 - Copying cache
+implementation netlist
+IPNAME:rx_axiw INSTANCE:rx_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs
+line 222 - Copying cache implementation netlist
 
 Elaborating instances ...
 IPNAME:clock_generator INSTANCE:clock_generator_0 -
-C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 172 - elaborating IP
+C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 173 - elaborating IP
 ClkGen elaborate status: PASSED
 WARNING:EDK - : Phase value 90.0000 is converted to 90.0
 
@@ -194,7 +205,7 @@ Inserting wrapper level ...
 Completion time: 0.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 0.00 seconds
+Completion time: 1.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -208,29 +219,27 @@ INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
 INSTANCE:adc_driver_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line
-134 - Running XST synthesis
-INSTANCE:axi_interconnect_1 - C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line
-147 - Running XST synthesis
-INSTANCE:mcu_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 155 -
+133 - Running XST synthesis
+INSTANCE:mcu_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 156 -
 Running XST synthesis
 INSTANCE:clock_generator_0 - C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line
-172 - Running XST synthesis
-INSTANCE:axi_uartlite_0 - C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 210
-- Running XST synthesis
+173 - Running XST synthesis
+INSTANCE:rx_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 222 -
+Running XST synthesis
 
 Running NGCBUILD ...
 IPNAME:system_adc_driver_axiw_0_wrapper INSTANCE:adc_driver_axiw_0 -
-C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 134 - Running NGCBUILD
-IPNAME:system_axi_interconnect_1_wrapper INSTANCE:axi_interconnect_1 -
-C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 147 - Running NGCBUILD
+C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 133 - Running NGCBUILD
 IPNAME:system_mcu_axiw_0_wrapper INSTANCE:mcu_axiw_0 -
-C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 155 - Running NGCBUILD
+C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 156 - Running NGCBUILD
 IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
-C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 172 - Running NGCBUILD
+C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 173 - Running NGCBUILD
+IPNAME:system_rx_axiw_0_wrapper INSTANCE:rx_axiw_0 -
+C:\GIT\Chilipepper\Labs\Lab_4\EDK\system.mhs line 222 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 103.00 seconds
+Total run time: 80.00 seconds
