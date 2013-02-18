@@ -12,7 +12,8 @@
 % filters.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#codegen
-function [z_i_out, z_q_out, e, test1, test2] = qpsk_rx_foc(y_i, y_q, mu_in, finish_rx)
+function [z_i_out, z_q_out, error_out, phi_out] = ...
+    qpsk_rx_foc(y_i, y_q, mu_in, finish_rx)
 
 persistent phi
 
@@ -73,13 +74,12 @@ else
     e = 1;
 end
 
-test1 = phi;
-
 c = mu*e;
 phiNew = phi - c;
 phi = phiNew;
 
-test2 = phi;
+error_out = e;
+phi_out = phi;
 
 z_i_out = z_i;
 z_q_out = z_q;
