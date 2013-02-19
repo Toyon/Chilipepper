@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<document OS="nt" product="ISE" version="14.4">
+
+  <!--The data in this file is primarily intended for consumption by Xilinx tools.
+    The structure and the elements are likely to change over the next few releases.
+    This means code written to parse this file will need to be revisited each subsequent release.-->
+
+  <application stringID="NgdBuild" timeStamp="Tue Feb 19 11:41:01 2013">
+    <section stringID="User_Env">
+      <table stringID="User_EnvVar">
+        <column stringID="variable"/>
+        <column stringID="value"/>
+        <row stringID="row" value="0">
+          <item stringID="variable" value="PATH"/>
+          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\ISE\\lib\nt;C:\Xilinx\14.4\ISE_DS\EDK\lib\nt;C:\Xilinx\14.4\ISE_DS\ISE\\bin\nt;C:\Xilinx\14.4\ISE_DS\EDK\bin\nt;C:\Xilinx\14.4\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\Vivado_HLS\2012.4\bin;C:\Xilinx\14.4\ISE_DS\ISE\bin\nt;C:\Xilinx\14.4\ISE_DS\ISE\lib\nt;C:\Xilinx\14.4\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\Vivado\2012.4\bin;C:\Xilinx\14.4\ISE_DS\PlanAhead\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt_be\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt_le\bin;C:\Xilinx\14.4\ISE_DS\common\bin\nt;C:\Xilinx\14.4\ISE_DS\common\lib\nt;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\DMIX;C:\Program Files\Dell\DW WLAN Card;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Altium Designer Summer 09\System;C:\Program Files\MATLAB\R2013a\bin;C:\Program Files\MATLAB\R2012a\bin;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\TortoiseGit\bin;C:\Program Files\Git\cmd;C:\Program Files\CVSNT\"/>
+        </row>
+        <row stringID="row" value="1">
+          <item stringID="variable" value="PATHEXT"/>
+          <item stringID="value" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"/>
+        </row>
+        <row stringID="row" value="2">
+          <item stringID="variable" value="XILINX"/>
+          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\ISE\;C:\Xilinx\14.4\ISE_DS\EDK"/>
+        </row>
+        <row stringID="row" value="3">
+          <item stringID="variable" value="XILINXD_LICENSE_FILE"/>
+          <item stringID="value" value="2100@mulder"/>
+        </row>
+        <row stringID="row" value="4">
+          <item stringID="variable" value="XILINX_DSP"/>
+          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\ISE"/>
+        </row>
+        <row stringID="row" value="5">
+          <item stringID="variable" value="XILINX_EDK"/>
+          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\EDK"/>
+        </row>
+        <row stringID="row" value="6">
+          <item stringID="variable" value="XILINX_PLANAHEAD"/>
+          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\PlanAhead"/>
+        </row>
+        <row stringID="row" value="7">
+          <item stringID="variable" value="XILINX_VIVADO"/>
+          <item stringID="value" value="C:\Xilinx\Vivado\2012.4"/>
+        </row>
+      </table>
+      <item stringID="User_EnvOs" value="OS Information">
+        <item stringID="User_EnvOsname" value="Microsoft Windows 7 , 32-bit"/>
+        <item stringID="User_EnvOsrelease" value="major release  (build 7600)"/>
+      </item>
+      <item stringID="User_EnvHost" value="jasonh7"/>
+      <table stringID="User_EnvCpu">
+        <column stringID="arch"/>
+        <column stringID="speed"/>
+        <row stringID="row" value="0">
+          <item stringID="arch" value="Intel(R) Core(TM) i7 CPU       Q 740  @ 1.73GHz"/>
+          <item stringID="speed" value="1729 MHz"/>
+        </row>
+      </table>
+    </section>
+    <task stringID="NGDBUILD_OPTION_SUMMARY">
+      <section stringID="NGDBUILD_OPTION_SUMMARY">
+        <item DEFAULT="None" label="-bm" stringID="NGDBUILD_bmm_file" value="system.bmm"/>
+        <item DEFAULT="None" label="-p" stringID="NGDBUILD_partname" value="xc7z020clg484-1"/>
+        <item DEFAULT="None" label="-uc" stringID="NGDBUILD_ucf_file" value="system.ucf"/>
+      </section>
+    </task>
+    <task stringID="NGDBUILD_REPORT">
+      <section stringID="NGDBUILD_DESIGN_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_ERRORS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_WARNINGS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_WARNINGS" value="132"/>
+        <item dataType="int" stringID="NGDBUILD_FILTERED_INFOS" value="0"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INFOS" value="3"/>
+      </section>
+      <section stringID="NGDBUILD_PRE_UNISIM_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFGP" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FD" value="40"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDR" value="7"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDRE" value="10"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUF" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="97"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="24"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="27"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="9"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="7"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="40"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_PS7" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="35"/>
+      </section>
+      <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
+        <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FD" value="40"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDC" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDR" value="7"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_FDRE" value="10"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_GND" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_IBUFG" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_INV" value="97"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="24"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="27"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT3" value="9"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="6"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT5" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="7"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="40"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_PS7" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_PULLUP" value="47"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_TS_TIMESPEC" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="35"/>
+      </section>
+      <section stringID="NGDBUILD_CORE_SUMMARY">
+        <item COUNT="1" stringID="NGDBUILD_CORE" value="processing_system7_v4_02_a"/>
+        <section stringID="NGDBUILD_CORE_GENERATION_SUMMARY">
+          <section stringID="NGDBUILD_CORE_INSTANCES">
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="blink_leds">
+              <item stringID="NGDBUILD_CORE_INFO" type="sysgen_core" value="blink_leds"/>
+              <item clock_period="10.00000000" clocking="Clock_Enables" sample_periods="1.00000000000 1.00000000000" stringID="NGDBUILD_CORE_PARAMETERS" testbench="0" total_blocks="84" value="blink_leds" xilinx_black_box_block="1" xilinx_constant_block_block="3" xilinx_edk_core_block="1" xilinx_edk_processor_block="1" xilinx_gateway_in_block="25" xilinx_gateway_out_block="12" xilinx_system_generator_block="1"/>
+            </scope>
+            <scope stringID="NGDBUILD_CORE_INSTANCE" value="processing_system7_0">
+              <item stringID="NGDBUILD_CORE_INFO" type="processing_system7" value="processing_system7_0"/>
+              <item C_APU_PERIPHERAL_FREQMHZ="666.666666" C_CAN0_CAN0_IO="MIO 46 .. 47" C_CAN0_PERIPHERAL_ENABLE="1" C_CAN_PERIPHERAL_FREQMHZ="23.8095" C_ENET0_ENET0_IO="MIO 16 .. 27" C_ENET0_GRP_MDIO_ENABLE="1" C_ENET0_GRP_MDIO_IO="MIO 52 .. 53" C_ENET0_PERIPHERAL_ENABLE="1" C_ENET0_PERIPHERAL_FREQMHZ="100 Mbps" C_ENET0_RESET_ENABLE="1" C_ENET0_RESET_IO="MIO 11" C_ENET1_RESET_IO="-1" C_FPGA0_PERIPHERAL_FREQMHZ="50.000000" C_FPGA1_PERIPHERAL_FREQMHZ="50.000000" C_FPGA2_PERIPHERAL_FREQMHZ="50.000000" C_FPGA3_PERIPHERAL_FREQMHZ="50.000000" C_GPIO_EMIO_GPIO_WIDTH="64" C_GPIO_PERIPHERAL_ENABLE="1" C_I2C0_I2C0_IO="MIO 50 .. 51" C_I2C0_PERIPHERAL_ENABLE="1" C_I2C0_RESET_ENABLE="1" C_I2C0_RESET_IO="MIO 13" C_I2C1_RESET_IO="-1" C_PJTAG_PERIPHERAL_ENABLE="0" C_PRESET_BANK0_VOLTAGE="LVCMOS 1.8V" C_PRESET_BANK1_VOLTAGE="LVCMOS 1.8V" C_PRESET_FPGA_PARTNUMBER="xc7z020clg484-1" C_PRESET_FPGA_SPEED="-1" C_PRESET_GLOBAL_CONFIG="Default" C_PRESET_GLOBAL_DEFAULT="powerup" C_QSPI_GRP_FBCLK_ENABLE="1" C_QSPI_PERIPHERAL_ENABLE="1" C_SD0_GRP_CD_ENABLE="1" C_SD0_GRP_CD_IO="MIO 0" C_SD0_GRP_WP_ENABLE="1" C_SD0_GRP_WP_IO="MIO 15" C_SD0_PERIPHERAL_ENABLE="1" C_SDIO_PERIPHERAL_FREQMHZ="50" C_TTC0_PERIPHERAL_ENABLE="1" C_UART1_PERIPHERAL_ENABLE="1" C_UART_PERIPHERAL_FREQMHZ="50" C_UIPARAM_DDR_BL="8" C_UIPARAM_DDR_BOARD_DELAY0="0.537" C_UIPARAM_DDR_BOARD_DELAY1="0.442" C_UIPARAM_DDR_BOARD_DELAY2="0.464" C_UIPARAM_DDR_BOARD_DELAY3="0.521" C_UIPARAM_DDR_CL="7" C_UIPARAM_DDR_CWL="6" C_UIPARAM_DDR_DEVICE_CAPACITY="2048 MBits" C_UIPARAM_DDR_DQS_TO_CLK_DELAY_0="0.217" C_UIPARAM_DDR_DQS_TO_CLK_DELAY_1="0.133" C_UIPARAM_DDR_DQS_TO_CLK_DELAY_2="0.089" C_UIPARAM_DDR_DQS_TO_CLK_DELAY_3="0.248" C_UIPARAM_DDR_DRAM_WIDTH="8 Bits" C_UIPARAM_DDR_FREQ_MHZ="533.333333" C_UIPARAM_DDR_MEMORY_TYPE="DDR 3" C_UIPARAM_DDR_PARTNO="MT41J256M8 HX-15E" C_UIPARAM_DDR_SPEED_BIN="DDR3_1066F" C_UIPARAM_DDR_TRAIN_DATA_EYE="1" C_UIPARAM_DDR_TRAIN_READ_GATE="1" C_UIPARAM_DDR_TRAIN_WRITE_LEVEL="1" C_UIPARAM_DDR_T_FAW="30.0" C_UIPARAM_DDR_T_RAS_MIN="36.0" C_UIPARAM_DDR_T_RC="49.5" C_UIPARAM_DDR_T_RCD="7" C_UIPARAM_DDR_T_RP="7" C_UIPARAM_DDR_USE_INTERNAL_VREF="1" C_USB0_PERIPHERAL_ENABLE="1" C_USB0_RESET_ENABLE="1" C_USB0_RESET_IO="MIO 7" C_USB1_RESET_IO="-1" C_WDT_PERIPHERAL_ENABLE="1" stringID="NGDBUILD_CORE_PARAMETERS" value="processing_system7_0"/>
+            </scope>
+          </section>
+        </section>
+      </section>
+    </task>
+  </application>
+
+</document>

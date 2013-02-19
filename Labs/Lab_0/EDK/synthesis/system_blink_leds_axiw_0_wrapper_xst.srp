@@ -1,0 +1,1054 @@
+Release 14.4 - xst P.49d (nt)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:\QPSK_Projects\Project_0\EDK\synthesis\xst_temp_dir\
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.31 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input Format                       : MIXED
+Input File Name                    : "system_blink_leds_axiw_0_wrapper_xst.prj"
+Verilog Include Directory          : {"C:\QPSK_Projects\Project_0\EDK\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxBFMinterface\pcores\" "C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\" }
+
+---- Target Parameters
+Target Device                      : xc7z020clg484-1
+Output File Name                   : "../implementation/system_blink_leds_axiw_0_wrapper.ngc"
+
+---- Source Options
+Top Module Name                    : system_blink_leds_axiw_0_wrapper
+
+---- Target Options
+Add IO Buffers                     : NO
+
+---- General Options
+Optimization Goal                  : speed
+Netlist Hierarchy                  : as_optimized
+Optimization Effort                : 1
+Hierarchy Separator                : /
+
+---- Other Options
+Cores Search Directories           : {../implementation}
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd" into library blink_leds_axiw_v1_00_a
+Parsing package <conv_pkg>.
+Parsing package body <conv_pkg>.
+Parsing entity <srl17e>.
+Parsing architecture <structural> of entity <srl17e>.
+Parsing entity <synth_reg>.
+Parsing architecture <structural> of entity <synth_reg>.
+Parsing entity <synth_reg_reg>.
+Parsing architecture <behav> of entity <synth_reg_reg>.
+Parsing entity <single_reg_w_init>.
+Parsing architecture <structural> of entity <single_reg_w_init>.
+Parsing entity <synth_reg_w_init>.
+Parsing architecture <structural> of entity <synth_reg_w_init>.
+Parsing entity <axi_sgiface>.
+Parsing architecture <IMP> of entity <axi_sgiface>.
+Parsing entity <blink_leds_FixPt>.
+Parsing architecture <rtl> of entity <blink_leds_fixpt>.
+Parsing entity <constant_963ed6358a>.
+Parsing architecture <behavior> of entity <constant_963ed6358a>.
+Parsing entity <constant_ef0e2e5fc6>.
+Parsing architecture <behavior> of entity <constant_ef0e2e5fc6>.
+Parsing entity <constant_fcd7a08743>.
+Parsing architecture <behavior> of entity <constant_fcd7a08743>.
+Parsing entity <edk_processor_entity_e6da1b6546>.
+Parsing architecture <structural> of entity <edk_processor_entity_e6da1b6546>.
+Parsing entity <blink_leds>.
+Parsing architecture <structural> of entity <blink_leds>.
+Parsing VHDL file "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_cw.vhd" into library blink_leds_axiw_v1_00_a
+Parsing entity <xlclockdriver>.
+Parsing architecture <behavior> of entity <xlclockdriver>.
+Parsing entity <default_clock_driver_blink_leds>.
+Parsing architecture <structural> of entity <default_clock_driver_blink_leds>.
+Parsing entity <plb_clock_driver_blink_leds>.
+Parsing architecture <structural> of entity <plb_clock_driver_blink_leds>.
+Parsing entity <blink_leds_cw>.
+Parsing architecture <structural> of entity <blink_leds_cw>.
+Parsing VHDL file "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_axiw.vhd" into library blink_leds_axiw_v1_00_a
+Parsing entity <blink_leds_axiw>.
+Parsing architecture <structural> of entity <blink_leds_axiw>.
+Parsing VHDL file "C:\QPSK_Projects\Project_0\EDK\hdl\system_blink_leds_axiw_0_wrapper.vhd" into library work
+Parsing entity <system_blink_leds_axiw_0_wrapper>.
+Parsing architecture <STRUCTURE> of entity <system_blink_leds_axiw_0_wrapper>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <system_blink_leds_axiw_0_wrapper> (architecture <STRUCTURE>) from library <work>.
+
+Elaborating entity <blink_leds_axiw> (architecture <structural>) with generics from library <blink_leds_axiw_v1_00_a>.
+WARNING:HDLCompiler:1127 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_axiw.vhd" Line 182: Assignment to axiaddrpref_sg_s_axi_arid_net ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_axiw.vhd" Line 191: Assignment to axiaddrpref_sg_s_axi_awid_net ignored, since the identifier is never used
+
+Elaborating entity <blink_leds_cw> (architecture <structural>) from library <blink_leds_axiw_v1_00_a>.
+
+Elaborating entity <blink_leds> (architecture <structural>) from library <blink_leds_axiw_v1_00_a>.
+
+Elaborating entity <blink_leds_FixPt> (architecture <rtl>) from library <blink_leds_axiw_v1_00_a>.
+
+Elaborating entity <constant_ef0e2e5fc6> (architecture <behavior>) from library <blink_leds_axiw_v1_00_a>.
+
+Elaborating entity <constant_fcd7a08743> (architecture <behavior>) from library <blink_leds_axiw_v1_00_a>.
+
+Elaborating entity <constant_963ed6358a> (architecture <behavior>) from library <blink_leds_axiw_v1_00_a>.
+
+Elaborating entity <edk_processor_entity_e6da1b6546> (architecture <structural>) from library <blink_leds_axiw_v1_00_a>.
+
+Elaborating entity <axi_sgiface> (architecture <IMP>) with generics from library <blink_leds_axiw_v1_00_a>.
+WARNING:HDLCompiler:1127 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd" Line 2062: Assignment to write_addr_valid ignored, since the identifier is never used
+WARNING:HDLCompiler:92 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd" Line 2164: s_axi_rready should be on the sensitivity list of the process
+WARNING:HDLCompiler:92 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd" Line 2166: s_axi_wvalid should be on the sensitivity list of the process
+WARNING:HDLCompiler:1127 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd" Line 2172: Assignment to s_axi_arlen_i ignored, since the identifier is never used
+
+Elaborating entity <default_clock_driver_blink_leds> (architecture <structural>) from library <blink_leds_axiw_v1_00_a>.
+
+Elaborating entity <xlclockdriver> (architecture <behavior>) with generics from library <blink_leds_axiw_v1_00_a>.
+
+Elaborating entity <synth_reg_w_init> (architecture <structural>) with generics from library <blink_leds_axiw_v1_00_a>.
+
+Elaborating entity <single_reg_w_init> (architecture <structural>) with generics from library <blink_leds_axiw_v1_00_a>.
+WARNING:HDLCompiler:89 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd" Line 1727: <fdre> remains a black-box since it has no binding entity.
+
+Elaborating entity <plb_clock_driver_blink_leds> (architecture <structural>) from library <blink_leds_axiw_v1_00_a>.
+WARNING:HDLCompiler:634 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_axiw.vhd" Line 133: Net <axiaddrpref_s_axi_arid_net[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_axiw.vhd" Line 134: Net <axiaddrpref_s_axi_awid_net[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_axiw.vhd" Line 139: Net <axiaddrpref_sg_s_axi_bid_net[11]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_axiw.vhd" Line 140: Net <axiaddrpref_sg_s_axi_rid_net[11]> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system_blink_leds_axiw_0_wrapper>.
+    Related source file is "C:\QPSK_Projects\Project_0\EDK\hdl\system_blink_leds_axiw_0_wrapper.vhd".
+    Summary:
+	no macro.
+Unit <system_blink_leds_axiw_0_wrapper> synthesized.
+
+Synthesizing Unit <blink_leds_axiw>.
+    Related source file is "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_axiw.vhd".
+        C_BASEADDR = "01101110011000000000000000000000"
+        C_HIGHADDR = "01101110011000001111111111111111"
+        C_S_AXI_ADDR_WIDTH = 32
+        C_S_AXI_DATA_WIDTH = 32
+        C_S_AXI_ID_WIDTH = 12
+        C_S_AXI_SUPPORT_BURST = 0
+WARNING:Xst:647 - Input <s_axi_arid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <s_axi_awid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_axiw.vhd" line 234: Output port <s_axi_bid> of the instance <sysgen_dut> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_axiw.vhd" line 234: Output port <s_axi_rid> of the instance <sysgen_dut> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <axiaddrpref_s_axi_arid_net> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <axiaddrpref_s_axi_awid_net> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <axiaddrpref_sg_s_axi_bid_net> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <axiaddrpref_sg_s_axi_rid_net> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	no macro.
+Unit <blink_leds_axiw> synthesized.
+
+Synthesizing Unit <blink_leds_cw>.
+    Related source file is "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_cw.vhd".
+    Set property "syn_black_box = true" for instance <persistentdff_inst>.
+    Set property "syn_noprune = true" for instance <persistentdff_inst>.
+    Set property "optimize_primitives = false" for instance <persistentdff_inst>.
+    Set property "dont_touch = true" for instance <persistentdff_inst>.
+    Set property "MAX_FANOUT = REDUCE" for signal <ce_1_sg_x0>.
+    Set property "syn_keep = true" for signal <persistentdff_inst_q>.
+    Set property "KEEP = TRUE" for signal <persistentdff_inst_q>.
+WARNING:Xst:37 - Detected unknown constraint/property "preserve_signal". This constraint/property is not supported by the current software release and will be ignored.
+    Set property "MAX_FANOUT = REDUCE" for signal <plb_ce_1_sg_x1>.
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <xps_ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <blink_leds_cw> synthesized.
+
+Synthesizing Unit <blink_leds>.
+    Related source file is "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd".
+INFO:Xst:3210 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd" line 2806: Output port <ce_out> of the instance <black_box> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <blink_leds> synthesized.
+
+Synthesizing Unit <blink_leds_FixPt>.
+    Related source file is "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd".
+    Found 30-bit register for signal <value>.
+    Found 30-bit register for signal <count_1>.
+    Found 30-bit adder for signal <count> created at line 1241.
+    Found 30-bit adder for signal <value_1> created at line 1241.
+    Found 30-bit comparator lessequal for signal <n0009> created at line 2411
+    Found 30-bit comparator lessequal for signal <n0012> created at line 2415
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  60 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <blink_leds_FixPt> synthesized.
+
+Synthesizing Unit <constant_ef0e2e5fc6>.
+    Related source file is "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <constant_ef0e2e5fc6> synthesized.
+
+Synthesizing Unit <constant_fcd7a08743>.
+    Related source file is "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <constant_fcd7a08743> synthesized.
+
+Synthesizing Unit <constant_963ed6358a>.
+    Related source file is "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd".
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <clr> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <constant_963ed6358a> synthesized.
+
+Synthesizing Unit <edk_processor_entity_e6da1b6546>.
+    Related source file is "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd".
+    Summary:
+	no macro.
+Unit <edk_processor_entity_e6da1b6546> synthesized.
+
+Synthesizing Unit <axi_sgiface>.
+    Related source file is "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd".
+        C_S_AXI_SUPPORT_BURST = 0
+        C_S_AXI_ID_WIDTH = 8
+        C_S_AXI_DATA_WIDTH = 32
+        C_S_AXI_ADDR_WIDTH = 32
+        C_S_AXI_TOTAL_ADDR_LEN = 12
+        C_S_AXI_LINEAR_ADDR_LEN = 8
+        C_S_AXI_BANK_ADDR_LEN = 2
+        C_S_AXI_AWLEN_WIDTH = 8
+        C_S_AXI_ARLEN_WIDTH = 8
+WARNING:Xst:647 - Input <S_AXI_AWADDR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_AWLEN> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_AWSIZE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_AWBURST> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_AWLOCK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_AWCACHE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_AWPROT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_WDATA> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_WSTRB> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_ARADDR<9:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_ARADDR<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_ARSIZE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_ARBURST> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_ARLOCK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_ARCACHE> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <S_AXI_ARPROT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <AXI_Ce> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <write_ready>.
+    Found 1-bit register for signal <S_AXI_BVALID_i>.
+    Found 8-bit register for signal <S_AXI_BID_i>.
+    Found 2-bit register for signal <write_state>.
+    Found 1-bit register for signal <S_AXI_RVALID_i>.
+    Found 2-bit register for signal <read_bank_addr_i>.
+    Found 1-bit register for signal <S_AXI_RLAST_i>.
+    Found 8-bit register for signal <S_AXI_RID_i>.
+    Found 2-bit register for signal <read_state>.
+    Found 2-bit register for signal <read_prep_counter>.
+    Found 8-bit register for signal <read_data_counter>.
+    Found 32-bit register for signal <reg_bank_out_i>.
+    Found 32-bit register for signal <fifo_bank_out_i>.
+    Found 32-bit register for signal <shmem_bank_out_i>.
+    Found 32-bit register for signal <S_AXI_RDATA_i>.
+    Found finite state machine <FSM_0> for signal <write_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 5                                              |
+    | Clock              | AXI_AClk (rising_edge)                         |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <read_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 6                                              |
+    | Outputs            | 4                                              |
+    | Clock              | AXI_AClk (rising_edge)                         |
+    | Reset              | AXI_AResetN_INV_8_o (positive)                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit subtractor for signal <GND_24_o_GND_24_o_sub_55_OUT<1:0>> created at line 1308.
+    Found 8-bit subtractor for signal <GND_24_o_GND_24_o_sub_67_OUT<7:0>> created at line 1308.
+    Found 1-bit 4-to-1 multiplexer for signal <s_shram_en> created at line 1999.
+    Found 32-bit 4-to-1 multiplexer for signal <S_AXI_RDATA_i[31]_reg_bank_out_i[31]_mux_121_OUT> created at line 2272.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 160 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <axi_sgiface> synthesized.
+
+Synthesizing Unit <default_clock_driver_blink_leds>.
+    Related source file is "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_cw.vhd".
+    Set property "syn_noprune = true".
+    Set property "optimize_primitives = false".
+    Set property "dont_touch = true".
+INFO:Xst:3210 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_cw.vhd" line 378: Output port <clr> of the instance <xlclockdriver> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_cw.vhd" line 378: Output port <ce_logic> of the instance <xlclockdriver> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <default_clock_driver_blink_leds> synthesized.
+
+Synthesizing Unit <xlclockdriver>.
+    Related source file is "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_cw.vhd".
+        period = 1
+        log_2_period = 1
+        pipeline_regs = 5
+        use_bufg = 0
+    Set property "MAX_FANOUT = REDUCE" for signal <ce_vec>.
+    Set property "MAX_FANOUT = REDUCE" for signal <ce_vec_logic>.
+    Summary:
+	no macro.
+Unit <xlclockdriver> synthesized.
+
+Synthesizing Unit <synth_reg_w_init>.
+    Related source file is "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd".
+        width = 1
+        init_index = 0
+        init_value = "0000"
+        latency = 1
+    Summary:
+	no macro.
+Unit <synth_reg_w_init> synthesized.
+
+Synthesizing Unit <single_reg_w_init>.
+    Related source file is "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd".
+        width = 1
+        init_index = 0
+        init_value = "0000"
+    Set property "syn_black_box = true" for instance <fd_prim_array[0].bit_is_0.fdre_comp>.
+WARNING:Xst:37 - Detected unknown constraint/property "fpga_dont_touch". This constraint/property is not supported by the current software release and will be ignored.
+    Summary:
+	no macro.
+Unit <single_reg_w_init> synthesized.
+
+Synthesizing Unit <plb_clock_driver_blink_leds>.
+    Related source file is "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_cw.vhd".
+    Set property "syn_noprune = true".
+    Set property "optimize_primitives = false".
+    Set property "dont_touch = true".
+INFO:Xst:3210 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_cw.vhd" line 428: Output port <clr> of the instance <xlclockdriver> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/QPSK_Projects/Project_0/EDK/pcores/blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_cw.vhd" line 428: Output port <ce_logic> of the instance <xlclockdriver> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <plb_clock_driver_blink_leds> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 2-bit subtractor                                      : 1
+ 30-bit adder                                          : 2
+ 8-bit subtractor                                      : 1
+# Registers                                            : 15
+ 1-bit register                                        : 4
+ 2-bit register                                        : 2
+ 30-bit register                                       : 2
+ 32-bit register                                       : 4
+ 8-bit register                                        : 3
+# Comparators                                          : 2
+ 30-bit comparator lessequal                           : 2
+# Multiplexers                                         : 11
+ 1-bit 2-to-1 multiplexer                              : 2
+ 1-bit 4-to-1 multiplexer                              : 1
+ 30-bit 2-to-1 multiplexer                             : 3
+ 32-bit 2-to-1 multiplexer                             : 1
+ 32-bit 4-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 3
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <axi_sgiface>.
+The following registers are absorbed into counter <read_data_counter>: 1 register on signal <read_data_counter>.
+The following registers are absorbed into counter <read_prep_counter>: 1 register on signal <read_prep_counter>.
+Unit <axi_sgiface> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 30-bit adder                                          : 2
+# Counters                                             : 2
+ 2-bit down counter                                    : 1
+ 8-bit down counter                                    : 1
+# Registers                                            : 212
+ Flip-Flops                                            : 212
+# Comparators                                          : 2
+ 30-bit comparator lessequal                           : 2
+# Multiplexers                                         : 101
+ 1-bit 2-to-1 multiplexer                              : 64
+ 1-bit 4-to-1 multiplexer                              : 33
+ 30-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <shmem_bank_out_i_7> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_6> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_5> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_4> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_3> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_2> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_1> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_0> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_31> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_30> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_29> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_28> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_27> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_26> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_25> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_24> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_23> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_22> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_21> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_20> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_19> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_18> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_17> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_16> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_31> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_30> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_29> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_28> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_27> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_26> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_25> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_24> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_23> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_22> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_21> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_20> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_19> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_18> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_17> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_16> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_15> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_14> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_13> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_12> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_11> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_10> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_9> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shmem_bank_out_i_8> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_23> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_22> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_21> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_20> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_19> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_18> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_17> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_16> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_15> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_14> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_13> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_12> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_11> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_10> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_9> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_8> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_7> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_6> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_5> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_4> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_3> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_2> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_1> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_0> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_15> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_14> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_13> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_12> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_11> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_10> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_9> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_8> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_7> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_6> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_5> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_4> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_3> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_2> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_1> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <fifo_bank_out_i_0> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_31> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_30> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_29> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_28> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_27> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_26> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_25> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <reg_bank_out_i_24> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/FSM_1> on signal <read_state[1:2]> with user encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ idle      | 00
+ read_prep | 01
+ read_data | 10
+-----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/FSM_0> on signal <write_state[1:2]> with user encoding.
+----------------------------
+ State          | Encoding
+----------------------------
+ idle           | 00
+ write_data     | 01
+ write_response | 10
+----------------------------
+WARNING:Xst:1710 - FF/Latch <S_AXI_RID_i_0> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RID_i_1> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RID_i_2> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RID_i_3> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RID_i_4> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RID_i_5> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RID_i_6> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RID_i_7> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_0> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_1> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_2> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_3> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_4> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_5> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_6> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_BID_i_7> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <system_blink_leds_axiw_0_wrapper> ...
+
+Optimizing unit <axi_sgiface> ...
+WARNING:Xst:1710 - FF/Latch <S_AXI_RDATA_i_31> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_30> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_29> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_28> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_27> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_26> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_25> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_24> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_23> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_22> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_21> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_20> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_19> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_18> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_17> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_16> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_15> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_14> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_13> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_12> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_11> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_10> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_9> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_8> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_7> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_6> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_5> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_4> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_3> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_2> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_1> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_0> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <read_bank_addr_i_0> is unconnected in block <axi_sgiface>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <read_bank_addr_i_1> is unconnected in block <axi_sgiface>.
+WARNING:Xst:1710 - FF/Latch <S_AXI_RDATA_i_31> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_30> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_29> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_28> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_27> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_26> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_25> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_24> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_23> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_22> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_21> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_20> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_19> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_18> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_17> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_16> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_15> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_14> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_13> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_12> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_11> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_10> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_9> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_8> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_7> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_6> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_5> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_4> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_3> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_2> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_1> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <S_AXI_RDATA_i_0> (without init value) has a constant value of 0 in block <axi_sgiface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <read_bank_addr_i_0> is unconnected in block <axi_sgiface>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <read_bank_addr_i_1> is unconnected in block <axi_sgiface>.
+
+Optimizing unit <blink_leds_FixPt> ...
+WARNING:Xst:1710 - FF/Latch <count_1_27> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_1_28> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_1_29> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_1_21> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_1_22> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_1_23> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_1_24> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_1_25> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_1_26> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_1_27> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_1_28> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_1_29> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <count_1_21> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_1_22> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_1_23> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_1_24> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_1_25> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <count_1_26> (without init value) has a constant value of 0 in block <blink_leds_FixPt>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_4> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_5> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_6> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_7> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_8> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_9> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_10> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_11> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_12> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_13> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_14> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_15> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_16> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_17> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_18> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_19> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_20> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_21> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_22> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_23> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_24> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_25> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_26> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_27> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_28> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_29> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_state_FSM_FFd1> in Unit <system_blink_leds_axiw_0_wrapper> is equivalent to the following FF/Latch, which will be removed : <blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/S_AXI_RVALID_i> 
+
+Mapping all equations...
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block system_blink_leds_axiw_0_wrapper, actual ratio is 0.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 44
+ Flip-Flops                                            : 44
+
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp> (without init value) has a constant value of 0 in block <system_blink_leds_axiw_0_wrapper>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : system_blink_leds_axiw_0_wrapper.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 156
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 24
+#      LUT2                        : 25
+#      LUT3                        : 9
+#      LUT4                        : 6
+#      LUT5                        : 4
+#      LUT6                        : 7
+#      MUXCY                       : 40
+#      VCC                         : 1
+#      XORCY                       : 35
+# FlipFlops/Latches                : 44
+#      FD                          : 27
+#      FDR                         : 7
+#      FDRE                        : 10
+# Others                           : 1
+#      xlpersistentdff             : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7z020clg484-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              44  out of  106400     0%  
+ Number of Slice LUTs:                   79  out of  53200     0%  
+    Number used as Logic:                79  out of  53200     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     82
+   Number with an unused Flip Flop:      38  out of     82    46%  
+   Number with an unused LUT:             3  out of     82     3%  
+   Number of fully used LUT-FF pairs:    41  out of     82    50%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                         247
+ Number of bonded IOBs:                   0  out of    200     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                                                                                                                              | Load  |
+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+sysgen_clk                         | NONE(blink_leds_axiw_0/sysgen_dut/default_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp)| 26    |
+axi_aclk                           | NONE(blink_leds_axiw_0/sysgen_dut/plb_clock_driver_blink_leds_x0/xlclockdriver_1/clr_reg/latency_gt_0.fd_array[1].reg_comp/fd_prim_array[0].bit_is_0.fdre_comp)    | 18    |
+-----------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 2.782ns (Maximum Frequency: 359.425MHz)
+   Minimum input arrival time before clock: 1.472ns
+   Maximum output required time after clock: 2.771ns
+   Maximum combinational path delay: 0.289ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'axi_aclk'
+  Clock period: 2.417ns (frequency: 413.736MHz)
+  Total number of paths / destination ports: 241 / 25
+-------------------------------------------------------------------------
+Delay:               2.417ns (Levels of Logic = 3)
+  Source:            blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_data_counter_6 (FF)
+  Destination:       blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_data_counter_7 (FF)
+  Source Clock:      axi_aclk rising
+  Destination Clock: axi_aclk rising
+
+  Data Path: blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_data_counter_6 to blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_data_counter_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.282   0.491  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_data_counter_6 (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_data_counter_6)
+     LUT2:I0->O            1   0.053   0.413  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/_n0320_inv1_SW0 (N4)
+     LUT6:I5->O            3   0.053   0.427  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/_n0320_inv1 (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/_n0320_inv1)
+     LUT6:I5->O            8   0.053   0.445  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/_n0356_inv (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/_n0356_inv)
+     FDRE:CE                   0.200          blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_data_counter_0
+    ----------------------------------------
+    Total                      2.417ns (0.641ns logic, 1.776ns route)
+                                       (26.5% logic, 73.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sysgen_clk'
+  Clock period: 2.782ns (frequency: 359.425MHz)
+  Total number of paths / destination ports: 807 / 25
+-------------------------------------------------------------------------
+Delay:               2.782ns (Levels of Logic = 26)
+  Source:            blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/count_1_0 (FF)
+  Destination:       blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_0 (FF)
+  Source Clock:      sysgen_clk rising
+  Destination Clock: sysgen_clk rising
+
+  Data Path: blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/count_1_0 to blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.282   0.399  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/count_1_0 (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/count_1_0)
+     INV:I->O              1   0.067   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_lut<0>_INV_0 (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_lut<0>)
+     MUXCY:S->O            1   0.291   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<0> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<1> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<2> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<3> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<4> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<5> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<5>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<6> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<6>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<7> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<7>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<8> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<8>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<9> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<9>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<10> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<10>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<11> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<11>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<12> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<12>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<13> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<13>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<14> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<14>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<15> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<15>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<16> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<16>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<17> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<17>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<18> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<18>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<19> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<19>)
+     MUXCY:CI->O           0   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<20> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<20>)
+     XORCY:CI->O          26   0.320   0.564  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_xor<21> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/count<21>)
+     LUT2:I1->O            1   0.053   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/mux301_lut (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/mux301_lut)
+     MUXCY:S->O            1   0.291   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/mux301_cy (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/GND_10_o_value_1[29]_LessThan_12_o_l1)
+     MUXCY:CI->O           1   0.204   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/mux301_cy1 (leds_out<3>)
+     FD:D                      0.011          blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/value_0
+    ----------------------------------------
+    Total                      2.782ns (1.819ns logic, 0.963ns route)
+                                       (65.4% logic, 34.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'axi_aclk'
+  Total number of paths / destination ports: 92 / 40
+-------------------------------------------------------------------------
+Offset:              1.472ns (Levels of Logic = 2)
+  Source:            s_axi_awvalid (PAD)
+  Destination:       blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_data_counter_7 (FF)
+  Destination Clock: axi_aclk rising
+
+  Data Path: s_axi_awvalid to blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_data_counter_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT4:I0->O            1   0.053   0.485  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/_n0356_inv_SW0 (N2)
+     LUT6:I4->O            8   0.053   0.445  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/_n0356_inv (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/_n0356_inv)
+     FDRE:CE                   0.200          blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_data_counter_0
+    ----------------------------------------
+    Total                      1.472ns (0.542ns logic, 0.930ns route)
+                                       (36.8% logic, 63.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sysgen_clk'
+  Total number of paths / destination ports: 135 / 4
+-------------------------------------------------------------------------
+Offset:              2.771ns (Levels of Logic = 26)
+  Source:            blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/count_1_0 (FF)
+  Destination:       leds_out<3> (PAD)
+  Source Clock:      sysgen_clk rising
+
+  Data Path: blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/count_1_0 to leds_out<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.282   0.399  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/count_1_0 (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/count_1_0)
+     INV:I->O              1   0.067   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_lut<0>_INV_0 (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_lut<0>)
+     MUXCY:S->O            1   0.291   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<0> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<0>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<1> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<1>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<2> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<2>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<3> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<3>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<4> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<4>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<5> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<5>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<6> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<6>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<7> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<7>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<8> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<8>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<9> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<9>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<10> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<10>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<11> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<11>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<12> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<12>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<13> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<13>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<14> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<14>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<15> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<15>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<16> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<16>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<17> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<17>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<18> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<18>)
+     MUXCY:CI->O           1   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<19> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<19>)
+     MUXCY:CI->O           0   0.015   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<20> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_cy<20>)
+     XORCY:CI->O          26   0.320   0.564  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/Madd_count_xor<21> (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/count<21>)
+     LUT2:I1->O            1   0.053   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/mux301_lut (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/mux301_lut)
+     MUXCY:S->O            1   0.291   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/mux301_cy (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/GND_10_o_value_1[29]_LessThan_12_o_l1)
+     MUXCY:CI->O           1   0.204   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/black_box/mux301_cy1 (leds_out<3>)
+    ----------------------------------------
+    Total                      2.771ns (1.808ns logic, 0.963ns route)
+                                       (65.2% logic, 34.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'axi_aclk'
+  Total number of paths / destination ports: 12 / 6
+-------------------------------------------------------------------------
+Offset:              1.158ns (Levels of Logic = 1)
+  Source:            blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_state_FSM_FFd1 (FF)
+  Destination:       s_axi_arready (PAD)
+  Source Clock:      axi_aclk rising
+
+  Data Path: blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_state_FSM_FFd1 to s_axi_arready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             16   0.282   0.823  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_state_FSM_FFd1 (blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/read_state_FSM_FFd1)
+     LUT6:I1->O            3   0.053   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/S_AXI_ARREADY1 (s_axi_arready)
+    ----------------------------------------
+    Total                      1.158ns (0.335ns logic, 0.823ns route)
+                                       (28.9% logic, 71.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 5 / 4
+-------------------------------------------------------------------------
+Delay:               0.289ns (Levels of Logic = 1)
+  Source:            s_axi_awvalid (PAD)
+  Destination:       s_axi_arready (PAD)
+
+  Data Path: s_axi_awvalid to s_axi_arready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT6:I2->O            3   0.053   0.000  blink_leds_axiw_0/sysgen_dut/blink_leds_x0/edk_processor_e6da1b6546/memmap/S_AXI_ARREADY1 (s_axi_arready)
+    ----------------------------------------
+    Total                      0.289ns (0.289ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock axi_aclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+axi_aclk       |    2.417|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sysgen_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sysgen_clk     |    2.782|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.37 secs
+ 
+--> 
+
+Total memory usage is 265712 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  299 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+
