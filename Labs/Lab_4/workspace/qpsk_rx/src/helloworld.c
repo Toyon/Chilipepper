@@ -55,7 +55,7 @@ int main()
     		else
     			aliveLed = 0;
     		testBlinkCount = 1;
-    		//XGpio_DiscreteWrite(&gpio_blinky, 2, aliveLed);
+    		XGpio_DiscreteWrite(&gpio_blinky, 2, aliveLed);
     	}
 	}
 
@@ -68,10 +68,8 @@ int SetupPeripherals( void )
 {
 
     XGpio_Initialize(&gpio_blinky, XPAR_AXI_GPIO_LED_DEVICE_ID);
-    XGpio_SetDataDirection(&gpio_blinky, 2, 0);
     XGpio_SetDataDirection(&gpio_blinky, 1, 0);
 	XGpio_DiscreteWrite(&gpio_blinky, 1, 0);
-	XGpio_DiscreteWrite(&gpio_blinky, 2, 0);
 
 	return XST_SUCCESS;
 }
