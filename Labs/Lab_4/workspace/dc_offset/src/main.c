@@ -31,7 +31,7 @@ int main()
     {
 	   Chilipepper_ControlAgc(); //update the Chilipepper AGC
 	   BlinkCount += 1;
-	   if (BlinkCount > 100000)
+	   if (BlinkCount > 500000)
 	   {
 		 if (aliveLed == 0)
 			aliveLed = 1;
