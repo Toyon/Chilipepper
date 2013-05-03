@@ -7,6 +7,7 @@ persistent i_dc q_dc i_mean q_mean
 persistent counter rssi_sum
 persistent dir_state
 persistent rssiHold
+persistent noise_offset noise_inc noise_dec
 
 alpha = alpha_in/2^12;
 
@@ -16,6 +17,9 @@ if isempty(i_dc)
     i_mean = 0;
     q_mean = 0;
     counter = 0;
+    noise_inc = 0;
+    noise_dec = 0;
+    noise_offset = 0;
     rssi_sum = 0;
     dir_state = 0;
     rssiHold = 0;
@@ -28,21 +32,41 @@ if rx_en_in == 1
     i_mean = (1-alpha)*i_mean + alpha*i_in;
     q_mean = (1-alpha)*q_mean + alpha*q_in;
 
-    if abs(i_in) < 250
-        i_dc = (1-alpha)*i_dc + alpha*i_in;
-    end
-    if abs(q_in) < 250
-        q_dc = (1-alpha)*q_dc + alpha*q_in;
-    end
-    if abs(i_dc) > 50
+    i_dc = (1-alpha)*i_dc + alpha*i_in; %update the i dc offset
+    q_dc = (1-alpha)*q_dc + alpha*q_in; %update the q dc offset
+
+    if abs(i_mean) > (50 + noise_offset)  % too much noise, raise cieling.
+        noise_inc = noise_inc + 1;
         i_dc = 0;
+    else
+        noise_dec = noise_dec + 1;
     end
-    if abs(q_dc) > 50
+    if abs(q_mean) > (50 + noise_offset)  % too much noise, raise cieling.
+        noise_inc = noise_inc + 1;
         q_dc = 0;
+    else
+        noise_dec = noise_dec +1;
+    end
+    if (noise_inc > 10)
+        %there is a high dc_offset value that needs to be corrected
+        noise_offset = noise_offset + 10;
+        noise_inc = 0;
+    end
+    if (noise_dec > 100000)
+        %dc offset threshold is higher than needed
+        noise_offset = noise_offset - 10;
+        noise_dec = 0;
     end
 end
 i_out = i_in - i_dc;
 q_out = q_in - q_dc;
+%correct false positive/nagatives
+if (abs(i_mean) < 50)
+    noise_inc = 0;
+end
+if (abs(i_mean) > noise_offset - 10)
+    noise_dec = 0;
+end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
