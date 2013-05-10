@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Model/simulation parameters
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-sim=1;
+sim=0;
 OS_RATE = 8;
 SNR = 1;
 fc = 10e3/20e6; % sample rate is 20 MHz, top is 10 kHz offset
@@ -110,7 +110,6 @@ if (sim)
     y = xp.*exp(1i*2*pi*fc*(0:length(xp)-1));
     rC = y/max(abs(y))*.1*2^11; % this controls receive gain
     r = awgn(rC,SNR,0,1);
-    r1 = rC;
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -133,12 +132,6 @@ s_t = zeros(1,length(r));
 s_c = zeros(1,length(r));
 f_est = zeros(1,length(r));
 t_est = zeros(1,length(r));
-s_p = zeros(1,length(r));
-s_o = zeros(1,length(r));
-byte_count = 0;
-if (sim)
-    bytes = zeros(1,ml);
-end
 for i1 = 1:length(r)+200
     if i1 > length(r)
         r_in = 0;
@@ -147,51 +140,30 @@ for i1 = 1:length(r)+200
     end
     i_in = round(real(r_in));
     q_in = round(imag(r_in));
-    [byte, en,  r_out(i1), s_f(i1), s_c(i1), s_t(i1), ...
-        t_est(i1), s_p(i1), s_o(i1), f_est(i1)] = ...
+    [r_out(i1), s_f(i1), s_c(i1), s_t(i1), t_est(i1), f_est(i1)] = ...
         qpsk_rx(i_in, q_in, floor(muFOC*2^12), floor(muTOC*2^12));
-    
-    if en == 1
-        byte_count = byte_count + 1;
-        bytes(byte_count) = byte;
-    end
-    
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 figure(2)
-subplot(2,2,1)
+subplot(2,3,1)
 scatter(real(r),imag(r))
 title('Pre FOC Signal');
-subplot(2,2,3)
+subplot(2,3,4)
 plot(real(r_out));
 title('Pre FOC Signal (real part)');
-subplot(2,2,2)
-plot(real(s_p));
-title('Message bits');
-subplot(2,2,4)
-plot(t_est);
-title('Time Estimate');
+subplot(2,3,2)
+scatter(real(s_c),imag(s_c))
+title('Post FOC Signal');
+subplot(2,3,5)
+plot(real(s_c));
+title('Post FOC Signal(real part)');
+subplot(2,3,3)
+scatter(real(s_t),imag(s_t))
+title('Post TOC Signal');
+subplot(2,3,6)
+plot(real(s_t));
+title('Post TOC Signal(real part)');
 
 figure(3)
-axis([0 length(s_p) -1.25 1.25]);
-plot(s_o);
-title('Correlation magnitude');
-
-if (sim)
-    numRecBytes = bytes(1)+bytes(2)+bytes(3);
-    msgBytes = bytes((1+4):(numRecBytes+4));
-    if sum(msgBytes-message) == 0
-        disp('Received message correctly');
-    else
-        disp('Received message incorrectly');
-    end    
-    native2unicode(bytes);
-    native2unicode(msgBytes)
-end
-
-if (~sim)
-    bs = double(M{end-1});
-    es = double(M{end});
-    recBytes = bs(es==1);
-    native2unicode(recBytes')
-end
+plot(t_est);
+title('Timing Estimate');
