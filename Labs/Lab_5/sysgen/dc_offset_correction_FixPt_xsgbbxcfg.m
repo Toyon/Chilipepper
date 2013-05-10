@@ -75,8 +75,8 @@
 	 setup_rates(this_block,'clk','ce', 1);
  end
  %s Add HDL files
- this_block.addFile('C:\GIT\Chilipepper\Labs\Lab_5\Matlab\codegen\dc_offset_correction\hdlsrc\dc_offset_correction_FixPt_pkg.vhd');
- this_block.addFile('C:\GIT\Chilipepper\Labs\Lab_5\Matlab\codegen\dc_offset_correction\hdlsrc\dc_offset_correction_FixPt.vhd');
+ this_block.addFile('hdl\dc_offset_correction_FixPt_pkg.vhd');
+ this_block.addFile('hdl\dc_offset_correction_FixPt.vhd');
 % ------------------------------------------------------------
 function setup_rates(block,clkname,cename,upsamplerate) 
 inputRates = block.inputRates; 
