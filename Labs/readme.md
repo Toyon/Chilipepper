@@ -11,5 +11,5 @@ The remaining labs include:
 5. Achieve carrier lock on a QPSK pattern
 6. Determine timing offset on a QPSK pattern
 7. Receive and decode a transmitted pattern
-8. Interface a processor with transmitter in order to output a message
-9. Receive packet
+8. Interface a processor with receiver in order to output a message
+9. Transmit packet
