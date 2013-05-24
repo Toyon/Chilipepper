@@ -12,4 +12,4 @@ The remaining labs include:
 6. Determine timing offset on a QPSK pattern
 7. Receive and decode a transmitted pattern
 8. Interface a processor with receiver in order to output a message
-9. Interface Transmit with processor to send/recieve a message (QPSK Demo)
+9. Interface Transmiter/Reciever with processor to send/recieve a message (QPSK Demo)
