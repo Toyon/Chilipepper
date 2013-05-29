@@ -93,8 +93,8 @@
 	 setup_rates(this_block,'clk','ce', 1);
  end
  %s Add HDL files
- this_block.addFile('C:\GIT\Chilipepper\Labs\Lab_8\MATLAB\codegen\qpsk_rx\hdlsrc\qpsk_rx_FixPt_pkg.vhd');
- this_block.addFile('C:\GIT\Chilipepper\Labs\Lab_8\MATLAB\codegen\qpsk_rx\hdlsrc\qpsk_rx_FixPt.vhd');
+ this_block.addFile('hdl\qpsk_rx_FixPt_pkg.vhd');
+ this_block.addFile('hdl\qpsk_rx_FixPt.vhd');
 % ------------------------------------------------------------
 function setup_rates(block,clkname,cename,upsamplerate) 
 inputRates = block.inputRates; 
