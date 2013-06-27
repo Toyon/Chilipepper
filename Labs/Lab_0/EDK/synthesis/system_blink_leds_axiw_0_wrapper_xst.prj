@@ -1,4 +1,0 @@
-vhdl blink_leds_axiw_v1_00_a C:\QPSK_Projects\Project_0\EDK\pcores\blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds.vhd
-vhdl blink_leds_axiw_v1_00_a C:\QPSK_Projects\Project_0\EDK\pcores\blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_cw.vhd
-vhdl blink_leds_axiw_v1_00_a C:\QPSK_Projects\Project_0\EDK\pcores\blink_leds_axiw_v1_00_a/hdl/vhdl/blink_leds_axiw.vhd
-vhdl work ../hdl/system_blink_leds_axiw_0_wrapper.vhd
