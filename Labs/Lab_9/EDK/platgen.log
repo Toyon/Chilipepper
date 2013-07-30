@@ -1,0 +1,305 @@
+Release 14.4 - platgen Xilinx EDK 14.4 Build EDK_P.49d
+ (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: platgen -p xc7z020clg484-1 -lang vhdl -intstyle default -msg
+__xps/ise/xmsgprops.lst system.mhs 
+
+Parse C:/GIT/Chilipepper/Labs/Lab_9/EDK/system.mhs ...
+
+Read MPD definitions ...
+WARNING:EDK:4092 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 49 
+WARNING:EDK:4092 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 151 
+WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_0 -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 213 
+WARNING:EDK:4092 - IPNAME: axi_uartlite, INSTANCE: axi_uartlite_0 -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 238 
+WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_gain - Pre-Production
+   version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 249 
+WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_led - Pre-Production
+   version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 260 
+WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_pa - Pre-Production
+   version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 274 
+WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_switch_test_modes -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 286 
+WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_button - Pre-Production
+   version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 297 
+WARNING:EDK:4092 - IPNAME: processing_system7, INSTANCE: processing_system7_0 -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 49 
+WARNING:EDK:4092 - IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 151 
+WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: clock_generator_0 -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 213 
+WARNING:EDK:4092 - IPNAME: axi_uartlite, INSTANCE: axi_uartlite_0 -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 238 
+WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_gain - Pre-Production
+   version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 249 
+WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_led - Pre-Production
+   version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 260 
+WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_pa - Pre-Production
+   version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 274 
+WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_switch_test_modes -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 286 
+WARNING:EDK:4092 - IPNAME: axi_gpio, INSTANCE: axi_gpio_button - Pre-Production
+   version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 297 
+
+Overriding IP level properties ...
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_S_AXI_HP0_HIGHADDR value to 0x1FFFFFFF -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_02_a\data\processing_system7_v2_1_0.mpd line 300 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_S_AXI_HP1_HIGHADDR value to 0x1FFFFFFF -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_02_a\data\processing_system7_v2_1_0.mpd line 304 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_S_AXI_HP2_HIGHADDR value to 0x1FFFFFFF -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_02_a\data\processing_system7_v2_1_0.mpd line 308 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_S_AXI_HP3_HIGHADDR value to 0x1FFFFFFF -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_02_a\data\processing_system7_v2_1_0.mpd line 312 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_NUM_F2P_INTR_INPUTS value to 1 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_02_a\data\processing_system7_v2_1_0.mpd line 319 
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi_interconnect_1 - tcl is
+   overriding PARAMETER C_BASEFAMILY value to zynq -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 81 
+
+Computing clock values...
+INFO:EDK:1432 - Frequency for Top-Level Input Clock
+   'processing_system7_0_PS_CLK_pin' is not specified. Clock DRCs will not be
+   performed for IPs connected to that clock port, unless they are connected
+   through the clock generator IP. 
+
+INFO:EDK:1432 - Frequency for Top-Level Input Clock 'clock_generator_0_pll_pin'
+   is not specified. Clock DRCs will not be performed for IPs connected to that
+   clock port, unless they are connected through the clock generator IP. 
+
+
+Performing IP level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION IPLEVEL_DRC_PROC...
+INFO:EDK - INFO: DDR Base and High address in current configuration is
+   0x00000000 and 0x1FFFFFFF respectively. 
+INFO:EDK - INFO: You can modify the DDR address range accessed by Programmable
+   Logic through the processing_system7 AXI slave interfaces. If MicroBlaze is a
+   master on processing_system7 AXI slave interfaces, please use the top half of
+   the address range (Base Address = 0x10000000; High Address = 0x1FFFFFFF). For
+   all other master, any subset of the DDR address can be used. See Xilinx
+   Answer 47167 for more information. 
+Address Map for Processor processing_system7_0
+  (0x41200000-0x4120ffff) axi_gpio_button	axi_interconnect_1
+  (0x41240000-0x4124ffff) axi_gpio_gain	axi_interconnect_1
+  (0x41280000-0x4128ffff) axi_gpio_led	axi_interconnect_1
+  (0x412c0000-0x412cffff) axi_gpio_pa	axi_interconnect_1
+  (0x41300000-0x4130ffff) axi_gpio_switch_test_modes	axi_interconnect_1
+  (0x42c00000-0x42c0ffff) axi_uartlite_0	axi_interconnect_1
+  (0x61600000-0x6160ffff) mcu_axiw_0	axi_interconnect_1
+  (0x69800000-0x6980ffff) dac_driver_axiw_0	axi_interconnect_1
+  (0x70e00000-0x70e0ffff) adc_driver_axiw_0	axi_interconnect_1
+  (0x70e20000-0x70e2ffff) tx_axiw_0	axi_interconnect_1
+  (0x72400000-0x7240ffff) rx_axiw_0	axi_interconnect_1
+
+Checking platform address map ...
+
+Checking platform configuration ...
+IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 - 1 master(s) : 11
+slave(s) 
+
+Checking port drivers...
+
+Performing Clock DRCs...
+
+Performing Reset DRCs...
+
+Overriding system level properties...
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_FCLK_CLK1_BUF value to FALSE -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_02_a\data\processing_system7_v2_1_0.mpd line 351 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_FCLK_CLK2_BUF value to FALSE -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_02_a\data\processing_system7_v2_1_0.mpd line 352 
+INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
+   is overriding PARAMETER C_FCLK_CLK3_BUF value to FALSE -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\processing_system7_v
+   4_02_a\data\processing_system7_v2_1_0.mpd line 353 
+
+INFO: Setting C_RANGE_CHECK = ON for axi_interconnect axi_interconnect_1.
+INFO:EDK:4130 - IPNAME: axi_interconnect, INSTANCE:axi_interconnect_1 - tcl is
+   overriding PARAMETER C_RANGE_CHECK value to 1 -
+   C:\Xilinx\14.4\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\axi_interconnect_v1_
+   06_a\data\axi_interconnect_v2_1_0.mpd line 149 
+
+Running system level update procedures...
+
+Running UPDATE Tcl procedures for OPTION SYSLEVEL_UPDATE_PROC...
+
+Running system level DRCs...
+
+Performing System level DRCs on properties...
+
+Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+
+Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
+INFO: No asynchronous clock conversions in axi_interconnect axi_interconnect_1.
+
+Modify defaults ...
+
+Creating stub ...
+
+Processing licensed instances ...
+Completion time: 0.00 seconds
+
+Creating hardware output directories ...
+
+Managing hardware (BBD-specified) netlist files ...
+IPNAME:adc_driver_axiw INSTANCE:adc_driver_axiw_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 137 - Copying (BBD-specified)
+netlist files.
+IPNAME:dac_driver_axiw INSTANCE:dac_driver_axiw_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 159 - Copying (BBD-specified)
+netlist files.
+IPNAME:mcu_axiw INSTANCE:mcu_axiw_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 173 - Copying (BBD-specified)
+netlist files.
+IPNAME:rx_axiw INSTANCE:rx_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs
+line 189 - Copying (BBD-specified) netlist files.
+IPNAME:tx_axiw INSTANCE:tx_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs
+line 201 - Copying (BBD-specified) netlist files.
+
+Managing cache ...
+IPNAME:processing_system7 INSTANCE:processing_system7_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 49 - Copying cache
+implementation netlist
+IPNAME:adc_driver_axiw INSTANCE:adc_driver_axiw_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 137 - Copying cache
+implementation netlist
+IPNAME:axi_interconnect INSTANCE:axi_interconnect_1 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 151 - Copying cache
+implementation netlist
+IPNAME:dac_driver_axiw INSTANCE:dac_driver_axiw_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 159 - Copying cache
+implementation netlist
+IPNAME:mcu_axiw INSTANCE:mcu_axiw_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 173 - Copying cache
+implementation netlist
+IPNAME:rx_axiw INSTANCE:rx_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs
+line 189 - Copying cache implementation netlist
+IPNAME:tx_axiw INSTANCE:tx_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs
+line 201 - Copying cache implementation netlist
+IPNAME:axi_uartlite INSTANCE:axi_uartlite_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 238 - Copying cache
+implementation netlist
+IPNAME:axi_gpio INSTANCE:axi_gpio_gain -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 249 - Copying cache
+implementation netlist
+IPNAME:axi_gpio INSTANCE:axi_gpio_led -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 260 - Copying cache
+implementation netlist
+IPNAME:axi_gpio INSTANCE:axi_gpio_pa -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 274 - Copying cache
+implementation netlist
+IPNAME:axi_gpio INSTANCE:axi_gpio_switch_test_modes -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 286 - Copying cache
+implementation netlist
+IPNAME:axi_gpio INSTANCE:axi_gpio_button -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 297 - Copying cache
+implementation netlist
+
+Elaborating instances ...
+IPNAME:clock_generator INSTANCE:clock_generator_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 213 - elaborating IP
+ClkGen elaborate status: PASSED
+WARNING:EDK - : Phase value 0.0000 is converted to 0.0
+
+WARNING:EDK - : Phase value 0.0000 is converted to 0.0
+
+WARNING:EDK - : Phase value 90.0000 is converted to 90.0
+
+WARNING:EDK - : Phase value 0.0 is converted to 0.0
+
+WARNING:EDK - : Phase value 0.0 is converted to 0.0
+
+WARNING:EDK - : Phase value 0.0 is converted to 0.0
+
+----------------------------------------
+----------------------------------------
+
+Writing HDL for elaborated instances ...
+
+Inserting wrapper level ...
+Completion time: 1.00 seconds
+
+Constructing platform-level connectivity ...
+Completion time: 0.00 seconds
+
+Writing (top-level) BMM ...
+
+Writing (top-level and wrappers) HDL ...
+
+Generating synthesis project file ...
+
+Running XST synthesis ...
+
+INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
+   IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
+   synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:adc_driver_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line
+137 - Running XST synthesis
+INSTANCE:dac_driver_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line
+159 - Running XST synthesis
+INSTANCE:mcu_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 173 -
+Running XST synthesis
+INSTANCE:rx_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 189 -
+Running XST synthesis
+INSTANCE:tx_axiw_0 - C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 201 -
+Running XST synthesis
+INSTANCE:clock_generator_0 - C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line
+213 - Running XST synthesis
+
+Running NGCBUILD ...
+IPNAME:system_adc_driver_axiw_0_wrapper INSTANCE:adc_driver_axiw_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 137 - Running NGCBUILD
+IPNAME:system_dac_driver_axiw_0_wrapper INSTANCE:dac_driver_axiw_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 159 - Running NGCBUILD
+IPNAME:system_mcu_axiw_0_wrapper INSTANCE:mcu_axiw_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 173 - Running NGCBUILD
+IPNAME:system_rx_axiw_0_wrapper INSTANCE:rx_axiw_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 189 - Running NGCBUILD
+IPNAME:system_tx_axiw_0_wrapper INSTANCE:tx_axiw_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 201 - Running NGCBUILD
+IPNAME:system_clock_generator_0_wrapper INSTANCE:clock_generator_0 -
+C:\GIT\Chilipepper\Labs\Lab_9\EDK\system.mhs line 213 - Running NGCBUILD
+INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
+   If any constraint needs to be overridden, this should be done by modifying
+   the data/system.ucf file.
+
+Rebuilding cache ...
+
+Total run time: 266.00 seconds
