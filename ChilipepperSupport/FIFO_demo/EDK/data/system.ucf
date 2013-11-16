@@ -1,0 +1,7 @@
+NET clock_generator_0_CLKIN_pin LOC = D18    | IOSTANDARD = LVCMOS25;
+NET clock_generator_0_CLKIN_pin TNM_NET = clock_generator_0_CLKIN;
+TIMESPEC TS_clock_generator_0_CLKIN = PERIOD clock_generator_0_CLKIN 40.000 MHz;
+
+NET clock_generator_0_LOCKED_pin			LOC = T22	|IOSTANDARD = LVCMOS25;
+NET axi_uartlite_0_RX_pin					LOC = R19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET axi_uartlite_0_TX_pin					LOC = L21	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
