@@ -1,0 +1,14 @@
+##############################################################################
+## File Name:         codegen\ipcore\tx_fifo_pcore_v1_00_a\data\tx_fifo_pcore_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Created:           2013-11-18 18:19:35
+##############################################################################
+
+lib tx_fifo_pcore_v1_00_a SimpleDualPortRAM_2048x8b vhdl
+lib tx_fifo_pcore_v1_00_a fifo_ram vhdl
+lib tx_fifo_pcore_v1_00_a tx_fifo_fixpt vhdl
+lib tx_fifo_pcore_v1_00_a tx_fifo_pcore_dut vhdl
+lib tx_fifo_pcore_v1_00_a tx_fifo_pcore_axi_lite_module vhdl
+lib tx_fifo_pcore_v1_00_a tx_fifo_pcore_addr_decoder vhdl
+lib tx_fifo_pcore_v1_00_a tx_fifo_pcore_axi_lite vhdl
+lib tx_fifo_pcore_v1_00_a tx_fifo_pcore vhdl
