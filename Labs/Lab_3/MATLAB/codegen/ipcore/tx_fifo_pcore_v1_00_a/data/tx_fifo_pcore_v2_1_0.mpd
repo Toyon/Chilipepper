@@ -1,7 +1,7 @@
 ##############################################################################
 ## File Name:         codegen\ipcore\tx_fifo_pcore_v1_00_a\data\tx_fifo_pcore_v2_1_0.mpd
 ## Description:       Microprocessor Peripheral Description
-## Created:           2013-11-18 18:19:35
+## Created:           2013-11-18 18:27:45
 ##############################################################################
 
 BEGIN tx_fifo_pcore
@@ -46,5 +46,7 @@ PORT AXI_Lite_RVALID = RVALID, DIR = O, BUS = S_AXI
 PORT AXI_Lite_RREADY = RREADY, DIR = I, BUS = S_AXI
 
 ## External Ports
+PORT get_byte = "", DIR = I
 PORT dout = "", DIR = O, VEC = [7:0]
+PORT empty = "", DIR = O
 
