@@ -1,19 +1,20 @@
 #include <stdio.h>
 #include "platform.h"
-#include "xbasic_types.h"
+#include "xil_types.h"
+#include "xparameters.h"
 #include "xuartps.h"
 
 void mcu_latch_registers (void);
 int Chilipepper_InitDone( void );
 
 // mcu registers
-Xuint32 chili_init_done, chili_pa_en, chili_tr_sw,
+u32 chili_init_done, chili_pa_en, chili_tr_sw,
 		chili_mcu_reset, chili_rx_en, chili_tx_en;
-Xuint32 chili_mcu_latch, chili_mcu_reg_reset,
+u32 chili_mcu_latch, chili_mcu_reg_reset,
 		chili_latch_done, chili_reg_reset_done;
 
-// DAC registers
-Xuint32 dac_en;
+// DAC register
+u32 dac_en;
 
 int main()
 {
