@@ -1,7 +1,7 @@
 ##############################################################################
 ## File Name:         codegen\ipcore\qpsk_tx_pcore_v1_00_a\data\qpsk_tx_pcore_v2_1_0.mpd
 ## Description:       Microprocessor Peripheral Description
-## Created:           2013-11-15 16:55:38
+## Created:           2013-11-18 19:08:10
 ##############################################################################
 
 BEGIN qpsk_tx_pcore
@@ -46,10 +46,10 @@ PORT AXI_Lite_RVALID = RVALID, DIR = O, BUS = S_AXI
 PORT AXI_Lite_RREADY = RREADY, DIR = I, BUS = S_AXI
 
 ## External Ports
-PORT data_in = "", DIR = I, VEC = [31:0]
-PORT valid = "", DIR = I
+PORT data_in = "", DIR = I, VEC = [7:0]
+PORT empty_in = "", DIR = I
 PORT i_out = "", DIR = O, VEC = [11:0]
 PORT q_out = "", DIR = O, VEC = [11:0]
-PORT ready = "", DIR = O
+PORT request_byte = "", DIR = O
 PORT blinky = "", DIR = O
 

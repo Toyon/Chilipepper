@@ -1,12 +1,13 @@
 %#codegen
 % this core runs at an oversampling rate of 8
-function [d_out, tx_done_out, ready] = ...
-    qpsk_tx_byte2sym(data_in, clear_fifo_in, tx_en_in, valid)
+function [d_out, re_byte_out, tx_done_out] = ...
+    qpsk_tx_byte2sym(data_in, empty_in, clear_fifo_in, tx_en_in)
 
 OS_RATE = 8;
 SYM_PER_BYTE = 4; % number of symbols per byte (QPSK 4)
 tbi = TB_i;
 tbq = TB_q;
+CORE_LATENCY = 8;
 
 persistent count
 persistent symIndex
@@ -15,7 +16,7 @@ persistent tx_fifo
 persistent wrCount rdCount
 persistent txDone
 persistent sentTrain
-persistent debounce
+persistent reBuf
 
 if isempty(count)
     count = 0;
@@ -25,7 +26,7 @@ if isempty(count)
     wrCount = 0; rdCount = 0;
     txDone = 0;
     sentTrain = 0;
-    debounce = 0;
+    reBuf = 0;
 end
 if isempty(tx_fifo)
     tx_fifo = zeros(1,1024);
@@ -35,6 +36,7 @@ end
 if clear_fifo_in == 1
     wrCount = 0;
     txDone = 0;
+    reBuf = 0;
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -51,7 +53,7 @@ d_out = 0;
 % This core doesn't care about packet length, just about how many bytes got
 % written to the fifo.
 PAD_BITS = 24;
-if tx_en_in == 1 && txDone == 0
+if empty_in == 1 && tx_en_in == 1 && txDone == 0
     if sentTrain <= PAD_BITS
         if count == 0
             diLatch = mod(sentTrain,2)*2-1;
@@ -95,21 +97,46 @@ if tx_en_in == 1 && txDone == 0
     end
 end
 
-% this will work for one packet at a time, but needs to be fixed to recieve
-% data while transmitting a packet as well
-if valid == 1 && debounce == 0
-    ready = 1;
-    wrCount = wrCount + 1; %total number of bytes to send out
-    rdCount = wrCount;
-    tx_fifo(wrCount) = data_in;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% transfer data from processor to internal buffer
+% Because the core has a non-zero throughput we need to stale a bit for the
+% requested data to make it to our input. So, I'm doing that we reBuf
+% counter. There are definitely more efficient ways to do this but I'm
+% gonna leave that for another day.
+wrIndex = 1024;
+re_byte_out = 0;
+if empty_in == 0 && reBuf == 0
+    reBuf = CORE_LATENCY;
     txDone = 0;
-    sentTrain = 1;
-    debounce = 2;
-else
-    if debounce > 0
-       debounce = debounce - 1;
-    end
-    ready = 0;
+    re_byte_out = 1;
 end
+if reBuf > 0
+    reBuf = reBuf - 1;
+end
+if reBuf == 1
+    wrCount = wrCount + 1; %total number of bytes to send out
+    wrIndex = wrCount;
+    rdCount = wrCount;
+    reBuf = 0;
+    count = 0;
+    sentTrain = 1;
+end    
+tx_fifo(wrIndex) = data_in;
 
 tx_done_out = txDone;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
