@@ -6,4 +6,6 @@ vhdl
 default
 -msg
 __xps/ise/xmsgprops.lst
+-parallel
+yes
 system.mhs
