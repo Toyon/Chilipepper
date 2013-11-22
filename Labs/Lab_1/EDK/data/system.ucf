@@ -24,8 +24,6 @@ NET dac_driver_txd_pin[10]					LOC = A17	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | S
 NET dac_driver_txd_pin[11]					LOC = C18	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
 #######################################################################################
 # MCU interface
-NET axi_uartlite_0_RX_pin					LOC = R19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET axi_uartlite_0_TX_pin					LOC = L21	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
 NET mcu_driver_mcu_reset_out_pin			LOC = K20	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
 NET mcu_driver_tx_en_pin					LOC = D22	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
 NET mcu_driver_tr_sw_pin					LOC = D20	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
@@ -34,7 +32,7 @@ NET mcu_driver_pa_en_pin 					LOC = E21	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SL
 NET mcu_driver_init_done_pin 				LOC = K19	| IOSTANDARD = LVCMOS25;
 #######################################################################################
 # LEDs
-NET clock_generator_0_LOCKED_pin           			LOC = T22  | IOSTANDARD=LVCMOS33;  # "LD0"
-NET tone_generator_blinky_pin								LOC = T21  | IOSTANDARD=LVCMOS33;  # "LD1"
-NET mcu_driver_blinky_pin									LOC = U22  | IOSTANDARD=LVCMOS33;  # "LD2"
-NET dac_driver_blinky_pin									LOC = U21  | IOSTANDARD=LVCMOS33;  # "LD3"
+NET clock_generator_0_LOCKED_pin			LOC = T22  | IOSTANDARD=LVCMOS33;  # "LD0"
+NET tone_generator_blinky_pin				LOC = T21  | IOSTANDARD=LVCMOS33;  # "LD1"
+NET mcu_driver_blinky_pin					LOC = U22  | IOSTANDARD=LVCMOS33;  # "LD2"
+NET dac_driver_blinky_pin					LOC = U21  | IOSTANDARD=LVCMOS33;  # "LD3"
