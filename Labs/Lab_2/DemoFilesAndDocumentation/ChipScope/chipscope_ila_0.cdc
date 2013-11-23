@@ -1,0 +1,53 @@
+#ChipScope Core Generator Project File Version 3.0
+#Sat Nov 23 11:53:52 Pacific Standard Time 2013
+SignalExport.bus<0000>.channelList=0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
+SignalExport.bus<0000>.name=TRIG0
+SignalExport.bus<0000>.offset=0.0
+SignalExport.bus<0000>.precision=0
+SignalExport.bus<0000>.radix=Bin
+SignalExport.bus<0000>.scaleFactor=1.0
+SignalExport.bus<0001>.channelList= 23 22 21 20 19 18 17 16 15 14 13 12
+SignalExport.bus<0001>.name=rx_i
+SignalExport.bus<0001>.offset=0.0
+SignalExport.bus<0001>.precision=0
+SignalExport.bus<0001>.radix=Hex
+SignalExport.bus<0001>.scaleFactor=1.0
+SignalExport.bus<0002>.channelList= 11 10 9 8 7 6 5 4 3 2 1 0
+SignalExport.bus<0002>.name=rx_q
+SignalExport.bus<0002>.offset=0.0
+SignalExport.bus<0002>.precision=0
+SignalExport.bus<0002>.radix=Hex
+SignalExport.bus<0002>.scaleFactor=1.0
+SignalExport.clockChannel=CLK
+SignalExport.dataEqualsTrigger=true
+SignalExport.triggerChannel<0000><0000>=rx_q[0]
+SignalExport.triggerChannel<0000><0001>=rx_q[1]
+SignalExport.triggerChannel<0000><0002>=rx_q[2]
+SignalExport.triggerChannel<0000><0003>=rx_q[3]
+SignalExport.triggerChannel<0000><0004>=rx_q[4]
+SignalExport.triggerChannel<0000><0005>=rx_q[5]
+SignalExport.triggerChannel<0000><0006>=rx_q[6]
+SignalExport.triggerChannel<0000><0007>=rx_q[7]
+SignalExport.triggerChannel<0000><0008>=rx_q[8]
+SignalExport.triggerChannel<0000><0009>=rx_q[9]
+SignalExport.triggerChannel<0000><0010>=rx_q[10]
+SignalExport.triggerChannel<0000><0011>=rx_q[11]
+SignalExport.triggerChannel<0000><0012>=rx_i[0]
+SignalExport.triggerChannel<0000><0013>=rx_i[1]
+SignalExport.triggerChannel<0000><0014>=rx_i[2]
+SignalExport.triggerChannel<0000><0015>=rx_i[3]
+SignalExport.triggerChannel<0000><0016>=rx_i[4]
+SignalExport.triggerChannel<0000><0017>=rx_i[5]
+SignalExport.triggerChannel<0000><0018>=rx_i[6]
+SignalExport.triggerChannel<0000><0019>=rx_i[7]
+SignalExport.triggerChannel<0000><0020>=rx_i[8]
+SignalExport.triggerChannel<0000><0021>=rx_i[9]
+SignalExport.triggerChannel<0000><0022>=rx_i[10]
+SignalExport.triggerChannel<0000><0023>=rx_i[11]
+SignalExport.triggerPort<0000>.name=TRIG0
+SignalExport.triggerPortCount=1
+SignalExport.triggerPortIsData<0000>=true
+SignalExport.triggerPortWidth<0000>=24
+SignalExport.type=ila
+
+
