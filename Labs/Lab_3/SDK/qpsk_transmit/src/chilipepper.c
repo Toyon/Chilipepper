@@ -7,61 +7,48 @@
 #include "xil_types.h"
 #include <stdio.h>
 
-//#define MCU_UART
 #define MCU_DRIVER
-//#define DC_OFFSET
 #define DAC_DRIVER
-#define TX_FIFO
 #define TX_PCORE
+#define TX_FIFO
+//#define DC_OFFSET
 //#define RX_PCORE
 //#define RX_FIFO
-
-#ifdef MCU_UART
-#include "xuartlite.h"
-XUartLite uartLite;
-#endif
-#ifdef RX_PCORE
-#include "rx_axiw.h"
-#endif
-#ifdef DC_OFFSET
-#include "dc_offset_axiw.h"
-#endif
+//#define MCU_UART
 
 #define TARGET_RSSI 800
 #define TARGET_RSSI_MARGIN 50
 
-unsigned char SendBuffer[3]; /* Buffer for Transmitting Data */
-unsigned char RecvBuffer[3]; /* Buffer for Receiving Data */
+unsigned char SendBuffer[3]; /* Buffer for Transmitting Data to Chilipepper */
+unsigned char RecvBuffer[3]; /* Buffer for Receiving Data from Chilipepper */
 
-#ifdef RX_PCORE
-xc_iface_t *chiliRxIface;
-xc_from_fifo_t *chiliRxFromFifo;
-#endif
-#ifdef RX_FIFO
-u32 rx_fifo_get_byte, rx_fifo_store_byte, rx_fifo_reset_fifo, rx_fifo_enable; // write
-u32 rx_fifo_dout, rx_fifo_empty, rx_fifo_byte_ready, rx_fifo_full, rx_fifo_bytes_available; // read
-#endif
 #ifdef MCU_DRIVER	// mcu registers
-u32 chili_init_done, chili_pa_en, chili_tr_sw,
-		chili_mcu_reset, chili_rx_en, chili_tx_en;
-u32 chili_mcu_latch, chili_mcu_reg_reset,
-		chili_latch_done, chili_reg_reset_done;
+u32 chili_mcu_reset, chili_tr_sw, chili_pa_en, chili_tx_en, chili_rx_en,
+	chili_mcu_latch, chili_mcu_reg_reset; // write
+u32 chili_init_done, chili_latch_done, chili_reg_reset_done; // read
 #endif
 #ifdef DAC_DRIVER	// DAC registers
-u32 dac_en;
+u32 dac_en; // write
 #endif
-#ifdef DC_OFFSET	// DC Offset registers
-u32 *chili_rssi, *chili_dir, *chili_rssi_high_goal, *chili_rssi_low_goal, *chili_agc_en, *rx_en;
+#ifdef TX_PCORE		// TX registers
+u32 clear_fifo, tx_en; // write
+u32 tx_done; // read
 #endif
-#ifdef RX_PCORE		// RX registers
-u32 *chili_mcu_rx_ready, *chili_num_bytes_ready, *chili_percent_full;
-#endif
-#ifdef TX_PCORE		// tx registers
-u32 clear_fifo, tx_en, tx_done;
-#endif
-#ifdef TX_FIFO
+#ifdef TX_FIFO // TX FIFO registers
 u32 tx_fifo_get_byte, tx_fifo_store_byte, tx_fifo_byte_in, tx_fifo_reset_fifo, tx_fifo_enable; // write
 u32 tx_fifo_empty, tx_fifo_byte_received, tx_fifo_full, tx_fifo_bytes_available; // read
+#endif
+#ifdef DC_OFFSET	// DC Offset registers
+u32 chili_agc_en, chili_rssi_low_goal, chili_rssi_high_goal, rx_en; // write
+u32 chili_rssi, chili_rssi_en, chili_dir, chili_dir_en; // read
+#endif
+#ifdef RX_PCORE		// RX registers
+u32 chili_mcu_rx_ready; // write
+u32 chili_num_bytes_ready; // read
+#endif
+#ifdef RX_FIFO // RX FIFO registers
+u32 rx_fifo_get_byte, rx_fifo_reset_fifo; // write
+u32 rx_fifo_byte_out, rx_fifo_empty, rx_fifo_byte_ready, rx_fifo_bytes_available; // read
 #endif
 /////////////////////////////////////////////////////////////////////////////////////////////
 // Initialize
@@ -74,86 +61,84 @@ int Chilipepper_Initialize(void) {
 		return -1;
 	XUartLite_ResetFifos(&uartLite);
 #endif
-#ifdef RX_PCORE
-	XC_CfgInitialize(&chiliRxIface, &RX_AXIW_ConfigTable[0]);		// initialize the software driver, assuming the Pcore device ID is 0
-	XC_GetShmem(chiliRxIface, "rx_fifo", (void **) &chiliRxFromFifo);		// obtain the memory location for storing the settings of shared memory "fromfifo"
-#endif
-#if defined (MCU_DRIVER)
-	chili_mcu_reset = 		XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x100; // write
-	chili_tr_sw = 			XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x104; // write
-	chili_pa_en = 			XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x108; // write
-	chili_tx_en = 			XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x10C; // write
-	chili_rx_en = 			XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x110; // write
-    chili_mcu_latch = 		XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x114; // write
-    chili_mcu_reg_reset = 	XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x118; // write
+#ifdef MCU_DRIVER
+	chili_mcu_reset = 			XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x100; // write
+	chili_tr_sw = 				XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x104; // write
+	chili_pa_en = 				XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x108; // write
+	chili_tx_en = 				XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x10C; // write
+	chili_rx_en = 				XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x110; // write
+    chili_mcu_latch = 			XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x114; // write
+    chili_mcu_reg_reset = 		XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x118; // write
 
-    chili_init_done = 		XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x11C; // read
-    chili_latch_done = 		XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x120; // read
-    chili_reg_reset_done = 	XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x124; // read
+    chili_init_done = 			XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x11C; // read
+    chili_latch_done = 			XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x120; // read
+    chili_reg_reset_done = 		XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x124; // read
 #endif
-#if defined (DAC_DRIVER)
-	dac_en = 				XPAR_DAC_DRIVER_S_AXI_BASEADDR + 0x100; //write
-#endif
-#if defined (RX_PCORE)
-	chili_num_bytes_ready = 	(u32 *) XPAR_RX_AXIW_0_MEMMAP_NUM_BYTES_READY;
-	chili_mcu_rx_ready = 		(u32 *) XPAR_RX_AXIW_0_MEMMAP_MCU_RX_READY;
-	chili_percent_full = 		(u32 *) XPAR_RX_AXIW_0_MEMMAP_RX_FIFO_PERCENTFULL;
-#endif
-#if defined (RX_FIFO)
-	rx_fifo_get_byte =			XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x100; //write
-	rx_fifo_store_byte =		XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x104; //write
-	rx_fifo_reset_fifo =		XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x108; //write
-
-	rx_fifo_dout = 				XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x10C; //read
-	rx_fifo_empty = 			XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x110; //read
-	rx_fifo_byte_ready = 		XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x114; //read
-	rx_fifo_full = 				XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x118; //read
-	rx_fifo_bytes_available = 	XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x11C; //read
-#endif
-#if defined (DC_OFFSET)
-	chili_rssi = 			(u32 *) XPAR_DC_OFFSET_AXIW_0_MEMMAP_RSSI; // read
-	chili_dir = 			(u32 *) XPAR_DC_OFFSET_AXIW_0_MEMMAP_DIR; // read
-	chili_rssi_high_goal = 	(u32 *) XPAR_DC_OFFSET_AXIW_0_MEMMAP_RSSI_HIGH_GOAL; // write
-	chili_rssi_low_goal = 	(u32 *) XPAR_DC_OFFSET_AXIW_0_MEMMAP_RSSI_LOW_GOAL; // write
-	chili_agc_en = 			(u32 *) XPAR_DC_OFFSET_AXIW_0_MEMMAP_AGC_EN; // write
-	rx_en = 				(u32 *) XPAR_DC_OFFSET_AXIW_0_MEMMAP_RX_EN; // write
-#endif
-#if defined (TX_PCORE)
-	clear_fifo = 	XPAR_QPSK_TX_S_AXI_BASEADDR + 0x100;  // write
-	tx_en = 		XPAR_QPSK_TX_S_AXI_BASEADDR + 0x104;  // write
-	tx_done = 		XPAR_QPSK_TX_S_AXI_BASEADDR + 0x108;  // read
-#endif
-#if defined (TX_FIFO)
-	tx_fifo_store_byte =			XPAR_TX_FIFO_S_AXI_BASEADDR + 0x100; //write
-	tx_fifo_byte_in =				XPAR_TX_FIFO_S_AXI_BASEADDR + 0x104; //write
-	tx_fifo_reset_fifo =			XPAR_TX_FIFO_S_AXI_BASEADDR + 0x108; //write
-
-	tx_fifo_byte_received = 		XPAR_TX_FIFO_S_AXI_BASEADDR + 0x10c; //read
-	tx_fifo_full = 					XPAR_TX_FIFO_S_AXI_BASEADDR + 0x110; //read
-	tx_fifo_bytes_available = 		XPAR_TX_FIFO_S_AXI_BASEADDR + 0x114; //read
+#ifdef DAC_DRIVER
+	dac_en = 					XPAR_DAC_DRIVER_S_AXI_BASEADDR + 0x100; // write
 #endif
 #ifdef RX_PCORE
-	*chili_mcu_rx_ready = 1;	// initialize rx driver
-	*chili_mcu_rx_ready = 0;
-	*chili_mcu_rx_ready = 1;
+	chili_mcu_rx_ready = 		XPAR_QPSK_RX_S_AXI_BASEADDR + 0x100; // write
+
+	chili_num_bytes_ready = 	XPAR_QPSK_RX_S_AXI_BASEADDR + 0x104; // read
+#endif
+#ifdef RX_FIFO
+	rx_fifo_get_byte =			XPAR_RX_FIFO_PCORE_S_AXI_BASEADDR + 0x100; // write
+	rx_fifo_reset_fifo =		XPAR_RX_FIFO_PCORE_S_AXI_BASEADDR + 0x104; // write
+
+	rx_fifo_byte_out = 			XPAR_RX_FIFO_PCORE_S_AXI_BASEADDR + 0x108; // read
+	rx_fifo_empty = 			XPAR_RX_FIFO_PCORE_S_AXI_BASEADDR + 0x10C; // read
+	rx_fifo_byte_ready = 		XPAR_RX_FIFO_PCORE_S_AXI_BASEADDR + 0x110; // read
+	rx_fifo_bytes_available = 	XPAR_RX_FIFO_PCORE_S_AXI_BASEADDR + 0x114; // read
 #endif
 #ifdef DC_OFFSET
-	*chili_rssi_high_goal = (u32)(1010*1010*2);		// initialize values for the DC offset/AGC core
-	*chili_rssi_low_goal = (u32)(990*990*2);
-	*chili_agc_en = 0;
+	chili_agc_en = 				XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x100; // write
+	chili_rssi_low_goal = 		XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x104; // write
+	chili_rssi_high_goal = 		XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x108; // write
+	rx_en = 					XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x10C; // write
+
+	chili_rssi = 				XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x110; // read
+	chili_rssi_en = 			XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x114; // read
+	chili_dir = 				XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x118; // read
+	chili_dir_en = 				XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x11C; // read
+#endif
+#ifdef TX_PCORE
+	clear_fifo = 				XPAR_QPSK_TX_S_AXI_BASEADDR + 0x100;  // write
+	tx_en = 					XPAR_QPSK_TX_S_AXI_BASEADDR + 0x104;  // write
+
+	tx_done = 					XPAR_QPSK_TX_S_AXI_BASEADDR + 0x108;  // read
+#endif
+#ifdef TX_FIFO
+	tx_fifo_store_byte =		XPAR_TX_FIFO_S_AXI_BASEADDR + 0x100; // write
+	tx_fifo_byte_in =			XPAR_TX_FIFO_S_AXI_BASEADDR + 0x104; // write
+	tx_fifo_reset_fifo =		XPAR_TX_FIFO_S_AXI_BASEADDR + 0x108; // write
+
+	tx_fifo_byte_received = 	XPAR_TX_FIFO_S_AXI_BASEADDR + 0x10c; // read
+	tx_fifo_full = 				XPAR_TX_FIFO_S_AXI_BASEADDR + 0x110; // read
+	tx_fifo_bytes_available = 	XPAR_TX_FIFO_S_AXI_BASEADDR + 0x114; // read
+#endif
+#ifdef RX_PCORE
+	Xil_Out32(chili_mcu_rx_ready, 1);
+	Xil_Out32(chili_mcu_rx_ready, 0);
+	Xil_Out32(chili_mcu_rx_ready, 1);
+#endif
+#ifdef DC_OFFSET
+	Xil_Out32(chili_rssi_high_goal, (u32)(1010*1010*2));
+	Xil_Out32(chili_rssi_low_goal, (u32)(990*990*2));
+	Xil_Out32(chili_agc_en, 0);
 #endif
 #ifdef MCU_DRIVER
 	Chilipepper_TxEnable(1);	// by default we enable Tx/Rx. User can disable later if they want
 	Chilipepper_RxEnable(1);	// by default we enable Tx/Rx. User can disable later if they want
 #endif
-#if defined (DAC_DRIVER)
+#ifdef DAC_DRIVER
 	Xil_Out32(dac_en, 0);
 	mcu_latch_registers();
 #endif
 #ifdef MCU_DRIVER
 	Chilipepper_Reset();
 #endif
-#if defined (DAC_DRIVER)
+#ifdef DAC_DRIVER
 	Xil_Out32(dac_en, 1);
 	mcu_latch_registers();
 #endif
@@ -162,12 +147,14 @@ int Chilipepper_Initialize(void) {
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 void mcu_latch_registers (void){
+#ifdef MCU_DRIVER
 	Xil_Out32(chili_mcu_latch, 1);
 	while(chili_latch_done == 0)
 		;
 	Xil_Out32(chili_mcu_latch, 0);
 	while(chili_latch_done == 1)
 		;
+#endif
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -287,12 +274,14 @@ int Chilipepper_ReadRssi(void) {
 // turn Chilipeppers onboard LED on/off
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_SetLed(int onOff) {
+#ifdef MCU_UART
 	SendBuffer[0] = 0xFF;
 	SendBuffer[1] = 0x00;
 	SendBuffer[2] = onOff;
 	SendBuffer[3] = 0xFE;
 
 	Chilipepper_SetRegister();
+#endif
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
