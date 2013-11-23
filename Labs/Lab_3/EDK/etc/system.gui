@@ -18,17 +18,16 @@
       <SELECTIONS/>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
-      <VARIABLE ID="clock_generator_0" ROW_INDEX="10"/>
+      <VARIABLE ID="clock_generator_0" ROW_INDEX="8"/>
       <VARIABLE ID="processing_system7_0" ROW_INDEX="1"/>
       <VARIABLE ID="axi_gpio_button" ROW_INDEX="2"/>
       <VARIABLE ID="axi_interconnect_1" ROW_INDEX="0"/>
       <VARIABLE ID="axi_gpio_led" ROW_INDEX="3"/>
-      <VARIABLE ID="axi_gpio_switch_test_modes" ROW_INDEX="4"/>
-      <VARIABLE ID="axi_uartlite_0" ROW_INDEX="5"/>
-      <VARIABLE ID="dac_driver" ROW_INDEX="6"/>
-      <VARIABLE ID="mcu_driver" ROW_INDEX="7"/>
-      <VARIABLE ID="tx_fifo" ROW_INDEX="9"/>
-      <VARIABLE ID="qpsk_tx" ROW_INDEX="8"/>
+      <VARIABLE ID="dac_driver" ROW_INDEX="4"/>
+      <VARIABLE ID="mcu_driver" ROW_INDEX="5"/>
+      <VARIABLE ID="tx_fifo" ROW_INDEX="7"/>
+      <VARIABLE ID="qpsk_tx" ROW_INDEX="6"/>
+      <VARIABLE ID="axi_gpio_switch" ROW_INDEX="9"/>
     </SEQUENCES>
   </SET>
 
@@ -75,7 +74,7 @@
 
   <SET CLASS="PROJECT" DISPLAYMODE="TREE" VIEW_ID="PORT">
     <HEADERS HSCROLL="0" VSCROLL="0">
-      <VARIABLE COL_INDEX="0" COL_WIDTH="264" IS_VISIBLE="TRUE" VIEWDISP="Name" VIEWTYPE="HEADER"/>
+      <VARIABLE COL_INDEX="0" COL_WIDTH="306" IS_VISIBLE="TRUE" VIEWDISP="Name" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="2" COL_WIDTH="353" IS_VISIBLE="TRUE" VIEWDISP="Connected Port" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="1" COL_WIDTH="361" IS_VISIBLE="TRUE" VIEWDISP="Net" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="3" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="Direction" VIEWTYPE="HEADER"/>
@@ -95,19 +94,16 @@
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
       <VARIABLE ID="ExternalPorts" ROW_INDEX="0"/>
-      <VARIABLE ID="clock_generator_0" ROW_INDEX="13"/>
+      <VARIABLE ID="clock_generator_0" ROW_INDEX="10"/>
       <VARIABLE ID="processing_system7_0" ROW_INDEX="2"/>
       <VARIABLE ID="axi_gpio_button" ROW_INDEX="3"/>
       <VARIABLE ID="axi_interconnect_1" ROW_INDEX="1"/>
       <VARIABLE ID="axi_gpio_led" ROW_INDEX="4"/>
-      <VARIABLE ID="axi_gpio_switch_test_modes" ROW_INDEX="5"/>
-      <VARIABLE ID="axi_uartlite_0" ROW_INDEX="6"/>
-      <VARIABLE ID="dac_driver" ROW_INDEX="7"/>
-      <VARIABLE ID="mcu_driver" ROW_INDEX="8"/>
-      <VARIABLE ID="tx_fifo" ROW_INDEX="10"/>
-      <VARIABLE ID="qpsk_tx" ROW_INDEX="9"/>
-      <VARIABLE ID="chipscope_ila_0" ROW_INDEX="12"/>
-      <VARIABLE ID="chipscope_icon_0" ROW_INDEX="11"/>
+      <VARIABLE ID="dac_driver" ROW_INDEX="6"/>
+      <VARIABLE ID="mcu_driver" ROW_INDEX="7"/>
+      <VARIABLE ID="tx_fifo" ROW_INDEX="9"/>
+      <VARIABLE ID="qpsk_tx" ROW_INDEX="8"/>
+      <VARIABLE ID="axi_gpio_switch" ROW_INDEX="5"/>
     </SEQUENCES>
   </SET>
 
@@ -185,7 +181,7 @@
     <SET ID="processing_system7_0" IS_EXPANDED="TRUE"/>
     <STATUS>
       <SELECTIONS>
-        <VARIABLE ID="axi_fifo_mm_s_1"/>
+        <VARIABLE ID="axi_uartlite_0"/>
       </SELECTIONS>
     </STATUS>
   </SET>

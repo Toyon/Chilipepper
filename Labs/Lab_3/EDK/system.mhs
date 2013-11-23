@@ -26,7 +26,6 @@
  PORT axi_gpio_button_GPIO_IO_I_pin = axi_gpio_button_GPIO_IO_I, DIR = I, SIGIS = INTERRUPT
  PORT axi_gpio_led_GPIO_IO_pin = axi_gpio_led_GPIO_IO, DIR = IO
  PORT axi_gpio_led_GPIO2_IO_pin = axi_gpio_led_GPIO2_IO, DIR = IO
- PORT clock_generator_0_pll_pin = clock_generator_0_CLKIN, DIR = I, SIGIS = CLK, CLK_FREQ = 40000000
  PORT clock_generator_0_tx_clk_pin = clock_generator_0_CLKOUT3, DIR = O, SIGIS = CLK, CLK_FREQ = 40000000
  PORT dac_driver_tx_iq_sel_pin = dac_driver_tx_iq_sel, DIR = O
  PORT dac_driver_txd_pin = dac_driver_txd, DIR = O, VEC = [11:0]
@@ -42,6 +41,7 @@
  PORT qpsk_tx_blinky_pin = qpsk_tx_blinky, DIR = O
  PORT clock_generator_0_rx_clk_pin = clock_generator_0_CLKOUT4, DIR = O, SIGIS = CLK, CLK_FREQ = 40000000
  PORT axi_gpio_switch_GPIO_IO_I_pin = axi_gpio_switch_GPIO_IO_I, DIR = I
+ PORT clock_generator_0_CLKIN_pin = clock_generator_0_CLKIN, DIR = I, SIGIS = CLK, CLK_FREQ = 40000000
 
 
 BEGIN clock_generator
@@ -61,7 +61,6 @@ BEGIN clock_generator
  PARAMETER C_CLKOUT3_GROUP = PLLE0
  PARAMETER C_CLKOUT4_FREQ = 40000000
  PARAMETER C_CLKOUT4_GROUP = PLLE0
- PORT CLKIN = clock_generator_0_CLKIN
  PORT CLKOUT3 = clock_generator_0_CLKOUT3
  PORT CLKFBOUT = clock_generator_0_CLKFBOUT
  PORT CLKFBIN = clock_generator_0_CLKFBOUT
@@ -71,6 +70,7 @@ BEGIN clock_generator
  PORT CLKOUT2 = clock_generator_0_CLKOUT2
  PORT LOCKED = clock_generator_0_LOCKED
  PORT CLKOUT4 = clock_generator_0_CLKOUT4
+ PORT CLKIN = clock_generator_0_CLKIN
 END
 
 BEGIN processing_system7
