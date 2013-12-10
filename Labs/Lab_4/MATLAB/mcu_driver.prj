@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deployment-project plugin="plugin.matlabhdlcoder" plugin-version="R2013a">
-  <configuration target="target.matlab.hdlcoder" target-name="HDL Code Generation" name="dc_offset" location="C:\GIT\Chilipepper\Labs\Lab_4_A\MATLAB" file="C:\GIT\Chilipepper\Labs\Lab_4_A\MATLAB\dc_offset.prj">
+  <configuration target="target.matlab.hdlcoder" target-name="HDL Code Generation" name="mcu_driver" location="C:\GIT\pcore_Branch\Chilipepper\Labs\Lab_2\MATLAB" file="C:\GIT\pcore_Branch\Chilipepper\Labs\Lab_2\MATLAB\mcu_driver.prj">
     <param.AutoInferDefaultFile />
     <param.AutoInferUseVariableSize>false</param.AutoInferUseVariableSize>
     <param.AutoInferUseUnboundedSize>false</param.AutoInferUseUnboundedSize>
@@ -13,16 +13,15 @@
     <param.hdl.WorkingSpecifiedDirectory />
     <param.hdl.BuildDirectory>option.hdl.ProjectDirectory</param.hdl.BuildDirectory>
     <param.hdl.BuildSpecifiedDirectory />
-    <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\dc_offset_correction\fixpt\dc_offset_correction_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
-    <param.fixptconv.InstrumentedBuildChecksum>416036311</param.fixptconv.InstrumentedBuildChecksum>
-    <param.fixptconv.FixedPointValidationChecksum>1169169255</param.fixptconv.FixedPointValidationChecksum>
-    <param.fixptconv.FixedPointSourceCodeChecksum>286810806</param.fixptconv.FixedPointSourceCodeChecksum>
+    <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\mcu_driver\fixpt\mcu_driver_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
+    <param.fixptconv.InstrumentedBuildChecksum>87703897</param.fixptconv.InstrumentedBuildChecksum>
+    <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
+    <param.fixptconv.FixedPointValidationChecksum>292942383</param.fixptconv.FixedPointValidationChecksum>
+    <param.fixptconv.FixedPointSourceCodeChecksum>405899028</param.fixptconv.FixedPointSourceCodeChecksum>
     <param.fixptconv.FixedPointStaticAnalysisChecksum />
-    <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}\dc_offset_correction_tb.m</param.fixptconv.DefaultTestFile>
+    <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}\mcu_driver_tb.m</param.fixptconv.DefaultTestFile>
     <param.fixptconv.ExcludedFixedPointVerificationFiles />
     <param.fixptconv.ExcludedFixedPointSimulationFiles />
-    <param.fixptconv.useStaticAnalysis>false</param.fixptconv.useStaticAnalysis>
-    <param.fixptconv.useBuildInstrumentMex>true</param.fixptconv.useBuildInstrumentMex>
     <param.fixptconv.FixptProposalKind>option.fixptconv.ProposeFracLenBasedOnWordLen</param.fixptconv.FixptProposalKind>
     <param.fixptconv.DefaultFixptWordLength>14</param.fixptconv.DefaultFixptWordLength>
     <param.fixptconv.DefaultFixptFractionLength>4</param.fixptconv.DefaultFixptFractionLength>
@@ -30,332 +29,195 @@
     <param.fixptconv.ProposeUsingDesignMinMaxAnd>option.fixptconv.ProposeUsingDesignMinMaxAnd.SimAndDerivedMinMax</param.fixptconv.ProposeUsingDesignMinMaxAnd>
     <param.transformedVariables>
       <ProposedTypesTableAnnotations>
-        <Function file="$(PROJECTDIR)\dc_offset_correction.m" name="dc_offset_correction">
-          <Variable name="ai">
-            <Column property="ProposedType" type="String" value="ufix11" />
+        <Function file="$(PROJECTDIR)\mcu_driver.m" name="mcu_driver">
+          <Variable name="blinky" />
+          <Variable name="blinky_cnt">
+            <Column property="ProposedType" type="String" value="ufix25" />
           </Variable>
-          <Variable name="alpha">
-            <Column property="ProposedType" type="String" value="ufix12_En12" />
-          </Variable>
-          <Variable name="alpha_in">
-            <Column property="ProposedType" type="String" value="ufix12" />
-          </Variable>
-          <Variable name="aq">
-            <Column property="ProposedType" type="String" value="ufix11" />
-          </Variable>
-          <Variable name="counter" />
-          <Variable name="d1">
-            <Column property="ProposedType" type="String" value="sfix12" />
-          </Variable>
-          <Variable name="d2">
-            <Column property="ProposedType" type="String" value="sfix12" />
-          </Variable>
-          <Variable name="d3">
-            <Column property="ProposedType" type="String" value="sfix12" />
-          </Variable>
-          <Variable name="d4">
-            <Column property="ProposedType" type="String" value="ufix24" />
-          </Variable>
-          <Variable name="d5">
-            <Column property="ProposedType" type="String" value="ufix24" />
-          </Variable>
-          <Variable name="d6" />
-          <Variable name="d7" />
-          <Variable name="d8" />
-          <Variable name="d9" />
-          <Variable name="dir_en_out" />
-          <Variable name="dir_out" />
-          <Variable name="dir_state" />
-          <Variable name="gain_en_in" />
-          <Variable name="i_dc">
-            <Column property="ProposedType" type="String" value="sfix24_En12" />
-          </Variable>
-          <Variable name="i_in">
-            <Column property="ProposedType" type="String" value="sfix12" />
-          </Variable>
-          <Variable name="i_mean">
-            <Column property="ProposedType" type="String" value="sfix24_En12" />
-          </Variable>
-          <Variable name="i_out">
-            <Column property="ProposedType" type="String" value="sfix12" />
-          </Variable>
-          <Variable name="q_dc">
-            <Column property="ProposedType" type="String" value="sfix24_En12" />
-          </Variable>
-          <Variable name="q_in">
-            <Column property="ProposedType" type="String" value="sfix12" />
-          </Variable>
-          <Variable name="q_mean">
-            <Column property="ProposedType" type="String" value="sfix24_En12" />
-          </Variable>
-          <Variable name="q_out">
-            <Column property="ProposedType" type="String" value="sfix12" />
-          </Variable>
-          <Variable name="rssiHold">
-            <Column property="ProposedType" type="String" value="ufix24" />
-          </Variable>
-          <Variable name="rssi_diff">
-            <Column property="ProposedType" type="String" value="ufix24" />
-          </Variable>
-          <Variable name="rssi_en_out" />
-          <Variable name="rssi_high_goal_in">
-            <Column property="ProposedType" type="String" value="ufix24" />
-          </Variable>
-          <Variable name="rssi_inst">
-            <Column property="ProposedType" type="String" value="ufix23" />
-          </Variable>
-          <Variable name="rssi_low_goal_in">
-            <Column property="ProposedType" type="String" value="ufix24" />
-          </Variable>
-          <Variable name="rssi_out">
-            <Column property="ProposedType" type="String" value="ufix24" />
-          </Variable>
-          <Variable name="rssi_sum">
-            <Column property="ProposedType" type="String" value="ufix32" />
-          </Variable>
-          <Variable name="rx_en_in" />
+          <Variable name="init_done" />
+          <Variable name="init_done_reg" />
+          <Variable name="latch" />
+          <Variable name="latch_done" />
+          <Variable name="mcu_reg_reset" />
+          <Variable name="mcu_reset_in" />
+          <Variable name="mcu_reset_out" />
+          <Variable name="pa_en" />
+          <Variable name="pa_en_reg" />
+          <Variable name="pa_enable" />
+          <Variable name="reg_reset_done" />
+          <Variable name="reset" />
+          <Variable name="rx_en" />
+          <Variable name="rx_en_reg" />
+          <Variable name="rx_enable" />
+          <Variable name="tr_sw" />
+          <Variable name="tr_sw_reg" />
+          <Variable name="tr_switch" />
+          <Variable name="tx_en" />
+          <Variable name="tx_en_reg" />
+          <Variable name="tx_enable" />
         </Function>
       </ProposedTypesTableAnnotations>
     </param.transformedVariables>
     <param.computedVariables>
       <ComputedFixedPointData>
-        <Function file="$(PROJECTDIR)\dc_offset_correction.m" name="dc_offset_correction">
-          <Variable name="ai">
+        <Function file="$(PROJECTDIR)\mcu_driver.m" name="mcu_driver">
+          <Variable name="blinky">
+            <Column property="Kind" type="String" value="output" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
           </Variable>
-          <Variable name="alpha">
+          <Variable name="blinky_cnt">
+            <Column property="Kind" type="String" value="persistent" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
           </Variable>
-          <Variable name="alpha_in">
+          <Variable name="init_done">
             <Column property="Kind" type="String" value="input" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
           </Variable>
-          <Variable name="aq">
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="counter">
-            <Column property="Kind" type="String" value="persistent" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="d1">
+          <Variable name="init_done_reg">
             <Column property="Kind" type="String" value="output" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
           </Variable>
-          <Variable name="d2">
-            <Column property="Kind" type="String" value="output" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="d3">
-            <Column property="Kind" type="String" value="output" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="d4">
-            <Column property="Kind" type="String" value="output" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="d5">
-            <Column property="Kind" type="String" value="output" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="d6">
-            <Column property="Kind" type="String" value="output" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="d7">
-            <Column property="Kind" type="String" value="output" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="d8">
-            <Column property="Kind" type="String" value="output" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="d9">
-            <Column property="Kind" type="String" value="output" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="dir_en_out">
-            <Column property="Kind" type="String" value="output" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="dir_out">
-            <Column property="Kind" type="String" value="output" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="dir_state">
-            <Column property="Kind" type="String" value="persistent" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="gain_en_in">
+          <Variable name="latch">
             <Column property="Kind" type="String" value="input" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
           </Variable>
-          <Variable name="i_dc">
-            <Column property="Kind" type="String" value="persistent" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="i_in">
-            <Column property="Kind" type="String" value="input" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="i_mean">
-            <Column property="Kind" type="String" value="persistent" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="i_out">
+          <Variable name="latch_done">
             <Column property="Kind" type="String" value="output" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
           </Variable>
-          <Variable name="q_dc">
-            <Column property="Kind" type="String" value="persistent" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="q_in">
+          <Variable name="mcu_reg_reset">
             <Column property="Kind" type="String" value="input" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
           </Variable>
-          <Variable name="q_mean">
-            <Column property="Kind" type="String" value="persistent" />
+          <Variable name="mcu_reset_in">
+            <Column property="Kind" type="String" value="input" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
           </Variable>
-          <Variable name="q_out">
+          <Variable name="mcu_reset_out">
             <Column property="Kind" type="String" value="output" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
           </Variable>
-          <Variable name="rssiHold">
-            <Column property="Kind" type="String" value="persistent" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="rssi_diff">
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="rssi_en_out">
+          <Variable name="pa_en">
             <Column property="Kind" type="String" value="output" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
           </Variable>
-          <Variable name="rssi_high_goal_in">
+          <Variable name="pa_en_reg">
             <Column property="Kind" type="String" value="input" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
           </Variable>
-          <Variable name="rssi_inst">
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="rssi_low_goal_in">
-            <Column property="Kind" type="String" value="input" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="rssi_out">
-            <Column property="Kind" type="String" value="output" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-          </Variable>
-          <Variable name="rssi_sum">
+          <Variable name="pa_enable">
             <Column property="Kind" type="String" value="persistent" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
           </Variable>
-          <Variable name="rx_en_in">
+          <Variable name="reg_reset_done">
+            <Column property="Kind" type="String" value="output" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="reset">
+            <Column property="Kind" type="String" value="persistent" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="rx_en">
+            <Column property="Kind" type="String" value="output" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="rx_en_reg">
             <Column property="Kind" type="String" value="input" />
-            <MATLABType class="logical" complex="false">
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="rx_enable">
+            <Column property="Kind" type="String" value="persistent" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="tr_sw">
+            <Column property="Kind" type="String" value="output" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="tr_sw_reg">
+            <Column property="Kind" type="String" value="input" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="tr_switch">
+            <Column property="Kind" type="String" value="persistent" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="tx_en">
+            <Column property="Kind" type="String" value="output" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="tx_en_reg">
+            <Column property="Kind" type="String" value="input" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+          </Variable>
+          <Variable name="tx_enable">
+            <Column property="Kind" type="String" value="persistent" />
+            <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
@@ -368,7 +230,7 @@
     <param.fixptconv.DefaultOverflowMode>option.fixptconv.proposetypes.wrap</param.fixptconv.DefaultOverflowMode>
     <param.fixptconv.LogAllIOValues>false</param.fixptconv.LogAllIOValues>
     <param.fixptconv.LogHistogram>false</param.fixptconv.LogHistogram>
-    <param.fixptconv.FixPtFileNameSuffix>_FixPt</param.fixptconv.FixPtFileNameSuffix>
+    <param.fixptconv.FixPtFileNameSuffix>_fixpt</param.fixptconv.FixPtFileNameSuffix>
     <param.fixptconv.AutoScaleLoopIndexVariables>false</param.fixptconv.AutoScaleLoopIndexVariables>
     <param.fixptconv.ConvertConstantsToFi>true</param.fixptconv.ConvertConstantsToFi>
     <param.fixptconv.FICastFiVariables>false</param.fixptconv.FICastFiVariables>
@@ -380,11 +242,146 @@
     <param.fixptconv.DefaultFixedPointSignedness>option.fixptconv.DefaultFixedPointSignedness.Automatic</param.fixptconv.DefaultFixedPointSignedness>
     <param.fixptconv.StaticAnalysisTimeout />
     <param.fixptconv.StaticAnalysisGlobalRangesOnly>false</param.fixptconv.StaticAnalysisGlobalRangesOnly>
-    <param.hdl.CodeGenTarget>option.hdl.ASIC_FPGA</param.hdl.CodeGenTarget>
+    <param.hdl.Workflow>option.workflow.IpCore</param.hdl.Workflow>
+    <param.hdl.TargetPlatform>ZedBoard</param.hdl.TargetPlatform>
+    <param.hdl.SynthesisTool>Xilinx ISE</param.hdl.SynthesisTool>
+    <param.hdl.InputFrequency>100</param.hdl.InputFrequency>
+    <param.hdl.TargetFrequency>100</param.hdl.TargetFrequency>
+    <param.hdl.IPCoreName>mcu_driver_pcore</param.hdl.IPCoreName>
+    <param.hdl.IPCoreVersion>v1.00.a</param.hdl.IPCoreVersion>
+    <param.hdl.ExecutionMode>option.hdl.FreeRunning</param.hdl.ExecutionMode>
+    <param.hdl.SynthesisToolChipFamily>Zynq</param.hdl.SynthesisToolChipFamily>
+    <param.hdl.SynthesisToolDeviceName>xc7z020</param.hdl.SynthesisToolDeviceName>
+    <param.hdl.SynthesisToolPackageName>clg484</param.hdl.SynthesisToolPackageName>
+    <param.hdl.SynthesisToolSpeedValue>-1</param.hdl.SynthesisToolSpeedValue>
+    <param.hdl.TargetInterface>
+      <TargetInterface>
+        <Port>
+          <Name>init_done</Name>
+          <PortType>Inport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
+        <Port>
+          <Name>mcu_reset_in</Name>
+          <PortType>Inport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>AXI4-Lite</SelectedInterface>
+          <BitRange>x"100"</BitRange>
+        </Port>
+        <Port>
+          <Name>tr_sw_reg</Name>
+          <PortType>Inport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>AXI4-Lite</SelectedInterface>
+          <BitRange>x"104"</BitRange>
+        </Port>
+        <Port>
+          <Name>pa_en_reg</Name>
+          <PortType>Inport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>AXI4-Lite</SelectedInterface>
+          <BitRange>x"108"</BitRange>
+        </Port>
+        <Port>
+          <Name>tx_en_reg</Name>
+          <PortType>Inport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>AXI4-Lite</SelectedInterface>
+          <BitRange>x"10C"</BitRange>
+        </Port>
+        <Port>
+          <Name>rx_en_reg</Name>
+          <PortType>Inport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>AXI4-Lite</SelectedInterface>
+          <BitRange>x"110"</BitRange>
+        </Port>
+        <Port>
+          <Name>latch</Name>
+          <PortType>Inport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>AXI4-Lite</SelectedInterface>
+          <BitRange>x"114"</BitRange>
+        </Port>
+        <Port>
+          <Name>mcu_reg_reset</Name>
+          <PortType>Inport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>AXI4-Lite</SelectedInterface>
+          <BitRange>x"118"</BitRange>
+        </Port>
+        <Port>
+          <Name>mcu_reset_out</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
+        <Port>
+          <Name>tr_sw</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
+        <Port>
+          <Name>pa_en</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
+        <Port>
+          <Name>tx_en</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
+        <Port>
+          <Name>rx_en</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
+        <Port>
+          <Name>init_done_reg</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>AXI4-Lite</SelectedInterface>
+          <BitRange>x"11C"</BitRange>
+        </Port>
+        <Port>
+          <Name>latch_done</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>AXI4-Lite</SelectedInterface>
+          <BitRange>x"120"</BitRange>
+        </Port>
+        <Port>
+          <Name>reg_reset_done</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>AXI4-Lite</SelectedInterface>
+          <BitRange>x"124"</BitRange>
+        </Port>
+        <Port>
+          <Name>blinky</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
+      </TargetInterface>
+    </param.hdl.TargetInterface>
     <param.hdl.TargetLanguage>option.hdl.VHDL</param.hdl.TargetLanguage>
     <param.hdl.CheckConformance>false</param.hdl.CheckConformance>
+    <param.hdl.LaunchConformanceReport>false</param.hdl.LaunchConformanceReport>
     <param.hdl.GenerateHDLCode>true</param.hdl.GenerateHDLCode>
-    <param.hdl.GenerateEDAScripts>true</param.hdl.GenerateEDAScripts>
+    <param.hdl.GenerateEDAScripts>false</param.hdl.GenerateEDAScripts>
     <param.hdl.GenerateComments>true</param.hdl.GenerateComments>
     <param.hdl.MATLABSourceComments>false</param.hdl.MATLABSourceComments>
     <param.hdl.GenerateReport>false</param.hdl.GenerateReport>
@@ -402,11 +399,12 @@
     <param.hdl.ComplexImagPostfix>_im</param.hdl.ComplexImagPostfix>
     <param.hdl.PipelinePostfix>_pipe</param.hdl.PipelinePostfix>
     <param.hdl.EnablePrefix>enb</param.hdl.EnablePrefix>
+    <param.hdl.InlineConfigurations>true</param.hdl.InlineConfigurations>
     <param.hdl.ResetType>option.hdl.Asynchronous</param.hdl.ResetType>
     <param.hdl.ResetAssertedLevel>option.hdl.ActiveHigh</param.hdl.ResetAssertedLevel>
     <param.hdl.ResetInputPort>reset</param.hdl.ResetInputPort>
     <param.hdl.ClockInputPort>clk</param.hdl.ClockInputPort>
-    <param.hdl.ClockEnableInputPort>ce</param.hdl.ClockEnableInputPort>
+    <param.hdl.ClockEnableInputPort>clk_enable</param.hdl.ClockEnableInputPort>
     <param.hdl.Oversampling>1</param.hdl.Oversampling>
     <param.hdl.EnableRate>option.hdl.DutBaseRate</param.hdl.EnableRate>
     <param.hdl.InputType>option.hdl.StdLogicVector</param.hdl.InputType>
@@ -429,8 +427,9 @@
     <param.hdl.RAMArchitecture>option.hdl.EnabledRAM</param.hdl.RAMArchitecture>
     <param.hdl.PartitionFunctions>false</param.hdl.PartitionFunctions>
     <param.hdl.GenerateMLFcnBlock>false</param.hdl.GenerateMLFcnBlock>
-    <param.hdl.GenerateXSGBlock>true</param.hdl.GenerateXSGBlock>
+    <param.hdl.GenerateXSGBlock>false</param.hdl.GenerateXSGBlock>
     <param.hdl.SearchPath />
+    <param.hdl.BackAnnotationGraph>false</param.hdl.BackAnnotationGraph>
     <param.hdl.HDLCompileFilePostfix>_compile.do</param.hdl.HDLCompileFilePostfix>
     <param.hdl.HDLCompileInit>vlib %s\n</param.hdl.HDLCompileInit>
     <param.hdl.HDLCompileVHDLCmd>vcom %s %s\n</param.hdl.HDLCompileVHDLCmd>
@@ -441,14 +440,20 @@
     <param.hdl.HDLSimCmd>vsim -novopt work.%s\n</param.hdl.HDLSimCmd>
     <param.hdl.HDLSimViewWaveCmd>add wave sim:%s\n</param.hdl.HDLSimViewWaveCmd>
     <param.hdl.HDLSimTerm>run -all\n</param.hdl.HDLSimTerm>
-    <param.hdl.HDLSynthFilePostfix>_synplify.tcl</param.hdl.HDLSynthFilePostfix>
-    <param.hdl.HDLSynthInit>project -new %s.prj\n</param.hdl.HDLSynthInit>
-    <param.hdl.HDLSynthCmd>add_file %s\n</param.hdl.HDLSynthCmd>
-    <param.hdl.HDLSynthTerm>set_option -technology VIRTEX4\nset_option -part XC4VSX35\nset_option -synthesis_onoff_pragma 0\nset_option -frequency auto\nproject -run synthesis\n</param.hdl.HDLSynthTerm>
+    <param.hdl.HDLSynthTool>option.hdl.None</param.hdl.HDLSynthTool>
+    <var.toolSpecificEDAScript>hdlgetedascript(''</var.toolSpecificEDAScript>
+    <param.hdl.HDLSynthFilePostfix />
+    <param.hdl.HDLSynthInit />
+    <param.hdl.HDLSynthCmd />
+    <param.hdl.HDLSynthTerm />
+    <param.hdl.HDLLintTool>option.hdl.None</param.hdl.HDLLintTool>
+    <param.hdl.HDLLintInit />
+    <param.hdl.HDLLintCmd />
+    <param.hdl.HDLLintTerm />
     <param.isHDLVerifierInstalled>false</param.isHDLVerifierInstalled>
-    <param.hdl.GenerateHDLTestBench>true</param.hdl.GenerateHDLTestBench>
+    <param.hdl.GenerateHDLTestBench>false</param.hdl.GenerateHDLTestBench>
     <param.hdl.SimulateGeneratedCode>false</param.hdl.SimulateGeneratedCode>
-    <param.hdl.SimulationTool>No simulation tool available on system path</param.hdl.SimulationTool>
+    <param.hdl.SimulationTool>ISIM</param.hdl.SimulationTool>
     <param.hdl.TestBenchPostfix>_tb</param.hdl.TestBenchPostfix>
     <param.hdl.ForceClock>true</param.hdl.ForceClock>
     <param.hdl.ClockHighTime>5</param.hdl.ClockHighTime>
@@ -481,16 +486,18 @@
     <param.hdl.GenerateFILTestBench>false</param.hdl.GenerateFILTestBench>
     <param.hdl.FILLogOutputs>false</param.hdl.FILLogOutputs>
     <param.hdl.FILBoardName>HDL Verifier installation or licnese is not avaialble</param.hdl.FILBoardName>
+    <param.FILShowIPAddressWidgets>true</param.FILShowIPAddressWidgets>
     <param.hdl.FILBoardIPAddress>192.168.0.2</param.hdl.FILBoardIPAddress>
     <param.hdl.FILBoardMACAddress>00-0A-35-02-21-8A</param.hdl.FILBoardMACAddress>
     <param.hdl.FILAdditionalFiles />
     <param.hdl.SimulateFILTestBench>false</param.hdl.SimulateFILTestBench>
-    <param.hdl.SynthesisTool>No synthesis tool available on system path</param.hdl.SynthesisTool>
-    <param.hdl.SynthesisToolChipFamily />
-    <param.hdl.SynthesisToolDeviceName />
-    <param.hdl.SynthesisToolPackageName />
-    <param.hdl.SynthesisToolSpeedValue />
     <param.hdl.AdditionalSynthesisProjectFiles />
+    <param.hdl.CriticalPathSource>option.hdl.Preroute</param.hdl.CriticalPathSource>
+    <param.hdl.EmbeddedSystemTool>Xilinx PlanAhead with Embedded Design</param.hdl.EmbeddedSystemTool>
+    <param.hdl.ReferenceDesign>Default system (ISE 14.4)</param.hdl.ReferenceDesign>
+    <param.hdl.ReferenceDesignPath />
+    <param.hdl.EmbeddedSystemProjectFolder>codegen\pa_prj</param.hdl.EmbeddedSystemProjectFolder>
+    <param.hdl.BitstreamBuildMode>false</param.hdl.BitstreamBuildMode>
     <unset>
       <param.AutoInferDefaultFile />
       <param.AutoInferUseVariableSize />
@@ -504,10 +511,10 @@
       <param.hdl.WorkingSpecifiedDirectory />
       <param.hdl.BuildDirectory />
       <param.hdl.BuildSpecifiedDirectory />
+      <param.fixptconv.ShowCoverage />
+      <param.fixptconv.FixedPointStaticAnalysisChecksum />
       <param.fixptconv.ExcludedFixedPointVerificationFiles />
       <param.fixptconv.ExcludedFixedPointSimulationFiles />
-      <param.fixptconv.useStaticAnalysis />
-      <param.fixptconv.useBuildInstrumentMex />
       <param.fixptconv.FixptProposalKind />
       <param.fixptconv.DefaultFixptWordLength />
       <param.fixptconv.DefaultFixptFractionLength />
@@ -527,11 +534,14 @@
       <param.fixptconv.DefaultFixedPointSignedness />
       <param.fixptconv.StaticAnalysisTimeout />
       <param.fixptconv.StaticAnalysisGlobalRangesOnly />
-      <param.hdl.CodeGenTarget />
+      <param.hdl.InputFrequency />
+      <param.hdl.TargetFrequency />
+      <param.hdl.IPCoreVersion />
+      <param.hdl.ExecutionMode />
       <param.hdl.TargetLanguage />
       <param.hdl.CheckConformance />
+      <param.hdl.LaunchConformanceReport />
       <param.hdl.GenerateHDLCode />
-      <param.hdl.GenerateEDAScripts />
       <param.hdl.GenerateComments />
       <param.hdl.MATLABSourceComments />
       <param.hdl.GenerateReport />
@@ -539,7 +549,6 @@
       <param.hdl.VHDLFileExt />
       <param.hdl.VerilogFileExt />
       <param.hdl.DateComment />
-      <param.hdl.UserComment />
       <param.hdl.ModulePrefix />
       <param.hdl.PackagePostfix />
       <param.hdl.EntityConflictPostfix />
@@ -549,10 +558,12 @@
       <param.hdl.ComplexImagPostfix />
       <param.hdl.PipelinePostfix />
       <param.hdl.EnablePrefix />
+      <param.hdl.InlineConfigurations />
       <param.hdl.ResetType />
       <param.hdl.ResetAssertedLevel />
       <param.hdl.ResetInputPort />
       <param.hdl.ClockInputPort />
+      <param.hdl.ClockEnableInputPort />
       <param.hdl.Oversampling />
       <param.hdl.InputType />
       <param.hdl.OutputType />
@@ -574,22 +585,30 @@
       <param.hdl.RAMArchitecture />
       <param.hdl.PartitionFunctions />
       <param.hdl.GenerateMLFcnBlock />
+      <param.hdl.GenerateXSGBlock />
       <param.hdl.SearchPath />
+      <param.hdl.BackAnnotationGraph />
       <param.hdl.HDLCompileFilePostfix />
       <param.hdl.HDLCompileInit />
       <param.hdl.HDLCompileVHDLCmd />
       <param.hdl.HDLCompileVerilogCmd />
-      <param.hdl.HDLCompileTerm />
       <param.hdl.HDLSimFilePostfix />
       <param.hdl.HDLSimInit />
       <param.hdl.HDLSimCmd />
       <param.hdl.HDLSimViewWaveCmd />
       <param.hdl.HDLSimTerm />
+      <param.hdl.HDLSynthTool />
+      <var.toolSpecificEDAScript />
       <param.hdl.HDLSynthFilePostfix />
       <param.hdl.HDLSynthInit />
       <param.hdl.HDLSynthCmd />
       <param.hdl.HDLSynthTerm />
+      <param.hdl.HDLLintTool />
+      <param.hdl.HDLLintInit />
+      <param.hdl.HDLLintCmd />
+      <param.hdl.HDLLintTerm />
       <param.isHDLVerifierInstalled />
+      <param.hdl.GenerateHDLTestBench />
       <param.hdl.SimulateGeneratedCode />
       <param.hdl.TestBenchPostfix />
       <param.hdl.ForceClock />
@@ -622,57 +641,64 @@
       <param.hdl.CosimResetLength />
       <param.hdl.GenerateFILTestBench />
       <param.hdl.FILLogOutputs />
+      <param.FILShowIPAddressWidgets />
       <param.hdl.FILBoardIPAddress />
       <param.hdl.FILBoardMACAddress />
       <param.hdl.FILAdditionalFiles />
       <param.hdl.SimulateFILTestBench />
-      <param.hdl.SynthesisToolChipFamily />
-      <param.hdl.SynthesisToolDeviceName />
-      <param.hdl.SynthesisToolPackageName />
-      <param.hdl.SynthesisToolSpeedValue />
       <param.hdl.AdditionalSynthesisProjectFiles />
+      <param.hdl.CriticalPathSource />
+      <param.hdl.ReferenceDesignPath />
+      <param.hdl.EmbeddedSystemProjectFolder />
+      <param.hdl.BitstreamBuildMode />
     </unset>
     <fileset.entrypoints>
-      <file value="${PROJECT_ROOT}\dc_offset_correction.m" custom-data-expanded="false">
-        <Inputs fileName="dc_offset_correction.m" functionName="dc_offset_correction">
-          <Input Name="i_in">
+      <file value="${PROJECT_ROOT}\mcu_driver.m" custom-data-expanded="false">
+        <Inputs fileName="mcu_driver.m" functionName="mcu_driver">
+          <Input Name="init_done">
             <Class>double</Class>
             <UserDefined>false</UserDefined>
             <Size>1 x 1</Size>
             <Complex>false</Complex>
           </Input>
-          <Input Name="q_in">
+          <Input Name="mcu_reset_in">
             <Class>double</Class>
             <UserDefined>false</UserDefined>
             <Size>1 x 1</Size>
             <Complex>false</Complex>
           </Input>
-          <Input Name="alpha_in">
+          <Input Name="tr_sw_reg">
             <Class>double</Class>
             <UserDefined>false</UserDefined>
             <Size>1 x 1</Size>
             <Complex>false</Complex>
           </Input>
-          <Input Name="gain_en_in">
+          <Input Name="pa_en_reg">
             <Class>double</Class>
             <UserDefined>false</UserDefined>
             <Size>1 x 1</Size>
             <Complex>false</Complex>
           </Input>
-          <Input Name="rssi_low_goal_in">
+          <Input Name="tx_en_reg">
             <Class>double</Class>
             <UserDefined>false</UserDefined>
             <Size>1 x 1</Size>
             <Complex>false</Complex>
           </Input>
-          <Input Name="rssi_high_goal_in">
+          <Input Name="rx_en_reg">
             <Class>double</Class>
             <UserDefined>false</UserDefined>
             <Size>1 x 1</Size>
             <Complex>false</Complex>
           </Input>
-          <Input Name="rx_en_in">
-            <Class>logical</Class>
+          <Input Name="latch">
+            <Class>double</Class>
+            <UserDefined>false</UserDefined>
+            <Size>1 x 1</Size>
+            <Complex>false</Complex>
+          </Input>
+          <Input Name="mcu_reg_reset">
+            <Class>double</Class>
             <UserDefined>false</UserDefined>
             <Size>1 x 1</Size>
             <Complex>false</Complex>
@@ -681,7 +707,7 @@
       </file>
     </fileset.entrypoints>
     <fileset.scriptfile>
-      <file>${PROJECT_ROOT}\dc_offset_correction_tb.m</file>
+      <file>${PROJECT_ROOT}\mcu_driver_tb.m</file>
     </fileset.scriptfile>
     <fileset.package />
     <build-deliverables />
@@ -689,6 +715,8 @@
       <step key="category.workflow.top" skipped="false" />
       <step key="category.inputtypes" skipped="false" />
       <step key="category.float2fixedconversion" skipped="false" />
+      <step key="category.workflow.selecttarget" skipped="false" />
+      <step key="category.workflow.targetinterface" skipped="false" />
       <step key="category.workflow.generate" skipped="false" />
       <step key="category.workflow.verification" skipped="false" />
       <step key="category.workflow.hdltb" skipped="true" />
@@ -698,9 +726,17 @@
       <step key="category.workflow.createsynthesisproject" skipped="false" />
       <step key="category.workflow.logicsynthesis" skipped="false" />
       <step key="category.workflow.par" skipped="false" />
+      <step key="category.workflow.reportcriticalpath" skipped="false" />
+      <step key="category.workflow.embeddedsystemintegration" skipped="true" />
+      <step key="category.workflow.createembeddedsystemproject" skipped="false" />
+      <step key="category.workflow.buildembeddedsystem" skipped="false" />
+      <step key="category.workflow.ipcoreprogramtargetdevice" skipped="false" />
+      <step key="category.workflow.fpgaturnkeyintegration" skipped="true" />
+      <step key="category.workflow.buildbitstream" skipped="false" />
+      <step key="category.workflow.fpgaturnkeyprogramtargetdevice" skipped="false" />
     </workflow>
     <matlab>
-      <root>C:\Program Files\MATLAB\R2013a</root>
+      <root>C:\Program Files\MATLAB\R2013b</root>
       <toolboxes>
         <toolbox name="fixedpoint" />
       </toolboxes>
