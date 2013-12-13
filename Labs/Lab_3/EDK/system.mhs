@@ -244,6 +244,12 @@ BEGIN tx_fifo_pcore
  PORT dout = tx_fifo_dout
  PORT empty = tx_fifo_empty
  PORT get_byte = tx_fifo_get_byte
+ PORT dbg_byte_out = tx_fifo_dbg_byte_out_to_chipscope_ila_0
+ PORT dbg_byte_recieved = tx_fifo_dbg_byte_recieved_to_chipscope_ila_0
+ PORT dbg_handshake = tx_fifo_dbg_handshake_to_chipscope_ila_0
+ PORT dbg_head_out = tx_fifo_dbg_head_out_to_chipscope_ila_0
+ PORT dbg_last_queue = tx_fifo_dbg_last_queue_to_chipscope_ila_0
+ PORT dbg_tail_out = tx_fifo_dbg_tail_out_to_chipscope_ila_0
 END
 
 BEGIN qpsk_tx_pcore
@@ -273,5 +279,23 @@ BEGIN axi_gpio
  BUS_INTERFACE S_AXI = axi_interconnect_1
  PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
  PORT GPIO_IO_I = axi_gpio_switch_GPIO_IO_I
+END
+
+BEGIN chipscope_ila
+ PARAMETER INSTANCE = chipscope_ila_0
+ PARAMETER HW_VER = 1.05.a
+ PARAMETER C_TRIG0_UNITS = 1
+ PARAMETER C_TRIG0_TRIGGER_IN_WIDTH = 42
+ PARAMETER C_NUM_DATA_SAMPLES = 1024
+ PORT chipscope_ila_control = chipscope_ila_0_icon_control
+ PORT TRIG0 = tx_fifo_dbg_byte_out_to_chipscope_ila_0 & tx_fifo_dbg_byte_recieved_to_chipscope_ila_0 & tx_fifo_dbg_handshake_to_chipscope_ila_0 & tx_fifo_dbg_head_out_to_chipscope_ila_0 & tx_fifo_dbg_last_queue_to_chipscope_ila_0 & tx_fifo_dbg_tail_out_to_chipscope_ila_0
+ PORT CLK = clock_generator_0_CLKOUT0
+END
+
+BEGIN chipscope_icon
+ PARAMETER INSTANCE = chipscope_icon_0
+ PARAMETER HW_VER = 1.06.a
+ PARAMETER C_NUM_CONTROL_PORTS = 1
+ PORT control0 = chipscope_ila_0_icon_control
 END
 
