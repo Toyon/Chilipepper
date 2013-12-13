@@ -1,12 +1,13 @@
 #######################################################################################
 # PL clocks and reset
-NET clock_generator_0_CLKIN_pin 		LOC = D18   | IOSTANDARD = LVCMOS25;
-NET clock_generator_0_CLKIN_pin 		TNM_NET = clock_generator_0_CLKIN;
-TIMESPEC TS_clock_generator_0_pll = PERIOD clock_generator_0_CLKIN 40.000 MHz;
+NET tx_clock_generator_CLKIN_pin 		LOC = D18   | IOSTANDARD = LVCMOS25;
+NET tx_clock_generator_CLKIN_pin 		TNM_NET = tx_clock_generator_CLKIN;
+TIMESPEC TS_tx_clock_generator_pll = PERIOD tx_clock_generator_CLKIN 40.000 MHz;
 #######################################################################################
 # Chilipepper Rx and Tx clock lines
-NET clock_generator_0_tx_clk_pin			LOC = C17	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET clock_generator_0_rx_clk_pin			LOC = J18	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET tx_clock_generator_tx_clk_pin		LOC = C17	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET tx_clock_generator_rx_clk_pin		LOC = J18	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET rx_clk_return_pin						LOC = L18	| IOSTANDARD = LVCMOS25;
 #######################################################################################
 # Rx - FMC interface at 2.5V
 NET adc_driver_rx_iq_sel_pin				LOC = N19	| IOSTANDARD = LVCMOS25;
@@ -32,6 +33,6 @@ NET mcu_driver_pa_en_pin 					LOC = E21	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SL
 NET mcu_driver_init_done_pin 				LOC = K19	| IOSTANDARD = LVCMOS25;
 #######################################################################################
 # LEDs
-NET clock_generator_0_LOCKED_pin 		LOC = T22  | IOSTANDARD=LVCMOS33;  # "LD0"
+NET tx_clock_generator_LOCKED_pin 		LOC = T22  | IOSTANDARD=LVCMOS33;  # "LD0"
 NET adc_driver_blinky_pin 					LOC = T21  | IOSTANDARD=LVCMOS33;  # "LD1"
 NET mcu_driver_blinky_pin 					LOC = U22  | IOSTANDARD=LVCMOS33;  # "LD2"
