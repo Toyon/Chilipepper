@@ -19,8 +19,8 @@
 #define TARGET_RSSI 800
 #define TARGET_RSSI_MARGIN 50
 
-unsigned char SendBuffer[3]; /* Buffer for Transmitting Data to Chilipepper */
-unsigned char RecvBuffer[3]; /* Buffer for Receiving Data from Chilipepper */
+unsigned char SendBuffer[4]; /* Buffer for Transmitting Data to Chilipepper */
+unsigned char RecvBuffer[4]; /* Buffer for Receiving Data from Chilipepper */
 
 #ifdef MCU_DRIVER	// mcu registers
 u32 chili_mcu_reset, chili_tr_sw, chili_pa_en, chili_tx_en, chili_rx_en,
