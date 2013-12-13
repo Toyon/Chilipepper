@@ -128,7 +128,7 @@ for i1 = 1:length(r)+200
     end
     i_in = round(real(r_in));
     q_in = round(imag(r_in));
-    [r_out(i1), s_f_i, s_f_q, f_est(i1)] = qpsk_rx(i_in, q_in);
+    [r_out(i1), s_f_i, s_f_q, f_est(i1), blinky] = qpsk_rx(i_in, q_in);
     s_f(i1) = complex(s_f_i,s_f_q);
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
