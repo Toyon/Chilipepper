@@ -19,8 +19,8 @@
 #define TARGET_RSSI 800
 #define TARGET_RSSI_MARGIN 50
 
-unsigned char SendBuffer[3]; /* Buffer for Transmitting Data to Chilipepper */
-unsigned char RecvBuffer[3]; /* Buffer for Receiving Data from Chilipepper */
+unsigned char SendBuffer[4]; /* Buffer for Transmitting Data to Chilipepper */
+unsigned char RecvBuffer[4]; /* Buffer for Receiving Data from Chilipepper */
 
 #ifdef MCU_DRIVER	// mcu registers
 u32 chili_mcu_reset, chili_tr_sw, chili_pa_en, chili_tx_en, chili_rx_en,
@@ -77,6 +77,21 @@ int Chilipepper_Initialize(void) {
 #ifdef DAC_DRIVER
 	dac_en = 					XPAR_DAC_DRIVER_S_AXI_BASEADDR + 0x100; // write
 #endif
+#ifdef TX_PCORE
+	clear_fifo = 				XPAR_QPSK_TX_S_AXI_BASEADDR + 0x100;  // write
+	tx_en = 					XPAR_QPSK_TX_S_AXI_BASEADDR + 0x104;  // write
+
+	tx_done = 					XPAR_QPSK_TX_S_AXI_BASEADDR + 0x108;  // read
+#endif
+#ifdef TX_FIFO
+	tx_fifo_store_byte =		XPAR_TX_FIFO_S_AXI_BASEADDR + 0x100; // write
+	tx_fifo_byte_in =			XPAR_TX_FIFO_S_AXI_BASEADDR + 0x104; // write
+	tx_fifo_reset_fifo =		XPAR_TX_FIFO_S_AXI_BASEADDR + 0x108; // write
+
+	tx_fifo_byte_received = 	XPAR_TX_FIFO_S_AXI_BASEADDR + 0x10c; // read
+	tx_fifo_full = 				XPAR_TX_FIFO_S_AXI_BASEADDR + 0x110; // read
+	tx_fifo_bytes_available = 	XPAR_TX_FIFO_S_AXI_BASEADDR + 0x114; // read
+#endif
 #ifdef RX_PCORE
 	chili_mcu_rx_ready = 		XPAR_QPSK_RX_S_AXI_BASEADDR + 0x100; // write
 
@@ -92,30 +107,15 @@ int Chilipepper_Initialize(void) {
 	rx_fifo_bytes_available = 	XPAR_RX_FIFO_PCORE_S_AXI_BASEADDR + 0x114; // read
 #endif
 #ifdef DC_OFFSET
-	chili_agc_en = 				XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x100; // write
-	chili_rssi_low_goal = 		XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x104; // write
-	chili_rssi_high_goal = 		XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x108; // write
-	rx_en = 					XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x10C; // write
+	chili_agc_en = 				XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x100; // write
+	chili_rssi_low_goal = 		XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x104; // write
+	chili_rssi_high_goal = 		XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x108; // write
+	rx_en = 					XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x10C; // write
 
-	chili_rssi = 				XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x110; // read
-	chili_rssi_en = 			XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x114; // read
-	chili_dir = 				XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x118; // read
-	chili_dir_en = 				XPAR_DC_OFFSET_PCORE_S_AXI_BASEADDR + 0x11C; // read
-#endif
-#ifdef TX_PCORE
-	clear_fifo = 				XPAR_QPSK_TX_S_AXI_BASEADDR + 0x100;  // write
-	tx_en = 					XPAR_QPSK_TX_S_AXI_BASEADDR + 0x104;  // write
-
-	tx_done = 					XPAR_QPSK_TX_S_AXI_BASEADDR + 0x108;  // read
-#endif
-#ifdef TX_FIFO
-	tx_fifo_store_byte =		XPAR_TX_FIFO_S_AXI_BASEADDR + 0x100; // write
-	tx_fifo_byte_in =			XPAR_TX_FIFO_S_AXI_BASEADDR + 0x104; // write
-	tx_fifo_reset_fifo =		XPAR_TX_FIFO_S_AXI_BASEADDR + 0x108; // write
-
-	tx_fifo_byte_received = 	XPAR_TX_FIFO_S_AXI_BASEADDR + 0x10c; // read
-	tx_fifo_full = 				XPAR_TX_FIFO_S_AXI_BASEADDR + 0x110; // read
-	tx_fifo_bytes_available = 	XPAR_TX_FIFO_S_AXI_BASEADDR + 0x114; // read
+	chili_rssi = 				XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x110; // read
+	chili_rssi_en = 			XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x114; // read
+	chili_dir = 				XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x118; // read
+	chili_dir_en = 				XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x11C; // read
 #endif
 #ifdef RX_PCORE
 	Xil_Out32(chili_mcu_rx_ready, 1);
@@ -228,7 +228,7 @@ void Chilipepper_SetPA(int onOff) {
 // enable or disable the Tx portion of the transceiver
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_TxEnable(int onOff) {
-#ifdef TX_PCORE
+#ifdef MCU_DRIVER
 	if (onOff == 1){
 		Xil_Out32(chili_tx_en, 1);
 		mcu_latch_registers();
