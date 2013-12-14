@@ -6,7 +6,7 @@
 % embedded@toyon.com
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#codegen
-function [s_i, s_q, tauh] = qpsk_rx_toc(r_i, r_q, mu_in)
+function [s_i, s_q, tauh] = qpsk_rx_toc(r_i, r_q, mu_in, finish_rx)
 
 persistent counter
 persistent tau
@@ -26,12 +26,16 @@ end
 
 mu = mu_in/2^12;
 
+if finish_rx == 1
+    tau = 0;
+end
+
 rBuf_i = [rBuf_i(2:end) r_i];
 rBuf_q = [rBuf_q(2:end) r_q];
 
 if counter == 0
     taur = round(tau);
-    % if we shift out of the window just exit
+    % basically if we shift out of the window just bail as we're screwed
     if abs(taur) >= OS_RATE
         tau = 0;
         taur = 0;

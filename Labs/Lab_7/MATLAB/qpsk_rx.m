@@ -14,42 +14,36 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#codegen
 
-function [r_out, s_f_out, s_c_out, s_t_out, t_est_out, f_est_out, ...
-          byte_out, en_out, s_p_out, s_o_out] = ...
-    qpsk_rx(i_in, q_in, mu_foc_in, mu_toc_in)
+function [num_bytes_ready, store_byte, byte, blinky] = ...
+    qpsk_rx(i_in, q_in, mcu_rx_ready_in)
 
-    % scale input data coming from the Chilipepper ADC to be purely fractional
-    % to avoid scaling issues
-    r_in = complex(i_in, q_in);
+    persistent blinky_cnt
+    persistent finish_rx_latch
 
-    % frequency offset estimation. Note that time constant is input as integer
-    [s_f_i, s_f_q, fe] = qpsk_rx_foc(i_in, q_in, mu_foc_in);
+    if isempty(blinky_cnt)
+        blinky_cnt = 0;
+        finish_rx_latch = 0; % feedback once packet is received to rest
+    end
 
+    % frequency offset estimation. Note that time constant is input as  a 
+    % constant integer with value 40
+    [s_f_i, s_f_q] = qpsk_rx_foc(i_in, q_in, 40, finish_rx_latch);
+    
     % Square-root raised-cosine band-limited filtering
     [s_c_i, s_c_q] = qpsk_rx_srrc(s_f_i, s_f_q);
 
     % Time offset estimation. Output data changes at the symbol rate.
-    [s_t_i, s_t_q, tauh] =  qpsk_rx_toc(s_c_i, s_c_q, mu_toc_in);
+    [s_t_i, s_t_q] = qpsk_rx_toc(s_c_i, s_c_q, 327, finish_rx_latch);
 
     % Determine start of packet using front-loaded training sequence
-    [byte, en, s_p, s_o] = qpsk_rx_correlator(s_t_i, s_t_q);
+    [byte, store_byte, finish_rx, num_bytes_ready] = ...
+    qpsk_rx_correlator(s_t_i, s_t_q, mcu_rx_ready_in);
 
-    %correlator output. en notifies byte changes (change is @ OSRATE)
-    byte_out = byte;
-    en_out = en;
+    finish_rx_latch = finish_rx;
 
-    % estimation and correlation values
-    t_est_out = tauh;
-    f_est_out = fe;
-    s_p_out = s_p;
-    s_o_out = s_o;
-
-    % original signal out (real version)
-    r_out = real(r_in);
-
-    % incremental signal outputs after frequency estimation, filtering, and
-    % timining estimation
-    s_f_out = complex(s_f_i,s_f_q);
-    s_c_out = complex(s_c_i,s_c_q);
-    s_t_out = complex(s_t_i,s_t_q);
+    blinky_cnt = blinky_cnt + 1;
+    if blinky_cnt == 20000000
+        blinky_cnt = 0;
+    end
+    blinky = floor(blinky_cnt/10000000);
 end
