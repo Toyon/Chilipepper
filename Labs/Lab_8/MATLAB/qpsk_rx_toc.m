@@ -35,7 +35,7 @@ rBuf_q = [rBuf_q(2:end) r_q];
 
 if counter == 0
     taur = round(tau);
-    % if we shift out of the window just exit
+    % basically if we shift out of the window just bail as we're screwed
     if abs(taur) >= OS_RATE
         tau = 0;
         taur = 0;
