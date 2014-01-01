@@ -2,18 +2,18 @@
 #include "xparameters.h"
 #include "xstatus.h"
 #include "xuartps.h"
+#include "xuartlite.h"
 #include "xil_printf.h"
 #include <math.h>
-#include "xil_types.h"
 #include <stdio.h>
 
 #define MCU_DRIVER
 //#define DAC_DRIVER
 //#define TX_PCORE
 //#define TX_FIFO
-//#define DC_OFFSET
-//#define RX_PCORE
-//#define RX_FIFO
+#define DC_OFFSET
+#define RX_PCORE
+#define RX_FIFO
 //#define MCU_UART
 
 #define TARGET_RSSI 800
@@ -47,16 +47,20 @@ u32 chili_mcu_rx_ready; // write
 u32 chili_num_bytes_ready; // read
 #endif
 #ifdef RX_FIFO // RX FIFO registers
-u32 rx_fifo_get_byte, rx_fifo_reset_fifo; // write
-u32 rx_fifo_byte_out, rx_fifo_empty, rx_fifo_byte_ready, rx_fifo_bytes_available; // read
+u32 rx_fifo_get_byte; // write
+u32 rx_fifo_byte_out, rx_fifo_byte_ready, rx_fifo_bytes_available; // read
+#endif
+#ifdef MCU_UART
+XUartLite uartLite;
 #endif
 /////////////////////////////////////////////////////////////////////////////////////////////
 // Initialize
 /////////////////////////////////////////////////////////////////////////////////////////////
 int Chilipepper_Initialize(void) {
+
 #ifdef MCU_UART
 	int xStatus;	// take care of the UART that goes to/from Chilipepper
-	xStatus = XUartLite_Initialize(&uartLite, XPAR_AXI_UARTLITE_0_DEVICE_ID);
+	xStatus = XUartLite_Initialize(&uartLite, XPAR_MCU_UART_DEVICE_ID);
 	if (xStatus != 0)
 		return -1;
 	XUartLite_ResetFifos(&uartLite);
@@ -77,31 +81,6 @@ int Chilipepper_Initialize(void) {
 #ifdef DAC_DRIVER
 	dac_en = 					XPAR_DAC_DRIVER_S_AXI_BASEADDR + 0x100; // write
 #endif
-#ifdef RX_PCORE
-	chili_mcu_rx_ready = 		XPAR_QPSK_RX_S_AXI_BASEADDR + 0x100; // write
-
-	chili_num_bytes_ready = 	XPAR_QPSK_RX_S_AXI_BASEADDR + 0x104; // read
-#endif
-#ifdef RX_FIFO
-	rx_fifo_get_byte =			XPAR_RX_FIFO_PCORE_S_AXI_BASEADDR + 0x100; // write
-	rx_fifo_reset_fifo =		XPAR_RX_FIFO_PCORE_S_AXI_BASEADDR + 0x104; // write
-
-	rx_fifo_byte_out = 			XPAR_RX_FIFO_PCORE_S_AXI_BASEADDR + 0x108; // read
-	rx_fifo_empty = 			XPAR_RX_FIFO_PCORE_S_AXI_BASEADDR + 0x10C; // read
-	rx_fifo_byte_ready = 		XPAR_RX_FIFO_PCORE_S_AXI_BASEADDR + 0x110; // read
-	rx_fifo_bytes_available = 	XPAR_RX_FIFO_PCORE_S_AXI_BASEADDR + 0x114; // read
-#endif
-#ifdef DC_OFFSET
-	chili_agc_en = 				XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x100; // write
-	chili_rssi_low_goal = 		XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x104; // write
-	chili_rssi_high_goal = 		XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x108; // write
-	rx_en = 					XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x10C; // write
-
-	chili_rssi = 				XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x110; // read
-	chili_rssi_en = 			XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x114; // read
-	chili_dir = 				XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x118; // read
-	chili_dir_en = 				XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x11C; // read
-#endif
 #ifdef TX_PCORE
 	clear_fifo = 				XPAR_QPSK_TX_S_AXI_BASEADDR + 0x100;  // write
 	tx_en = 					XPAR_QPSK_TX_S_AXI_BASEADDR + 0x104;  // write
@@ -117,15 +96,38 @@ int Chilipepper_Initialize(void) {
 	tx_fifo_full = 				XPAR_TX_FIFO_S_AXI_BASEADDR + 0x110; // read
 	tx_fifo_bytes_available = 	XPAR_TX_FIFO_S_AXI_BASEADDR + 0x114; // read
 #endif
+#ifdef DC_OFFSET
+	chili_agc_en = 			XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x100; // write
+	chili_rssi_low_goal = 	XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x104; // write
+	chili_rssi_high_goal = 	XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x108; // write
+	rx_en = 				XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x10C; // write
+
+	chili_rssi = 			XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x110; // read
+	chili_rssi_en = 		XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x114; // read
+	chili_dir = 			XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x118; // read
+	chili_dir_en = 			XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x11C; // read
+#endif
 #ifdef RX_PCORE
-	Xil_Out32(chili_mcu_rx_ready, 1);
-	Xil_Out32(chili_mcu_rx_ready, 0);
-	Xil_Out32(chili_mcu_rx_ready, 1);
+	chili_mcu_rx_ready = 		XPAR_QPSK_RX_S_AXI_BASEADDR + 0x100; // write
+
+	chili_num_bytes_ready = 	XPAR_QPSK_RX_S_AXI_BASEADDR + 0x104; // read
+#endif
+#ifdef RX_FIFO
+	rx_fifo_get_byte	=		XPAR_RX_FIFO_S_AXI_BASEADDR + 0x100; //write
+
+	rx_fifo_byte_out = 			XPAR_RX_FIFO_S_AXI_BASEADDR + 0x104; //read
+	rx_fifo_bytes_available = 	XPAR_RX_FIFO_S_AXI_BASEADDR + 0x108; //read
+	rx_fifo_byte_ready = 			XPAR_RX_FIFO_S_AXI_BASEADDR + 0x10C; //read
 #endif
 #ifdef DC_OFFSET
 	Xil_Out32(chili_rssi_high_goal, (u32)(1010*1010*2));
 	Xil_Out32(chili_rssi_low_goal, (u32)(990*990*2));
 	Xil_Out32(chili_agc_en, 0);
+#endif
+#ifdef RX_PCORE
+	Xil_Out32(chili_mcu_rx_ready, 1);
+	Xil_Out32(chili_mcu_rx_ready, 0);
+	Xil_Out32(chili_mcu_rx_ready, 1);
 #endif
 #ifdef MCU_DRIVER
 	Chilipepper_TxEnable(1);	// by default we enable Tx/Rx. User can disable later if they want
@@ -693,7 +695,6 @@ void Chilipepper_WriteTestPacket(unsigned char count) {
 int Chilipepper_ReadPacket(unsigned char *rxBuf, unsigned char *id) {
 #ifdef RX_PCORE
 	int numBytes, i1;
-	u32 value;
 	int numBytesReady;
 	int retValue;
 
@@ -710,14 +711,14 @@ int Chilipepper_ReadPacket(unsigned char *rxBuf, unsigned char *id) {
 	// read the bytes and the CRC
 	for (i1=0; i1<numBytesReady; i1++)
 	{
-		Xil_Out32(chili_get_next_byte, 1);
+		Xil_Out32(rx_fifo_get_byte, 1);
 		int tries = 0;
-		while (Xil_In32(chili_byte_ready) == 0 && tries < 100)
+		while (Xil_In32(rx_fifo_byte_ready) == 0 && tries < 100)
 			tries++;
 		;
-		Xil_Out32(chili_get_next_byte, 0);
+		Xil_Out32(rx_fifo_get_byte, 0);
 		if (tries < 100)
-			rxBuf[i1] = Xil_In32(chili_byte_out);
+			rxBuf[i1] = Xil_In32(rx_fifo_byte_out);
 		else
 			rxBuf[i1] = 0;
 	}
@@ -746,7 +747,7 @@ int Chilipepper_ReadPacket(unsigned char *rxBuf, unsigned char *id) {
 // FlushRxFifo
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_FlushRxFifo(void) {
-#ifdef RX_PCORE
+#ifdef RX_PCORE_SL
 	u32 empty, value;
 
 	// flush the read FIFO
@@ -1081,3 +1082,4 @@ int hex_decimal(char hex[])
 	}
 	return sum;
 }
+
