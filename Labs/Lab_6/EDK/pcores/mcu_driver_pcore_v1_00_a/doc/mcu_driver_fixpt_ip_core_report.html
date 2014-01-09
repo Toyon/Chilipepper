@@ -12,7 +12,12 @@ div {
 	line-heigh: 90%;
 }
 
-h2.sectionHeading {
+h2.title {
+	color: #000066;
+	font-weight: bold;
+}
+
+h3.sectionHeading {
 	color: #000066;
 	font-weight: bold;
 }
@@ -39,9 +44,9 @@ thead.reportTableHeader {
 
 </head>
 <body>
+<h2 class="title">IP Core Generation Report for mcu_driver_fixpt</h2>
 <div>
-<h2 class="sectionHeading">Summary</h2>
-<br/><br/>
+<h3 class="sectionHeading">Summary</h3>
 <table>
 <tbody>
 <tr>
@@ -65,7 +70,7 @@ thead.reportTableHeader {
 <tr>
 <td>Target platform
 </td>
-<td class="summaryTableSndColEvenRow">ZedBoard
+<td class="summaryTableSndColEvenRow">Generic Xilinx Platform
 </td>
 </tr>
 <tr>
@@ -83,13 +88,13 @@ thead.reportTableHeader {
 <tr>
 <td class="distinctCellColor">HDL Coder version
 </td>
-<td class="summaryTableSndColOddRow">3.3
+<td class="summaryTableSndColOddRow">3.4
 </td>
 </tr>
 <tr>
 <td>IP core generated on
 </td>
-<td class="summaryTableSndColEvenRow">18-Nov-2013 13:30:51
+<td class="summaryTableSndColEvenRow">30-Dec-2013 15:48:59
 </td>
 </tr>
 <tr>
@@ -101,10 +106,8 @@ thead.reportTableHeader {
 </tbody>
 </table>
 </div>
-<br/><br/>
 <div>
-<h2 class="sectionHeading">Target Interface Configuration</h2>
-<br/><br/>
+<h3 class="sectionHeading">Target Interface Configuration</h3>
 You chose the following target interface configuration for 
 mcu_driver_fixpt
 :
@@ -117,15 +120,15 @@ Target platform interface table:
 <table>
 <thead class="reportTableHeader">
 <tr>
-<td>mcu_driver_fixpt/init_done
+<td>Port Name
 </td>
-<td>Inport
+<td>Port Type
 </td>
-<td>ufix1_En0
+<td>Data Type
 </td>
-<td>External Port
+<td>Target Platform Interfaces
 </td>
-<td>
+<td>Bit Range / Address / FPGA Pin
 </td>
 </tr>
 </thead>
@@ -325,20 +328,18 @@ Target platform interface table:
 </tbody>
 </table>
 </div>
-<br/><br/>
 <div>
-<h2 class="sectionHeading">Register Address Mapping</h2>
-<br/><br/>
+<h3 class="sectionHeading">Register Address Mapping</h3>
 The following AXI4-Lite bus accessible registers were generated for this IP core:
 <br/><br/>
 <table>
 <thead class="reportTableHeader">
 <tr>
-<td>IPCore_Reset
+<td>Register Name
 </td>
-<td>0x0
+<td>Address Offset
 </td>
-<td>write 0x1 to bit 0 to reset IP core
+<td>Description
 </td>
 </tr>
 </thead>
@@ -440,10 +441,8 @@ The register address mapping is also in the following C header file for you to u
 <br/>
 The IP core name is appended to the register names to avoid name conflicts.
 </div>
-<br/><br/>
 <div>
-<h2 class="sectionHeading">IP Core User Guide</h2>
-<br/><br/>
+<h3 class="sectionHeading">IP Core User Guide</h3>
 <b>Theory of Operation</b>
 <br/><br/>
 This IP core is designed to be connected to an embedded processor with an 
@@ -484,10 +483,8 @@ This IP Core is generated for the Xilinx EDK environment. The following steps ar
 <br/>
 7. Generate FPGA bitstream and download the bitstream to target device.
 </div>
-<br/><br/>
 <div>
-<h2 class="sectionHeading">IP Core File List</h2>
-<br/><br/>
+<h3 class="sectionHeading">IP Core File List</h3>
 The IP core folder is located at:
 <br/>
 <a href="matlab:uiopen('codegen\ipcore\mcu_driver_pcore_v1_00_a')">codegen\ipcore\mcu_driver_pcore_v1_00_a</a>
@@ -523,6 +520,5 @@ Following files are generated under this folder:
 <br/>
 <a href="matlab:edit('codegen\ipcore\mcu_driver_pcore_v1_00_a\include\mcu_driver_pcore_addr.h')">include\mcu_driver_pcore_addr.h</a>
 </div>
-<br/><br/>
 </body>
 </html>

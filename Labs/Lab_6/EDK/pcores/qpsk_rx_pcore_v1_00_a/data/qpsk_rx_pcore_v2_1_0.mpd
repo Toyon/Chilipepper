@@ -1,7 +1,7 @@
 ##############################################################################
 ## File Name:         codegen\ipcore\qpsk_rx_pcore_v1_00_a\data\qpsk_rx_pcore_v2_1_0.mpd
 ## Description:       Microprocessor Peripheral Description
-## Created:           2013-12-13 14:31:58
+## Created:           2014-01-04 13:16:35
 ##############################################################################
 
 BEGIN qpsk_rx_pcore
@@ -48,9 +48,8 @@ PORT AXI_Lite_RREADY = RREADY, DIR = I, BUS = S_AXI
 ## External Ports
 PORT i_in = "", DIR = I, VEC = [11:0]
 PORT q_in = "", DIR = I, VEC = [11:0]
-PORT r_out = "", DIR = O, VEC = [11:0]
 PORT s_t_i = "", DIR = O, VEC = [13:0]
 PORT s_t_q = "", DIR = O, VEC = [13:0]
-PORT t_est_out = "", DIR = O, VEC = [13:0]
 PORT blinky = "", DIR = O
+PORT tauh = "", DIR = O, VEC = [13:0]
 
