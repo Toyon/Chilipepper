@@ -12,10 +12,8 @@
 % The second goal is to send these bytes off to the Microblaze processor.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#codegen
-function [byte_out, en_out, reset_out, ...
-        num_bytes_ready_out, ...
-        s_out, o_out] = ...
-    qpsk_rx_correlator(s_i_in, s_q_in, mcu_rx_ready_in)
+function [byte_out, reset_out, s_out, o_out] = ...
+    qpsk_rx_correlator(s_i_in, s_q_in)
 
 persistent counter
 persistent sBuf_i sBuf_q
@@ -23,8 +21,6 @@ persistent oLatch sLatch
 persistent q detPacket
 persistent ip op
 persistent bits symCount byteCount numBytes
-persistent numBytesReady
-persistent mcuHasResetThisCore
 persistent persis_byte
 
 t_i = TB_i;
@@ -45,22 +41,13 @@ if isempty(counter)
     symCount = 0;
     byteCount = 0;
     numBytes = 1000;
-    numBytesReady = 0;
-    mcuHasResetThisCore = 0;
     persis_byte = 0;
 end
 
-if mcu_rx_ready_in == 0
-    numBytesReady = 0;
-    mcuHasResetThisCore = 1;
-end
-
-en_out = 0;
 reset_out = 0;
 % found a packet, now we're ready to write the data
 % out
 if counter == 0 && detPacket == 1
-    mcuHasResetThisCore = 0; % don't go high again until MCU 1->0->1
     if s_i_in < 0
         sHard_i_t = -1;
     else
@@ -96,7 +83,6 @@ if counter == 0 && detPacket == 1
         byteCount = byteCount + 1;
         symCount = 0;
         persis_byte = bits*BIT_TO_BYTE;
-        en_out = 1;
         % first byte is number of bytes in payload
         if byteCount == 1
             numBytes = persis_byte;
@@ -109,15 +95,13 @@ if counter == 0 && detPacket == 1
                 detPacket = 0;
                 counter = 1;
                 reset_out = 1;
-                numBytesReady = numBytes+6;
             end
         end
     end
 end
 
 % let's see if we can find a packet. only do so if MCU is ok to rcv packet
-if counter == 0 && detPacket == 0 && ...
-        mcu_rx_ready_in == 1 && mcuHasResetThisCore == 1
+if counter == 0 && detPacket == 0
     sLatch = 0;
     if s_i_in < 0
         ss_i = -1;
@@ -167,7 +151,6 @@ if counter == 0 && detPacket == 0 && ...
     numBytes = 1000;
 end
 
-num_bytes_ready_out = numBytesReady;
 s_out = sLatch;
 o_out = oLatch;
 

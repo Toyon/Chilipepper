@@ -156,16 +156,3 @@ end
     end
     blinky = floor(blinky_cnt/10000000);
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
