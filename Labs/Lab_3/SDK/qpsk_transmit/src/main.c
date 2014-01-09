@@ -41,7 +41,7 @@ int main()
     	switch (sw)
     	{
 		case 0: // Continuously send out packets (do it once and then stall for a bit)
-			for (i1=0; i1<50000; i1++)
+			for (i1=0; i1<5000; i1++)
 			{
 				if (i1 == 0)
 				{
