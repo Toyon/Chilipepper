@@ -1,5 +1,5 @@
-function [dout, empty, byte_received, full, bytes_available, dbg_head_out, dbg_tail_out, dbg_last_queue, dbg_byte_recieved, dbg_handshake, dbg_byte_out] = ...
-    tx_fifo(get_byte, store_byte, byte_in, reset_fifo)
+function [dout, bytes_available, byte_received, empty] = ...
+    tx_fifo(reset_fifo, store_byte, byte_in, get_byte)
     %
     %  First In First Out (FIFO) structure.
     %  This FIFO stores integers.
@@ -20,22 +20,22 @@ function [dout, empty, byte_received, full, bytes_available, dbg_head_out, dbg_t
 
     full = 0;
     empty = 0;
-    byte_received = 0;
 
+    % handshaking logic
+    byte_received = 0;
+    if store_byte == 0
+        handshake = 0;
+    end
+    if handshake == 1
+        byte_received = 1;
+    end
+    
     % Section for checking full and empty cases
     if ((tail == 1 && head == 1024) || ((head + 1) == tail))
         empty = 1;
     end
     if ((head == 1 && tail == 1024) || ((tail + 1) == head))
         full = 1;
-    end
-
-    % handshaking logic
-    if store_byte == 0
-        handshake = 0;
-    end
-    if handshake == 1
-        byte_received = 1;
     end
 
     %%%%%%%%%%%%%%get%%%%%%%%%%%%%%%%%%%%%
@@ -65,10 +65,3 @@ function [dout, empty, byte_received, full, bytes_available, dbg_head_out, dbg_t
     end
 
     dout = byte_out;
-    dbg_head_out = head;
-    dbg_tail_out = tail;
-    dbg_last_queue = byte_in;
-    dbg_byte_recieved = byte_received;
-    dbg_handshake = handshake;
-    dbg_byte_out = byte_out;
-    

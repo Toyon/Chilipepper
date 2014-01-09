@@ -7,9 +7,11 @@ function [i_out, q_out, tx_done_out, request_byte, blinky] = ...
         blinky_cnt = 0;
     end
 
-    [byte_out, request_byte, tx_done] = ...
+    [byte_i_out, byte_q_out, request_byte, tx_done] = ...
         qpsk_tx_byte2sym(data_in, empty_in, clear_fifo_in, tx_en_in);
-
+    
+    byte_out = complex(byte_i_out, byte_q_out);
+    
     [d_ssrc] = qpsk_srrc(byte_out);
 
     % make i/q discrete ports and scale to the full 12-bit range of the DAC
