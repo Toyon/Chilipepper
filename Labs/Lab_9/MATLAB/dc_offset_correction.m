@@ -1,5 +1,5 @@
-function [i_out, q_out, rssi_out, rssi_en_out, dir_out, dir_en_out] = ...
-    dc_offset_correction(i_in, q_in, alpha_in, gain_en_in, ...
+function [i_out, q_out, rssi_out, rssi_en_out, dir_out, dir_en_out, blinky] = ...
+    dc_offset_correction(i_in, q_in, gain_en_in,...
         rssi_low_goal_in, rssi_high_goal_in, rx_en_in)
 
 persistent i_dc q_dc i_mean q_mean
@@ -7,8 +7,10 @@ persistent counter rssi_sum
 persistent dir_state
 persistent rssiHold
 persistent noise_offset noise_inc noise_dec
+persistent blinky_cnt
 
-alpha = alpha_in/2^12;
+%alpha = alpha_in/2^12;
+alpha = 1/2^12;
 
 if isempty(i_dc)
     i_dc = 0;
@@ -22,6 +24,7 @@ if isempty(i_dc)
     rssi_sum = 0;
     dir_state = 0;
     rssiHold = 0;
+    blinky_cnt = 0;
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -88,13 +91,11 @@ if rx_en_in == 1
             counter = counter + 1;
             rssi_sum = rssi_sum + rssi_inst;
 
-            if (counter >= 2^8 && i_mean < 50)
+            if counter >= 2^8
                 counter = 0;
                 rssi_out = round(rssi_sum/2^8);
                 rssiHold = rssi_out;
                 rssi_en_out = 1;
-            else
-                
             end
         end
     end
@@ -116,8 +117,8 @@ aq = abs(q_in);
 rssi_diff = abs(rssiHold-(i_mean*i_mean+q_mean*q_mean));
 if rx_en_in == 1
     switch dir_state
-        case 0 % wait for some action and the processor is done (only runs when AGC function called)
-            if (gain_en_in == 0)
+        case 0 % wait for some action and the processor is done
+            if gain_en_in == 0
                 if rssi_en_out == 1
                     if rssi_diff < rssi_low_goal_in %too low - increase
                         dir_out = 1;
@@ -139,7 +140,7 @@ if rx_en_in == 1
                 end
             end
         case 1 % see if the MCU has done something and if so reset
-            if (gain_en_in == 1)
+            if gain_en_in == 1
                 dir_out = 0;
                 dir_en_out = 1;
                 dir_state = 0;
@@ -149,3 +150,9 @@ if rx_en_in == 1
     end
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    blinky_cnt = blinky_cnt + 1;
+    if blinky_cnt == 20000000
+        blinky_cnt = 0;
+    end
+    blinky = floor(blinky_cnt/10000000);
+end
