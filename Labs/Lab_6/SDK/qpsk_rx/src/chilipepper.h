@@ -1,5 +1,3 @@
-#include "xuartps.h"
-
 #ifndef CHILIPEPPER_H_
 #define CHILIPEPPER_H_
 
@@ -9,6 +7,7 @@ int Chilipepper_InitDone( void );
 void Chilipepper_Reset( void );
 void Chilipepper_SetTxRxSw( int zeroTxOneRx );
 void Chilipepper_SetPA(int onOff);
+void Chilipepper_SetDCOC(int onOff);
 void Chilipepper_TxEnable(int onOff);
 void Chilipepper_RxEnable(int onOff);
 void mcu_latch_registers (void);
@@ -38,9 +37,11 @@ void Chilipepper_DeltaFreq(int RXTXswitch, int IncDecswitch);
 void Chilipepper_SetBand(int total, int RXTXswitch);
 void Chilipepper_SendBand(char data[], int RXTXswitch);
 
+#ifdef MCU_UART
 void Chilipepper_printf(XUartPs *InstancePtr, unsigned char * str);
 void clear_uart_buffer(XUartPs *InstancePtr);
 int Chilipepper_cin(XUartPs *InstancePtr, unsigned char * Buf);
+#endif
 int checkEscapeValues(char hexData[], int RXTXswitch, void (*sendEscape)(char[], int));
 int hex_decimal(char hex[]);
 
