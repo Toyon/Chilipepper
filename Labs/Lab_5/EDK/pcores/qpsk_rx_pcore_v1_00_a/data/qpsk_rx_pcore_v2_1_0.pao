@@ -1,7 +1,7 @@
 ##############################################################################
 ## File Name:         codegen\ipcore\qpsk_rx_pcore_v1_00_a\data\qpsk_rx_pcore_v2_1_0.pao
 ## Description:       Peripheral Analysis Order
-## Created:           2013-12-13 13:36:17
+## Created:           2014-01-02 17:49:14
 ##############################################################################
 
 lib qpsk_rx_pcore_v1_00_a qpsk_rx_fixpt_pkg vhdl
