@@ -22,8 +22,9 @@ NET dac_driver_txd_pin[8]					LOC = G19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SL
 NET dac_driver_txd_pin[9]					LOC = A16	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
 NET dac_driver_txd_pin[10]					LOC = A17	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
 NET dac_driver_txd_pin[11]					LOC = C18	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-#######################################################################################
-# MCU interface
+############################################# MCU Interface ###############################################
+NET mcu_uart_RX_pin							LOC = R19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET mcu_uart_TX_pin							LOC = L21	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
 NET mcu_driver_mcu_reset_out_pin			LOC = K20	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
 NET mcu_driver_tx_en_pin					LOC = D22	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
 NET mcu_driver_tr_sw_pin					LOC = D20	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;

@@ -38,6 +38,8 @@
  PORT tx_clock_generator_tx_clk_pin = tx_clock_generator_CLKOUT2, DIR = O, SIGIS = CLK, CLK_FREQ = 40000000
  PORT tx_clock_generator_rx_clk_pin = tx_clock_generator_CLKOUT3, DIR = O, SIGIS = CLK, CLK_FREQ = 40000000
  PORT tx_clock_generator_LOCKED_pin = tx_clock_generator_LOCKED, DIR = O
+ PORT mcu_uart_RX_pin = mcu_uart_RX, DIR = I
+ PORT mcu_uart_TX_pin = mcu_uart_TX, DIR = O
 
 
 BEGIN processing_system7
@@ -226,5 +228,16 @@ BEGIN chipscope_icon
  PARAMETER HW_VER = 1.06.a
  PARAMETER C_NUM_CONTROL_PORTS = 1
  PORT control0 = chipscope_ila_0_icon_control
+END
+
+BEGIN axi_uartlite
+ PARAMETER INSTANCE = mcu_uart
+ PARAMETER HW_VER = 1.02.a
+ PARAMETER C_BASEADDR = 0x42c00000
+ PARAMETER C_HIGHADDR = 0x42c0ffff
+ BUS_INTERFACE S_AXI = axi_interconnect_1
+ PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
+ PORT RX = mcu_uart_RX
+ PORT TX = mcu_uart_TX
 END
 
