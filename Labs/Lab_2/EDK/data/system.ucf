@@ -23,8 +23,9 @@ NET adc_driver_rxd_pin[8]					LOC = J20	| IOSTANDARD = LVCMOS25;
 NET adc_driver_rxd_pin[9]					LOC = P21	| IOSTANDARD = LVCMOS25;
 NET adc_driver_rxd_pin[10]					LOC = N18	| IOSTANDARD = LVCMOS25;
 NET adc_driver_rxd_pin[11]					LOC = J16	| IOSTANDARD = LVCMOS25;
-#######################################################################################
-# MCU interface
+############################################# MCU Interface ###############################################
+NET mcu_uart_RX_pin							LOC = R19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET mcu_uart_TX_pin							LOC = L21	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
 NET mcu_driver_mcu_reset_out_pin			LOC = K20	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
 NET mcu_driver_tx_en_pin					LOC = D22	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
 NET mcu_driver_tr_sw_pin					LOC = D20	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
