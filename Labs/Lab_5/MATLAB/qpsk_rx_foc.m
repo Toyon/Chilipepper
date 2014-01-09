@@ -12,7 +12,7 @@
 % filters.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#codegen
-function [z_i_out, z_q_out, fe] = qpsk_rx_foc(y_i, y_q, mu_in)
+function [z_i_out, z_q_out, fe] = qpsk_rx_foc(y_i, y_q)
 
 persistent phi
 
@@ -23,9 +23,8 @@ if isempty(phi)
     phi = 0;
 end
 
-mu = mu_in/2^12;
-
 % create the VCO signal
+%phi = mod(phi,1);
 if phi >= 1
     phi = phi - 1;
 end
@@ -68,7 +67,8 @@ else
     e = 1;
 end
 
-c = mu*e;
+% update with hard coded mu 40/2^12
+c = (0.009765625)*e;
 phiNew = phi - c;
 phi = phiNew;
 
@@ -76,3 +76,5 @@ fe = phiNew;
 
 z_i_out = z_i;
 z_q_out = z_q;
+
+
