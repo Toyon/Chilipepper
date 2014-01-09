@@ -12,20 +12,16 @@
 % The second goal is to send these bytes off to the Microblaze processor.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#codegen
-function [byte_out, en_out, reset_out, ...
-        num_bytes_ready_out, ...
-        s_out, o_out] = ...
+function [byte_out, en_out, reset_out, num_bytes_ready_out, clear_fifo_out] = ...
     qpsk_rx_correlator(s_i_in, s_q_in, mcu_rx_ready_in)
 
 persistent counter
 persistent sBuf_i sBuf_q
-persistent oLatch sLatch
 persistent q detPacket
 persistent ip op
 persistent bits symCount byteCount numBytes
 persistent numBytesReady
 persistent mcuHasResetThisCore
-persistent persis_byte
 
 t_i = TB_i;
 t_q = TB_q;
@@ -33,21 +29,18 @@ OS_RATE = 8;
 BIT_TO_BYTE = [1 2 4 8 16 32 64 128]';
 
 if isempty(counter)
-    counter = 0;    
+    counter = 0;
     sBuf_i = zeros(1,65);
     sBuf_q = zeros(1,65);
-    sLatch = 0;
-    oLatch = 0;
     q = 0;
     detPacket = 0;
     ip = 0; op = 0;
     bits = zeros(1,8);
     symCount = 0;
     byteCount = 0;
-    numBytes = 1000;
+    numBytes = 0;
     numBytesReady = 0;
     mcuHasResetThisCore = 0;
-    persis_byte = 0;
 end
 
 if mcu_rx_ready_in == 0
@@ -55,8 +48,10 @@ if mcu_rx_ready_in == 0
     mcuHasResetThisCore = 1;
 end
 
+byte_out = 0;
 en_out = 0;
 reset_out = 0;
+clear_fifo_out = 0;
 % found a packet, now we're ready to write the data
 % out
 if counter == 0 && detPacket == 1
@@ -86,8 +81,6 @@ if counter == 0 && detPacket == 1
             sHard_i = -sHard_q_t;
             sHard_q = sHard_i_t;
     end
-    sLatch = sHard_i;
-    oLatch = 1;
     bits(symCount*2+1) = (sHard_i+1)/2;
     bits(symCount*2+2) = (sHard_q+1)/2;
 
@@ -95,13 +88,13 @@ if counter == 0 && detPacket == 1
     if symCount >= 4
         byteCount = byteCount + 1;
         symCount = 0;
-        persis_byte = bits*BIT_TO_BYTE;
+        byte_out = bits*BIT_TO_BYTE;
         en_out = 1;
         % first byte is number of bytes in payload
         if byteCount == 1
-            numBytes = persis_byte;
+            numBytes = byte_out;
         end
-        % if we exceed the packet ID  
+        % if we exceed the packet ID
         if byteCount > 3
             % exit if we've written all the bytes or above reasonable
             % threshold
@@ -118,7 +111,6 @@ end
 % let's see if we can find a packet. only do so if MCU is ok to rcv packet
 if counter == 0 && detPacket == 0 && ...
         mcu_rx_ready_in == 1 && mcuHasResetThisCore == 1
-    sLatch = 0;
     if s_i_in < 0
         ss_i = -1;
     else
@@ -151,29 +143,25 @@ if counter == 0 && detPacket == 0 && ...
             q = 2; % 180 degrees;
         end
         detPacket = 1;
+        clear_fifo_out = 1;
     end
     if op > 100
         if sc_iWithq > 10 && sc_qWithi < 10
             q = 3; % 90 degrees
-
         else
             q = 1; % 270 degrees;
         end
         detPacket = 1;
+        clear_fifo_out = 1;
     end
-    oLatch = ip+op;
     symCount = 0;
     byteCount = 0;
-    numBytes = 1000;
 end
 
 num_bytes_ready_out = numBytesReady;
-s_out = sLatch;
-o_out = oLatch;
 
 % only pull data once every OS_RATE clocks
 counter = counter + 1;
 if counter >= OS_RATE
     counter = 0;
 end
-byte_out = persis_byte;

@@ -1,6 +1,6 @@
 %#codegen
 % this core runs at an oversampling rate of 8
-function [d_out, re_byte_out, tx_done_out] = ...
+function [d_out, re_byte_out, tx_done_out, clear_fifo_in_done] = ...
     qpsk_tx_byte2sym(data_in, empty_in, clear_fifo_in, tx_en_in)
 
 OS_RATE = 8;
@@ -33,10 +33,12 @@ if isempty(tx_fifo)
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % if want to transmit a new packet reset things
+clear_fifo_in_done = 0;
 if clear_fifo_in == 1
     wrCount = 0;
     txDone = 0;
     reBuf = 0;
+    clear_fifo_in_done = 1;
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
