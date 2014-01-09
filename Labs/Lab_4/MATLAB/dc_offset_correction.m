@@ -150,22 +150,9 @@ if rx_en_in == 1
     end
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        blinky_cnt = blinky_cnt + 1;
+    blinky_cnt = blinky_cnt + 1;
     if blinky_cnt == 20000000
         blinky_cnt = 0;
     end
     blinky = floor(blinky_cnt/10000000);
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
