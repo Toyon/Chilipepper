@@ -7,6 +7,7 @@ int Chilipepper_InitDone( void );
 void Chilipepper_Reset( void );
 void Chilipepper_SetTxRxSw( int zeroTxOneRx );
 void Chilipepper_SetPA(int onOff);
+void Chilipepper_SetDCOC(int onOff);
 void Chilipepper_TxEnable(int onOff);
 void Chilipepper_RxEnable(int onOff);
 void mcu_latch_registers (void);
