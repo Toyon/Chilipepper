@@ -41,6 +41,8 @@
  PORT rx_clock_generator_CLKIN_pin = rx_clock_generator_CLKIN, DIR = I, SIGIS = CLK, CLK_FREQ = 40000000
  PORT rx_clock_generator_LOCKED_pin = rx_clock_generator_LOCKED, DIR = O
  PORT qpsk_rx_blinky_pin = qpsk_rx_blinky, DIR = O
+ PORT mcu_uart_RX_pin = mcu_uart_RX, DIR = I
+ PORT mcu_uart_TX_pin = mcu_uart_TX, DIR = O
 
 
 BEGIN processing_system7
@@ -244,20 +246,37 @@ BEGIN qpsk_rx_pcore
  PORT i_in = dc_offset_i_out
  PORT q_in = dc_offset_q_out
  PORT blinky = qpsk_rx_blinky
- PORT byte = qpsk_rx_byte
- PORT store_byte = qpsk_rx_store_byte
+ PORT byte = qpsk_rx_byte_to_chipscope_ila_0
+ PORT o_out = qpsk_rx_o_out_to_chipscope_ila_0
+ PORT s_out = qpsk_rx_s_out_to_chipscope_ila_0
 END
 
-BEGIN rx_fifo_pcore
- PARAMETER INSTANCE = rx_fifo
- PARAMETER HW_VER = 1.00.a
- PARAMETER C_S_AXI_BASEADDR = 0x61600000
- PARAMETER C_S_AXI_HIGHADDR = 0x6160ffff
+BEGIN axi_uartlite
+ PARAMETER INSTANCE = mcu_uart
+ PARAMETER HW_VER = 1.02.a
+ PARAMETER C_BASEADDR = 0x42c00000
+ PARAMETER C_HIGHADDR = 0x42c0ffff
  BUS_INTERFACE S_AXI = axi_interconnect_1
- PORT AXI_Lite_ACLK = processing_system7_0_FCLK_CLK0
- PORT byte_in = qpsk_rx_byte
- PORT store_byte = qpsk_rx_store_byte
- PORT IPCORE_CLK = rx_clock_generator_CLKOUT1
- PORT IPCORE_RESETN = processing_system7_0_FCLK_RESET0_N
+ PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
+ PORT RX = mcu_uart_RX
+ PORT TX = mcu_uart_TX
+END
+
+BEGIN chipscope_ila
+ PARAMETER INSTANCE = chipscope_ila_0
+ PARAMETER HW_VER = 1.05.a
+ PARAMETER C_TRIG0_UNITS = 1
+ PARAMETER C_TRIG0_TRIGGER_IN_WIDTH = 18
+ PARAMETER C_NUM_DATA_SAMPLES = 8192
+ PORT chipscope_ila_control = chipscope_ila_0_icon_control
+ PORT TRIG0 = qpsk_rx_byte_to_chipscope_ila_0 & qpsk_rx_o_out_to_chipscope_ila_0 & qpsk_rx_s_out_to_chipscope_ila_0
+ PORT CLK = rx_clock_generator_CLKOUT1
+END
+
+BEGIN chipscope_icon
+ PARAMETER INSTANCE = chipscope_icon_0
+ PARAMETER HW_VER = 1.06.a
+ PARAMETER C_NUM_CONTROL_PORTS = 1
+ PORT control0 = chipscope_ila_0_icon_control
 END
 

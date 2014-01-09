@@ -94,7 +94,7 @@ thead.reportTableHeader {
 <tr>
 <td>IP core generated on
 </td>
-<td class="summaryTableSndColEvenRow">13-Dec-2013 17:33:31
+<td class="summaryTableSndColEvenRow">04-Jan-2014 15:01:31
 </td>
 </tr>
 <tr>
@@ -146,35 +146,11 @@ Target platform interface table:
 </td>
 </tr>
 <tr>
-<td>qpsk_rx_fixpt/mcu_rx_ready_in
-</td>
-<td>Inport
-</td>
-<td>ufix1_En0
-</td>
-<td>AXI4-Lite
-</td>
-<td>x"100"
-</td>
-</tr>
-<tr>
-<td class="distinctCellColor">qpsk_rx_fixpt/num_bytes_ready
-</td>
-<td class="distinctCellColor">Outport
-</td>
-<td class="distinctCellColor">ufix5_En0
-</td>
-<td class="distinctCellColor">AXI4-Lite
-</td>
-<td class="distinctCellColor">x"104"
-</td>
-</tr>
-<tr>
-<td>qpsk_rx_fixpt/store_byte
+<td>qpsk_rx_fixpt/byte
 </td>
 <td>Outport
 </td>
-<td>ufix1_En0
+<td>ufix8_En0
 </td>
 <td>External Port
 </td>
@@ -182,7 +158,31 @@ Target platform interface table:
 </td>
 </tr>
 <tr>
-<td class="distinctCellColor">qpsk_rx_fixpt/byte
+<td class="distinctCellColor">qpsk_rx_fixpt/blinky
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">ufix1_En0
+</td>
+<td class="distinctCellColor">External Port
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td>qpsk_rx_fixpt/s_out
+</td>
+<td>Outport
+</td>
+<td>sfix2_En0
+</td>
+<td>External Port
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">qpsk_rx_fixpt/o_out
 </td>
 <td class="distinctCellColor">Outport
 </td>
@@ -191,18 +191,6 @@ Target platform interface table:
 <td class="distinctCellColor">External Port
 </td>
 <td class="distinctCellColor">
-</td>
-</tr>
-<tr>
-<td>qpsk_rx_fixpt/blinky
-</td>
-<td>Outport
-</td>
-<td>ufix1_En0
-</td>
-<td>External Port
-</td>
-<td>
 </td>
 </tr>
 </tbody>
@@ -230,22 +218,6 @@ The following AXI4-Lite bus accessible registers were generated for this IP core
 <td class="distinctCellColor">0x4
 </td>
 <td class="distinctCellColor">enabled (by default) when bit 0 is 0x1
-</td>
-</tr>
-<tr>
-<td>mcu_rx_ready_in_Data
-</td>
-<td>0x100
-</td>
-<td>data register for port mcu_rx_ready_in
-</td>
-</tr>
-<tr>
-<td class="distinctCellColor">num_bytes_ready_Data
-</td>
-<td class="distinctCellColor">0x104
-</td>
-<td class="distinctCellColor">data register for port num_bytes_ready
 </td>
 </tr>
 </tbody>

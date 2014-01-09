@@ -28,7 +28,7 @@
       <VARIABLE ID="tx_clock_generator" ROW_INDEX="7"/>
       <VARIABLE ID="rx_clock_generator" ROW_INDEX="8"/>
       <VARIABLE ID="qpsk_rx" ROW_INDEX="9"/>
-      <VARIABLE ID="rx_fifo" ROW_INDEX="10"/>
+      <VARIABLE ID="mcu_uart" ROW_INDEX="10"/>
     </SEQUENCES>
   </SET>
 
@@ -98,12 +98,14 @@
       <VARIABLE ID="processing_system7_0" ROW_INDEX="2"/>
       <VARIABLE ID="axi_interconnect_1" ROW_INDEX="1"/>
       <VARIABLE ID="adc_driver" ROW_INDEX="3"/>
-      <VARIABLE ID="mcu_driver" ROW_INDEX="5"/>
-      <VARIABLE ID="dc_offset" ROW_INDEX="4"/>
-      <VARIABLE ID="tx_clock_generator" ROW_INDEX="9"/>
-      <VARIABLE ID="rx_clock_generator" ROW_INDEX="8"/>
-      <VARIABLE ID="qpsk_rx" ROW_INDEX="6"/>
-      <VARIABLE ID="rx_fifo" ROW_INDEX="7"/>
+      <VARIABLE ID="mcu_driver" ROW_INDEX="6"/>
+      <VARIABLE ID="dc_offset" ROW_INDEX="5"/>
+      <VARIABLE ID="tx_clock_generator" ROW_INDEX="11"/>
+      <VARIABLE ID="rx_clock_generator" ROW_INDEX="10"/>
+      <VARIABLE ID="qpsk_rx" ROW_INDEX="7"/>
+      <VARIABLE ID="mcu_uart" ROW_INDEX="4"/>
+      <VARIABLE ID="chipscope_ila_0" ROW_INDEX="9"/>
+      <VARIABLE ID="chipscope_icon_0" ROW_INDEX="8"/>
     </SEQUENCES>
   </SET>
 
@@ -181,7 +183,7 @@
     <SET ID="processing_system7_0" IS_EXPANDED="TRUE"/>
     <STATUS>
       <SELECTIONS>
-        <VARIABLE ID="rx_fifo_pcore_0"/>
+        <VARIABLE ID="axi_uartlite_0"/>
       </SELECTIONS>
     </STATUS>
   </SET>
