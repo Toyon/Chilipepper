@@ -31,6 +31,9 @@
       <VARIABLE ID="axi_gpio_button" ROW_INDEX="10"/>
       <VARIABLE ID="axi_gpio_led" ROW_INDEX="11"/>
       <VARIABLE ID="axi_gpio_switch" ROW_INDEX="12"/>
+      <VARIABLE ID="dac_driver" ROW_INDEX="13"/>
+      <VARIABLE ID="qpsk_tx" ROW_INDEX="14"/>
+      <VARIABLE ID="tx_fifo" ROW_INDEX="15"/>
     </SEQUENCES>
   </SET>
 
@@ -79,7 +82,7 @@
     <HEADERS HSCROLL="0" VSCROLL="0">
       <VARIABLE COL_INDEX="0" COL_WIDTH="270" IS_VISIBLE="TRUE" VIEWDISP="Name" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="2" COL_WIDTH="275" IS_VISIBLE="TRUE" VIEWDISP="Connected Port" VIEWTYPE="HEADER"/>
-      <VARIABLE COL_INDEX="1" COL_WIDTH="183" IS_VISIBLE="TRUE" VIEWDISP="Net" VIEWTYPE="HEADER"/>
+      <VARIABLE COL_INDEX="1" COL_WIDTH="264" IS_VISIBLE="TRUE" VIEWDISP="Net" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="3" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="Direction" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="4" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="Range" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="5" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="Class" VIEWTYPE="HEADER"/>
@@ -99,19 +102,20 @@
       <VARIABLE ID="ExternalPorts" ROW_INDEX="0"/>
       <VARIABLE ID="processing_system7_0" ROW_INDEX="2"/>
       <VARIABLE ID="axi_interconnect_1" ROW_INDEX="1"/>
-      <VARIABLE ID="rx_fifo" ROW_INDEX="11"/>
+      <VARIABLE ID="rx_fifo" ROW_INDEX="13"/>
       <VARIABLE ID="adc_driver" ROW_INDEX="3"/>
-      <VARIABLE ID="mcu_driver" ROW_INDEX="9"/>
-      <VARIABLE ID="dc_offset" ROW_INDEX="8"/>
-      <VARIABLE ID="qpsk_rx" ROW_INDEX="10"/>
-      <VARIABLE ID="rx_clock_generator" ROW_INDEX="14"/>
-      <VARIABLE ID="tx_clock_generator" ROW_INDEX="15"/>
+      <VARIABLE ID="mcu_driver" ROW_INDEX="10"/>
+      <VARIABLE ID="dc_offset" ROW_INDEX="9"/>
+      <VARIABLE ID="qpsk_rx" ROW_INDEX="11"/>
+      <VARIABLE ID="rx_clock_generator" ROW_INDEX="15"/>
+      <VARIABLE ID="tx_clock_generator" ROW_INDEX="16"/>
       <VARIABLE ID="mcu_uart" ROW_INDEX="7"/>
-      <VARIABLE ID="chipscope_ila_0" ROW_INDEX="13"/>
-      <VARIABLE ID="chipscope_icon_0" ROW_INDEX="12"/>
       <VARIABLE ID="axi_gpio_button" ROW_INDEX="4"/>
       <VARIABLE ID="axi_gpio_led" ROW_INDEX="5"/>
       <VARIABLE ID="axi_gpio_switch" ROW_INDEX="6"/>
+      <VARIABLE ID="dac_driver" ROW_INDEX="8"/>
+      <VARIABLE ID="qpsk_tx" ROW_INDEX="12"/>
+      <VARIABLE ID="tx_fifo" ROW_INDEX="14"/>
     </SEQUENCES>
   </SET>
 
@@ -188,7 +192,7 @@
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="5" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="62,962,200" VERSION="0"/>
     <STATUS>
       <SELECTIONS>
-        <VARIABLE ID="axi_gpio_0"/>
+        <VARIABLE ID="tx_fifo_pcore_0"/>
       </SELECTIONS>
     </STATUS>
   </SET>
