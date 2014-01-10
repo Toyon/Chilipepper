@@ -15,8 +15,8 @@
     <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\qpsk_tx\fixpt\qpsk_tx_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
     <param.fixptconv.InstrumentedBuildChecksum>559827131</param.fixptconv.InstrumentedBuildChecksum>
     <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
-    <param.fixptconv.FixedPointValidationChecksum>2062137810</param.fixptconv.FixedPointValidationChecksum>
-    <param.fixptconv.FixedPointSourceCodeChecksum>1820781192</param.fixptconv.FixedPointSourceCodeChecksum>
+    <param.fixptconv.FixedPointValidationChecksum>543043460</param.fixptconv.FixedPointValidationChecksum>
+    <param.fixptconv.FixedPointSourceCodeChecksum>1652222681</param.fixptconv.FixedPointSourceCodeChecksum>
     <param.fixptconv.FixedPointStaticAnalysisChecksum />
     <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}\qpsk_tb.m</param.fixptconv.DefaultTestFile>
     <param.fixptconv.ExcludedFixedPointVerificationFiles />
@@ -55,11 +55,17 @@
           <Variable name="diLatch" />
           <Variable name="dqLatch" />
           <Variable name="empty_in" />
-          <Variable name="rdCount" />
-          <Variable name="rdIndex" />
+          <Variable name="rdCount">
+            <Column property="ProposedType" type="String" value="ufix11" />
+          </Variable>
+          <Variable name="rdIndex">
+            <Column property="ProposedType" type="String" value="ufix11" />
+          </Variable>
           <Variable name="reBuf" />
           <Variable name="re_byte_out" />
-          <Variable name="sentTrain" />
+          <Variable name="sentTrain">
+            <Column property="ProposedType" type="String" value="ufix8" />
+          </Variable>
           <Variable name="sym2" />
           <Variable name="symIndex" />
           <Variable name="tbi" />
@@ -68,7 +74,9 @@
           <Variable name="tx_done_out" />
           <Variable name="tx_en_in" />
           <Variable name="tx_fifo" />
-          <Variable name="wrCount" />
+          <Variable name="wrCount">
+            <Column property="ProposedType" type="String" value="ufix11" />
+          </Variable>
           <Variable name="wrIndex" />
         </Function>
         <Function file="$(PROJECTDIR)\SRRC.m" name="SRRC" specialization="f66_SRRC">
@@ -857,7 +865,7 @@
     <param.fixptconv.StaticAnalysisGlobalRangesOnly>false</param.fixptconv.StaticAnalysisGlobalRangesOnly>
     <param.hdl.Workflow>option.workflow.IpCore</param.hdl.Workflow>
     <param.hdl.TargetPlatform>Generic Xilinx Platform</param.hdl.TargetPlatform>
-    <param.hdl.SynthesisTool>No synthesis tool specified</param.hdl.SynthesisTool>
+    <param.hdl.SynthesisTool>No synthesis tool available on system path</param.hdl.SynthesisTool>
     <param.hdl.InputFrequency>100</param.hdl.InputFrequency>
     <param.hdl.TargetFrequency>100</param.hdl.TargetFrequency>
     <param.hdl.IPCoreName>qpsk_tx_pcore</param.hdl.IPCoreName>

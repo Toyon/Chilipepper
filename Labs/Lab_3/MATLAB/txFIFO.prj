@@ -261,7 +261,7 @@
     <param.fixptconv.StaticAnalysisGlobalRangesOnly>false</param.fixptconv.StaticAnalysisGlobalRangesOnly>
     <param.hdl.Workflow>option.workflow.IpCore</param.hdl.Workflow>
     <param.hdl.TargetPlatform>Generic Xilinx Platform</param.hdl.TargetPlatform>
-    <param.hdl.SynthesisTool>No synthesis tool specified</param.hdl.SynthesisTool>
+    <param.hdl.SynthesisTool>No synthesis tool available on system path</param.hdl.SynthesisTool>
     <param.hdl.InputFrequency>100</param.hdl.InputFrequency>
     <param.hdl.TargetFrequency>100</param.hdl.TargetFrequency>
     <param.hdl.IPCoreName>tx_fifo_pcore</param.hdl.IPCoreName>

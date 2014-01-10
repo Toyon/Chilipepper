@@ -93,22 +93,11 @@ for i1 = 1:num_samp
     end
 end
 if ~sim % load data that was transmitted and captured from chipscope
-    if 1
-        fid = fopen('tx.prn');
-        M = textscan(fid,'%d %d %d %d %d %d %d %d %d %d','Headerlines',1);
-        fclose(fid);
-        iFile = double(M{3})'/2^11;
-        qFile = double(M{4})'/2^11;
-    else
-        M = load('dac.prn');
-        if M(1,end-1) == 0
-            iFile = M(1:2:end,end)'/2^11;
-            qFile = M(2:2:end,end)'/2^11;
-        else
-            qFile = M(1:2:end,end)'/2^11;
-            iFile = M(2:2:end,end)'/2^11;
-        end
-    end
+    fid = fopen('tx.prn');
+    M = textscan(fid,'%d %d %d %d','Headerlines',1);
+    fclose(fid);
+    iFile = double(M{3})'/2^11;
+    qFile = double(M{4})'/2^11;
     x = complex(iFile,qFile);
 end
 
@@ -124,7 +113,11 @@ sb = (sh+1)/2;
 d = zeros(1,ml);
 for i1 = 1:ml
     si = sb(1+(i1-1)*8:i1*8);
-    d(i1) = bi2de(si);
+    s1 = [];
+    for i2 = 1:length(si)
+       s1 = [s1 num2str(round(si(i2)))];
+    end
+    d(i1) = bin2dec(fliplr(s1));
 end
 figure(1)
 clf
