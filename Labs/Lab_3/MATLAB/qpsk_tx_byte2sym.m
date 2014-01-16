@@ -128,19 +128,3 @@ end
 tx_fifo(wrIndex) = data_in;
 
 tx_done_out = txDone;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

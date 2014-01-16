@@ -62,6 +62,7 @@ BEGIN clock_generator
  PARAMETER C_CLKOUT4_FREQ = 0
  PARAMETER C_CLKOUT4_PHASE = 0
  PARAMETER C_CLKOUT4_GROUP = NONE
+ PARAMETER C_CLKOUT3_PHASE = 180
  PORT RST = net_gnd
  PORT CLKIN = tx_clock_generator_CLKIN
  PORT CLKOUT0 = tx_clock_generator_CLKOUT0
@@ -287,12 +288,12 @@ END
 BEGIN chipscope_ila
  PARAMETER INSTANCE = chipscope_ila_0
  PARAMETER HW_VER = 1.05.a
+ PARAMETER C_NUM_DATA_SAMPLES = 2048
  PARAMETER C_TRIG0_UNITS = 1
  PARAMETER C_TRIG0_TRIGGER_IN_WIDTH = 24
- PARAMETER C_NUM_DATA_SAMPLES = 2048
  PORT chipscope_ila_control = chipscope_ila_0_icon_control
+ PORT CLK = tx_clock_generator_CLKOUT1
  PORT TRIG0 = dac_driver_tx_i & dac_driver_tx_q
- PORT CLK = tx_clock_generator_CLKOUT0
 END
 
 BEGIN chipscope_icon
