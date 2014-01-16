@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.matlabhdlcoder" plugin-version="R2013a">
-  <configuration file="C:\GIT\pcore_Examples\Receiver_pcore_fifo\MATLAB\adc_driver.prj" location="C:\GIT\pcore_Examples\Receiver_pcore_fifo\MATLAB" name="adc_driver" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
+  <configuration file="C:\GIT\QPSK_Pcore\Labs\Lab_2\MATLAB\adc_driver.prj" location="C:\GIT\QPSK_Pcore\Labs\Lab_2\MATLAB" name="adc_driver" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
     <param.AutoInferDefaultFile />
     <param.AutoInferUseVariableSize>false</param.AutoInferUseVariableSize>
     <param.AutoInferUseUnboundedSize>false</param.AutoInferUseUnboundedSize>
@@ -13,10 +13,10 @@
     <param.hdl.BuildDirectory>option.hdl.ProjectDirectory</param.hdl.BuildDirectory>
     <param.hdl.BuildSpecifiedDirectory />
     <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\adc_driver\fixpt\adc_driver_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
-    <param.fixptconv.InstrumentedBuildChecksum>2908415608</param.fixptconv.InstrumentedBuildChecksum>
+    <param.fixptconv.InstrumentedBuildChecksum>43393</param.fixptconv.InstrumentedBuildChecksum>
     <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
-    <param.fixptconv.FixedPointValidationChecksum>1477483873</param.fixptconv.FixedPointValidationChecksum>
-    <param.fixptconv.FixedPointSourceCodeChecksum>1278199467</param.fixptconv.FixedPointSourceCodeChecksum>
+    <param.fixptconv.FixedPointValidationChecksum>2013952758</param.fixptconv.FixedPointValidationChecksum>
+    <param.fixptconv.FixedPointSourceCodeChecksum>2530430885</param.fixptconv.FixedPointSourceCodeChecksum>
     <param.fixptconv.FixedPointStaticAnalysisChecksum />
     <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}\adc_driver_tb.m</param.fixptconv.DefaultTestFile>
     <param.fixptconv.ExcludedFixedPointVerificationFiles />
@@ -37,10 +37,10 @@
           <Variable name="i_out">
             <Column property="ProposedType" type="String" value="sfix12" />
           </Variable>
-          <Variable name="q_out">
+          <Variable name="i_out_delay">
             <Column property="ProposedType" type="String" value="sfix12" />
           </Variable>
-          <Variable name="q_out_delay">
+          <Variable name="q_out">
             <Column property="ProposedType" type="String" value="sfix12" />
           </Variable>
           <Variable name="rx_i">
@@ -88,7 +88,20 @@
           <Variable name="i_out">
             <Column property="Kind" type="String" value="persistent" />
             <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="1.0" />
+            <Column property="SimMax" type="Double" value="0.0" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+            <Column property="IsInteger" type="Boolean" value="true" />
+            <Column property="RoundMode" type="String" value="floor" />
+            <Column property="OverflowMode" type="String" value="saturate" />
+            <Column property="ProposedType" type="String" value="ufix1" />
+          </Variable>
+          <Variable name="i_out_delay">
+            <Column property="Kind" type="String" value="persistent" />
+            <Column property="SimMin" type="Double" value="0.0" />
+            <Column property="SimMax" type="Double" value="0.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -101,20 +114,7 @@
           <Variable name="q_out">
             <Column property="Kind" type="String" value="persistent" />
             <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="0.0" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="saturate" />
-            <Column property="ProposedType" type="String" value="ufix1" />
-          </Variable>
-          <Variable name="q_out_delay">
-            <Column property="Kind" type="String" value="persistent" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="0.0" />
+            <Column property="SimMax" type="Double" value="1.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -127,7 +127,7 @@
           <Variable name="rx_i">
             <Column property="Kind" type="String" value="output" />
             <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="1.0" />
+            <Column property="SimMax" type="Double" value="0.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -153,7 +153,7 @@
           <Variable name="rx_q">
             <Column property="Kind" type="String" value="output" />
             <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="0.0" />
+            <Column property="SimMax" type="Double" value="1.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>

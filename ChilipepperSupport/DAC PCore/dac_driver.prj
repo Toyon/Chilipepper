@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <deployment-project plugin="plugin.matlabhdlcoder" plugin-version="R2013a">
-  <configuration target="target.matlab.hdlcoder" target-name="HDL Code Generation" name="dac_driver" location="C:\GIT\pcore_Branch\Chilipepper\Labs\Lab_3\MATLAB" file="C:\GIT\pcore_Branch\Chilipepper\Labs\Lab_3\MATLAB\dac_driver.prj">
+  <configuration file="C:\GIT\QPSK_Pcore\Labs\Lab_1\MATLAB\dac_driver.prj" location="C:\GIT\QPSK_Pcore\Labs\Lab_1\MATLAB" name="dac_driver" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
     <param.AutoInferDefaultFile />
     <param.AutoInferUseVariableSize>false</param.AutoInferUseVariableSize>
     <param.AutoInferUseUnboundedSize>false</param.AutoInferUseUnboundedSize>
@@ -14,10 +13,10 @@
     <param.hdl.BuildDirectory>option.hdl.ProjectDirectory</param.hdl.BuildDirectory>
     <param.hdl.BuildSpecifiedDirectory />
     <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\dac_driver\fixpt\dac_driver_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
-    <param.fixptconv.InstrumentedBuildChecksum>736791382</param.fixptconv.InstrumentedBuildChecksum>
+    <param.fixptconv.InstrumentedBuildChecksum>2942457370</param.fixptconv.InstrumentedBuildChecksum>
     <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
-    <param.fixptconv.FixedPointValidationChecksum>1815872444</param.fixptconv.FixedPointValidationChecksum>
-    <param.fixptconv.FixedPointSourceCodeChecksum>1226385956</param.fixptconv.FixedPointSourceCodeChecksum>
+    <param.fixptconv.FixedPointValidationChecksum>2736799534</param.fixptconv.FixedPointValidationChecksum>
+    <param.fixptconv.FixedPointSourceCodeChecksum>3106877314</param.fixptconv.FixedPointSourceCodeChecksum>
     <param.fixptconv.FixedPointStaticAnalysisChecksum />
     <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}\dac_driver_tb.m</param.fixptconv.DefaultTestFile>
     <param.fixptconv.ExcludedFixedPointVerificationFiles />
@@ -25,10 +24,11 @@
     <param.fixptconv.FixptProposalKind>option.fixptconv.ProposeFracLenBasedOnWordLen</param.fixptconv.FixptProposalKind>
     <param.fixptconv.DefaultFixptWordLength>14</param.fixptconv.DefaultFixptWordLength>
     <param.fixptconv.DefaultFixptFractionLength>4</param.fixptconv.DefaultFixptFractionLength>
-    <param.fixptconv.SafetyMargin>4</param.fixptconv.SafetyMargin>
+    <param.fixptconv.ContainerTypes>false</param.fixptconv.ContainerTypes>
+    <param.fixptconv.SafetyMargin>0</param.fixptconv.SafetyMargin>
     <param.fixptconv.ProposeUsingDesignMinMaxAnd>option.fixptconv.ProposeUsingDesignMinMaxAnd.SimAndDerivedMinMax</param.fixptconv.ProposeUsingDesignMinMaxAnd>
     <param.transformedVariables>
-      <ProposedTypesTableAnnotations>
+      <UserEntities>
         <Function file="$(PROJECTDIR)\dac_driver.m" name="dac_driver">
           <Variable name="blinky" />
           <Variable name="blinky_cnt">
@@ -47,10 +47,10 @@
             <Column property="ProposedType" type="String" value="sfix12" />
           </Variable>
         </Function>
-      </ProposedTypesTableAnnotations>
+      </UserEntities>
     </param.transformedVariables>
     <param.computedVariables>
-      <ComputedFixedPointData>
+      <ComputedEntities>
         <Function file="$(PROJECTDIR)\dac_driver.m" name="dac_driver">
           <Variable name="blinky">
             <Column property="Kind" type="String" value="output" />
@@ -157,12 +157,13 @@
             <Column property="ProposedType" type="String" value="sfix10" />
           </Variable>
         </Function>
-      </ComputedFixedPointData>
+      </ComputedEntities>
     </param.computedVariables>
     <param.fixptconv.FiMathString>fimath('RoundingMethod', 'Floor', 'OverflowAction', 'Wrap', 'ProductMode', 'FullPrecision', 'MaxProductWordLength', 128, 'SumMode', 'FullPrecision', 'MaxSumWordLength', 128)</param.fixptconv.FiMathString>
     <param.fixptconv.DefaultRoundMode>option.fixptconv.proposetypes.floor</param.fixptconv.DefaultRoundMode>
     <param.fixptconv.DefaultOverflowMode>option.fixptconv.proposetypes.wrap</param.fixptconv.DefaultOverflowMode>
     <param.fixptconv.LogAllIOValues>false</param.fixptconv.LogAllIOValues>
+    <param.fixptconv.DetectOverflows>false</param.fixptconv.DetectOverflows>
     <param.fixptconv.LogHistogram>false</param.fixptconv.LogHistogram>
     <param.fixptconv.FixPtFileNameSuffix>_fixpt</param.fixptconv.FixPtFileNameSuffix>
     <param.fixptconv.AutoScaleLoopIndexVariables>false</param.fixptconv.AutoScaleLoopIndexVariables>
@@ -177,17 +178,17 @@
     <param.fixptconv.StaticAnalysisTimeout />
     <param.fixptconv.StaticAnalysisGlobalRangesOnly>false</param.fixptconv.StaticAnalysisGlobalRangesOnly>
     <param.hdl.Workflow>option.workflow.IpCore</param.hdl.Workflow>
-    <param.hdl.TargetPlatform>ZedBoard</param.hdl.TargetPlatform>
-    <param.hdl.SynthesisTool>Xilinx ISE</param.hdl.SynthesisTool>
+    <param.hdl.TargetPlatform>Generic Xilinx Platform</param.hdl.TargetPlatform>
+    <param.hdl.SynthesisTool>No synthesis tool available on system path</param.hdl.SynthesisTool>
     <param.hdl.InputFrequency>100</param.hdl.InputFrequency>
     <param.hdl.TargetFrequency>100</param.hdl.TargetFrequency>
     <param.hdl.IPCoreName>dac_driver_pcore</param.hdl.IPCoreName>
     <param.hdl.IPCoreVersion>v1.00.a</param.hdl.IPCoreVersion>
     <param.hdl.ExecutionMode>option.hdl.FreeRunning</param.hdl.ExecutionMode>
-    <param.hdl.SynthesisToolChipFamily>Zynq</param.hdl.SynthesisToolChipFamily>
-    <param.hdl.SynthesisToolDeviceName>xc7z020</param.hdl.SynthesisToolDeviceName>
-    <param.hdl.SynthesisToolPackageName>clg484</param.hdl.SynthesisToolPackageName>
-    <param.hdl.SynthesisToolSpeedValue>-1</param.hdl.SynthesisToolSpeedValue>
+    <param.hdl.SynthesisToolChipFamily />
+    <param.hdl.SynthesisToolDeviceName />
+    <param.hdl.SynthesisToolPackageName />
+    <param.hdl.SynthesisToolSpeedValue />
     <param.hdl.TargetInterface>
       <TargetInterface>
         <Port>
@@ -257,10 +258,13 @@
     <param.hdl.PipelinePostfix>_pipe</param.hdl.PipelinePostfix>
     <param.hdl.EnablePrefix>enb</param.hdl.EnablePrefix>
     <param.hdl.InlineConfigurations>true</param.hdl.InlineConfigurations>
+    <param.hdl.UseRisingEdge>false</param.hdl.UseRisingEdge>
+    <param.hdl.UseMatrixTypesInHDL>false</param.hdl.UseMatrixTypesInHDL>
     <param.hdl.ResetType>option.hdl.Asynchronous</param.hdl.ResetType>
     <param.hdl.ResetAssertedLevel>option.hdl.ActiveHigh</param.hdl.ResetAssertedLevel>
     <param.hdl.ResetInputPort>reset</param.hdl.ResetInputPort>
     <param.hdl.ClockInputPort>clk</param.hdl.ClockInputPort>
+    <param.hdl.ClockEdge>option.hdl.Rising</param.hdl.ClockEdge>
     <param.hdl.ClockEnableInputPort>clk_enable</param.hdl.ClockEnableInputPort>
     <param.hdl.Oversampling>1</param.hdl.Oversampling>
     <param.hdl.EnableRate>option.hdl.DutBaseRate</param.hdl.EnableRate>
@@ -274,6 +278,8 @@
     <param.hdl.RegisterInputs>false</param.hdl.RegisterInputs>
     <param.hdl.RegisterOutputs>false</param.hdl.RegisterOutputs>
     <param.hdl.DistributedPipelining>false</param.hdl.DistributedPipelining>
+    <param.hdl.DistributedPipeliningPriority>option.hdl.NumericalIntegrity</param.hdl.DistributedPipeliningPriority>
+    <param.hdl.PreserveDesignDelays>false</param.hdl.PreserveDesignDelays>
     <param.hdl.InputPipeline>0</param.hdl.InputPipeline>
     <param.hdl.OutputPipeline>0</param.hdl.OutputPipeline>
     <param.hdl.PipelineVariables />
@@ -310,7 +316,7 @@
     <param.isHDLVerifierInstalled>false</param.isHDLVerifierInstalled>
     <param.hdl.GenerateHDLTestBench>false</param.hdl.GenerateHDLTestBench>
     <param.hdl.SimulateGeneratedCode>false</param.hdl.SimulateGeneratedCode>
-    <param.hdl.SimulationTool>ISIM</param.hdl.SimulationTool>
+    <param.hdl.SimulationTool>No simulation tool available on system path</param.hdl.SimulationTool>
     <param.hdl.TestBenchPostfix>_tb</param.hdl.TestBenchPostfix>
     <param.hdl.ForceClock>true</param.hdl.ForceClock>
     <param.hdl.ClockHighTime>5</param.hdl.ClockHighTime>
@@ -343,6 +349,7 @@
     <param.hdl.GenerateFILTestBench>false</param.hdl.GenerateFILTestBench>
     <param.hdl.FILLogOutputs>false</param.hdl.FILLogOutputs>
     <param.hdl.FILBoardName>HDL Verifier installation or licnese is not avaialble</param.hdl.FILBoardName>
+    <param.hdl.FILConnection />
     <param.FILShowIPAddressWidgets>true</param.FILShowIPAddressWidgets>
     <param.hdl.FILBoardIPAddress>192.168.0.2</param.hdl.FILBoardIPAddress>
     <param.hdl.FILBoardMACAddress>00-0A-35-02-21-8A</param.hdl.FILBoardMACAddress>
@@ -351,9 +358,9 @@
     <param.hdl.AdditionalSynthesisProjectFiles />
     <param.hdl.CriticalPathSource>option.hdl.Preroute</param.hdl.CriticalPathSource>
     <param.hdl.EmbeddedSystemTool>Xilinx PlanAhead with Embedded Design</param.hdl.EmbeddedSystemTool>
-    <param.hdl.ReferenceDesign>Default system (ISE 14.4)</param.hdl.ReferenceDesign>
+    <param.hdl.ReferenceDesign />
     <param.hdl.ReferenceDesignPath />
-    <param.hdl.EmbeddedSystemProjectFolder>codegen\pa_prj</param.hdl.EmbeddedSystemProjectFolder>
+    <param.hdl.EmbeddedSystemProjectFolder>codegen/pa_prj</param.hdl.EmbeddedSystemProjectFolder>
     <param.hdl.BitstreamBuildMode>false</param.hdl.BitstreamBuildMode>
     <unset>
       <param.AutoInferDefaultFile />
@@ -374,12 +381,14 @@
       <param.fixptconv.FixptProposalKind />
       <param.fixptconv.DefaultFixptWordLength />
       <param.fixptconv.DefaultFixptFractionLength />
+      <param.fixptconv.ContainerTypes />
       <param.fixptconv.SafetyMargin />
       <param.fixptconv.ProposeUsingDesignMinMaxAnd />
       <param.fixptconv.FiMathString />
       <param.fixptconv.DefaultRoundMode />
       <param.fixptconv.DefaultOverflowMode />
       <param.fixptconv.LogAllIOValues />
+      <param.fixptconv.DetectOverflows />
       <param.fixptconv.LogHistogram />
       <param.fixptconv.FixPtFileNameSuffix />
       <param.fixptconv.AutoScaleLoopIndexVariables />
@@ -415,10 +424,13 @@
       <param.hdl.PipelinePostfix />
       <param.hdl.EnablePrefix />
       <param.hdl.InlineConfigurations />
+      <param.hdl.UseRisingEdge />
+      <param.hdl.UseMatrixTypesInHDL />
       <param.hdl.ResetType />
       <param.hdl.ResetAssertedLevel />
       <param.hdl.ResetInputPort />
       <param.hdl.ClockInputPort />
+      <param.hdl.ClockEdge />
       <param.hdl.ClockEnableInputPort />
       <param.hdl.Oversampling />
       <param.hdl.InputType />
@@ -431,6 +443,8 @@
       <param.hdl.RegisterInputs />
       <param.hdl.RegisterOutputs />
       <param.hdl.DistributedPipelining />
+      <param.hdl.DistributedPipeliningPriority />
+      <param.hdl.PreserveDesignDelays />
       <param.hdl.InputPipeline />
       <param.hdl.OutputPipeline />
       <param.hdl.PipelineVariables />
@@ -497,6 +511,7 @@
       <param.hdl.CosimResetLength />
       <param.hdl.GenerateFILTestBench />
       <param.hdl.FILLogOutputs />
+      <param.hdl.FILConnection />
       <param.FILShowIPAddressWidgets />
       <param.hdl.FILBoardIPAddress />
       <param.hdl.FILBoardMACAddress />
@@ -504,12 +519,13 @@
       <param.hdl.SimulateFILTestBench />
       <param.hdl.AdditionalSynthesisProjectFiles />
       <param.hdl.CriticalPathSource />
+      <param.hdl.ReferenceDesign />
       <param.hdl.ReferenceDesignPath />
       <param.hdl.EmbeddedSystemProjectFolder />
       <param.hdl.BitstreamBuildMode />
     </unset>
     <fileset.entrypoints>
-      <file value="${PROJECT_ROOT}\dac_driver.m" custom-data-expanded="false">
+      <file custom-data-expanded="false" value="${PROJECT_ROOT}\dac_driver.m">
         <Inputs fileName="dac_driver.m" functionName="dac_driver">
           <Input Name="tx_i">
             <Class>double</Class>
@@ -562,10 +578,27 @@
       <step key="category.workflow.fpgaturnkeyprogramtargetdevice" skipped="false" />
     </workflow>
     <matlab>
-      <root>C:\Program Files\MATLAB\R2013b</root>
+      <root>C:\Program Files\MATLAB\R2014a</root>
       <toolboxes>
+        <toolbox name="matlabhdlcoder" />
         <toolbox name="fixedpoint" />
+        <toolbox name="matlabcoder" />
       </toolboxes>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
     </matlab>
     <platform>
       <unix>false</unix>
@@ -584,4 +617,3 @@
     </platform>
   </configuration>
 </deployment-project>
-
