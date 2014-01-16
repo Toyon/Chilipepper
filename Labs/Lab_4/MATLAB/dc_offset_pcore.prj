@@ -750,10 +750,10 @@
     <param.hdl.SimulateFILTestBench>false</param.hdl.SimulateFILTestBench>
     <param.hdl.AdditionalSynthesisProjectFiles />
     <param.hdl.CriticalPathSource>option.hdl.Preroute</param.hdl.CriticalPathSource>
-    <param.hdl.EmbeddedSystemTool />
+    <param.hdl.EmbeddedSystemTool>Xilinx PlanAhead with Embedded Design</param.hdl.EmbeddedSystemTool>
     <param.hdl.ReferenceDesign />
     <param.hdl.ReferenceDesignPath />
-    <param.hdl.EmbeddedSystemProjectFolder />
+    <param.hdl.EmbeddedSystemProjectFolder>codegen/pa_prj</param.hdl.EmbeddedSystemProjectFolder>
     <param.hdl.BitstreamBuildMode>false</param.hdl.BitstreamBuildMode>
     <unset>
       <param.AutoInferDefaultFile />
@@ -857,9 +857,6 @@
       <param.hdl.HDLSimViewWaveCmd />
       <param.hdl.HDLSimTerm />
       <var.toolSpecificEDAScript />
-      <param.hdl.HDLSynthInit />
-      <param.hdl.HDLSynthCmd />
-      <param.hdl.HDLSynthTerm />
       <param.hdl.HDLLintTool />
       <param.hdl.HDLLintInit />
       <param.hdl.HDLLintCmd />
@@ -906,7 +903,6 @@
       <param.hdl.SimulateFILTestBench />
       <param.hdl.AdditionalSynthesisProjectFiles />
       <param.hdl.CriticalPathSource />
-      <param.hdl.EmbeddedSystemTool />
       <param.hdl.ReferenceDesign />
       <param.hdl.ReferenceDesignPath />
       <param.hdl.EmbeddedSystemProjectFolder />
