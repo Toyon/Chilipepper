@@ -13,10 +13,10 @@
     <param.hdl.BuildDirectory>option.hdl.ProjectDirectory</param.hdl.BuildDirectory>
     <param.hdl.BuildSpecifiedDirectory />
     <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\adc_driver\fixpt\adc_driver_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
-    <param.fixptconv.InstrumentedBuildChecksum>2317309929</param.fixptconv.InstrumentedBuildChecksum>
+    <param.fixptconv.InstrumentedBuildChecksum>43393</param.fixptconv.InstrumentedBuildChecksum>
     <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
-    <param.fixptconv.FixedPointValidationChecksum>1285170183</param.fixptconv.FixedPointValidationChecksum>
-    <param.fixptconv.FixedPointSourceCodeChecksum>1307421852</param.fixptconv.FixedPointSourceCodeChecksum>
+    <param.fixptconv.FixedPointValidationChecksum>2013952758</param.fixptconv.FixedPointValidationChecksum>
+    <param.fixptconv.FixedPointSourceCodeChecksum>2530430885</param.fixptconv.FixedPointSourceCodeChecksum>
     <param.fixptconv.FixedPointStaticAnalysisChecksum />
     <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}\adc_driver_tb.m</param.fixptconv.DefaultTestFile>
     <param.fixptconv.ExcludedFixedPointVerificationFiles />
@@ -37,10 +37,10 @@
           <Variable name="i_out">
             <Column property="ProposedType" type="String" value="sfix12" />
           </Variable>
-          <Variable name="q_out">
+          <Variable name="i_out_delay">
             <Column property="ProposedType" type="String" value="sfix12" />
           </Variable>
-          <Variable name="q_out_delay">
+          <Variable name="q_out">
             <Column property="ProposedType" type="String" value="sfix12" />
           </Variable>
           <Variable name="rx_i">
@@ -88,7 +88,20 @@
           <Variable name="i_out">
             <Column property="Kind" type="String" value="persistent" />
             <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="1.0" />
+            <Column property="SimMax" type="Double" value="0.0" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+            <Column property="IsInteger" type="Boolean" value="true" />
+            <Column property="RoundMode" type="String" value="floor" />
+            <Column property="OverflowMode" type="String" value="saturate" />
+            <Column property="ProposedType" type="String" value="ufix1" />
+          </Variable>
+          <Variable name="i_out_delay">
+            <Column property="Kind" type="String" value="persistent" />
+            <Column property="SimMin" type="Double" value="0.0" />
+            <Column property="SimMax" type="Double" value="0.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -101,20 +114,7 @@
           <Variable name="q_out">
             <Column property="Kind" type="String" value="persistent" />
             <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="0.0" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="saturate" />
-            <Column property="ProposedType" type="String" value="ufix1" />
-          </Variable>
-          <Variable name="q_out_delay">
-            <Column property="Kind" type="String" value="persistent" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="0.0" />
+            <Column property="SimMax" type="Double" value="1.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -127,7 +127,7 @@
           <Variable name="rx_i">
             <Column property="Kind" type="String" value="output" />
             <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="1.0" />
+            <Column property="SimMax" type="Double" value="0.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -153,7 +153,7 @@
           <Variable name="rx_q">
             <Column property="Kind" type="String" value="output" />
             <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="0.0" />
+            <Column property="SimMax" type="Double" value="1.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
@@ -199,7 +199,7 @@
     <param.fixptconv.StaticAnalysisGlobalRangesOnly>false</param.fixptconv.StaticAnalysisGlobalRangesOnly>
     <param.hdl.Workflow>option.workflow.IpCore</param.hdl.Workflow>
     <param.hdl.TargetPlatform>Generic Xilinx Platform</param.hdl.TargetPlatform>
-    <param.hdl.SynthesisTool>No synthesis tool specified</param.hdl.SynthesisTool>
+    <param.hdl.SynthesisTool>No synthesis tool available on system path</param.hdl.SynthesisTool>
     <param.hdl.InputFrequency>100</param.hdl.InputFrequency>
     <param.hdl.TargetFrequency>100</param.hdl.TargetFrequency>
     <param.hdl.IPCoreName>adc_driver_pcore</param.hdl.IPCoreName>
@@ -480,7 +480,6 @@
       <param.hdl.HDLSimViewWaveCmd />
       <param.hdl.HDLSimTerm />
       <var.toolSpecificEDAScript />
-      <param.hdl.HDLSynthInit />
       <param.hdl.HDLLintTool />
       <param.hdl.HDLLintInit />
       <param.hdl.HDLLintCmd />
