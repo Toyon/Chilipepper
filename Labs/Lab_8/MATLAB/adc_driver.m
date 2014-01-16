@@ -1,20 +1,20 @@
 %#codegen
 function [rx_i, rx_q, blinky] = adc_driver(rxd, rx_iq_sel)
 % deinterleave txd into I and Q channels
-    persistent i_out q_out q_out_delay blinky_cnt
+    persistent i_out q_out i_out_delay blinky_cnt
 
     if isempty(i_out)
         i_out = 0;
         q_out = 0;
-        q_out_delay = 0;
+        i_out_delay = 0;
         blinky_cnt = 0;
     end
 
     if rx_iq_sel == 0
-        q_out_delay = rxd;
+        i_out_delay = rxd;
     else
-        i_out = rxd;
-        q_out = q_out_delay;
+        i_out = i_out_delay;
+        q_out = rxd;
     end
     % ADC runs at 2x the rate the output changes at
         rx_i = i_out;
