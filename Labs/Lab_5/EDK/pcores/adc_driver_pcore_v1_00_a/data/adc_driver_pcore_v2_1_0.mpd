@@ -1,7 +1,7 @@
 ##############################################################################
 ## File Name:         codegen\ipcore\adc_driver_pcore_v1_00_a\data\adc_driver_pcore_v2_1_0.mpd
 ## Description:       Microprocessor Peripheral Description
-## Created:           2013-12-30 15:48:14
+## Created:           2014-01-16 12:23:10
 ##############################################################################
 
 BEGIN adc_driver_pcore
