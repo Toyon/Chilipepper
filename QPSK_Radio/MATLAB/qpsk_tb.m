@@ -67,8 +67,8 @@ for i1 = 1:num_samp
     clear_buf = [clear_buf(2:end) clear_fifo_in];
     tx_en_buf = [tx_en_buf(2:end) tx_en_in];
     
-    [new_data_in, empty_in, byte_recieved, full, percent_full] = ...
-    tx_fifo(byte_request, store_byte_buf(1), data_buf(1), reset_fifo);
+    [new_data_in, bytes_available, byte_recieved, empty_in] = ...
+    tx_fifo(reset_fifo, store_byte_buf(1), data_buf(1), byte_request);
     
     [i_out, q_out, tx_done_out, request_byte, clear_fifo_in_done] = ...
         qpsk_tx(new_data_in,empty_in,clear_buf(1),tx_en_buf(1));
@@ -153,7 +153,7 @@ s_t = zeros(1,length(r));
 tau = zeros(1,length(r));
 s_o = zeros(1,length(r));
 o = zeros(1,length(r));
-bytes = zeros(1,ml); byte_count = 0; next_byte = 0; percent_full = 0;
+bytes = zeros(1,ml); byte_count = 0; next_byte = 0; bytes_available = 0;
 for i1 = 1:length(r)+200
     if i1 == 1
         mcu_rdy = 0;
