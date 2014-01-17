@@ -177,31 +177,34 @@ IPNAME:qpsk_rx_pcore INSTANCE:qpsk_rx -
 C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 214 - Copying cache
 implementation netlist
 IPNAME:axi_uartlite INSTANCE:mcu_uart -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 267 - Copying cache
+C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 268 - Copying cache
 implementation netlist
 IPNAME:axi_gpio INSTANCE:axi_gpio_button -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 278 - Copying cache
+C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 279 - Copying cache
 implementation netlist
 IPNAME:axi_gpio INSTANCE:axi_gpio_led -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 291 - Copying cache
+C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 292 - Copying cache
+implementation netlist
+IPNAME:axi_gpio INSTANCE:axi_gpio_switch -
+C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 306 - Copying cache
 implementation netlist
 IPNAME:dac_driver_pcore INSTANCE:dac_driver -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 317 - Copying cache
+C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 318 - Copying cache
 implementation netlist
 IPNAME:qpsk_tx_pcore INSTANCE:qpsk_tx -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 333 - Copying cache
+C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 334 - Copying cache
 implementation netlist
 IPNAME:tx_fifo_pcore INSTANCE:tx_fifo -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 350 - Copying cache
+C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 351 - Copying cache
 implementation netlist
 
 Elaborating instances ...
 IPNAME:clock_generator INSTANCE:rx_clock_generator -
 C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 231 - elaborating IP
 ClkGen elaborate status: PASSED
-WARNING:EDK - : Phase value 90.0000 is converted to 90.0
+WARNING:EDK - : Phase value 180.0000 is converted to 180.0
 
-WARNING:EDK - : Phase value 90.0000 is converted to 90.0
+WARNING:EDK - : Phase value 180.0000 is converted to 180.0
 
 WARNING:EDK - : Phase value 0.0 is converted to 0.0
 
@@ -220,7 +223,7 @@ WARNING:EDK - : Phase value 0.0000 is converted to 0.0
 
 WARNING:EDK - : Phase value 0.0000 is converted to 0.0
 
-WARNING:EDK - : Phase value 0.0 is converted to 0.0
+WARNING:EDK - : Phase value 180.0000 is converted to 180.0
 
 WARNING:EDK - : Phase value 0.0 is converted to 0.0
 
@@ -234,10 +237,10 @@ WARNING:EDK - : Phase value 0.0 is converted to 0.0
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 0.00 seconds
+Completion time: 1.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -264,13 +267,11 @@ INSTANCE:rx_clock_generator - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line
 231 - Running XST synthesis
 INSTANCE:tx_clock_generator - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line
 247 - Running XST synthesis
-INSTANCE:axi_gpio_switch - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 305
-- Running XST synthesis
-INSTANCE:dac_driver - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 317 -
+INSTANCE:dac_driver - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 318 -
 Running XST synthesis
-INSTANCE:qpsk_tx - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 333 -
+INSTANCE:qpsk_tx - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 334 -
 Running XST synthesis
-INSTANCE:tx_fifo - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 350 -
+INSTANCE:tx_fifo - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 351 -
 Running XST synthesis
 
 Running NGCBUILD ...
@@ -284,4 +285,4 @@ INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
 
 Rebuilding cache ...
 
-Total run time: 204.00 seconds
+Total run time: 178.00 seconds

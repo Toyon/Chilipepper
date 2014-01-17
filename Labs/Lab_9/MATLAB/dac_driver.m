@@ -5,6 +5,8 @@ function [ tx_iq_sel, txd, blinky] = dac_driver( tx_i, tx_q, dac_en )
     if isempty(count)
         count = 0;
         blinky_cnt = 0;
+    else
+        count = +~count;
     end
     %DAC runs at 2x the input rate
     if dac_en == 1
@@ -18,7 +20,6 @@ function [ tx_iq_sel, txd, blinky] = dac_driver( tx_i, tx_q, dac_en )
         tx_iq_sel = 0;
         txd = 0;
     end
-    count = +~count;
     
     blinky_cnt = blinky_cnt + 1;
     if blinky_cnt == 20000000
