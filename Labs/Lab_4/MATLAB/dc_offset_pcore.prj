@@ -13,7 +13,7 @@
     <param.hdl.BuildDirectory>option.hdl.ProjectDirectory</param.hdl.BuildDirectory>
     <param.hdl.BuildSpecifiedDirectory />
     <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\dc_offset_correction\fixpt\dc_offset_correction_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
-    <param.fixptconv.InstrumentedBuildChecksum>1439267488</param.fixptconv.InstrumentedBuildChecksum>
+    <param.fixptconv.InstrumentedBuildChecksum>3885298528</param.fixptconv.InstrumentedBuildChecksum>
     <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
     <param.fixptconv.FixedPointValidationChecksum>3046420226</param.fixptconv.FixedPointValidationChecksum>
     <param.fixptconv.FixedPointSourceCodeChecksum>2130176956</param.fixptconv.FixedPointSourceCodeChecksum>
@@ -112,393 +112,213 @@
         <Function file="$(PROJECTDIR)\dc_offset_correction.m" name="dc_offset_correction">
           <Variable name="ai">
             <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="224.0" />
-            <Column property="SimMax" type="Double" value="274.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix9" />
           </Variable>
           <Variable name="alpha">
             <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="2.44140625E-4" />
-            <Column property="SimMax" type="Double" value="2.44140625E-4" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix14_En25" />
           </Variable>
           <Variable name="aq">
             <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="165.0" />
-            <Column property="SimMax" type="Double" value="220.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix8" />
           </Variable>
           <Variable name="blinky">
             <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="0.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="blinky_cnt">
             <Column property="Kind" type="String" value="persistent" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="8192.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix14" />
           </Variable>
           <Variable name="counter">
             <Column property="Kind" type="String" value="persistent" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="256.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix9" />
           </Variable>
           <Variable name="dir_en_out">
             <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="1.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="dir_out">
             <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="2.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix2" />
           </Variable>
           <Variable name="dir_state">
             <Column property="Kind" type="String" value="persistent" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="1.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="gain_en_in">
             <Column property="Kind" type="String" value="input" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="1.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="i_dc">
             <Column property="Kind" type="String" value="persistent" />
-            <Column property="SimMin" type="Double" value="-50.013327603058976" />
-            <Column property="SimMax" type="Double" value="0.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="sfix14_En7" />
           </Variable>
           <Variable name="i_in">
             <Column property="Kind" type="String" value="input" />
-            <Column property="SimMin" type="Double" value="-274.0" />
-            <Column property="SimMax" type="Double" value="-224.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="sfix10" />
           </Variable>
           <Variable name="i_mean">
             <Column property="Kind" type="String" value="persistent" />
-            <Column property="SimMin" type="Double" value="-184.2549056822403" />
-            <Column property="SimMax" type="Double" value="0.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="i_out">
             <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="-274.0" />
-            <Column property="SimMax" type="Double" value="-205.18844273335623" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="sfix14_En4" />
           </Variable>
           <Variable name="noise_dec">
             <Column property="Kind" type="String" value="persistent" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="2.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix2" />
           </Variable>
           <Variable name="noise_inc">
             <Column property="Kind" type="String" value="persistent" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="11.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix4" />
           </Variable>
           <Variable name="noise_offset">
             <Column property="Kind" type="String" value="persistent" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="140.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix8" />
           </Variable>
           <Variable name="q_dc">
             <Column property="Kind" type="String" value="persistent" />
-            <Column property="SimMin" type="Double" value="-133.72928030093254" />
-            <Column property="SimMax" type="Double" value="0.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="q_in">
             <Column property="Kind" type="String" value="input" />
-            <Column property="SimMin" type="Double" value="-220.0" />
-            <Column property="SimMax" type="Double" value="-165.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="sfix9" />
           </Variable>
           <Variable name="q_mean">
             <Column property="Kind" type="String" value="persistent" />
-            <Column property="SimMin" type="Double" value="-133.72928030093254" />
-            <Column property="SimMax" type="Double" value="0.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="q_out">
             <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="-196.0" />
-            <Column property="SimMax" type="Double" value="-42.65438294559601" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="rssiHold">
             <Column property="Kind" type="String" value="persistent" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="94674.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix17" />
           </Variable>
           <Variable name="rssi_diff">
             <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="94305.7257839958" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix14_E3" />
           </Variable>
           <Variable name="rssi_en_out">
             <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="1.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="rssi_high_goal_in">
             <Column property="Kind" type="String" value="input" />
-            <Column property="SimMin" type="Double" value="1500.0" />
-            <Column property="SimMax" type="Double" value="1500.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix11" />
           </Variable>
           <Variable name="rssi_inst">
             <Column property="Kind" type="String" value="local" />
-            <Column property="SimMin" type="Double" value="52913.84590933247" />
-            <Column property="SimMax" type="Double" value="104229.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix14_E3" />
           </Variable>
           <Variable name="rssi_low_goal_in">
             <Column property="Kind" type="String" value="input" />
-            <Column property="SimMin" type="Double" value="500.0" />
-            <Column property="SimMax" type="Double" value="500.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix9" />
           </Variable>
           <Variable name="rssi_out">
             <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="94674.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix17" />
           </Variable>
           <Variable name="rssi_sum">
             <Column property="Kind" type="String" value="persistent" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="2.4236538988829978E7" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix14_E11" />
           </Variable>
           <Variable name="rx_en_in">
             <Column property="Kind" type="String" value="input" />
-            <Column property="SimMin" type="Double" value="0.0" />
-            <Column property="SimMax" type="Double" value="1.0" />
             <MATLABType class="double" complex="false">
               <size>1</size>
               <size>1</size>
             </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
         </Function>
       </ComputedEntities>
@@ -750,10 +570,10 @@
     <param.hdl.SimulateFILTestBench>false</param.hdl.SimulateFILTestBench>
     <param.hdl.AdditionalSynthesisProjectFiles />
     <param.hdl.CriticalPathSource>option.hdl.Preroute</param.hdl.CriticalPathSource>
-    <param.hdl.EmbeddedSystemTool>Xilinx PlanAhead with Embedded Design</param.hdl.EmbeddedSystemTool>
+    <param.hdl.EmbeddedSystemTool />
     <param.hdl.ReferenceDesign />
     <param.hdl.ReferenceDesignPath />
-    <param.hdl.EmbeddedSystemProjectFolder>codegen/pa_prj</param.hdl.EmbeddedSystemProjectFolder>
+    <param.hdl.EmbeddedSystemProjectFolder />
     <param.hdl.BitstreamBuildMode>false</param.hdl.BitstreamBuildMode>
     <unset>
       <param.AutoInferDefaultFile />
@@ -903,6 +723,7 @@
       <param.hdl.SimulateFILTestBench />
       <param.hdl.AdditionalSynthesisProjectFiles />
       <param.hdl.CriticalPathSource />
+      <param.hdl.EmbeddedSystemTool />
       <param.hdl.ReferenceDesign />
       <param.hdl.ReferenceDesignPath />
       <param.hdl.EmbeddedSystemProjectFolder />

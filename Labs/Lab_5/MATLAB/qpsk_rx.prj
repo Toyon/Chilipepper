@@ -15,8 +15,8 @@
     <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\qpsk_rx\fixpt\qpsk_rx_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
     <param.fixptconv.InstrumentedBuildChecksum>457755731</param.fixptconv.InstrumentedBuildChecksum>
     <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
-    <param.fixptconv.FixedPointValidationChecksum>3892745740</param.fixptconv.FixedPointValidationChecksum>
-    <param.fixptconv.FixedPointSourceCodeChecksum>3600135222</param.fixptconv.FixedPointSourceCodeChecksum>
+    <param.fixptconv.FixedPointValidationChecksum>27268484</param.fixptconv.FixedPointValidationChecksum>
+    <param.fixptconv.FixedPointSourceCodeChecksum>2890345233</param.fixptconv.FixedPointSourceCodeChecksum>
     <param.fixptconv.FixedPointStaticAnalysisChecksum />
     <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}\qpsk_tb.m</param.fixptconv.DefaultTestFile>
     <param.fixptconv.ExcludedFixedPointVerificationFiles />
@@ -30,8 +30,12 @@
     <param.transformedVariables>
       <UserEntities>
         <Function file="$(PROJECTDIR)\qpsk_rx_foc.m" name="qpsk_rx_foc" specialization="f23_qpsk_rx_foc">
-          <Variable name="bf" />
-          <Variable name="c" />
+          <Variable name="bf">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="c">
+            <Column property="ProposedType" type="String" value="sfix12_En12" />
+          </Variable>
           <Variable name="e" />
           <Variable name="f_i" />
           <Variable name="f_q" />
@@ -39,20 +43,48 @@
           <Variable name="lCos" />
           <Variable name="lSin" />
           <Variable name="phi" />
-          <Variable name="phi12" />
-          <Variable name="phiNew" />
-          <Variable name="tf" />
-          <Variable name="ti1" />
-          <Variable name="ti2" />
-          <Variable name="time_diff" />
-          <Variable name="tq1" />
-          <Variable name="tq2" />
-          <Variable name="y_i" />
-          <Variable name="y_q" />
-          <Variable name="z_i" />
-          <Variable name="z_i_out" />
-          <Variable name="z_q" />
-          <Variable name="z_q_out" />
+          <Variable name="phi12">
+            <Column property="ProposedType" type="String" value="ufix13" />
+          </Variable>
+          <Variable name="phiNew">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="tf">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="ti1">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="ti2">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="time_diff">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="tq1">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="tq2">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="y_i">
+            <Column property="ProposedType" type="String" value="sfix12" />
+          </Variable>
+          <Variable name="y_q">
+            <Column property="ProposedType" type="String" value="sfix12" />
+          </Variable>
+          <Variable name="z_i">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="z_i_out">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="z_q">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="z_q_out">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
         </Function>
         <Function file="$(PROJECTDIR)\SIN.m" name="SIN" specialization="f2_SIN">
           <Variable name="y" />
