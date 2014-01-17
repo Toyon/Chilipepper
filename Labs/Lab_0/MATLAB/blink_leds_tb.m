@@ -1,9 +1,5 @@
-cycles_per_count_in = 2;
-num_leds = 2;
- 
-for i1 = 1:20
-    leds_out(i1) = ...
-        blink_leds(2^num_leds, cycles_per_count_in);
+for i1 = 1:200
+    [blinky_out(i1)] = blink_leds(1);
 end
- 
-plot(leds_out,'o');
+
+plot(blinky_out,'o')

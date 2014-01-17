@@ -1,9 +1,8 @@
 function make_trig_lut
-
     % Generate LUT values
-    ii = 0:(20-1);
-    c = cos(2*pi*ii/20);
-    s = sin(2*pi*ii/20);
+    ii = 0:(400-1);
+    c = cos(2*pi*ii/400);
+    s = sin(2*pi*ii/400);
 
     % Create cosine LUT
     fid = fopen('COS.m','w+');
@@ -22,5 +21,4 @@ function make_trig_lut
     fprintf(fid,'%14.12f\n',s);
     fprintf(fid,'];\n');
     fclose(fid);
-
 end
