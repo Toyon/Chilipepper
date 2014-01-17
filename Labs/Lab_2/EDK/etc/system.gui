@@ -24,6 +24,7 @@
       <VARIABLE ID="mcu_driver" ROW_INDEX="3"/>
       <VARIABLE ID="tx_clock_generator" ROW_INDEX="4"/>
       <VARIABLE ID="mcu_uart" ROW_INDEX="5"/>
+      <VARIABLE ID="rx_clock_generator" ROW_INDEX="6"/>
     </SEQUENCES>
   </SET>
 
@@ -94,10 +95,11 @@
       <VARIABLE ID="axi_interconnect_1" ROW_INDEX="1"/>
       <VARIABLE ID="adc_driver" ROW_INDEX="3"/>
       <VARIABLE ID="mcu_driver" ROW_INDEX="5"/>
-      <VARIABLE ID="tx_clock_generator" ROW_INDEX="8"/>
+      <VARIABLE ID="tx_clock_generator" ROW_INDEX="9"/>
       <VARIABLE ID="chipscope_ila_0" ROW_INDEX="7"/>
       <VARIABLE ID="chipscope_icon_0" ROW_INDEX="6"/>
       <VARIABLE ID="mcu_uart" ROW_INDEX="4"/>
+      <VARIABLE ID="rx_clock_generator" ROW_INDEX="8"/>
     </SEQUENCES>
   </SET>
 
@@ -174,7 +176,7 @@
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="5" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="62,962,200" VERSION="0"/>
     <STATUS>
       <SELECTIONS>
-        <VARIABLE ID="axi_uartlite_0"/>
+        <VARIABLE ID="clock_generator_0"/>
       </SELECTIONS>
     </STATUS>
   </SET>

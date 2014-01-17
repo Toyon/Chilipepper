@@ -33,13 +33,14 @@
  PORT mcu_driver_blinky_pin = mcu_driver_blinky, DIR = O
  PORT adc_driver_rxd_pin = adc_driver_pcore_fixpt_pcore_0_rxd, DIR = I, VEC = [11:0]
  PORT adc_driver_rx_iq_sel_pin = adc_driver_pcore_fixpt_pcore_0_rx_iq_sel, DIR = I
- PORT rx_clk_return_pin = net_rx_clk_return_pin, DIR = I, SIGIS = CLK
  PORT tx_clock_generator_CLKIN_pin = tx_clock_generator_CLKIN, DIR = I, SIGIS = CLK, CLK_FREQ = 40000000
  PORT tx_clock_generator_tx_clk_pin = tx_clock_generator_CLKOUT1, DIR = O, SIGIS = CLK, CLK_FREQ = 40000000
  PORT tx_clock_generator_rx_clk_pin = tx_clock_generator_CLKOUT2, DIR = O, SIGIS = CLK, CLK_FREQ = 40000000
  PORT tx_clock_generator_LOCKED_pin = tx_clock_generator_LOCKED, DIR = O
  PORT mcu_uart_RX_pin = mcu_uart_RX, DIR = I
  PORT mcu_uart_TX_pin = mcu_uart_TX, DIR = O
+ PORT rx_clock_generator_CLKIN_pin = rx_clock_generator_CLKIN, DIR = I, SIGIS = CLK, CLK_FREQ = 40000000
+ PORT rx_clock_generator_LOCKED_pin = rx_clock_generator_LOCKED, DIR = O
 
 
 BEGIN processing_system7
@@ -149,9 +150,9 @@ BEGIN adc_driver_pcore
  PORT rxd = adc_driver_pcore_fixpt_pcore_0_rxd
  PORT rx_iq_sel = adc_driver_pcore_fixpt_pcore_0_rx_iq_sel
  PORT blinky = adc_driver_blinky
- PORT IPCORE_CLK = net_rx_clk_return_pin
  PORT rx_i = adc_driver_rx_i_to_chipscope_ila_0
  PORT rx_q = adc_driver_rx_q_to_chipscope_ila_0
+ PORT IPCORE_CLK = rx_clock_generator_CLKOUT0
 END
 
 BEGIN mcu_driver_pcore
@@ -224,5 +225,18 @@ BEGIN axi_uartlite
  PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
  PORT RX = mcu_uart_RX
  PORT TX = mcu_uart_TX
+END
+
+BEGIN clock_generator
+ PARAMETER INSTANCE = rx_clock_generator
+ PARAMETER HW_VER = 4.03.a
+ PARAMETER C_CLKIN_FREQ = 40000000
+ PARAMETER C_CLKOUT0_FREQ = 40000000
+ PARAMETER C_CLKOUT0_PHASE = 180
+ PARAMETER C_CLKOUT0_GROUP = PLLE0
+ PORT CLKIN = rx_clock_generator_CLKIN
+ PORT CLKOUT0 = rx_clock_generator_CLKOUT0
+ PORT RST = net_gnd
+ PORT LOCKED = rx_clock_generator_LOCKED
 END
 
