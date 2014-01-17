@@ -1,6 +1,5 @@
-function [i_out, q_out, rssi_out, rssi_en_out, dir_out, dir_en_out, ...
-    d1, d2, d3, d4, d5, d6, d7, d8, d9] = ...
-    dc_offset_correction(i_in, q_in, alpha_in, gain_en_in, ...
+function [i_out, q_out, rssi_out, rssi_en_out, dir_out, dir_en_out,...
+    blinky] = dc_offset_correction(i_in, q_in, gain_en_in,...
         rssi_low_goal_in, rssi_high_goal_in, rx_en_in)
 
 persistent i_dc q_dc i_mean q_mean
@@ -8,8 +7,10 @@ persistent counter rssi_sum
 persistent dir_state
 persistent rssiHold
 persistent noise_offset noise_inc noise_dec
+persistent blinky_cnt
 
-alpha = alpha_in/2^12;
+%alpha = alpha_in/2^12;
+alpha = 1/2^12;
 
 if isempty(i_dc)
     i_dc = 0;
@@ -23,6 +24,7 @@ if isempty(i_dc)
     rssi_sum = 0;
     dir_state = 0;
     rssiHold = 0;
+    blinky_cnt = 0;
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -147,27 +149,10 @@ if rx_en_in == 1
             dir_state = 0;
     end
 end
-d1 = i_in;
-d2 = i_mean;
-d3 = i_dc;
-d4 = rssiHold;
-d5 = rssi_diff;
-d6 = dir_state;
-d7 = gain_en_in;
-d8 = dir_out;
-d9 = dir_en_out;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
+    blinky_cnt = blinky_cnt + 1;
+    if blinky_cnt == 20000000
+        blinky_cnt = 0;
+    end
+    blinky = floor(blinky_cnt/10000000);
+end

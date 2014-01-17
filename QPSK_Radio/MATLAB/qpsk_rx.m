@@ -13,50 +13,35 @@
 % tart of packet.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#codegen
-function [byte_out, en_out, clear_fifo_out, num_bytes_ready_out, ...
-        r_out, s_f_out, s_c_out, s_t_out, t_est_out, s_p_out, s_o_out, ...
-        fe_out] = ...
-    qpsk_rx(i_in, q_in, mu_foc_in, mu_toc_in, mcu_rx_ready_in)
+function [store_byte, byte, num_bytes_ready, clear_fifo_out, blinky] =...
+    qpsk_rx(i_in, q_in, mcu_rx_ready_in)
 
 persistent finish_rx_latch
+persistent blinky_cnt
 
 if isempty(finish_rx_latch)
     finish_rx_latch = 0; % feedback once packet is received to rest
+    blinky_cnt = 0;
 end
 
-% scale input data coming from the Chilipepper ADC to be purely fractional
-% to avoid scaling issues
-r_in = complex(i_in, q_in);
-
 % frequency offset estimation. Note that time constant is input as integer
-[s_f_i, s_f_q, fe] = ...
-    qpsk_rx_foc(i_in, q_in, mu_foc_in, finish_rx_latch);
+[s_f_i, s_f_q] = ...
+    qpsk_rx_foc(i_in, q_in, finish_rx_latch);
 
 % Square-root raised-cosine band-limited filtering
 [s_c_i, s_c_q] = qpsk_rx_srrc(s_f_i, s_f_q);
 
 % Time offset estimation. Output data changes at the symbol rate.
-[s_t_i, s_t_q, tauh] = ...
-    qpsk_rx_toc(s_c_i, s_c_q, mu_toc_in, finish_rx_latch);
+[s_t_i, s_t_q] = ...
+    qpsk_rx_toc(s_c_i, s_c_q, finish_rx_latch);
 
 % Determine start of packet using front-loaded training sequence
-[byte, en, finish_rx, clear_fifo, num_bytes_ready_out, s_p, s_o] = ...
+[byte, store_byte, finish_rx, num_bytes_ready, clear_fifo_out] = ...
     qpsk_rx_correlator(s_t_i, s_t_q, mcu_rx_ready_in);
 
-% These are debug outputs and can largely be ignored as they are just used
-% for testbench simulation
-byte_out = byte;
-en_out = en;
-clear_fifo_out = clear_fifo;
-
+blinky_cnt = blinky_cnt + 1;
+if blinky_cnt == 20000000
+    blinky_cnt = 0;
+end
+blinky = floor(blinky_cnt/10000000);
 finish_rx_latch = finish_rx;
-
-r_out = real(r_in);
-s_f_out = complex(s_f_i,s_f_q);
-s_c_out = complex(s_c_i,s_c_q);
-s_t_out = complex(s_t_i,s_t_q);
-
-t_est_out = tauh;
-s_p_out = s_p;
-s_o_out = s_o;
-fe_out = fe;

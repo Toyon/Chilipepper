@@ -7,7 +7,7 @@ t = (0:L-1)/Fs; % Time vector
 make_trig_lut;
 
 for i1 = 1:L
-    [I(i1), Q(i1)] = output_tone();
+    [I(i1), Q(i1)] = output_tone(L);
     y(i1) = I(i1) - Q(i1);
 end
 

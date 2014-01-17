@@ -1,75 +1,47 @@
 #######################################################################################
 # PL clocks and reset
+NET tx_clock_generator_CLKIN_pin 		LOC = D18   | IOSTANDARD = LVCMOS25;
+NET tx_clock_generator_CLKIN_pin 		TNM_NET = tx_clock_generator_CLKIN;
+TIMESPEC TS_tx_clock_generator_CLKIN = PERIOD tx_clock_generator_CLKIN 40.000 MHz;
 #######################################################################################
-NET clock_generator_0_pll_pin LOC = D18    | IOSTANDARD = LVCMOS25;
-NET clock_generator_0_pll_pin TNM_NET = clock_generator_0_pll;
-TIMESPEC TS_clock_generator_0_pll = PERIOD clock_generator_0_pll 40.000 MHz;
-#######################################################################################
-
+# Chilipepper Rx and Tx clock lines
+NET tx_clock_generator_tx_clk_pin			LOC = C17	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET tx_clock_generator_rx_clk_pin			LOC = J18	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
 #######################################################################################
 # Tx - FMC interface at 2.5V
-#######################################################################################
-NET clock_generator_0_tx_clk_pin		LOC = C17	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET dac_driver_axiw_0_tx_iq_sel_pin	LOC = B16	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET dac_driver_axiw_0_txd_pin[0]		LOC = A18	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET dac_driver_axiw_0_txd_pin[1]		LOC = A19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET dac_driver_axiw_0_txd_pin[2]		LOC = E20	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET dac_driver_axiw_0_txd_pin[3]		LOC = G21	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET dac_driver_axiw_0_txd_pin[4]		LOC = F19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET dac_driver_axiw_0_txd_pin[5]		LOC = G15	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET dac_driver_axiw_0_txd_pin[6]		LOC = E19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET dac_driver_axiw_0_txd_pin[7]		LOC = G16	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET dac_driver_axiw_0_txd_pin[8]		LOC = G19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET dac_driver_axiw_0_txd_pin[9]		LOC = A16	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET dac_driver_axiw_0_txd_pin[10]	LOC = A17	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET dac_driver_axiw_0_txd_pin[11]	LOC = C18	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-
-#######################################################################################
-
-#######################################################################################
-# MCU interface
-#######################################################################################
-NET axi_uartlite_0_RX_pin				LOC = R19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET axi_uartlite_0_TX_pin				LOC = L21	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET mcu_axiw_0_mcu_reset_pin			LOC = K20	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET mcu_axiw_0_tx_en_pin				LOC = D22	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET mcu_axiw_0_tr_sw_pin				LOC = D20	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET mcu_axiw_0_rx_en_pin 				LOC = C22	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET mcu_axiw_0_pa_en_pin 				LOC = E21	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
-NET mcu_axiw_0_init_done_pin 			LOC = K19	| IOSTANDARD = LVCMOS25;
-#######################################################################################
-
+NET dac_driver_tx_iq_sel_pin				LOC = B16	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET dac_driver_txd_pin[0]					LOC = A18	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET dac_driver_txd_pin[1]					LOC = A19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET dac_driver_txd_pin[2]					LOC = E20	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET dac_driver_txd_pin[3]					LOC = G21	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET dac_driver_txd_pin[4]					LOC = F19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET dac_driver_txd_pin[5]					LOC = G15	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET dac_driver_txd_pin[6]					LOC = E19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET dac_driver_txd_pin[7]					LOC = G16	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET dac_driver_txd_pin[8]					LOC = G19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET dac_driver_txd_pin[9]					LOC = A16	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET dac_driver_txd_pin[10]					LOC = A17	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET dac_driver_txd_pin[11]					LOC = C18	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+############################################# MCU Interface ###############################################
+NET mcu_uart_RX_pin							LOC = R19	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET mcu_uart_TX_pin							LOC = L21	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET mcu_driver_mcu_reset_out_pin			LOC = K20	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET mcu_driver_tx_en_pin					LOC = D22	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET mcu_driver_tr_sw_pin					LOC = D20	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET mcu_driver_rx_en_pin 					LOC = C22	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET mcu_driver_pa_en_pin 					LOC = E21	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
+NET mcu_driver_init_done_pin 				LOC = K19	| IOSTANDARD = LVCMOS25;
 #######################################################################################
 # LEDs
+NET axi_gpio_led_GPIO_IO_pin           	LOC = T22  | IOSTANDARD=LVCMOS33; # "LD0"
+NET axi_gpio_led_GPIO2_IO_pin					LOC = T21  | IOSTANDARD=LVCMOS33; # "LD1"
+NET tx_clock_generator_LOCKED_pin			LOC = U22  | IOSTANDARD=LVCMOS33; # "LD2"
+NET dac_driver_blinky_pin						LOC = U21  | IOSTANDARD=LVCMOS33; # "LD3"
+NET mcu_driver_blinky_pin						LOC = V22  | IOSTANDARD=LVCMOS33; # "LD4"
+NET qpsk_tx_blinky_pin							LOC = W22  | IOSTANDARD=LVCMOS33; # "LD5"
 #######################################################################################
-#NET clock_generator_0_LOCKED_pin           	LOC = T22  | IOSTANDARD=LVCMOS33;  # "LD0"
-#NET mcu_axiw_0_blinky_mcu_pin						LOC = T21  | IOSTANDARD=LVCMOS33;  # "LD1"
-#NET tx_axiw_0_blinky_tx_pin  						LOC = U22  | IOSTANDARD=LVCMOS33;  # "LD2"
-#NET dac_driver_axiw_0_blinky_dac_driver_pin  LOC = U21  | IOSTANDARD=LVCMOS33;  # "LD3"
-#NET adc_driver_axiw_0_blinky_adc_driver_pin  LOC = V22  | IOSTANDARD=LVCMOS33;  # "LD4"
-#NET rx_axiw_0_blinky_rx_driver_pin           LOC = W22  | IOSTANDARD=LVCMOS33;  # "LD5"
-#NET axi_gpio_0_GPIO_IO_pin  						LOC = U19  | IOSTANDARD=LVCMOS33;  # "LD6"
-#NET axi_gpio_0_GPIO2_IO_pin        				LOC = U14  | IOSTANDARD=LVCMOS33;  # "LD7"
-
-NET axi_gpio_0_GPIO_IO_pin           	LOC = T22  | IOSTANDARD=LVCMOS33;  # "LD0"
-NET axi_gpio_0_GPIO2_IO_pin				LOC = T21  | IOSTANDARD=LVCMOS33;  # "LD1"
-#######################################################################################
-
-#######################################################################################
-# SWITCHes
-#######################################################################################
-NET axi_gpio_switch_test_modes_GPIO_IO[0]	LOC = F22  | IOSTANDARD=LVCMOS25;  # "SW0"
-NET axi_gpio_switch_test_modes_GPIO_IO[1]	LOC = G22  | IOSTANDARD=LVCMOS25;  # "SW1"
-
-#NET axi_gpio_pa_GPIO_IO_I_pin[0]	LOC = M15  | IOSTANDARD=LVCMOS25;  # SW7
-#NET axi_gpio_pa_GPIO_IO_I_pin[1]	LOC = H17  | IOSTANDARD=LVCMOS25;  # SW6
-#NET axi_gpio_pa_GPIO_IO_I_pin[2]	LOC = H18  | IOSTANDARD=LVCMOS25;  # SW5
-#NET axi_gpio_pa_GPIO_IO_I_pin[3]	LOC = H19  | IOSTANDARD=LVCMOS25;  # SW4
-#NET axi_gpio_pa_GPIO_IO_I_pin[4]	LOC = F21  | IOSTANDARD=LVCMOS25;  # SW3
-#######################################################################################
-
+# Switches
+NET axi_gpio_switch_GPIO_IO_I_pin	LOC = F22  | IOSTANDARD=LVCMOS25;  # "SW0"
 #######################################################################################
 # Buttons
-#######################################################################################
 NET axi_gpio_button_GPIO_IO_I_pin LOC = P16  | IOSTANDARD=LVCMOS25;  # "BTCenter"
-#######################################################################################

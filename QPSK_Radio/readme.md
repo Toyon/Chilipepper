@@ -4,6 +4,6 @@ The complete set of code for the physical layer is written in MATLAB and transla
 
 The MAC and peripheral (serial port) interfaces are written in C.
 
-Note, this example was written in HDL Coder with MATLAB entry based on MathWorks R2013a and Xilinx 14.2 tools.
+Note, this example was written in HDL Coder with MATLAB entry based on MathWorks R2014a and Xilinx 14.7 tools.
 
 This example is largely meant to demonstrate the end-to-end workflow using HDL Coder with MATLAB entry and does not use some of the newer system object available in the Communications Toolbox.

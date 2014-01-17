@@ -1,0 +1,13 @@
+##############################################################################
+## File Name:         codegen\ipcore\tone_generator_pcore_v1_00_a\data\tone_generator_pcore_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Created:           2013-12-11 15:33:43
+##############################################################################
+
+lib tone_generator_pcore_v1_00_a output_tone_fixpt_pkg vhdl
+lib tone_generator_pcore_v1_00_a output_tone_fixpt vhdl
+lib tone_generator_pcore_v1_00_a tone_generator_pcore_dut vhdl
+lib tone_generator_pcore_v1_00_a tone_generator_pcore_axi_lite_module vhdl
+lib tone_generator_pcore_v1_00_a tone_generator_pcore_addr_decoder vhdl
+lib tone_generator_pcore_v1_00_a tone_generator_pcore_axi_lite vhdl
+lib tone_generator_pcore_v1_00_a tone_generator_pcore vhdl

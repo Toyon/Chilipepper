@@ -1,6 +1,6 @@
 %#codegen
 % this core runs at an oversampling rate of 8
-function [d_out, re_byte_out, tx_done_out, d1, d2, d3] = ...
+function [d_out, re_byte_out, tx_done_out, clear_fifo_in_done] = ...
     qpsk_tx_byte2sym(data_in, empty_in, clear_fifo_in, tx_en_in)
 
 OS_RATE = 8;
@@ -33,10 +33,12 @@ if isempty(tx_fifo)
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % if want to transmit a new packet reset things
+clear_fifo_in_done = 0;
 if clear_fifo_in == 1
     wrCount = 0;
     txDone = 0;
     reBuf = 0;
+    clear_fifo_in_done = 1;
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -113,14 +115,10 @@ end
 if reBuf > 0
     reBuf = reBuf - 1;
 end
-d1 = 0;
-d2 = 0;
-d3 = 0;
 if reBuf == 1
     wrCount = wrCount + 1; %total number of bytes to send out
     wrIndex = wrCount;
     rdCount = wrCount;
-    d1 = reBuf; d2 = data_in; d3 = wrIndex;
     reBuf = 0;
     count = 0;
     sentTrain = 1;
@@ -128,3 +126,19 @@ end
 tx_fifo(wrIndex) = data_in;
 
 tx_done_out = txDone;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
