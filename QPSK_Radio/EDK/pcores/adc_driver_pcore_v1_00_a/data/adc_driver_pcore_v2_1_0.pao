@@ -1,0 +1,12 @@
+##############################################################################
+## File Name:         codegen\ipcore\adc_driver_pcore_v1_00_a\data\adc_driver_pcore_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Created:           2014-01-16 16:34:42
+##############################################################################
+
+lib adc_driver_pcore_v1_00_a adc_driver_fixpt vhdl
+lib adc_driver_pcore_v1_00_a adc_driver_pcore_dut vhdl
+lib adc_driver_pcore_v1_00_a adc_driver_pcore_axi_lite_module vhdl
+lib adc_driver_pcore_v1_00_a adc_driver_pcore_addr_decoder vhdl
+lib adc_driver_pcore_v1_00_a adc_driver_pcore_axi_lite vhdl
+lib adc_driver_pcore_v1_00_a adc_driver_pcore vhdl

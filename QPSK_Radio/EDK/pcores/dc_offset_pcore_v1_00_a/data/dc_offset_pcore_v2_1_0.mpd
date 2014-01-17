@@ -1,0 +1,54 @@
+##############################################################################
+## File Name:         codegen\ipcore\dc_offset_pcore_v1_00_a\data\dc_offset_pcore_v2_1_0.mpd
+## Description:       Microprocessor Peripheral Description
+## Created:           2014-01-16 16:38:02
+##############################################################################
+
+BEGIN dc_offset_pcore
+
+## Peripheral Options
+OPTION IPTYPE = PERIPHERAL
+OPTION IMP_NETLIST = TRUE
+OPTION HDL = VHDL
+OPTION ARCH_SUPPORT_MAP = (OTHERS = DEVELOPMENT)
+OPTION IP_GROUP = MICROBLAZE:PPC:USER
+OPTION DESC = dc_offset_pcore
+OPTION LONG_DESC = dc_offset_pcore
+
+PORT IPCORE_CLK = "", DIR = I, SIGIS = CLK, ASSIGNMENT = REQUIRE
+PORT IPCORE_RESETN = "", DIR = I, SIGIS = RST, ASSIGNMENT = REQUIRE
+
+## AXI4-Lite Slave
+BUS_INTERFACE BUS = S_AXI, BUS_STD = AXI, BUS_TYPE = SLAVE
+## Generics for VHDL or Parameters for Verilog
+PARAMETER C_S_AXI_BASEADDR = 0xffffffff, DT = std_logic_vector(31 downto 0), ADDR_TYPE = REGISTER, ASSIGNMENT = REQUIRE, PAIR = C_S_AXI_HIGHADDR, ADDRESS = BASE, MIN_SIZE = 0x1000, TYPE = NON_HDL, BUS = S_AXI
+PARAMETER C_S_AXI_HIGHADDR = 0x00000000, DT = std_logic_vector(31 downto 0), ADDR_TYPE = REGISTER, ASSIGNMENT = REQUIRE, PAIR = C_S_AXI_BASEADDR, ADDRESS = HIGH, TYPE = NON_HDL, BUS = S_AXI
+PARAMETER C_S_AXI_PROTOCOL = AXI4LITE, DT = STRING, ASSIGNMENT = CONSTANT, TYPE = NON_HDL, BUS = S_AXI
+## Ports
+PORT AXI_Lite_ACLK = "", DIR = I, SIGIS = CLK, ASSIGNMENT = REQUIRE, BUS = S_AXI
+PORT AXI_Lite_ARESETN = ARESETN, DIR = I, SIGIS = RST, BUS = S_AXI
+PORT AXI_Lite_AWADDR = AWADDR, DIR = I, VEC = [31:0], ENDIAN = LITTLE, BUS = S_AXI
+PORT AXI_Lite_AWVALID = AWVALID, DIR = I, BUS = S_AXI
+PORT AXI_Lite_AWREADY = AWREADY, DIR = O, BUS = S_AXI
+PORT AXI_Lite_WDATA = WDATA, DIR = I, VEC = [31:0], ENDIAN = LITTLE, BUS = S_AXI
+PORT AXI_Lite_WSTRB = WSTRB, DIR = I, VEC = [3:0], ENDIAN = LITTLE, BUS = S_AXI
+PORT AXI_Lite_WVALID = WVALID, DIR = I, BUS = S_AXI
+PORT AXI_Lite_WREADY = WREADY, DIR = O, BUS = S_AXI
+PORT AXI_Lite_BRESP = BRESP, DIR = O, VEC = [1:0], BUS = S_AXI
+PORT AXI_Lite_BVALID = BVALID, DIR = O, BUS = S_AXI
+PORT AXI_Lite_BREADY = BREADY, DIR = I, BUS = S_AXI
+PORT AXI_Lite_ARADDR = ARADDR, DIR = I, VEC = [31:0], ENDIAN = LITTLE, BUS = S_AXI
+PORT AXI_Lite_ARVALID = ARVALID, DIR = I, BUS = S_AXI
+PORT AXI_Lite_ARREADY = ARREADY, DIR = O, BUS = S_AXI
+PORT AXI_Lite_RDATA = RDATA, DIR = O, VEC = [31:0], ENDIAN = LITTLE, BUS = S_AXI
+PORT AXI_Lite_RRESP = RRESP, DIR = O, VEC = [1:0], BUS = S_AXI
+PORT AXI_Lite_RVALID = RVALID, DIR = O, BUS = S_AXI
+PORT AXI_Lite_RREADY = RREADY, DIR = I, BUS = S_AXI
+
+## External Ports
+PORT i_in = "", DIR = I, VEC = [11:0]
+PORT q_in = "", DIR = I, VEC = [11:0]
+PORT i_out = "", DIR = O, VEC = [11:0]
+PORT q_out = "", DIR = O, VEC = [11:0]
+PORT blinky = "", DIR = O
+
