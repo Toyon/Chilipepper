@@ -13,7 +13,6 @@ sim = 1;
 % Initialize LUTs
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 make_srrc_lut;
-make_train_lut;
 make_trig_lut;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -67,8 +66,8 @@ for i1 = 1:num_samp
     clear_buf = [clear_buf(2:end) clear_fifo_in];
     tx_en_buf = [tx_en_buf(2:end) tx_en_in];
     
-    [new_data_in, empty_in, byte_recieved, full, percent_full] = ...
-    tx_fifo(byte_request, store_byte_buf(1), data_buf(1), reset_fifo);
+    [new_data_in, bytes_available, byte_recieved, empty_in] = ...
+    tx_fifo(reset_fifo, store_byte_buf(1), data_buf(1), byte_request);
     
     [i_out, q_out, tx_done_out, request_byte] = ...
         qpsk_tx(new_data_in,empty_in,clear_buf(1),tx_en_buf(1));
@@ -94,22 +93,11 @@ for i1 = 1:num_samp
     end
 end
 if ~sim % load data that was transmitted and captured from chipscope
-    if 1
-        fid = fopen('tx.prn');
-        M = textscan(fid,'%d %d %d %d %d %d %d %d %d %d','Headerlines',1);
-        fclose(fid);
-        iFile = double(M{3})'/2^11;
-        qFile = double(M{4})'/2^11;
-    else
-        M = load('dac.prn');
-        if M(1,end-1) == 0
-            iFile = M(1:2:end,end)'/2^11;
-            qFile = M(2:2:end,end)'/2^11;
-        else
-            qFile = M(1:2:end,end)'/2^11;
-            iFile = M(2:2:end,end)'/2^11;
-        end
-    end
+    fid = fopen('tx.prn');
+    M = textscan(fid,'%d %d %d %d','Headerlines',1);
+    fclose(fid);
+    iFile = double(M{3})'/2^11;
+    qFile = double(M{4})'/2^11;
     x = complex(iFile,qFile);
 end
 
@@ -125,7 +113,11 @@ sb = (sh+1)/2;
 d = zeros(1,ml);
 for i1 = 1:ml
     si = sb(1+(i1-1)*8:i1*8);
-    d(i1) = bi2de(si);
+    s1 = [];
+    for i2 = 1:length(si)
+       s1 = [s1 num2str(round(si(i2)))];
+    end
+    d(i1) = bin2dec(fliplr(s1));
 end
 figure(1)
 clf

@@ -13,34 +13,28 @@
 % tart of packet.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#codegen
+function [s_t_i, s_t_q, blinky, tauh] =...
+    qpsk_rx(i_in, q_in)
 
-function [r_out, s_f_out, s_c_out, s_t_out, t_est_out, f_est_out] = ...
-    qpsk_rx(i_in, q_in, mu_foc_in, mu_toc_in)
+persistent blinky_cnt
 
-    % scale input data coming from the Chilipepper ADC to be purely
-    % fractional to avoid scaling issues
-    r_in = complex(i_in, q_in);
-
-    % frequency offset estimation. Note that time constant is input as
-    % integer
-    [s_f_i, s_f_q, fe] = qpsk_rx_foc(i_in, q_in, mu_foc_in);
-
-    % Square-root raised-cosine band-limited filtering
-    [s_c_i, s_c_q] = qpsk_rx_srrc(s_f_i, s_f_q);
-
-    % Time offset estimation. Output data changes at the symbol rate.
-    [s_t_i, s_t_q, tauh] =  qpsk_rx_toc(s_c_i, s_c_q, mu_toc_in);
-
-    % estimation and correlation values
-    t_est_out = tauh;
-    f_est_out = fe;
-
-    % original signal out (real version)
-    r_out = real(r_in);
-
-    % incremental signal outputs after frequency estimation, filtering, and
-    % timining estimation
-    s_f_out = complex(s_f_i,s_f_q);
-    s_c_out = complex(s_c_i,s_c_q);
-    s_t_out = complex(s_t_i,s_t_q);
+if isempty(blinky_cnt)
+    blinky_cnt = 0;
 end
+
+% frequency offset estimation. Note that time constant is input as integer
+[s_f_i, s_f_q] = ...
+    qpsk_rx_foc(i_in, q_in);
+
+% Square-root raised-cosine band-limited filtering
+[s_c_i, s_c_q] = qpsk_rx_srrc(s_f_i, s_f_q);
+
+% Time offset estimation. Output data changes at the symbol rate.
+[s_t_i, s_t_q, tauh] = ...
+    qpsk_rx_toc(s_c_i, s_c_q);
+
+blinky_cnt = blinky_cnt + 1;
+if blinky_cnt == 20000000
+    blinky_cnt = 0;
+end
+blinky = floor(blinky_cnt/10000000);

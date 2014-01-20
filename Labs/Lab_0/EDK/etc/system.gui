@@ -15,9 +15,7 @@
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="5" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="62,962,200" VERSION="0"/>
     <STATUS>
-      <SELECTIONS>
-        <VARIABLE ID="blink_leds"/>
-      </SELECTIONS>
+      <SELECTIONS/>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
       <VARIABLE ID="processing_system7_0" ROW_INDEX="1"/>
@@ -85,15 +83,20 @@
       <VARIABLE COL_INDEX="11" COL_WIDTH="368" IS_VISIBLE="TRUE" VIEWDISP="Differential Polarity" VIEWTYPE="HEADER"/>
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="5" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="62,962,200" VERSION="0"/>
+    <SET ID="ExternalPorts" IS_EXPANDED="TRUE"/>
+    <SET ID="blink_leds" IS_EXPANDED="TRUE">
+      <SET ID="S_AXI" IS_EXPANDED="TRUE"/>
+    </SET>
+    <SET ID="clock_generator_0" IS_EXPANDED="TRUE"/>
     <STATUS>
       <SELECTIONS/>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
-      <VARIABLE ID="ExternalPorts" ROW_INDEX="0"/>
+      <VARIABLE ID="ExternalPorts" IS_EXPANDED="TRUE" ROW_INDEX="0"/>
       <VARIABLE ID="processing_system7_0" ROW_INDEX="2"/>
-      <VARIABLE ID="blink_leds" ROW_INDEX="3"/>
+      <VARIABLE ID="blink_leds" IS_EXPANDED="TRUE" ROW_INDEX="3"/>
       <VARIABLE ID="axi_interconnect_1" ROW_INDEX="1"/>
-      <VARIABLE ID="clock_generator_0" ROW_INDEX="4"/>
+      <VARIABLE ID="clock_generator_0" IS_EXPANDED="TRUE" ROW_INDEX="4"/>
     </SEQUENCES>
   </SET>
 

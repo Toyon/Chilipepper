@@ -1,0 +1,300 @@
+<html>
+<head>
+<title>IP Core Generation Report for adc_driver_fixpt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style type="text/css">
+table {
+	width: 100%;
+	border: 1px solid black;
+}
+
+div {
+	line-heigh: 90%;
+}
+
+h2.title {
+	color: #000066;
+	font-weight: bold;
+}
+
+h3.sectionHeading {
+	color: #000066;
+	font-weight: bold;
+}
+
+td.distinctCellColor {
+	background-color: #eeeeff;
+}
+
+td.summaryTableSndColOddRow {
+	background-color: #eeeeff;
+	text-align: right;
+}
+
+td.summaryTableSndColEvenRow {
+	text-align: right;
+}
+
+thead.reportTableHeader {
+	background-color: #eeeeee;
+	font-weight: bold;
+}
+
+</style>
+
+</head>
+<body>
+<h2 class="title">IP Core Generation Report for adc_driver_fixpt</h2>
+<div>
+<h3 class="sectionHeading">Summary</h3>
+<table>
+<tbody>
+<tr>
+<td class="distinctCellColor">IP core name
+</td>
+<td class="summaryTableSndColOddRow">adc_driver_pcore
+</td>
+</tr>
+<tr>
+<td>IP core version
+</td>
+<td class="summaryTableSndColEvenRow">v1.00.a
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">IP core folder
+</td>
+<td class="summaryTableSndColOddRow"><a href="matlab:uiopen('codegen\ipcore\adc_driver_pcore_v1_00_a')">codegen\ipcore\adc_driver_pcore_v1_00_a</a>
+</td>
+</tr>
+<tr>
+<td>Target platform
+</td>
+<td class="summaryTableSndColEvenRow">Generic Xilinx Platform
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">Target language
+</td>
+<td class="summaryTableSndColOddRow">VHDL
+</td>
+</tr>
+<tr>
+<td>Function/Script Name
+</td>
+<td class="summaryTableSndColEvenRow">adc_driver_fixpt
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">HDL Coder version
+</td>
+<td class="summaryTableSndColOddRow">3.4
+</td>
+</tr>
+<tr>
+<td>IP core generated on
+</td>
+<td class="summaryTableSndColEvenRow">16-Jan-2014 12:23:11
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">IP core generated for
+</td>
+<td class="summaryTableSndColOddRow">adc_driver_fixpt
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<h3 class="sectionHeading">Target Interface Configuration</h3>
+You chose the following target interface configuration for 
+adc_driver_fixpt
+:
+<br/><br/>
+Processor/FPGA synchronization mode: 
+<b>Free running</b>
+<br/><br/>
+Target platform interface table:
+<br/>
+<table>
+<thead class="reportTableHeader">
+<tr>
+<td>Port Name
+</td>
+<td>Port Type
+</td>
+<td>Data Type
+</td>
+<td>Target Platform Interfaces
+</td>
+<td>Bit Range / Address / FPGA Pin
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="distinctCellColor">adc_driver_fixpt/rx_iq_sel
+</td>
+<td class="distinctCellColor">Inport
+</td>
+<td class="distinctCellColor">ufix1_En0
+</td>
+<td class="distinctCellColor">External Port
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td>adc_driver_fixpt/rx_i
+</td>
+<td>Outport
+</td>
+<td>sfix12_En0
+</td>
+<td>External Port
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">adc_driver_fixpt/rx_q
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">sfix12_En0
+</td>
+<td class="distinctCellColor">External Port
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td>adc_driver_fixpt/blinky
+</td>
+<td>Outport
+</td>
+<td>ufix1_En0
+</td>
+<td>External Port
+</td>
+<td>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<h3 class="sectionHeading">Register Address Mapping</h3>
+The following AXI4-Lite bus accessible registers were generated for this IP core:
+<br/><br/>
+<table>
+<thead class="reportTableHeader">
+<tr>
+<td>Register Name
+</td>
+<td>Address Offset
+</td>
+<td>Description
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="distinctCellColor">IPCore_Enable
+</td>
+<td class="distinctCellColor">0x4
+</td>
+<td class="distinctCellColor">enabled (by default) when bit 0 is 0x1
+</td>
+</tr>
+</tbody>
+</table>
+<br/>
+The register address mapping is also in the following C header file for you to use when programming the processor:
+<br/>
+<a href="matlab:edit('codegen\ipcore\adc_driver_pcore_v1_00_a\include\adc_driver_pcore_addr.h')">include\adc_driver_pcore_addr.h</a>
+<br/>
+The IP core name is appended to the register names to avoid name conflicts.
+</div>
+<div>
+<h3 class="sectionHeading">IP Core User Guide</h3>
+<b>Theory of Operation</b>
+<br/><br/>
+This IP core is designed to be connected to an embedded processor with an 
+<b>AXI4-Lite bus. </b>
+The processor acts as bus master, and the IP core acts as slave. By accessing the generated registers via the AXI4-Lite bus, the processor can control the IP core, and read and write data from and to the IP core. 
+<br/><br/>
+For example, to reset the IP core, write 0x1 to the bit 0 of IPCore_Reset register. To enable or disable the IP core, write 0x1 or 0x0 to the IPCore_Enable register. To access the data ports of the MATLAB/Simulink algorithm, read or write to the associated data registers.
+<br/><br/>
+<img src="doc_arch_axi4_lite.jpg"/>
+<br/><br/>
+This IP core also support the 
+<b>External Port </b>
+interface. To connect the external ports to the FPGA external IO pins, add FPGA pin assignment constraints in the Xilinx EDK environment.
+<br/><br/>
+<b>Processor/FPGA Synchronization</b>
+<br/><br/>
+The 
+<b>Free running </b>
+mode means there is no explicit synchronization between embedded processor software execution (SW) and the IP core (HW). SW and HW runs independently. The data written from the processor to IP core takes effect immediately, and the data read from the IP core is the latest data available on the IP core output ports. 
+<br/><br/>
+<img src="free_running.jpg"/>
+<br/><br/>
+<b>EDK Environment Integration</b>
+<br/><br/>
+This IP Core is generated for the Xilinx EDK environment. The following steps are an example showing how to add the IP core into the EDK environment:
+<br/>
+1. Copy the IP core folder into the "pcores" folder in your Xilinx Platform Studio (XPS) project. This step adds the IP core into the XPS project user library.
+<br/>
+2. In the XPS project, find the IP core in the user library and add the IP core to the design.
+<br/>
+3. Connect the S_AXI port of the IP core to the embedded processor's AXI master port.
+<br/>
+4. Connect the clock and reset ports of the IP core to the global clock and reset signals.
+<br/>
+5. Assign a base address for the IP core.
+<br/>
+6. Connect external ports and add FPGA pin assignment constraints.
+<br/>
+7. Generate FPGA bitstream and download the bitstream to target device.
+</div>
+<div>
+<h3 class="sectionHeading">IP Core File List</h3>
+The IP core folder is located at:
+<br/>
+<a href="matlab:uiopen('codegen\ipcore\adc_driver_pcore_v1_00_a')">codegen\ipcore\adc_driver_pcore_v1_00_a</a>
+<br/>
+Following files are generated under this folder:
+<br/><br/>
+<b>IP core definition files</b>
+<br/>
+<a href="matlab:edit('codegen\ipcore\adc_driver_pcore_v1_00_a\data\adc_driver_pcore_v2_1_0.mpd')">data\adc_driver_pcore_v2_1_0.mpd</a>
+<br/>
+<a href="matlab:edit('codegen\ipcore\adc_driver_pcore_v1_00_a\data\adc_driver_pcore_v2_1_0.pao')">data\adc_driver_pcore_v2_1_0.pao</a>
+<br/><br/>
+<b>IP core report</b>
+<br/>
+<a href="matlab:web('codegen\ipcore\adc_driver_pcore_v1_00_a\doc\adc_driver_fixpt_ip_core_report.html')">doc\adc_driver_fixpt_ip_core_report.html</a>
+<br/><br/>
+<b>IP core HDL source files</b>
+<br/>
+<a href="matlab:edit('codegen\ipcore\adc_driver_pcore_v1_00_a\hdl\vhdl\adc_driver_fixpt.vhd')">hdl\vhdl\adc_driver_fixpt.vhd</a>
+<br/>
+<a href="matlab:edit('codegen\ipcore\adc_driver_pcore_v1_00_a\hdl\vhdl\adc_driver_pcore_dut.vhd')">hdl\vhdl\adc_driver_pcore_dut.vhd</a>
+<br/>
+<a href="matlab:edit('codegen\ipcore\adc_driver_pcore_v1_00_a\hdl\vhdl\adc_driver_pcore_axi_lite_module.vhd')">hdl\vhdl\adc_driver_pcore_axi_lite_module.vhd</a>
+<br/>
+<a href="matlab:edit('codegen\ipcore\adc_driver_pcore_v1_00_a\hdl\vhdl\adc_driver_pcore_addr_decoder.vhd')">hdl\vhdl\adc_driver_pcore_addr_decoder.vhd</a>
+<br/>
+<a href="matlab:edit('codegen\ipcore\adc_driver_pcore_v1_00_a\hdl\vhdl\adc_driver_pcore_axi_lite.vhd')">hdl\vhdl\adc_driver_pcore_axi_lite.vhd</a>
+<br/>
+<a href="matlab:edit('codegen\ipcore\adc_driver_pcore_v1_00_a\hdl\vhdl\adc_driver_pcore.vhd')">hdl\vhdl\adc_driver_pcore.vhd</a>
+<br/>
+<br/>
+<b>IP core C header file</b>
+<br/>
+<a href="matlab:edit('codegen\ipcore\adc_driver_pcore_v1_00_a\include\adc_driver_pcore_addr.h')">include\adc_driver_pcore_addr.h</a>
+</div>
+</body>
+</html>

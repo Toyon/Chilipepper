@@ -1,6 +1,6 @@
 %#codegen
 % this core runs at an oversampling rate of 8
-function [d_out, re_byte_out, tx_done_out] = ...
+function [d_i_out, d_q_out, re_byte_out, tx_done_out] = ...
     qpsk_tx_byte2sym(data_in, empty_in, clear_fifo_in, tx_en_in)
 
 OS_RATE = 8;
@@ -47,7 +47,8 @@ if rdIndex <= 0
 end
 data = tx_fifo(rdIndex);
 
-d_out = 0;
+d_i_out = 0;
+d_q_out = 0;
 % fifo should be empty and the processor says go ahead and transmit
 % we stop when we've written all the data out that we wrote to the fifo.
 % This core doesn't care about packet length, just about how many bytes got
@@ -64,7 +65,8 @@ if empty_in == 1 && tx_en_in == 1 && txDone == 0
             count = 0;
             sentTrain = sentTrain + 1;
         end
-        d_out = complex(diLatch,dqLatch);
+        d_i_out = diLatch;
+        d_q_out = dqLatch;
     elseif sentTrain <= 65+PAD_BITS
         if count == 0
             diLatch = tbi(sentTrain-PAD_BITS);
@@ -75,7 +77,8 @@ if empty_in == 1 && tx_en_in == 1 && txDone == 0
             count = 0;
             sentTrain = sentTrain + 1;
         end
-        d_out = complex(diLatch,dqLatch);
+        d_i_out = diLatch;
+        d_q_out = dqLatch;
     else
         if mod(count,OS_RATE) == 0
             sym2 = symIndex*2;
@@ -83,7 +86,8 @@ if empty_in == 1 && tx_en_in == 1 && txDone == 0
             dqLatch = mybitget(data,sym2+2)*2-1;
             symIndex = symIndex + 1;
         end
-        d_out = complex(diLatch, dqLatch);
+        d_i_out = diLatch;
+        d_q_out = dqLatch;
 
         count = count + 1;
         if count >= OS_RATE*SYM_PER_BYTE
@@ -124,19 +128,3 @@ end
 tx_fifo(wrIndex) = data_in;
 
 tx_done_out = txDone;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

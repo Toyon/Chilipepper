@@ -1,6 +1,6 @@
 #Please do not modify this file by hand
-XmpVersion: 14.3
-VerMgmt: 14.3
+XmpVersion: 14.7
+VerMgmt: 14.7
 IntStyle: default
 Flow: ise
 MHS File: system.mhs
@@ -24,11 +24,6 @@ UcfFile: data/system.ucf
 EnableParTimingError: 1
 ShowLicenseDialog: 1
 BInfo: 
-LockAddr: rx_axiw_0,C_BASEADDR
-LockAddr: adc_driver_axiw_0,C_BASEADDR
-LockAddr: tx_axiw_0,C_BASEADDR
-LockAddr: dac_driver_axiw_0,C_BASEADDR
-LockAddr: mcu_axiw_0,C_BASEADDR
 Processor: processing_system7_0
 ElfImp: 
 ElfSim: 

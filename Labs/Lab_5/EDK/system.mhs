@@ -23,29 +23,31 @@
  PORT processing_system7_0_DDR_DQS_n = processing_system7_0_DDR_DQS_n, DIR = IO, VEC = [3:0]
  PORT processing_system7_0_DDR_VRN = processing_system7_0_DDR_VRN, DIR = IO
  PORT processing_system7_0_DDR_VRP = processing_system7_0_DDR_VRP, DIR = IO
- PORT axi_gpio_led_GPIO_IO_pin = axi_gpio_led_GPIO_IO, DIR = IO
- PORT axi_gpio_led_GPIO2_IO_pin = axi_gpio_led_GPIO2_IO, DIR = IO
- PORT adc_driver_axiw_0_rx_iq_sel_pin = net_adc_driver_axiw_0_rx_iq_sel_pin, DIR = I
- PORT adc_driver_axiw_0_rxd_pin = net_adc_driver_axiw_0_rxd_pin, DIR = I, VEC = [11:0]
- PORT adc_driver_axiw_0_blinky_adc_driver_pin = adc_driver_axiw_0_blinky_adc_driver, DIR = O
- PORT mcu_axiw_0_init_done_pin = net_mcu_axiw_0_init_done_pin, DIR = I
- PORT mcu_axiw_0_blinky_mcu_pin = mcu_axiw_0_blinky_mcu, DIR = O
- PORT mcu_axiw_0_mcu_reset_pin = mcu_axiw_0_mcu_reset, DIR = O
- PORT mcu_axiw_0_pa_en_pin = mcu_axiw_0_pa_en, DIR = O
- PORT mcu_axiw_0_rx_en_pin = mcu_axiw_0_rx_en, DIR = O
- PORT mcu_axiw_0_tr_sw_pin = mcu_axiw_0_tr_sw, DIR = O
- PORT mcu_axiw_0_tx_en_pin = mcu_axiw_0_tx_en, DIR = O
- PORT clock_generator_0_pll_pin = net_clock_generator_0_pll_pin, DIR = I, SIGIS = CLK
- PORT clock_generator_0_rx_clk_pin = clock_generator_0_CLKOUT3, DIR = O, SIGIS = CLK, CLK_FREQ = 40000000
- PORT clock_generator_0_LOCKED_pin = clock_generator_0_LOCKED, DIR = O
- PORT axi_uartlite_0_RX_pin = axi_uartlite_0_RX, DIR = I
- PORT axi_uartlite_0_TX_pin = axi_uartlite_0_TX, DIR = O
- PORT clock_generator_0_tx_clk_pin = clock_generator_0_CLKOUT4, DIR = O, SIGIS = CLK, CLK_FREQ = 40000000
+ PORT adc_driver_blinky_pin = adc_driver_blinky, DIR = O
+ PORT mcu_driver_init_done_pin = mcu_driver_init_done, DIR = I
+ PORT mcu_driver_mcu_reset_out_pin = mcu_driver_mcu_reset_out, DIR = O
+ PORT mcu_driver_tr_sw_pin = mcu_driver_tr_sw, DIR = O
+ PORT mcu_driver_pa_en_pin = mcu_driver_pa_en, DIR = O
+ PORT mcu_driver_tx_en_pin = mcu_driver_tx_en, DIR = O
+ PORT mcu_driver_rx_en_pin = mcu_driver_rx_en, DIR = O
+ PORT mcu_driver_blinky_pin = mcu_driver_blinky, DIR = O
+ PORT adc_driver_rxd_pin = adc_driver_pcore_fixpt_pcore_0_rxd, DIR = I, VEC = [11:0]
+ PORT adc_driver_rx_iq_sel_pin = adc_driver_pcore_fixpt_pcore_0_rx_iq_sel, DIR = I
+ PORT dc_offset_blinky_pin = dc_offset_blinky, DIR = O
+ PORT tx_clock_generator_CLKIN_pin = tx_clock_generator_CLKIN, DIR = I, SIGIS = CLK, CLK_FREQ = 40000000
+ PORT tx_clock_generator_tx_clk_pin = tx_clock_generator_CLKOUT1, DIR = O, SIGIS = CLK, CLK_FREQ = 40000000
+ PORT tx_clock_generator_rx_clk_pin = tx_clock_generator_CLKOUT2, DIR = O, SIGIS = CLK, CLK_FREQ = 40000000
+ PORT tx_clock_generator_LOCKED_pin = tx_clock_generator_LOCKED, DIR = O
+ PORT rx_clock_generator_CLKIN_pin = rx_clock_generator_CLKIN, DIR = I, SIGIS = CLK, CLK_FREQ = 40000000
+ PORT rx_clock_generator_LOCKED_pin = rx_clock_generator_LOCKED, DIR = O
+ PORT qpsk_rx_blinky_pin = qpsk_rx_blinky, DIR = O
+ PORT mcu_uart_RX_pin = mcu_uart_RX, DIR = I
+ PORT mcu_uart_TX_pin = mcu_uart_TX, DIR = O
 
 
 BEGIN processing_system7
  PARAMETER INSTANCE = processing_system7_0
- PARAMETER HW_VER = 4.02.a
+ PARAMETER HW_VER = 4.03.a
  PARAMETER C_DDR_RAM_HIGHADDR = 0x1FFFFFFF
  PARAMETER C_EN_EMIO_CAN0 = 0
  PARAMETER C_EN_EMIO_CAN1 = 0
@@ -131,21 +133,6 @@ BEGIN processing_system7
  PORT M_AXI_GP0_ACLK = processing_system7_0_FCLK_CLK0
 END
 
-BEGIN adc_driver_axiw
- PARAMETER INSTANCE = adc_driver_axiw_0
- PARAMETER HW_VER = 1.00.a
- PARAMETER C_BASEADDR = 0x70e00000
- PARAMETER C_HIGHADDR = 0x70e0ffff
- BUS_INTERFACE S_AXI = axi_interconnect_1
- PORT axi_aclk = processing_system7_0_FCLK_CLK0
- PORT rx_iq_sel = net_adc_driver_axiw_0_rx_iq_sel_pin
- PORT rxd = net_adc_driver_axiw_0_rxd_pin
- PORT blinky_adc_driver = adc_driver_axiw_0_blinky_adc_driver
- PORT rx_i = adc_driver_axiw_0_rx_i
- PORT rx_q = adc_driver_axiw_0_rx_q
- PORT sysgen_clk = clock_generator_0_CLKOUT1
-END
-
 BEGIN axi_interconnect
  PARAMETER INSTANCE = axi_interconnect_1
  PARAMETER HW_VER = 1.06.a
@@ -154,101 +141,136 @@ BEGIN axi_interconnect
  PORT INTERCONNECT_ARESETN = processing_system7_0_FCLK_RESET0_N
 END
 
-BEGIN axi_gpio
- PARAMETER INSTANCE = axi_gpio_led
- PARAMETER HW_VER = 1.01.b
- PARAMETER C_IS_DUAL = 1
- PARAMETER C_GPIO_WIDTH = 1
- PARAMETER C_GPIO2_WIDTH = 1
- PARAMETER C_BASEADDR = 0x41200000
- PARAMETER C_HIGHADDR = 0x4120ffff
+BEGIN adc_driver_pcore
+ PARAMETER INSTANCE = adc_driver
+ PARAMETER HW_VER = 1.00.a
+ PARAMETER C_S_AXI_BASEADDR = 0x65800000
+ PARAMETER C_S_AXI_HIGHADDR = 0x6580ffff
  BUS_INTERFACE S_AXI = axi_interconnect_1
- PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
- PORT GPIO_IO = axi_gpio_led_GPIO_IO
- PORT GPIO2_IO = axi_gpio_led_GPIO2_IO
+ PORT AXI_Lite_ACLK = processing_system7_0_FCLK_CLK0
+ PORT IPCORE_RESETN = processing_system7_0_FCLK_RESET0_N
+ PORT rxd = adc_driver_pcore_fixpt_pcore_0_rxd
+ PORT rx_iq_sel = adc_driver_pcore_fixpt_pcore_0_rx_iq_sel
+ PORT blinky = adc_driver_blinky
+ PORT IPCORE_CLK = rx_clock_generator_CLKOUT0
+ PORT rx_i = adc_driver_rx_i
+ PORT rx_q = adc_driver_rx_q
 END
 
-BEGIN mcu_axiw
- PARAMETER INSTANCE = mcu_axiw_0
+BEGIN mcu_driver_pcore
+ PARAMETER INSTANCE = mcu_driver
  PARAMETER HW_VER = 1.00.a
- PARAMETER C_BASEADDR = 0x61600000
- PARAMETER C_HIGHADDR = 0x6160ffff
+ PARAMETER C_S_AXI_BASEADDR = 0x65400000
+ PARAMETER C_S_AXI_HIGHADDR = 0x6540ffff
  BUS_INTERFACE S_AXI = axi_interconnect_1
- PORT axi_aclk = processing_system7_0_FCLK_CLK0
- PORT init_done = net_mcu_axiw_0_init_done_pin
- PORT blinky_mcu = mcu_axiw_0_blinky_mcu
- PORT mcu_reset = mcu_axiw_0_mcu_reset
- PORT pa_en = mcu_axiw_0_pa_en
- PORT rx_en = mcu_axiw_0_rx_en
- PORT tr_sw = mcu_axiw_0_tr_sw
- PORT tx_en = mcu_axiw_0_tx_en
- PORT sysgen_clk = clock_generator_0_CLKOUT0
+ PORT AXI_Lite_ACLK = processing_system7_0_FCLK_CLK0
+ PORT IPCORE_CLK = tx_clock_generator_CLKOUT0
+ PORT IPCORE_RESETN = processing_system7_0_FCLK_RESET0_N
+ PORT init_done = mcu_driver_init_done
+ PORT mcu_reset_out = mcu_driver_mcu_reset_out
+ PORT tr_sw = mcu_driver_tr_sw
+ PORT pa_en = mcu_driver_pa_en
+ PORT tx_en = mcu_driver_tx_en
+ PORT rx_en = mcu_driver_rx_en
+ PORT blinky = mcu_driver_blinky
 END
 
-BEGIN rx_axiw
- PARAMETER INSTANCE = rx_axiw_0
+BEGIN dc_offset_pcore
+ PARAMETER INSTANCE = dc_offset
  PARAMETER HW_VER = 1.00.a
- PARAMETER C_BASEADDR = 0x72400000
- PARAMETER C_HIGHADDR = 0x7240ffff
+ PARAMETER C_S_AXI_BASEADDR = 0x76200000
+ PARAMETER C_S_AXI_HIGHADDR = 0x7620ffff
  BUS_INTERFACE S_AXI = axi_interconnect_1
- PORT axi_aclk = processing_system7_0_FCLK_CLK0
- PORT i_in = dc_offset_axiw_0_i_out
- PORT q_in = dc_offset_axiw_0_q_out
- PORT sysgen_clk = clock_generator_0_CLKOUT2
+ PORT AXI_Lite_ACLK = processing_system7_0_FCLK_CLK0
+ PORT IPCORE_CLK = rx_clock_generator_CLKOUT1
+ PORT IPCORE_RESETN = processing_system7_0_FCLK_RESET0_N
+ PORT i_in = adc_driver_rx_i
+ PORT q_in = adc_driver_rx_q
+ PORT blinky = dc_offset_blinky
+ PORT i_out = dc_offset_i_out
+ PORT q_out = dc_offset_q_out
 END
 
 BEGIN clock_generator
- PARAMETER INSTANCE = clock_generator_0
+ PARAMETER INSTANCE = tx_clock_generator
  PARAMETER HW_VER = 4.03.a
  PARAMETER C_CLKIN_FREQ = 40000000
- PARAMETER C_CLKFBIN_FREQ = 40000000
- PARAMETER C_CLKFBOUT_FREQ = 40000000
- PARAMETER C_CLKFBOUT_GROUP = PLLE0
  PARAMETER C_CLKOUT0_FREQ = 20000000
  PARAMETER C_CLKOUT0_GROUP = PLLE0
  PARAMETER C_CLKOUT1_FREQ = 40000000
  PARAMETER C_CLKOUT1_GROUP = PLLE0
- PARAMETER C_CLKOUT2_FREQ = 20000000
+ PARAMETER C_CLKOUT2_FREQ = 40000000
  PARAMETER C_CLKOUT2_GROUP = PLLE0
- PARAMETER C_CLKOUT3_FREQ = 40000000
- PARAMETER C_CLKOUT3_PHASE = 90
- PARAMETER C_CLKOUT3_GROUP = PLLE0
- PARAMETER C_CLKOUT4_FREQ = 40000000
- PARAMETER C_CLKOUT4_GROUP = PLLE0
- PORT CLKIN = net_clock_generator_0_pll_pin
- PORT CLKOUT0 = clock_generator_0_CLKOUT0
- PORT CLKOUT1 = clock_generator_0_CLKOUT1
- PORT CLKOUT2 = clock_generator_0_CLKOUT2
- PORT CLKOUT3 = clock_generator_0_CLKOUT3
- PORT CLKFBOUT = clock_generator_0_CLKFBOUT
- PORT CLKFBIN = clock_generator_0_CLKFBOUT
+ PARAMETER C_CLKOUT1_PHASE = 180
+ PORT CLKIN = tx_clock_generator_CLKIN
+ PORT CLKOUT0 = tx_clock_generator_CLKOUT0
+ PORT CLKOUT1 = tx_clock_generator_CLKOUT1
+ PORT CLKOUT2 = tx_clock_generator_CLKOUT2
  PORT RST = net_gnd
- PORT LOCKED = clock_generator_0_LOCKED
- PORT CLKOUT4 = clock_generator_0_CLKOUT4
+ PORT LOCKED = tx_clock_generator_LOCKED
 END
 
-BEGIN dc_offset_axiw
- PARAMETER INSTANCE = dc_offset_axiw_0
+BEGIN clock_generator
+ PARAMETER INSTANCE = rx_clock_generator
+ PARAMETER HW_VER = 4.03.a
+ PARAMETER C_CLKIN_FREQ = 40000000
+ PARAMETER C_CLKOUT0_FREQ = 40000000
+ PARAMETER C_CLKOUT0_GROUP = PLLE0
+ PARAMETER C_CLKOUT1_FREQ = 20000000
+ PARAMETER C_CLKOUT1_GROUP = PLLE0
+ PARAMETER C_CLKOUT0_PHASE = 180
+ PARAMETER C_CLKOUT1_PHASE = 180
+ PARAMETER C_CLKOUT2_PHASE = 0
+ PORT CLKIN = rx_clock_generator_CLKIN
+ PORT CLKOUT0 = rx_clock_generator_CLKOUT0
+ PORT CLKOUT1 = rx_clock_generator_CLKOUT1
+ PORT RST = net_gnd
+ PORT LOCKED = rx_clock_generator_LOCKED
+END
+
+BEGIN qpsk_rx_pcore
+ PARAMETER INSTANCE = qpsk_rx
  PARAMETER HW_VER = 1.00.a
- PARAMETER C_BASEADDR = 0x6fc00000
- PARAMETER C_HIGHADDR = 0x6fc0ffff
+ PARAMETER C_S_AXI_BASEADDR = 0x7e400000
+ PARAMETER C_S_AXI_HIGHADDR = 0x7e40ffff
  BUS_INTERFACE S_AXI = axi_interconnect_1
- PORT axi_aclk = processing_system7_0_FCLK_CLK0
- PORT i_in = adc_driver_axiw_0_rx_i
- PORT q_in = adc_driver_axiw_0_rx_q
- PORT i_out = dc_offset_axiw_0_i_out
- PORT q_out = dc_offset_axiw_0_q_out
- PORT sysgen_clk = clock_generator_0_CLKOUT2
+ PORT AXI_Lite_ACLK = processing_system7_0_FCLK_CLK0
+ PORT IPCORE_CLK = rx_clock_generator_CLKOUT1
+ PORT IPCORE_RESETN = processing_system7_0_FCLK_RESET0_N
+ PORT i_in = dc_offset_i_out
+ PORT q_in = dc_offset_q_out
+ PORT blinky = qpsk_rx_blinky
+ PORT f_est = qpsk_rx_f_est_to_chipscope_ila_0
+ PORT s_f_i = qpsk_rx_s_f_i_to_chipscope_ila_0
+ PORT s_f_q = qpsk_rx_s_f_q_to_chipscope_ila_0
+END
+
+BEGIN chipscope_ila
+ PARAMETER INSTANCE = chipscope_ila_0
+ PARAMETER HW_VER = 1.05.a
+ PARAMETER C_TRIG0_UNITS = 1
+ PARAMETER C_TRIG0_TRIGGER_IN_WIDTH = 66
+ PARAMETER C_NUM_DATA_SAMPLES = 8192
+ PORT chipscope_ila_control = chipscope_ila_0_icon_control
+ PORT TRIG0 = qpsk_rx_f_est_to_chipscope_ila_0 & qpsk_rx_s_f_i_to_chipscope_ila_0 & qpsk_rx_s_f_q_to_chipscope_ila_0
+ PORT CLK = rx_clock_generator_CLKOUT1
+END
+
+BEGIN chipscope_icon
+ PARAMETER INSTANCE = chipscope_icon_0
+ PARAMETER HW_VER = 1.06.a
+ PARAMETER C_NUM_CONTROL_PORTS = 1
+ PORT control0 = chipscope_ila_0_icon_control
 END
 
 BEGIN axi_uartlite
- PARAMETER INSTANCE = axi_uartlite_0
+ PARAMETER INSTANCE = mcu_uart
  PARAMETER HW_VER = 1.02.a
  PARAMETER C_BASEADDR = 0x42c00000
  PARAMETER C_HIGHADDR = 0x42c0ffff
  BUS_INTERFACE S_AXI = axi_interconnect_1
  PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
- PORT RX = axi_uartlite_0_RX
- PORT TX = axi_uartlite_0_TX
+ PORT RX = mcu_uart_RX
+ PORT TX = mcu_uart_TX
 END
 

@@ -6,13 +6,12 @@
 % embedded@toyon.com
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#codegen
-function [s_i, s_q, tauh] = qpsk_rx_toc(r_i, r_q, mu_in, finish_rx)
+function [s_i, s_q] = qpsk_rx_toc(r_i, r_q, finish_rx)
 
 persistent counter
 persistent tau
 persistent rBuf_i rBuf_q
 persistent symLatch_i symLatch_q
-persistent tEst
 
 OS_RATE = 8;
 if isempty(counter)
@@ -21,10 +20,7 @@ if isempty(counter)
     rBuf_i = zeros(1,4*OS_RATE);
     rBuf_q = zeros(1,4*OS_RATE);
     symLatch_i = 0; symLatch_q = 0;
-    tEst = 0;
 end
-
-mu = mu_in/2^12;
 
 if finish_rx == 1
     tau = 0;
@@ -35,7 +31,7 @@ rBuf_q = [rBuf_q(2:end) r_q];
 
 if counter == 0
     taur = round(tau);
-    % if we shift out of the window just exit
+    % basically if we shift out of the window just bail as we're screwed
     if abs(taur) >= OS_RATE
         tau = 0;
         taur = 0;
@@ -60,10 +56,8 @@ if counter == 0
         oe = 1;
     end
 
-    % update tau
-    tau = tau + mu*oe;
-    
-    tEst = tau;
+    % update tau (with hard coded mu_in) 327/2^12
+    tau = tau + (0.079833984375)*oe;
 
     symLatch_i = zo_i;
     symLatch_q = zo_q;
@@ -71,7 +65,6 @@ end
 
 s_i = symLatch_i;
 s_q = symLatch_q;
-tauh = tEst;
 
 counter = counter + 1;
 if counter >= OS_RATE

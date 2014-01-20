@@ -40,10 +40,10 @@ for i1 = 1:length(is)
     i_in = is(i1);
     q_in = qs(i1);
  
-    [i_out, q_out, rssi_out, rssi_en_out, dir_out, dir_en_out, ...
-    d1, d2, d3, d4, d5, d6, d7, d8, d9] = ...
-        dc_offset_correction(i_in, q_in, 1, mod(i1,2), 500, 1500, i1>3000);
-    
+    [i_out, q_out, rssi_out, rssi_en_out, dir_out, dir_en_out] = ...
+        dc_offset_correction(i_in, q_in, mod(i1,2), ...
+            500, 1500, +(i1>3000));
+
     io(i1) = i_out;
     qo(i1) = q_out;
     if rssi_en_out

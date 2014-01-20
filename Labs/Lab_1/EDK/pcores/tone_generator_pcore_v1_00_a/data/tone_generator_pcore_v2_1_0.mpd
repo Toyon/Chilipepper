@@ -1,7 +1,7 @@
 ##############################################################################
 ## File Name:         codegen\ipcore\tone_generator_pcore_v1_00_a\data\tone_generator_pcore_v2_1_0.mpd
 ## Description:       Microprocessor Peripheral Description
-## Created:           2013-09-27 12:24:22
+## Created:           2013-12-11 15:33:43
 ##############################################################################
 
 BEGIN tone_generator_pcore
@@ -46,7 +46,7 @@ PORT AXI_Lite_RVALID = RVALID, DIR = O, BUS = S_AXI
 PORT AXI_Lite_RREADY = RREADY, DIR = I, BUS = S_AXI
 
 ## External Ports
-PORT myInput = "", DIR = I, VEC = [9:0]
+PORT myInput = "", DIR = I, VEC = [8:0]
 PORT i_out = "", DIR = O, VEC = [11:0]
 PORT q_out = "", DIR = O, VEC = [11:0]
 PORT blinky = "", DIR = O
