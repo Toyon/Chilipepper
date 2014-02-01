@@ -4,8 +4,6 @@
 OS_RATE = 8;
 SNR = 100;
 fc = 10e3/20e6; % sample rate is 20 MHz, top is 10 kHz offset
-muFOC = floor(.01*2^12)/2^12;
-muTOC = floor(.01*8*2^12)/2^12;
 sim = 1;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -127,9 +125,7 @@ rC = y/max(abs(y))*.1*2^11; % this controls receive gain
 %r = awgn(rC,SNR,0,1);
 r = rC;
 if ~sim
-    %M = load('rx.prn');
     fid = fopen('rx.prn');
-    %M = textscan(fid,'%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d','Headerlines',1);
     M = textscan(fid,'%d %d %d %d','Headerlines',1);
     fclose(fid);
     is = double(M{3});
@@ -146,13 +142,7 @@ end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Main receiver core
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-s = zeros(1,length(r));
 r_out = zeros(1,length(r));
-s_f = zeros(1,length(r));
-s_t = zeros(1,length(r));
-tau = zeros(1,length(r));
-s_o = zeros(1,length(r));
-o = zeros(1,length(r));
 bytes = zeros(1,ml); byte_count = 0; next_byte = 0; percent_full = 0;
 for i1 = 1:length(r)+200
     if i1 == 1
@@ -187,37 +177,8 @@ for i1 = 1:length(r)+200
             next_byte=1;
         end
     end
-
 end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-figure(2)
-subplot(2,4,1)
-scatter(real(r),imag(r))
-title('OTA Receive Signal');
-subplot(2,4,5)
-plot(real(r_out));
-%title('OTA Receive Signal (real part)');
-%subplot(2,4,2)
-%scatter(real(s_f),imag(s_f))
-%title('Signal Post FOC');
-%subplot(2,4,6)
-%plot(real(s_f));
-%title('Signal Post FOC (real part)');
-%subplot(2,4,3)
-%scatter(real(s_t),imag(s_t))
-%title('Signal Post TOC');
-%subplot(2,4,7)
-%plot(t_est);
-%title('Time estimate');
-%subplot(2,4,4)
-%plot(real(s_p));
-%title('Message bits');
-%axis([0 length(s_p) -1.25 1.25]);
-%subplot(2,4,8)
-%plot(s_o);
-%title('Correlation magnitude');
-%axis([0 length(s_o) 0 160]);
 
 numRecBytes = bytes(1)+bytes(2)+bytes(3);
 msgBytes = bytes((1+4):(numRecBytes+4));

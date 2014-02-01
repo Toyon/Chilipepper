@@ -21,27 +21,27 @@ WARNING:EDK - INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable
    qualify for Xilinx software updates or new releases.
 
 
-Parse C:/GIT/QPSK_Pcore/Labs/Lab_8/EDK/system.mhs ...
+Parse C:/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/system.mhs ...
 
 Read MPD definitions ...
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: rx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 225 
+   C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 225 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: tx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 242 
+   C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 242 
 WARNING:EDK:4092 - IPNAME: chipscope_icon, INSTANCE: chipscope_icon_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 286 
+   C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 286 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: rx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 225 
+   C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 225 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: tx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 242 
+   C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 242 
 WARNING:EDK:4092 - IPNAME: chipscope_icon, INSTANCE: chipscope_icon_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 286 
+   C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 286 
 
 Overriding IP level properties ...
 INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
@@ -186,47 +186,47 @@ Creating hardware output directories ...
 
 Managing hardware (BBD-specified) netlist files ...
 IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 272 - Copying (BBD-specified)
-netlist files.
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 272 - Copying
+(BBD-specified) netlist files.
 IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 286 - Copying (BBD-specified)
-netlist files.
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 286 - Copying
+(BBD-specified) netlist files.
 
 Managing cache ...
 IPNAME:processing_system7 INSTANCE:processing_system7_0 -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 48 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 48 - Copying cache
 implementation netlist
 IPNAME:axi_interconnect INSTANCE:axi_interconnect_1 -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 136 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 136 - Copying cache
 implementation netlist
 IPNAME:rx_fifo_pcore INSTANCE:rx_fifo -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 144 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 144 - Copying cache
 implementation netlist
 IPNAME:adc_driver_pcore INSTANCE:adc_driver -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 158 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 158 - Copying cache
 implementation netlist
 IPNAME:mcu_driver_pcore INSTANCE:mcu_driver -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 174 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 174 - Copying cache
 implementation netlist
 IPNAME:dc_offset_pcore INSTANCE:dc_offset -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 192 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 192 - Copying cache
 implementation netlist
 IPNAME:qpsk_rx_pcore INSTANCE:qpsk_rx -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 208 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 208 - Copying cache
 implementation netlist
 IPNAME:axi_uartlite INSTANCE:mcu_uart -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 261 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 261 - Copying cache
 implementation netlist
 IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 272 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 272 - Copying cache
 implementation netlist
 IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 286 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 286 - Copying cache
 implementation netlist
 
 Elaborating instances ...
 IPNAME:clock_generator INSTANCE:rx_clock_generator -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 225 - elaborating IP
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 225 - elaborating IP
 ClkGen elaborate status: PASSED
 WARNING:EDK - : Phase value 180.0000 is converted to 180.0
 
@@ -243,7 +243,7 @@ WARNING:EDK - : Phase value 0.0 is converted to 0.0
 ----------------------------------------
 ----------------------------------------
 IPNAME:clock_generator INSTANCE:tx_clock_generator -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 242 - elaborating IP
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 242 - elaborating IP
 ClkGen elaborate status: PASSED
 WARNING:EDK - : Phase value 0.0000 is converted to 0.0
 
@@ -260,13 +260,135 @@ WARNING:EDK - : Phase value 0.0 is converted to 0.0
 ----------------------------------------
 ----------------------------------------
 IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 272 - elaborating IP
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 272 - elaborating IP
 Created elaborate directory hdl/elaborate/chipscope_ila_0_v1_05_a/synhdl/vhdl/
-INFO: Chipscope core parameters not changed. Not regenerating core
+Generating ChipScope core: chipscope_ila_0 ...
+ChipScope Core Generator command: coregen.exe -b
+C:/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/implementation/chipscope_ila_0.xco
+Release 14.7 - Xilinx CORE Generator P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+All runtime messages will be recorded in
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\implementation\chipscope_ila_0_wrapper\co
+regen.log
+Updating project device from '7z020' to 'xc7z020'.
+Wrote CGP file for project 'coregen'.
+Resolving generic values...
+Finished resolving generic values.
+Generating IP...
+Configuring files for chipscope_ila_0 root...
+Gathering HDL files for chipscope_ila_0 root...
+Creating XST project for chipscope_ila_0...
+Creating XST script file for chipscope_ila_0...
+Creating XST instantiation file for chipscope_ila_0...
+Running XST for chipscope_ila_0...
+XST: HDL Parsing
+XST: HDL Elaboration
+XST: HDL Synthesis
+XST: Advanced HDL Synthesis
+XST: Low Level Synthesis
+XST: Design Summary
+Not generating VHDL wrapper
+Not generating Verilog wrapper
+Skipping VHDL instantiation template for chipscope_ila_0...
+Skipping Verilog instantiation template for chipscope_ila_0...
+Finished Generation.
+Generating IP instantiation template...
+Generating ASY schematic symbol...
+Generating metadata file...
+Generating ISE project...
+XCO file found: chipscope_ila_0.xco
+XMDF file found: chipscope_ila_0_xmdf.tcl
+Adding
+C:/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/implementation/chipscope_ila_0_wrapper/tm
+p/_cg/chipscope_ila_0.asy -view all -origin_type imported
+Adding
+C:/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/implementation/chipscope_ila_0_wrapper/tm
+p/_cg/chipscope_ila_0.ngc -view all -origin_type created
+Checking file
+"C:/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/implementation/chipscope_ila_0_wrapper/t
+mp/_cg/chipscope_ila_0.ngc" for project device match ...
+File
+"C:/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/implementation/chipscope_ila_0_wrapper/t
+mp/_cg/chipscope_ila_0.ngc" device information matches project device.
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/chipscope_ila_0"
+Generating README file...
+Generating FLIST file...
+Moving files to output directory...
+Finished moving files to output directory
+Saved CGP file for project 'coregen'.
+*************************************************************
 IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 286 - elaborating IP
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 286 - elaborating IP
 Created elaborate directory hdl/elaborate/chipscope_icon_0_v1_06_a/synhdl/vhdl/
-INFO: ChipScope core parameters not changed. Not regenerating core
+Generating ChipScope core: chipscope_icon_0 ...
+ChipScope Core Generator command: coregen.exe -b
+C:/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/implementation/chipscope_icon_0.xco
+Release 14.7 - Xilinx CORE Generator P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+All runtime messages will be recorded in
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\implementation\chipscope_icon_0_wrapper\c
+oregen.log
+Updating project device from '7z020' to 'xc7z020'.
+Wrote CGP file for project 'coregen'.
+Resolving generic values...
+Finished resolving generic values.
+Generating IP...
+Configuring files for chipscope_icon_0 root...
+Gathering HDL files for chipscope_icon_0 root...
+Creating XST project for chipscope_icon_0...
+Creating XST script file for chipscope_icon_0...
+Creating XST instantiation file for chipscope_icon_0...
+Running XST for chipscope_icon_0...
+XST: HDL Parsing
+XST: HDL Elaboration
+XST: HDL Synthesis
+XST: Advanced HDL Synthesis
+XST: Low Level Synthesis
+XST: Design Summary
+Not generating VHDL wrapper
+Not generating Verilog wrapper
+Skipping VHDL instantiation template for chipscope_icon_0...
+Skipping Verilog instantiation template for chipscope_icon_0...
+Finished Generation.
+Generating IP instantiation template...
+Generating ASY schematic symbol...
+Generating metadata file...
+Generating ISE project...
+XCO file found: chipscope_icon_0.xco
+XMDF file found: chipscope_icon_0_xmdf.tcl
+WARNING:EDK - : chipscope_icon_0.vhd does not exist, will not be added to ISE
+   project.
+
+WARNING:EDK - : chipscope_icon_0.vho does not exist, will not be added to ISE
+   project.
+
+Adding
+C:/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/implementation/chipscope_icon_0_wrapper/t
+mp/_cg/chipscope_icon_0.asy -view all -origin_type imported
+Adding
+C:/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/implementation/chipscope_icon_0_wrapper/t
+mp/_cg/chipscope_icon_0.ngc -view all -origin_type created
+Checking file
+"C:/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/implementation/chipscope_icon_0_wrapper/
+tmp/_cg/chipscope_icon_0.ngc" for project device match ...
+File
+"C:/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/implementation/chipscope_icon_0_wrapper/
+tmp/_cg/chipscope_icon_0.ngc" device information matches project device.
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/chipscope_icon_0"
+Generating README file...
+Generating FLIST file...
+Moving files to output directory...
+Finished moving files to output directory
+Saved CGP file for project 'coregen'.
+*************************************************************
 
 Writing HDL for elaborated instances ...
 
@@ -287,30 +409,30 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:rx_fifo - C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 144 -
+INSTANCE:rx_fifo - C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 144 -
 Running XST synthesis
-INSTANCE:adc_driver - C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 158 -
+INSTANCE:adc_driver - C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 158
+- Running XST synthesis
+INSTANCE:mcu_driver - C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 174
+- Running XST synthesis
+INSTANCE:dc_offset - C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 192
+- Running XST synthesis
+INSTANCE:qpsk_rx - C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 208 -
 Running XST synthesis
-INSTANCE:mcu_driver - C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 174 -
-Running XST synthesis
-INSTANCE:dc_offset - C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 192 -
-Running XST synthesis
-INSTANCE:qpsk_rx - C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 208 -
-Running XST synthesis
-INSTANCE:rx_clock_generator - C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line
-225 - Running XST synthesis
-INSTANCE:tx_clock_generator - C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line
-242 - Running XST synthesis
+INSTANCE:rx_clock_generator - C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs
+line 225 - Running XST synthesis
+INSTANCE:tx_clock_generator - C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs
+line 242 - Running XST synthesis
 
 Running NGCBUILD ...
 IPNAME:system_rx_clock_generator_wrapper INSTANCE:rx_clock_generator -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 225 - Running NGCBUILD
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 225 - Running NGCBUILD
 IPNAME:system_tx_clock_generator_wrapper INSTANCE:tx_clock_generator -
-C:\GIT\QPSK_Pcore\Labs\Lab_8\EDK\system.mhs line 242 - Running NGCBUILD
+C:\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system.mhs line 242 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 140.00 seconds
+Total run time: 341.00 seconds
