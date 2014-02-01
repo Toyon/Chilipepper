@@ -22,7 +22,7 @@ if isempty(blinky_cnt)
     blinky_cnt = 0;
 end
 
-% frequency offset estimation. Note that time constant is input as integer
+% frequency offset estimation.
 [s_f_i, s_f_q, f_est] = ...
     qpsk_rx_foc(i_in, q_in);
 
