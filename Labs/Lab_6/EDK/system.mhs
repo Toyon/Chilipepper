@@ -250,12 +250,23 @@ BEGIN qpsk_rx_pcore
  PORT tauh = qpsk_rx_tauh_to_chipscope_ila_0
 END
 
+BEGIN axi_uartlite
+ PARAMETER INSTANCE = mcu_uart
+ PARAMETER HW_VER = 1.02.a
+ PARAMETER C_BASEADDR = 0x42c00000
+ PARAMETER C_HIGHADDR = 0x42c0ffff
+ BUS_INTERFACE S_AXI = axi_interconnect_1
+ PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
+ PORT RX = mcu_uart_RX
+ PORT TX = mcu_uart_TX
+END
+
 BEGIN chipscope_ila
  PARAMETER INSTANCE = chipscope_ila_0
  PARAMETER HW_VER = 1.05.a
  PARAMETER C_TRIG0_UNITS = 1
  PARAMETER C_TRIG0_TRIGGER_IN_WIDTH = 42
- PARAMETER C_NUM_DATA_SAMPLES = 8192
+ PARAMETER C_NUM_DATA_SAMPLES = 16384
  PORT chipscope_ila_control = chipscope_ila_0_icon_control
  PORT TRIG0 = qpsk_rx_s_t_i_to_chipscope_ila_0 & qpsk_rx_s_t_q_to_chipscope_ila_0 & qpsk_rx_tauh_to_chipscope_ila_0
  PORT CLK = rx_clock_generator_CLKOUT1
@@ -266,16 +277,5 @@ BEGIN chipscope_icon
  PARAMETER HW_VER = 1.06.a
  PARAMETER C_NUM_CONTROL_PORTS = 1
  PORT control0 = chipscope_ila_0_icon_control
-END
-
-BEGIN axi_uartlite
- PARAMETER INSTANCE = mcu_uart
- PARAMETER HW_VER = 1.02.a
- PARAMETER C_BASEADDR = 0x42c00000
- PARAMETER C_HIGHADDR = 0x42c0ffff
- BUS_INTERFACE S_AXI = axi_interconnect_1
- PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
- PORT RX = mcu_uart_RX
- PORT TX = mcu_uart_TX
 END
 

@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.matlabhdlcoder" plugin-version="R2013a">
-  <configuration file="C:\GIT\QPSK_Pcore\Labs\Lab_6\MATLAB\qpsk_rx.prj" location="C:\GIT\QPSK_Pcore\Labs\Lab_6\MATLAB" name="qpsk_rx" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
+  <configuration file="C:\GIT\Chilipepper_Labs\Labs\Lab_6\MATLAB\qpsk_rx.prj" location="C:\GIT\Chilipepper_Labs\Labs\Lab_6\MATLAB" name="qpsk_rx" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
     <param.AutoInferDefaultFile />
     <param.AutoInferUseVariableSize>false</param.AutoInferUseVariableSize>
     <param.AutoInferUseUnboundedSize>false</param.AutoInferUseUnboundedSize>
@@ -13,10 +13,10 @@
     <param.hdl.BuildDirectory>option.hdl.ProjectDirectory</param.hdl.BuildDirectory>
     <param.hdl.BuildSpecifiedDirectory />
     <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\qpsk_rx\fixpt\qpsk_rx_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
-    <param.fixptconv.InstrumentedBuildChecksum>928281406</param.fixptconv.InstrumentedBuildChecksum>
+    <param.fixptconv.InstrumentedBuildChecksum>2311963675</param.fixptconv.InstrumentedBuildChecksum>
     <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
-    <param.fixptconv.FixedPointValidationChecksum>2512900764</param.fixptconv.FixedPointValidationChecksum>
-    <param.fixptconv.FixedPointSourceCodeChecksum>668427791</param.fixptconv.FixedPointSourceCodeChecksum>
+    <param.fixptconv.FixedPointValidationChecksum>581799673</param.fixptconv.FixedPointValidationChecksum>
+    <param.fixptconv.FixedPointSourceCodeChecksum>85465963</param.fixptconv.FixedPointSourceCodeChecksum>
     <param.fixptconv.FixedPointStaticAnalysisChecksum />
     <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}\qpsk_tb.m</param.fixptconv.DefaultTestFile>
     <param.fixptconv.ExcludedFixedPointVerificationFiles />
@@ -119,7 +119,9 @@
           </Variable>
         </Function>
         <Function file="$(PROJECTDIR)\qpsk_rx_toc.m" name="qpsk_rx_toc" specialization="f58_qpsk_rx_toc">
-          <Variable name="OS_RATE" />
+          <Variable name="OS_RATE">
+            <Column property="DesignRangeIsAutoDefined" type="Boolean" value="false" />
+          </Variable>
           <Variable name="counter" />
           <Variable name="od_i">
             <Column property="ProposedType" type="String" value="sfix26_En12" />
@@ -203,17 +205,27 @@
           <Variable name="q_in">
             <Column property="ProposedType" type="String" value="sfix12" />
           </Variable>
-          <Variable name="s_c_i" />
-          <Variable name="s_c_q" />
+          <Variable name="s_c_i">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="s_c_q">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
           <Variable name="s_f_i">
             <Column property="ProposedType" type="String" value="sfix26_En12" />
           </Variable>
           <Variable name="s_f_q">
             <Column property="ProposedType" type="String" value="sfix26_En12" />
           </Variable>
-          <Variable name="s_t_i" />
-          <Variable name="s_t_q" />
-          <Variable name="tauh" />
+          <Variable name="s_t_i">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="s_t_q">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="tauh">
+            <Column property="ProposedType" type="String" value="ufix20_En12" />
+          </Variable>
         </Function>
       </UserEntities>
     </param.transformedVariables>
@@ -1194,14 +1206,14 @@
         <Port>
           <Name>s_t_i</Name>
           <PortType>Outport</PortType>
-          <DataType>numerictype(1, 14, 6)</DataType>
+          <DataType>numerictype(1, 26, 12)</DataType>
           <SelectedInterface>External Port</SelectedInterface>
           <BitRange />
         </Port>
         <Port>
           <Name>s_t_q</Name>
           <PortType>Outport</PortType>
-          <DataType>numerictype(1, 14, 6)</DataType>
+          <DataType>numerictype(1, 26, 12)</DataType>
           <SelectedInterface>External Port</SelectedInterface>
           <BitRange />
         </Port>
@@ -1215,7 +1227,7 @@
         <Port>
           <Name>tauh</Name>
           <PortType>Outport</PortType>
-          <DataType>numerictype(0, 14, 11)</DataType>
+          <DataType>numerictype(0, 20, 12)</DataType>
           <SelectedInterface>External Port</SelectedInterface>
           <BitRange />
         </Port>
