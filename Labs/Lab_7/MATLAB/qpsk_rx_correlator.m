@@ -139,7 +139,6 @@ if counter == 0 && detPacket == 0
     if op > 100
         if sc_iWithq > 10 && sc_qWithi < 10
             q = 3; % 90 degrees
-
         else
             q = 1; % 270 degrees;
         end
