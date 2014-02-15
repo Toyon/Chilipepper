@@ -273,14 +273,14 @@ BEGIN chipscope_ila
  PARAMETER INSTANCE = chipscope_ila_0
  PARAMETER HW_VER = 1.05.a
  PARAMETER C_TRIG0_UNITS = 1
- PARAMETER C_TRIG0_TRIGGER_IN_WIDTH = 24
  PARAMETER C_NUM_DATA_SAMPLES = 8192
+ PARAMETER C_TRIG0_TRIGGER_IN_WIDTH = 9
  PARAMETER C_TRIG1_UNITS = 1
- PARAMETER C_TRIG1_TRIGGER_IN_WIDTH = 37
+ PARAMETER C_TRIG1_TRIGGER_IN_WIDTH = 24
  PORT chipscope_ila_control = chipscope_ila_0_icon_control
- PORT TRIG0 = dc_offset_i_out & dc_offset_q_out
- PORT CLK = rx_clock_generator_CLKOUT0
- PORT TRIG1 = dc_offset_i_in & dc_offset_q_in & adc_driver_rx_iq_sel & adc_driver_rxd
+ PORT CLK = rx_clock_generator_CLKOUT1
+ PORT TRIG0 = qpsk_rx_byte & qpsk_rx_store_byte
+ PORT TRIG1 = dc_offset_q_in & dc_offset_i_in
 END
 
 BEGIN chipscope_icon

@@ -78,5 +78,3 @@ phi = phiNew;
 
 z_i_out = z_i;
 z_q_out = z_q;
-
-

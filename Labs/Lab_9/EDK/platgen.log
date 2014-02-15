@@ -21,21 +21,21 @@ WARNING:EDK - INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable
    qualify for Xilinx software updates or new releases.
 
 
-Parse C:/GIT/QPSK_Pcore/Labs/Lab_9/EDK/system.mhs ...
+Parse C:/GIT/Chilipepper_Labs/Labs/Lab_9/EDK/system.mhs ...
 
 Read MPD definitions ...
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: rx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 231 
+   C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 231 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: tx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 247 
+   C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 247 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: rx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 231 
+   C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 231 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: tx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 247 
+   C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 247 
 
 Overriding IP level properties ...
 INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
@@ -82,9 +82,9 @@ INFO:EDK - INFO: You can modify the DDR address range accessed by Programmable
    all other master, any subset of the DDR address can be used. See Xilinx
    Answer 47167 for more information. 
 Address Map for Processor processing_system7_0
-  (0x41200000-0x4120ffff) axi_gpio_button	axi_interconnect_1
+  (0x41200000-0x4120ffff) axi_gpio_switch	axi_interconnect_1
   (0x41240000-0x4124ffff) axi_gpio_led	axi_interconnect_1
-  (0x41280000-0x4128ffff) axi_gpio_switch	axi_interconnect_1
+  (0x41280000-0x4128ffff) axi_gpio_button	axi_interconnect_1
   (0x42c00000-0x42c0ffff) mcu_uart	axi_interconnect_1
   (0x67a00000-0x67a0ffff) mcu_driver	axi_interconnect_1
   (0x69800000-0x6980ffff) tx_fifo	axi_interconnect_1
@@ -156,51 +156,51 @@ Managing hardware (BBD-specified) netlist files ...
 
 Managing cache ...
 IPNAME:processing_system7 INSTANCE:processing_system7_0 -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 54 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 54 - Copying cache
 implementation netlist
 IPNAME:axi_interconnect INSTANCE:axi_interconnect_1 -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 142 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 142 - Copying cache
 implementation netlist
 IPNAME:rx_fifo_pcore INSTANCE:rx_fifo -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 150 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 150 - Copying cache
 implementation netlist
 IPNAME:adc_driver_pcore INSTANCE:adc_driver -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 164 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 164 - Copying cache
 implementation netlist
 IPNAME:mcu_driver_pcore INSTANCE:mcu_driver -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 180 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 180 - Copying cache
 implementation netlist
 IPNAME:dc_offset_pcore INSTANCE:dc_offset -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 198 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 198 - Copying cache
 implementation netlist
 IPNAME:qpsk_rx_pcore INSTANCE:qpsk_rx -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 214 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 214 - Copying cache
 implementation netlist
 IPNAME:axi_uartlite INSTANCE:mcu_uart -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 268 - Copying cache
-implementation netlist
-IPNAME:axi_gpio INSTANCE:axi_gpio_button -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 279 - Copying cache
-implementation netlist
-IPNAME:axi_gpio INSTANCE:axi_gpio_led -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 292 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 269 - Copying cache
 implementation netlist
 IPNAME:axi_gpio INSTANCE:axi_gpio_switch -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 306 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 280 - Copying cache
 implementation netlist
 IPNAME:dac_driver_pcore INSTANCE:dac_driver -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 318 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 292 - Copying cache
 implementation netlist
 IPNAME:qpsk_tx_pcore INSTANCE:qpsk_tx -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 334 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 308 - Copying cache
 implementation netlist
 IPNAME:tx_fifo_pcore INSTANCE:tx_fifo -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 351 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 325 - Copying cache
+implementation netlist
+IPNAME:axi_gpio INSTANCE:axi_gpio_led -
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 339 - Copying cache
+implementation netlist
+IPNAME:axi_gpio INSTANCE:axi_gpio_button -
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 353 - Copying cache
 implementation netlist
 
 Elaborating instances ...
 IPNAME:clock_generator INSTANCE:rx_clock_generator -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 231 - elaborating IP
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 231 - elaborating IP
 ClkGen elaborate status: PASSED
 WARNING:EDK - : Phase value 180.0000 is converted to 180.0
 
@@ -217,7 +217,7 @@ WARNING:EDK - : Phase value 0.0 is converted to 0.0
 ----------------------------------------
 ----------------------------------------
 IPNAME:clock_generator INSTANCE:tx_clock_generator -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 247 - elaborating IP
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 247 - elaborating IP
 ClkGen elaborate status: PASSED
 WARNING:EDK - : Phase value 0.0000 is converted to 0.0
 
@@ -240,7 +240,7 @@ Inserting wrapper level ...
 Completion time: 0.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -253,36 +253,36 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
-INSTANCE:rx_fifo - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 150 -
+INSTANCE:rx_fifo - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 150 -
 Running XST synthesis
-INSTANCE:adc_driver - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 164 -
+INSTANCE:adc_driver - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 164
+- Running XST synthesis
+INSTANCE:mcu_driver - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 180
+- Running XST synthesis
+INSTANCE:dc_offset - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 198
+- Running XST synthesis
+INSTANCE:qpsk_rx - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 214 -
 Running XST synthesis
-INSTANCE:mcu_driver - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 180 -
+INSTANCE:rx_clock_generator - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs
+line 231 - Running XST synthesis
+INSTANCE:tx_clock_generator - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs
+line 247 - Running XST synthesis
+INSTANCE:dac_driver - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 292
+- Running XST synthesis
+INSTANCE:qpsk_tx - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 308 -
 Running XST synthesis
-INSTANCE:dc_offset - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 198 -
-Running XST synthesis
-INSTANCE:qpsk_rx - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 214 -
-Running XST synthesis
-INSTANCE:rx_clock_generator - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line
-231 - Running XST synthesis
-INSTANCE:tx_clock_generator - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line
-247 - Running XST synthesis
-INSTANCE:dac_driver - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 318 -
-Running XST synthesis
-INSTANCE:qpsk_tx - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 334 -
-Running XST synthesis
-INSTANCE:tx_fifo - C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 351 -
+INSTANCE:tx_fifo - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 325 -
 Running XST synthesis
 
 Running NGCBUILD ...
 IPNAME:system_rx_clock_generator_wrapper INSTANCE:rx_clock_generator -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 231 - Running NGCBUILD
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 231 - Running NGCBUILD
 IPNAME:system_tx_clock_generator_wrapper INSTANCE:tx_clock_generator -
-C:\GIT\QPSK_Pcore\Labs\Lab_9\EDK\system.mhs line 247 - Running NGCBUILD
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 247 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 178.00 seconds
+Total run time: 177.00 seconds

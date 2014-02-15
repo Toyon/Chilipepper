@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.matlabhdlcoder" plugin-version="R2013a">
-  <configuration file="C:\GIT\QPSK_Pcore\Labs\Lab_7\MATLAB\qpsk_rx.prj" location="C:\GIT\QPSK_Pcore\Labs\Lab_7\MATLAB" name="qpsk_rx" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
+  <configuration file="C:\GIT\Chilipepper_Labs\Labs\Lab_7\MATLAB\qpsk_rx.prj" location="C:\GIT\Chilipepper_Labs\Labs\Lab_7\MATLAB" name="qpsk_rx" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
     <param.AutoInferDefaultFile />
     <param.AutoInferUseVariableSize>false</param.AutoInferUseVariableSize>
     <param.AutoInferUseUnboundedSize>false</param.AutoInferUseUnboundedSize>
@@ -13,10 +13,10 @@
     <param.hdl.BuildDirectory>option.hdl.ProjectDirectory</param.hdl.BuildDirectory>
     <param.hdl.BuildSpecifiedDirectory />
     <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\qpsk_rx\fixpt\qpsk_rx_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
-    <param.fixptconv.InstrumentedBuildChecksum>3680112724</param.fixptconv.InstrumentedBuildChecksum>
+    <param.fixptconv.InstrumentedBuildChecksum>183717232</param.fixptconv.InstrumentedBuildChecksum>
     <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
-    <param.fixptconv.FixedPointValidationChecksum>1347256188</param.fixptconv.FixedPointValidationChecksum>
-    <param.fixptconv.FixedPointSourceCodeChecksum>5117847</param.fixptconv.FixedPointSourceCodeChecksum>
+    <param.fixptconv.FixedPointValidationChecksum>232831518</param.fixptconv.FixedPointValidationChecksum>
+    <param.fixptconv.FixedPointSourceCodeChecksum>2587944403</param.fixptconv.FixedPointSourceCodeChecksum>
     <param.fixptconv.FixedPointStaticAnalysisChecksum />
     <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}\qpsk_tb.m</param.fixptconv.DefaultTestFile>
     <param.fixptconv.ExcludedFixedPointVerificationFiles />
@@ -225,7 +225,7 @@
             <Column property="ProposedType" type="String" value="sfix20_En12" />
           </Variable>
           <Variable name="taur">
-            <Column property="ProposedType" type="String" value="ufix8" />
+            <Column property="ProposedType" type="String" value="sfix8" />
           </Variable>
           <Variable name="ze_i">
             <Column property="ProposedType" type="String" value="sfix26_En12" />
@@ -267,8 +267,12 @@
           <Variable name="q_in">
             <Column property="ProposedType" type="String" value="sfix12" />
           </Variable>
-          <Variable name="s_c_i" />
-          <Variable name="s_c_q" />
+          <Variable name="s_c_i">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="s_c_q">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
           <Variable name="s_f_i">
             <Column property="ProposedType" type="String" value="sfix26_En12" />
           </Variable>
@@ -276,8 +280,12 @@
             <Column property="ProposedType" type="String" value="sfix26_En12" />
           </Variable>
           <Variable name="s_out" />
-          <Variable name="s_t_i" />
-          <Variable name="s_t_q" />
+          <Variable name="s_t_i">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="s_t_q">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
         </Function>
       </UserEntities>
     </param.transformedVariables>

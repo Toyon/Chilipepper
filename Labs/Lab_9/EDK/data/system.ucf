@@ -50,7 +50,7 @@ NET mcu_driver_rx_en_pin 					LOC = C22	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SL
 NET mcu_driver_pa_en_pin 					LOC = E21	| IOSTANDARD = LVCMOS25 | DRIVE = 4 | SLEW = FAST;
 NET mcu_driver_init_done_pin 				LOC = K19	| IOSTANDARD = LVCMOS25;
 ################################################# LEDs ##################################################
-NET axi_gpio_led_GPIO_IO_pin           LOC = T22  | IOSTANDARD=LVCMOS33;  # "LD0"
+NET axi_gpio_led_GPIO_IO_pin				LOC = T22  | IOSTANDARD=LVCMOS33;  # "LD0"
 NET axi_gpio_led_GPIO2_IO_pin				LOC = T21  | IOSTANDARD=LVCMOS33;  # "LD1"
 #NET tx_clock_generator_LOCKED_pin		LOC = T22  | IOSTANDARD=LVCMOS33;  # "LD0"
 #NET rx_clock_generator_LOCKED_pin		LOC = T21  | IOSTANDARD=LVCMOS33;  # "LD1"
@@ -66,4 +66,4 @@ NET axi_gpio_switch_GPIO_IO_I_pin[0]	LOC = F22  | IOSTANDARD=LVCMOS25;  # "SW0"
 NET axi_gpio_switch_GPIO_IO_I_pin[1]	LOC = G22  | IOSTANDARD=LVCMOS25;  # "SW1"
 #######################################################################################
 # Buttons
-NET axi_gpio_button_GPIO_IO_I_pin LOC = P16  | IOSTANDARD=LVCMOS25;  # "BTCenter"
+NET axi_gpio_button_GPIO_IO_I_pin 		LOC = P16  | IOSTANDARD=LVCMOS25;  # "BTCenter"

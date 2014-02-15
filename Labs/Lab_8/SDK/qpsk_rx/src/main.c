@@ -25,6 +25,7 @@ int main()
 
     Chilipepper_SetPA( 0 );
     Chilipepper_SetTxRxSw( 1 ); // 0- transmit, 1-receive
+	Chilipepper_SetDCOC(1);		// enable dc offset correction
 
     while (1)
     {
