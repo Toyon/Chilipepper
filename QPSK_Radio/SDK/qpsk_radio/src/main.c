@@ -38,6 +38,7 @@ int main()
 	// by default we are in receive
 	Chilipepper_SetPA( 1 );
 	Chilipepper_SetTxRxSw( 1 ); // 0- transmit, 1-receive
+	Chilipepper_SetDCOC(1);		// enable dc offset correction
 
 	// enable the Chilipepper LED to indicate we are operational
 	Chilipepper_SetLed( 1 );
@@ -288,9 +289,3 @@ int SetupPeripherals( void )
 
 	return XST_SUCCESS;
 }
-
-
-
-
-
-
