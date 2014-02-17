@@ -2,153 +2,144 @@
 #include "xparameters.h"
 #include "xstatus.h"
 #include "xuartps.h"
+#include "xuartlite.h"
 #include "xil_printf.h"
 #include <math.h>
-#include "xbasic_types.h"
 #include <stdio.h>
 
-#define MCU_UART
 #define MCU_DRIVER
-#define DC_OFFSET
-#define TX_DRIVER
 #define DAC_DRIVER
-#define RX_DRIVER
-
-#ifdef MCU_UART
-#include "xuartlite.h"
-XUartLite uartLite;
-#endif
-//#ifdef TX_DRIVER
-//#include "tx_axiw.h"
-//#endif
-//#ifdef RX_DRIVER
-//#include "rx_axiw.h"
-//#endif
-//#ifdef DC_OFFSET
-//#include "dc_offset_axiw.h"
-//#endif
+#define TX_PCORE
+#define TX_FIFO
+#define DC_OFFSET
+#define RX_PCORE
+#define RX_FIFO
+#define MCU_UART
 
 #define TARGET_RSSI 800
 #define TARGET_RSSI_MARGIN 50
 
-unsigned char SendBuffer[3]; /* Buffer for Transmitting Data */
-unsigned char RecvBuffer[3]; /* Buffer for Receiving Data */
+unsigned char SendBuffer[4]; /* Buffer for Transmitting Data to Chilipepper */
+unsigned char RecvBuffer[4]; /* Buffer for Receiving Data from Chilipepper */
 
-//#ifdef RX_DRIVER
-//xc_iface_t *chiliRxIface;
-//xc_from_fifo_t *chiliRxFromFifo;
-//#endif
-
-// mcu registers
-Xuint32 chili_init_done, chili_pa_en, chili_tr_sw, chili_mcu_reset,
-		chili_rx_en, chili_tx_en, chili_mcu_latch, chili_mcu_reg_reset,
-		chili_latch_done, chili_reg_reset_done;
-// DAC registers
-Xuint32 dac_en;
-// DC Offset registers
-Xuint32 chili_rssi, chili_dir, chili_rssi_high_goal, chili_rssi_low_goal,
-		chili_agc_en, rx_en, chili_rssi_en, chili_dir_en, chili_get_next_byte,
-		chili_byte_out, chili_byte_ready;
-// RX registers
-Xuint32 chili_mcu_rx_ready, chili_num_bytes_ready, chili_percent_full;
-// tx registers
-Xuint32 clear_fifo, tx_en, tx_done, tx_fifo, byte_in, store_byte, byte_received,
-		reset_tx_fifo, clear_fifo_done, fifo_full;
-
+#ifdef MCU_DRIVER	// mcu registers
+u32 chili_mcu_reset, chili_tr_sw, chili_pa_en, chili_tx_en, chili_rx_en,
+	chili_mcu_latch, chili_mcu_reg_reset; // write
+u32 chili_init_done, chili_latch_done, chili_reg_reset_done; // read
+#endif
+#ifdef DAC_DRIVER	// DAC registers
+u32 dac_en; // write
+#endif
+#ifdef TX_PCORE		// TX registers
+u32 clear_fifo, tx_en; // write
+u32 tx_done; // read
+#endif
+#ifdef TX_FIFO // TX FIFO registers
+u32 tx_fifo_reset_fifo,tx_fifo_store_byte, tx_fifo_byte_in; // write
+u32 tx_fifo_bytes_available,tx_fifo_byte_received; // read
+#endif
+#ifdef DC_OFFSET	// DC Offset registers
+u32 chili_agc_en, chili_rssi_low_goal, chili_rssi_high_goal, rx_en; // write
+u32 chili_rssi, chili_rssi_en, chili_dir, chili_dir_en; // read
+#endif
+#ifdef RX_PCORE		// RX registers
+u32 chili_mcu_rx_ready; // write
+u32 chili_num_bytes_ready; // read
+#endif
+#ifdef RX_FIFO // RX FIFO registers
+u32 rx_fifo_get_byte; // write
+u32 rx_fifo_byte_out, rx_fifo_byte_ready, rx_fifo_bytes_available; // read
+#endif
+#ifdef MCU_UART
+XUartLite uartLite;
+#endif
 /////////////////////////////////////////////////////////////////////////////////////////////
 // Initialize
 /////////////////////////////////////////////////////////////////////////////////////////////
 int Chilipepper_Initialize(void) {
-	int xStatus;
-	int k = 0;
 
-	// take care of the UART that goes to/from Chilipepper
 #ifdef MCU_UART
-	xStatus = XUartLite_Initialize(&uartLite, XPAR_AXI_UARTLITE_0_DEVICE_ID);
+	int xStatus;	// take care of the UART that goes to/from Chilipepper
+	xStatus = XUartLite_Initialize(&uartLite, XPAR_MCU_UART_DEVICE_ID);
 	if (xStatus != 0)
 		return -1;
 	XUartLite_ResetFifos(&uartLite);
 #endif
+#ifdef MCU_DRIVER
+	chili_mcu_reset =           XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x100; // write
+	chili_tr_sw =               XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x104; // write
+	chili_pa_en =               XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x108; // write
+	chili_tx_en =               XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x10C; // write
+	chili_rx_en =               XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x110; // write
+    chili_mcu_latch =           XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x114; // write
+    chili_mcu_reg_reset =       XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x118; // write
 
-#if defined (MCU_DRIVER)
-	chili_pa_en = 			XPAR_MCU_DRIVER_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x108; // write
-	chili_tr_sw = 			XPAR_MCU_DRIVER_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x104; // write
-	chili_mcu_reset = 		XPAR_MCU_DRIVER_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x100; // write
-	chili_rx_en = 			XPAR_MCU_DRIVER_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x110; // write
-	chili_tx_en = 			XPAR_MCU_DRIVER_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x10C; // write
-	chili_mcu_latch =		XPAR_MCU_DRIVER_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x114; // write
-	chili_mcu_reg_reset =	XPAR_MCU_DRIVER_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x118; // write
-
-	chili_init_done = 		XPAR_MCU_DRIVER_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x11C; // read
-	chili_latch_done = 		XPAR_MCU_DRIVER_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x120; // read
-	chili_reg_reset_done = 	XPAR_MCU_DRIVER_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x124; // read
+    chili_init_done =           XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x11C; // read
+    chili_latch_done =          XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x120; // read
+    chili_reg_reset_done =      XPAR_MCU_DRIVER_S_AXI_BASEADDR + 0x124; // read
 #endif
-
-#if defined (DAC_DRIVER)
-	dac_en = 				XPAR_DAC_DRIVER_PCORE_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x100;
+#ifdef DAC_DRIVER
+	dac_en = 					XPAR_DAC_DRIVER_S_AXI_BASEADDR + 0x100; // write
 #endif
+#ifdef TX_PCORE
+	clear_fifo = 				XPAR_QPSK_TX_S_AXI_BASEADDR + 0x100;  // write
+	tx_en = 					XPAR_QPSK_TX_S_AXI_BASEADDR + 0x104;  // write
 
-#if defined (RX_DRIVER)
-	chili_num_bytes_ready = XPAR_QPSK_RX_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x120;
-	chili_mcu_rx_ready = 	XPAR_QPSK_RX_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x100;
-	chili_percent_full = 	XPAR_QPSK_RX_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x11C;
-	chili_rssi = 			XPAR_QPSK_RX_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x128; // read
-	chili_dir = 			XPAR_QPSK_RX_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x130; // read
-	chili_rssi_en = 		XPAR_QPSK_RX_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x12C; // read
-	chili_dir_en = 			XPAR_QPSK_RX_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x134; // read
-	chili_rssi_high_goal = 	XPAR_QPSK_RX_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x110; // write
-	chili_rssi_low_goal = 	XPAR_QPSK_RX_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x10C; // write
-	chili_agc_en = 			XPAR_QPSK_RX_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x108; // write
-	rx_en = 				XPAR_QPSK_RX_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x114; // write
-
-	//added due to MATLAB --> Pcore
-	chili_get_next_byte	=	XPAR_QPSK_RX_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x104; //write
-	chili_byte_out = 		XPAR_QPSK_RX_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x118; //read
-	chili_byte_ready = 		XPAR_QPSK_RX_FIXPT_PCORE_0_S_AXI_BASEADDR + 0x124; //read
+	tx_done = 					XPAR_QPSK_TX_S_AXI_BASEADDR + 0x108;  // read
 #endif
+#ifdef TX_FIFO
+	tx_fifo_reset_fifo =		XPAR_TX_FIFO_S_AXI_BASEADDR + 0x100; // write
+	tx_fifo_store_byte =		XPAR_TX_FIFO_S_AXI_BASEADDR + 0x104; // write
+	tx_fifo_byte_in =			XPAR_TX_FIFO_S_AXI_BASEADDR + 0x108; // write
 
-#if defined (TX_DRIVER)
-
-	clear_fifo = 			XPAR_QPSK_TX_S_AXI_BASEADDR + 0x104; // write
-	tx_en = 				XPAR_QPSK_TX_S_AXI_BASEADDR + 0x108; // write
-
-	tx_done = 				XPAR_QPSK_TX_S_AXI_BASEADDR + 0x110; // read
-	clear_fifo_done = 		XPAR_QPSK_TX_S_AXI_BASEADDR + 0x11C; // read
-
-
-	store_byte = 			XPAR_TX_FIFO_S_AXI_BASEADDR + 0x100; // write
-	byte_in = 				XPAR_TX_FIFO_S_AXI_BASEADDR + 0x104; // write
-	reset_tx_fifo = 		XPAR_TX_FIFO_S_AXI_BASEADDR + 0x108; // write
-
-	byte_received = 		XPAR_TX_FIFO_S_AXI_BASEADDR + 0x10C; // read
-	fifo_full = 			XPAR_TX_FIFO_S_AXI_BASEADDR + 0x110; // read
+	tx_fifo_bytes_available = 	XPAR_TX_FIFO_S_AXI_BASEADDR + 0x10C; // read
+	tx_fifo_byte_received = 	XPAR_TX_FIFO_S_AXI_BASEADDR + 0x110; // read
 #endif
+#ifdef DC_OFFSET
+	chili_agc_en = 			XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x100; // write
+	chili_rssi_low_goal = 	XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x104; // write
+	chili_rssi_high_goal = 	XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x108; // write
+	rx_en = 				XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x10C; // write
 
-	chili_mcu_reg_reset = 1;
-	for (k = 0; k++; k<1000){
-		int j = 0;
-	};
-	chili_mcu_reg_reset = 0;
+	chili_rssi = 			XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x110; // read
+	chili_rssi_en = 		XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x114; // read
+	chili_dir = 			XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x118; // read
+	chili_dir_en = 			XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x11C; // read
+#endif
+#ifdef RX_PCORE
+	chili_mcu_rx_ready = 		XPAR_QPSK_RX_S_AXI_BASEADDR + 0x100; // write
 
-	// initialize rx driver
+	chili_num_bytes_ready = 	XPAR_QPSK_RX_S_AXI_BASEADDR + 0x104; // read
+#endif
+#ifdef RX_FIFO
+	rx_fifo_get_byte	=		XPAR_RX_FIFO_S_AXI_BASEADDR + 0x100; //write
+
+	rx_fifo_byte_out = 			XPAR_RX_FIFO_S_AXI_BASEADDR + 0x104; //read
+	rx_fifo_bytes_available = 	XPAR_RX_FIFO_S_AXI_BASEADDR + 0x108; //read
+	rx_fifo_byte_ready = 			XPAR_RX_FIFO_S_AXI_BASEADDR + 0x10C; //read
+#endif
+#ifdef DC_OFFSET
+	Xil_Out32(chili_rssi_high_goal, (u32)(1010*1010*2));
+	Xil_Out32(chili_rssi_low_goal, (u32)(990*990*2));
+	Xil_Out32(chili_agc_en, 0);
+#endif
+#ifdef RX_PCORE
 	Xil_Out32(chili_mcu_rx_ready, 1);
-	mcu_latch_registers();
 	Xil_Out32(chili_mcu_rx_ready, 0);
-	mcu_latch_registers();
 	Xil_Out32(chili_mcu_rx_ready, 1);
-	mcu_latch_registers();
-
-	// by default we enable Tx/Rx. User can disable later if they want
-	Chilipepper_TxEnable(1);
-	Chilipepper_RxEnable(1);
-	// disable data going to DAC prior to reset
-#if defined (DAC_DRIVER)
+#endif
+#ifdef MCU_DRIVER
+	Chilipepper_TxEnable(1);	// by default we enable Tx/Rx. User can disable later if they want
+	Chilipepper_RxEnable(1);	// by default we enable Tx/Rx. User can disable later if they want
+#endif
+#ifdef DAC_DRIVER
 	Xil_Out32(dac_en, 0);
 	mcu_latch_registers();
 #endif
+#ifdef MCU_DRIVER
 	Chilipepper_Reset();
-	// go ahead and reenable DAC
-#if defined (DAC_DRIVER)
+#endif
+#ifdef DAC_DRIVER
 	Xil_Out32(dac_en, 1);
 	mcu_latch_registers();
 #endif
@@ -157,20 +148,24 @@ int Chilipepper_Initialize(void) {
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 void mcu_latch_registers (void){
+#ifdef MCU_DRIVER
 	Xil_Out32(chili_mcu_latch, 1);
 	while(chili_latch_done == 0)
 		;
 	Xil_Out32(chili_mcu_latch, 0);
 	while(chili_latch_done == 1)
 		;
+#endif
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 // Check to see if onboard calibration has finished
 /////////////////////////////////////////////////////////////////////////////////////////////
 int Chilipepper_InitDone(void) {
-	int done;
+	int done = 0;
+#ifdef MCU_DRIVER
 	done = Xil_In32(chili_init_done);
+#endif
 	return done;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -179,6 +174,7 @@ int Chilipepper_InitDone(void) {
 // reset the board
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_Reset(void) {
+#ifdef MCU_DRIVER
 	// reset Chilipepper
 	Xil_Out32(chili_mcu_reset, 1);
 	mcu_latch_registers();
@@ -189,6 +185,7 @@ void Chilipepper_Reset(void) {
 	// don't continue until we get a valid init back from Chilipepper.
 	while (Chilipepper_InitDone() == 0)
 		;
+#endif
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -196,6 +193,7 @@ void Chilipepper_Reset(void) {
 // set the transmit/receive switch
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_SetTxRxSw(int zeroTxOneRx) {
+#ifdef MCU_DRIVER
 	// 0- transmit, 1-receive - defaults to Rx if input not zero
 	if (zeroTxOneRx == 0){
 		Xil_Out32(chili_tr_sw, 0);
@@ -205,6 +203,7 @@ void Chilipepper_SetTxRxSw(int zeroTxOneRx) {
 		Xil_Out32(chili_tr_sw, 1);
 		mcu_latch_registers();
 	}
+#endif
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -212,6 +211,7 @@ void Chilipepper_SetTxRxSw(int zeroTxOneRx) {
 // enable or disable the Tx PA
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_SetPA(int onOff) {
+#ifdef MCU_DRIVER
 	// if not 1 then some other value so for safety disable PA
 	if (onOff == 1){
 		Xil_Out32(chili_pa_en, 1);
@@ -221,6 +221,23 @@ void Chilipepper_SetPA(int onOff) {
 		Xil_Out32(chili_pa_en, 0);
 		mcu_latch_registers();
 	}
+#endif
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+// enable or disable the DC_Offset Correction
+/////////////////////////////////////////////////////////////////////////////////////////////
+void Chilipepper_SetDCOC(int onOff) {
+#ifdef DC_OFFSET
+	// if not 1 then some other value so for safety disable PA
+	if (onOff == 1){
+		Xil_Out32(rx_en, 1);
+	}
+	else{
+		Xil_Out32(rx_en, 0);
+	}
+#endif
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -228,6 +245,7 @@ void Chilipepper_SetPA(int onOff) {
 // enable or disable the Tx portion of the transceiver
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_TxEnable(int onOff) {
+#ifdef MCU_DRIVER
 	if (onOff == 1){
 		Xil_Out32(chili_tx_en, 1);
 		mcu_latch_registers();
@@ -236,6 +254,7 @@ void Chilipepper_TxEnable(int onOff) {
 		Xil_Out32(chili_tx_en, 0);
 		mcu_latch_registers();
 	}
+#endif
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -243,16 +262,16 @@ void Chilipepper_TxEnable(int onOff) {
 // enable or disable the Rx portion of the transceiver
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_RxEnable(int onOff) {
+#ifdef MCU_DRIVER
 	if (onOff == 1) {
 		//*chili_rx_en = 1; // active high (enable rx in MCU)
 		Xil_Out32(chili_rx_en, 1);
-		Xil_Out32(rx_en, 1);
 		mcu_latch_registers();
 	} else {
 		Xil_Out32(chili_rx_en, 0); // active high (disable rx in MCU)
-		Xil_Out32(rx_en, 0);
 		mcu_latch_registers();
 	}
+#endif
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -260,10 +279,10 @@ void Chilipepper_RxEnable(int onOff) {
 // read RSSI off the hardware core
 /////////////////////////////////////////////////////////////////////////////////////////////
 int Chilipepper_ReadRssi(void) {
-	Xuint32 rssiValue;
-
+	u32 rssiValue = 0;
+#ifdef DC_OFFSET
 	rssiValue = Xil_In32(chili_rssi);
-
+#endif
 	return (int) rssiValue;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -272,56 +291,14 @@ int Chilipepper_ReadRssi(void) {
 // turn Chilipeppers onboard LED on/off
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_SetLed(int onOff) {
+#ifdef MCU_UART
 	SendBuffer[0] = 0xFF;
 	SendBuffer[1] = 0x00;
 	SendBuffer[2] = onOff;
 	SendBuffer[3] = 0xFE;
 
 	Chilipepper_SetRegister();
-}
-/////////////////////////////////////////////////////////////////////////////////////////////
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-// Increment/Decrement the Chilipepper RX/TX center frequency
-/////////////////////////////////////////////////////////////////////////////////////////////
-void Chilipepper_DeltaFreq(int RXTXswitch, int IncDecswitch){
-	unsigned char myVar;
-	SendBuffer[0] = 0xFF;
-	SendBuffer[1] = (RXTXswitch) ? 0x08:0x07;
-	myVar = (IncDecswitch == '1') ? 0x01:0x00;
-	SendBuffer[2] = myVar;
-	SendBuffer[3] = 0xFE;
-
-	Chilipepper_SetRegister();
-	return;
-}
-/////////////////////////////////////////////////////////////////////////////////////////////
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-// change the Chilipepper RX/TX center frequency
-/////////////////////////////////////////////////////////////////////////////////////////////
-void Chilipepper_SendFreq(char data[], int RXTXswitch) {
-	SendBuffer[0] = 0xFF;
-	SendBuffer[1] = (RXTXswitch) ? 0x04:0x03;
-//	unsigned char myData = hex_decimal(data);
-	SendBuffer[2] = hex_decimal(data);
-	SendBuffer[3] = 0xFE;
-	Chilipepper_Delay();
-	Chilipepper_SetRegister();
-}
-/////////////////////////////////////////////////////////////////////////////////////////////
-
-/////////////////////////////////////////////////////////////////////////////////////////////
-// change the Chilipepper RX/TX bandpass filter bandwidth
-/////////////////////////////////////////////////////////////////////////////////////////////
-void Chilipepper_SendBand(char data[], int RXTXswitch) {
-	SendBuffer[0] = 0xFF;
-	SendBuffer[1] = (RXTXswitch) ? 0x06:0x05;
-	unsigned char myData = hex_decimal(data);
-	SendBuffer[2] = myData;
-	SendBuffer[3] = 0xFE;
-	Chilipepper_Delay();
-	Chilipepper_SetRegister();
+#endif
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -330,6 +307,7 @@ void Chilipepper_SendBand(char data[], int RXTXswitch) {
 /////////////////////////////////////////////////////////////////////////////////////////////
 int Chilipepper_ControlAgc(void) {
 	static int gain = 14;
+#ifdef DC_OFFSET
 	//int rssi
 	int dir;
 
@@ -357,6 +335,7 @@ int Chilipepper_ControlAgc(void) {
 		Xil_Out32(chili_agc_en, 0);
 	}
 	//xil_printf("Dir %d, RSSI %d, Gain %d\r\n",dir,rssi,gain);
+#endif
 	return gain;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -365,6 +344,7 @@ int Chilipepper_ControlAgc(void) {
 // Set the transmitter gain
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_SetTxGain(int dB) {
+#ifdef TX_PCORE
 	int lg;
 
 	if (dB < 0)
@@ -379,6 +359,7 @@ void Chilipepper_SetTxGain(int dB) {
 	SendBuffer[3] = 0xFE;
 
 	Chilipepper_SetRegister();
+#endif
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -386,12 +367,14 @@ void Chilipepper_SetTxGain(int dB) {
 // control the AGC
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_SetRxGain(int dB) {
+#ifdef RX_PCORE
 	SendBuffer[0] = 0xFF;
 	SendBuffer[1] = 0x02;
 	SendBuffer[2] = (unsigned char) dB;
 	SendBuffer[3] = 0xFE;
 
 	Chilipepper_SetRegister();
+#endif
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -447,8 +430,10 @@ void Chilipepper_SetRegister(void) {
 // Write packet to FIFO
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_WriteAckPacket(unsigned char *txBuf, unsigned char id) {
+#ifdef TX_PCORE
 	txBuf[4] = id; // payload
 	Chilipepper_WritePacket(txBuf, 1, 0);
+#endif
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -457,73 +442,74 @@ void Chilipepper_WriteAckPacket(unsigned char *txBuf, unsigned char id) {
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_WritePacket(unsigned char *txBuf, int numPayloadBytes,
 		unsigned char packetID) {
-	int count;
-
-	Xil_Out32(rx_en, 0);
+#ifdef TX_PCORE
+	int count, i;
 	Chilipepper_SetTxRxSw(0); // 0- transmit, 1-receive
-//	Chilipepper_FlushRxFifo();
-
+	Chilipepper_SetDCOC(0);
+	Chilipepper_FlushTxFifo();
+	Chilipepper_FlushRxFifo();
 	// 1.) set tx_en low, 2.) toggle clear_fifo, 3.) fill FIFO,
 	// 4.) set tx_en high, 5.) wait for tx_done to go high
 	Xil_Out32(tx_en, 0);
+
 	Xil_Out32(clear_fifo, 0);
 	Xil_Out32(clear_fifo, 1);
-	while(clear_fifo_done == 0)
-		;
+	while (i<200)
+		i++;
 	Xil_Out32(clear_fifo, 0);
-	while(clear_fifo_done == 1)
-		;
+	while (i>0)
+		i--;
+
 	txBuf[0] = numPayloadBytes % 256;
 	txBuf[1] = (numPayloadBytes >> 8) % 256;
 	txBuf[2] = (numPayloadBytes >> 16) % 256;
 	txBuf[3] = packetID;
 	Chilipepper_AppendCrc(txBuf, 4 + numPayloadBytes);
 	for (count = 0; count < (numPayloadBytes + 6); count++) {
-		Xil_Out32(tx_fifo, txBuf[count]);
-		Xil_Out32(store_byte, 1);
-		while (Xil_In32(byte_received) == 0)
+		Xil_Out32(tx_fifo_byte_in, txBuf[count]);
+		Xil_Out32(tx_fifo_store_byte, 1);
+		while (Xil_In32(tx_fifo_byte_received) == 0)
 			;
-		Xil_Out32(store_byte, 0);
-		while (Xil_In32(byte_received) == 1)
+		Xil_Out32(tx_fifo_store_byte, 0);
+		while (Xil_In32(tx_fifo_byte_received) == 1)
 			;
 	}
 
-	Xil_Out32(tx_fifo, 55); // help with SRRC filtering at end
-	Xil_Out32(store_byte, 1);
-	while (Xil_In32(byte_received) == 0)
+	Xil_Out32(tx_fifo_byte_in, 55); // help with SRRC filtering at end
+	Xil_Out32(tx_fifo_store_byte, 1);
+	while (Xil_In32(tx_fifo_byte_received) == 0)
 		;
-	Xil_Out32(store_byte, 0);
-	while (Xil_In32(byte_received) == 1)
-		;
-
-
-	Xil_Out32(tx_fifo, 66); // help with SRRC filtering at end
-	Xil_Out32(store_byte, 1);
-	while (Xil_In32(byte_received) == 0)
-		;
-	Xil_Out32(store_byte, 0);
-	while (Xil_In32(byte_received) == 1)
+	Xil_Out32(tx_fifo_store_byte, 0);
+	while (Xil_In32(tx_fifo_byte_received) == 1)
 		;
 
 
-	Xil_Out32(tx_fifo, 77); // help with SRRC filtering at end
-	Xil_Out32(store_byte, 1);
-	while (Xil_In32(byte_received) == 0)
+	Xil_Out32(tx_fifo_byte_in, 66); // help with SRRC filtering at end
+	Xil_Out32(tx_fifo_store_byte, 1);
+	while (Xil_In32(tx_fifo_byte_received) == 0)
 		;
-	Xil_Out32(store_byte, 0);
-	while (Xil_In32(byte_received) == 1)
+	Xil_Out32(tx_fifo_store_byte, 0);
+	while (Xil_In32(tx_fifo_byte_received) == 1)
+		;
+
+
+	Xil_Out32(tx_fifo_byte_in, 77); // help with SRRC filtering at end
+	Xil_Out32(tx_fifo_store_byte, 1);
+	while (Xil_In32(tx_fifo_byte_received) == 0)
+		;
+	Xil_Out32(tx_fifo_store_byte, 0);
+	while (Xil_In32(tx_fifo_byte_received) == 1)
 		;
 
 
 	Xil_Out32(tx_en, 1);
 
-	int i=0;
 	while (Xil_In32(tx_done) == 0)
-		i++;
 		;
 	// go back to receive
-	Xil_Out32(rx_en, 1);
+	Chilipepper_SetDCOC(1);
 	Chilipepper_SetTxRxSw(1); // 0- transmit, 1-receive
+#endif
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -532,13 +518,14 @@ void Chilipepper_WritePacket(unsigned char *txBuf, int numPayloadBytes,
 /////////////////////////////////////////////////////////////////////////////////////////////
 int Chilipepper_WritePacketWithAck(unsigned char *txBuf, int numPayloadBytes,
 		unsigned char *rxBuf) {
-	int success, numSendTries, numRecvTries;
+	int success = 0;
+#ifdef TX_PCORE
+	int numSendTries, numRecvTries;
 	unsigned char id;
 	static unsigned char count = 1; // packet ID is a sequential counter, *not* equal to 0 which is ACK
 	unsigned char retValue;
 	int numBytes;
 
-	success = 0;
 	numSendTries = 0;
 	do {
 		// transmit a packet with the count index
@@ -561,7 +548,7 @@ int Chilipepper_WritePacketWithAck(unsigned char *txBuf, int numPayloadBytes,
 
 			numRecvTries += 1;
 		} while (numRecvTries < 1000000);
-		success = 1;
+
 		if (success == 1)
 			break; // Tx/ACK went ok
 
@@ -571,7 +558,7 @@ int Chilipepper_WritePacketWithAck(unsigned char *txBuf, int numPayloadBytes,
 	count += 1;
 	if (count >= 255)
 		count = 1;
-
+#endif
 	return success;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -580,7 +567,9 @@ int Chilipepper_WritePacketWithAck(unsigned char *txBuf, int numPayloadBytes,
 // Write test "hello world!" packet to FIFO
 /////////////////////////////////////////////////////////////////////////////////////////////
 int Chilipepper_WriteTestPacketWithAck(unsigned char *rxBuf) {
-	int success, numSendTries, numRecvTries;
+	int success = 0;
+#ifdef TX_PCORE
+	int numSendTries, numRecvTries;
 	unsigned char id;
 	static unsigned char count = 1; // packet ID is a sequential counter, *not* equal to 0 which is ACK
 	unsigned char retValue;
@@ -619,7 +608,7 @@ int Chilipepper_WriteTestPacketWithAck(unsigned char *rxBuf) {
 	count += 1;
 	if (count >= 255)
 		count = 1;
-
+#endif
 	return success;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -628,23 +617,24 @@ int Chilipepper_WriteTestPacketWithAck(unsigned char *rxBuf) {
 // Write test "hello world!" packet to FIFO
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_WriteTestPacket(unsigned char count) {
+#ifdef TX_PCORE
 	unsigned char testBuf[18];
-	int i1;
-
-	Xil_Out32(rx_en, 0);
+	int i1, i;
 	Chilipepper_SetTxRxSw(0); // 0- transmit, 1-receive
+	Chilipepper_SetDCOC(0);
+	Chilipepper_FlushTxFifo();
 	Chilipepper_FlushRxFifo();
-
 	// 1.) set tx_en low, 2.) toggle clear_fifo, 3.) fill FIFO,
 	// 4.) set tx_en high, 5.) wait for tx_done to go high
 	Xil_Out32(tx_en, 0);
+
 	Xil_Out32(clear_fifo, 0);
 	Xil_Out32(clear_fifo, 1);
-	while(clear_fifo_done == 0)
-		;
+	while (i<200)
+		i++;
 	Xil_Out32(clear_fifo, 0);
-	while(clear_fifo_done == 1)
-		;
+	while (i>0)
+		i--;
 
 	// first three bytes are number of bytes to write to FIFO
 	testBuf[0] = 12;
@@ -666,49 +656,46 @@ void Chilipepper_WriteTestPacket(unsigned char count) {
 
 	Chilipepper_AppendCrc(testBuf, 16);
 	for (i1 = 0; i1 < 18; i1++){
-		Xil_Out32(tx_fifo, testBuf[i1]);
-		Xil_Out32(store_byte, 1);
-		while (Xil_In32(byte_received) == 0)
+		Xil_Out32(tx_fifo_byte_in, testBuf[i1]);
+		Xil_Out32(tx_fifo_store_byte, 1);
+		while (Xil_In32(tx_fifo_byte_received) == 0)
 		;
-		Xil_Out32(store_byte, 0);
-		while (Xil_In32(byte_received) == 1)
-			;
+		Xil_Out32(tx_fifo_store_byte, 0);
+		while (Xil_In32(tx_fifo_byte_received) == 1)
+		;
 	}
 
-	Xil_Out32(tx_fifo, 55); // help with SRRC filtering at end
-	Xil_Out32(store_byte, 1);
-	while (Xil_In32(byte_received) == 0)
+	Xil_Out32(tx_fifo_byte_in, 55); // help with SRRC filtering at end
+	Xil_Out32(tx_fifo_store_byte, 1);
+	while (Xil_In32(tx_fifo_byte_received) == 0)
 	;
-	Xil_Out32(store_byte, 0);
-	while (Xil_In32(byte_received) == 1)
+	Xil_Out32(tx_fifo_store_byte, 0);
+	while (Xil_In32(tx_fifo_byte_received) == 1)
 		;
 
-
-	Xil_Out32(tx_fifo, 66); // help with SRRC filtering at end
-	Xil_Out32(store_byte, 1);
-	while (Xil_In32(byte_received) == 0)
+	Xil_Out32(tx_fifo_byte_in, 66); // help with SRRC filtering at end
+	Xil_Out32(tx_fifo_store_byte, 1);
+	while (Xil_In32(tx_fifo_byte_received) == 0)
 	;
-	Xil_Out32(store_byte, 0);
-	while (Xil_In32(byte_received) == 1)
+	Xil_Out32(tx_fifo_store_byte, 0);
+	while (Xil_In32(tx_fifo_byte_received) == 1)
 		;
 
-
-	Xil_Out32(tx_fifo, 77); // help with SRRC filtering at end
-	Xil_Out32(store_byte, 1);
-	while (Xil_In32(byte_received) == 0)
+	Xil_Out32(tx_fifo_byte_in, 77); // help with SRRC filtering at end
+	Xil_Out32(tx_fifo_store_byte, 1);
+	while (Xil_In32(tx_fifo_byte_received) == 0)
 	;
-	Xil_Out32(store_byte, 0);
-	while (Xil_In32(byte_received) == 1)
+	Xil_Out32(tx_fifo_store_byte, 0);
+	while (Xil_In32(tx_fifo_byte_received) == 1)
 		;
-
 
 	Xil_Out32(tx_en, 1);
 
 	while (Xil_In32(tx_done) == 0)
 		;
-	// go back to receive mode
+	Chilipepper_SetDCOC(1);
 	Chilipepper_SetTxRxSw(1); // 0- transmit, 1-receive
-	Xil_Out32(rx_en, 1);
+#endif
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -717,15 +704,14 @@ void Chilipepper_WriteTestPacket(unsigned char count) {
 // #1 This begins by indicating that we are ready to receive a packet
 /////////////////////////////////////////////////////////////////////////////////////////////
 int Chilipepper_ReadPacket(unsigned char *rxBuf, unsigned char *id) {
-#ifdef RX_DRIVER
+#ifdef RX_PCORE
 	int numBytes, i1;
-	u32 value;
 	int numBytesReady;
 	int retValue;
 
 	// put transceiver in receive mode
 	Chilipepper_SetTxRxSw( 1 ); // 0- transmit, 1-receive
-	Xil_Out32(rx_en, 1);
+	Chilipepper_SetDCOC(1);
 	Xil_Out32(chili_mcu_rx_ready, 1);
 
 	numBytesReady = Xil_In32(chili_num_bytes_ready);
@@ -736,14 +722,14 @@ int Chilipepper_ReadPacket(unsigned char *rxBuf, unsigned char *id) {
 	// read the bytes and the CRC
 	for (i1=0; i1<numBytesReady; i1++)
 	{
-		Xil_Out32(chili_get_next_byte, 1);
+		Xil_Out32(rx_fifo_get_byte, 1);
 		int tries = 0;
-		while (Xil_In32(chili_byte_ready) == 0 && tries < 100)
+		while (Xil_In32(rx_fifo_byte_ready) == 0 && tries < 100)
 			tries++;
 		;
-		Xil_Out32(chili_get_next_byte, 0);
+		Xil_Out32(rx_fifo_get_byte, 0);
 		if (tries < 100)
-			rxBuf[i1] = Xil_In32(chili_byte_out);
+			rxBuf[i1] = Xil_In32(rx_fifo_byte_out);
 		else
 			rxBuf[i1] = 0;
 	}
@@ -769,20 +755,39 @@ int Chilipepper_ReadPacket(unsigned char *rxBuf, unsigned char *id) {
 /////////////////////////////////////////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////////////////////////////////////////
+// FlushTxFifo
+/////////////////////////////////////////////////////////////////////////////////////////////
+void Chilipepper_FlushTxFifo( void )
+{
+#ifdef TX_PCORE
+	int i = 0;
+
+	Xil_Out32(tx_fifo_reset_fifo, 1);
+	while (i<200)
+		i++;
+	Xil_Out32(tx_fifo_reset_fifo, 0);
+	while (i>0)
+		i--;
+#endif
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
 // FlushRxFifo
 /////////////////////////////////////////////////////////////////////////////////////////////
 void Chilipepper_FlushRxFifo(void) {
-#ifdef RX_DRIVER
+#ifdef RX_PCORE_SL
 	u32 empty, value;
 
 	// flush the read FIFO
-//	while(1)
-//	{
-//		XC_Read(chiliRxIface, chiliRxFromFifo->empty, &empty);
-//		if (empty == 1)
-//		break;
-//		XC_Read(chiliRxIface, chiliRxFromFifo->dout, &value);
-//	}
+	while(1)
+	{
+		XC_Read(chiliRxIface, chiliRxFromFifo->empty, &empty);
+		if (empty == 1)
+			break;
+		XC_Read(chiliRxIface, chiliRxFromFifo->dout, &value);
+	}
 #endif
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -861,6 +866,11 @@ void Chilipepper_AppendCrc(unsigned char *buf, int msgLength) {
 	buf[msgLength + 1] = lsb;
 }
 
+/**************************************************************************************
+ * This section is for outputting to the serial port, and can be used if Xil_printf is
+ * not functioning properly.
+ */
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 // Delay
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -927,22 +937,11 @@ void Chilipepper_printf(XUartPs *uart, unsigned char *str) {
 	return;
 }
 
-/* Function to convert hexadecimal to decimal. */
-int hex_decimal(char hex[])
-{
-	int i, length, sum = 0;
-	for (length = 0; hex[length] != '\0'; ++length)
-		;
-	for (i = 0; hex[i] != '\0'; ++i, --length) {
-		if (hex[i] >= '0' && hex[i] <= '9')
-			sum += (hex[i] - '0') * pow(16, length - 1);
-		if (hex[i] >= 'A' && hex[i] <= 'F')
-			sum += (hex[i] - 55) * pow(16, length - 1);
-		if (hex[i] >= 'a' && hex[i] <= 'f')
-			sum += (hex[i] - 87) * pow(16, length - 1);
-	}
-	return sum;
-}
+
+/*****************************************************
+ * This Section is used for Modifying Band and Frequency Settings
+ * for the Chilipepper FMC Board.
+ */
 
 void Chilipepper_SetFreq(int total, int RXTXswitch) {
 	char message[6];
@@ -985,6 +984,37 @@ void Chilipepper_SetFreq(int total, int RXTXswitch) {
 	return;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+// Increment/Decrement the Chilipepper RX/TX center frequency
+/////////////////////////////////////////////////////////////////////////////////////////////
+void Chilipepper_DeltaFreq(int RXTXswitch, int IncDecswitch){
+	unsigned char myVar;
+	SendBuffer[0] = 0xFF;
+	SendBuffer[1] = (RXTXswitch) ? 0x08:0x07;
+	myVar = (IncDecswitch == '1') ? 0x01:0x00;
+	SendBuffer[2] = myVar;
+	SendBuffer[3] = 0xFE;
+
+	Chilipepper_SetRegister();
+	return;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+// change the Chilipepper RX/TX center frequency
+/////////////////////////////////////////////////////////////////////////////////////////////
+void Chilipepper_SendFreq(char data[], int RXTXswitch) {
+	SendBuffer[0] = 0xFF;
+	SendBuffer[1] = (RXTXswitch) ? 0x04:0x03;
+	//	unsigned char myData = hex_decimal(data);
+	SendBuffer[2] = hex_decimal(data);
+	SendBuffer[3] = 0xFE;
+	Chilipepper_Delay();
+	Chilipepper_SetRegister();
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
 void Chilipepper_SetBand(int total, int RXTXswitch) {
 	char message[4];
 	int i, MyTotal = total;
@@ -1019,6 +1049,19 @@ void Chilipepper_SetBand(int total, int RXTXswitch) {
 	return;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+// change the Chilipepper RX/TX bandpass filter bandwidth
+/////////////////////////////////////////////////////////////////////////////////////////////
+void Chilipepper_SendBand(char data[], int RXTXswitch) {
+	SendBuffer[0] = 0xFF;
+	SendBuffer[1] = (RXTXswitch) ? 0x06:0x05;
+	unsigned char myData = hex_decimal(data);
+	SendBuffer[2] = myData;
+	SendBuffer[3] = 0xFE;
+	Chilipepper_Delay();
+	Chilipepper_SetRegister();
+}
+
 int checkEscapeValues(char hexData[3], int RXTXswitch, void (*sendEscape)(char[], int)){
 
 	if (hexData[0] == 'F' && hexData[1] == 'F'){
@@ -1051,4 +1094,21 @@ int checkEscapeValues(char hexData[3], int RXTXswitch, void (*sendEscape)(char[]
 		return 0;
 	}
 	return 1;
+}
+
+/* Function to convert hexadecimal to decimal. */
+int hex_decimal(char hex[])
+{
+	int i, length, sum = 0;
+	for (length = 0; hex[length] != '\0'; ++length)
+		;
+	for (i = 0; hex[i] != '\0'; ++i, --length) {
+		if (hex[i] >= '0' && hex[i] <= '9')
+			sum += (hex[i] - '0') * pow(16, length - 1);
+		if (hex[i] >= 'A' && hex[i] <= 'F')
+			sum += (hex[i] - 55) * pow(16, length - 1);
+		if (hex[i] >= 'a' && hex[i] <= 'f')
+			sum += (hex[i] - 87) * pow(16, length - 1);
+	}
+	return sum;
 }

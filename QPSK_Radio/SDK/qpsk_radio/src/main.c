@@ -1,16 +1,10 @@
 #include <stdio.h>
 #include "platform.h"
-#include "xbasic_types.h"
 #include "xgpio.h"
-#include "xparameters.h"
-#include "xstatus.h"
 #include "chilipepper.h"
 #include "xuartps.h"
-#include "xil_printf.h"
-#include "xscugic.h"
-#include "xil_exception.h"
 
-XGpio gpio_blinky, gpio_sw_test, /*gpio_btn,*/ gpio_gain, gpio_sw_tx_pa;
+XGpio gpio_blinky, gpio_sw_test, gpio_btn, gpio_gain, gpio_sw_tx_pa;
 XUartPs uartPs;
 XUartPs_Config *pUartPsConfig;
 
@@ -26,7 +20,6 @@ int main()
 	int currentGain;
 	unsigned char id, prevId;
 	int sw, i1;
-	int k = 1;
     int success;
     int pa, prevPa;
 	static int testBlinkCount;
@@ -50,10 +43,7 @@ int main()
 	Chilipepper_SetLed( 1 );
 
 
-//	xil_printf("\r\n\r\nWelcome to Toyon's Chilipepper QPSK demo. This demo was written in MATLAB using Mathworks HDL Coder.\r\n\r\n");
-	Chilipepper_printf(&uartPs,
-			(unsigned char *)"\r\n\r\nWelcome to Toyon's Chilipepper QPSK demo. This demo was written in MATLAB using Mathworks HDL Coder.\r\n\r\n");
-
+	xil_printf("\r\n\r\nWelcome to Toyon's Chilipepper QPSK demo. This demo was written in MATLAB using Mathworks HDL Coder.\r\n\r\n");
 	//Chilipepper_SetRxGain( 20 );
 	prevPa = 0;
 	prevId = 0;
@@ -69,7 +59,7 @@ int main()
         sw = XGpio_DiscreteRead(&gpio_sw_test, 1);
     	switch (sw)
     	{
-    	case 1: // normal operation
+    	case 0: // normal operation
     		// during normal operation adjust the AGC
 
         	// main priority is to parse OTA packets
@@ -121,14 +111,11 @@ int main()
     			XGpio_DiscreteWrite(&gpio_blinky, 1, 1);
 				if (txCount >= 10 || txTryCount > 100000)
 				{
-					//txSuccess = Chilipepper_WritePacketWithAck( txBuf, txCount, rxBuf );
-					Chilipepper_WritePacket(txBuf, txCount,k);
-					k++;
-
-					//if (txSuccess == 1)
-					//{
+					txSuccess = Chilipepper_WritePacketWithAck( txBuf, txCount, rxBuf );
+					if (txSuccess == 1)
+					{
 		    			XGpio_DiscreteWrite(&gpio_blinky, 1, 0);
-					//}
+					}
 	    			txCount = 0;
 	    			txTryCount = 0;
 				}
@@ -146,17 +133,14 @@ int main()
 	    		XGpio_DiscreteWrite(&gpio_blinky, 2, aliveLed);
 	    	}
     		break;
-    	case 0: // continuously send out packets
+    	case 1: // continuously send out packets
     		// do it once and then stall for a bit
     		for (i1=0; i1<5000; i1++)
     		{
     			if (i1 == 0)
     			{
     				XGpio_DiscreteWrite(&gpio_blinky, 1, 1);
-    				Chilipepper_WriteTestPacket( k );
-    				k++;
-    				if (k == 10)
-    					k = 1;
+    				Chilipepper_WriteTestPacket( 1 );
     				XGpio_DiscreteWrite(&gpio_blinky, 1, 0);
     			}
     		}
@@ -185,8 +169,8 @@ int main()
         		XGpio_DiscreteWrite(&gpio_blinky, 2, aliveLed);
         	}
 
-        	//if (DebouncButton() == 0)
-    		//	break;
+        	if (DebouncButton() == 0)
+    			break;
 
 			XGpio_DiscreteWrite(&gpio_blinky, 1, 1);
         	success = Chilipepper_WriteTestPacketWithAck( rxBuf );
@@ -237,7 +221,7 @@ void WriteLedGain( int gain )
 		break;
 	}
 }
-/*
+
 int DebouncButton( void )
 {
     int btn;
@@ -269,7 +253,7 @@ int DebouncButton( void )
 
     return 1;
 }
-*/
+
 int SetupPeripherals( void )
 {
 	int status;
@@ -289,8 +273,8 @@ int SetupPeripherals( void )
     XGpio_Initialize(&gpio_sw_tx_pa, XPAR_AXI_GPIO_PA_DEVICE_ID);
     XGpio_SetDataDirection(&gpio_sw_tx_pa, 1, 1+2+4+8+16);
 
-//    XGpio_Initialize(&gpio_btn, XPAR_AXI_GPIO_BUTTON_DEVICE_ID);
-//    XGpio_SetDataDirection(&gpio_btn, 1, 1);
+    XGpio_Initialize(&gpio_btn, XPAR_AXI_GPIO_BUTTON_DEVICE_ID);
+    XGpio_SetDataDirection(&gpio_btn, 1, 1);
 
     pUartPsConfig = XUartPs_LookupConfig(XPAR_PS7_UART_1_DEVICE_ID);
 	if (NULL == pUartPsConfig) {
@@ -304,3 +288,9 @@ int SetupPeripherals( void )
 
 	return XST_SUCCESS;
 }
+
+
+
+
+
+
