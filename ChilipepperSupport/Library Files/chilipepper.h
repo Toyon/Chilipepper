@@ -21,6 +21,7 @@ int  Chilipepper_WriteTestPacketWithAck( unsigned char *rxBuf );
 void Chilipepper_WriteAckPacket( unsigned char *txBuf, unsigned char id );
 int  Chilipepper_CheckCrc( unsigned char *rxBuf, int numBytes );
 void Chilipepper_AppendCrc( unsigned char *buf, int msgLength );
+void Chilipepper_FlushTxFifo( void );
 
 int Chilipepper_ControlAgc( void );
 int Chilipepper_ReadRssi( void );
