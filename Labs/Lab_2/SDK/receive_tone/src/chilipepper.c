@@ -443,20 +443,22 @@ void Chilipepper_WriteAckPacket(unsigned char *txBuf, unsigned char id) {
 void Chilipepper_WritePacket(unsigned char *txBuf, int numPayloadBytes,
 		unsigned char packetID) {
 #ifdef TX_PCORE
-	int count;
+	int count, i;
 	Chilipepper_SetTxRxSw(0); // 0- transmit, 1-receive
 	Chilipepper_SetDCOC(0);
+	Chilipepper_FlushTxFifo();
 	Chilipepper_FlushRxFifo();
-
 	// 1.) set tx_en low, 2.) toggle clear_fifo, 3.) fill FIFO,
 	// 4.) set tx_en high, 5.) wait for tx_done to go high
 	Xil_Out32(tx_en, 0);
 
-	Xil_Out32(clear_fifo, 1);
-	Xil_Out32(tx_fifo_reset_fifo,1);
-	Chilipepper_Delay();
 	Xil_Out32(clear_fifo, 0);
-	Xil_Out32(tx_fifo_reset_fifo,0);
+	Xil_Out32(clear_fifo, 1);
+	while (i<200)
+		i++;
+	Xil_Out32(clear_fifo, 0);
+	while (i>0)
+		i--;
 
 	txBuf[0] = numPayloadBytes % 256;
 	txBuf[1] = (numPayloadBytes >> 8) % 256;
@@ -617,19 +619,22 @@ int Chilipepper_WriteTestPacketWithAck(unsigned char *rxBuf) {
 void Chilipepper_WriteTestPacket(unsigned char count) {
 #ifdef TX_PCORE
 	unsigned char testBuf[18];
-	int i1;
+	int i1, i;
 	Chilipepper_SetTxRxSw(0); // 0- transmit, 1-receive
 	Chilipepper_SetDCOC(0);
+	Chilipepper_FlushTxFifo();
 	Chilipepper_FlushRxFifo();
 	// 1.) set tx_en low, 2.) toggle clear_fifo, 3.) fill FIFO,
 	// 4.) set tx_en high, 5.) wait for tx_done to go high
 	Xil_Out32(tx_en, 0);
 
-	Xil_Out32(tx_fifo_reset_fifo,1);
-	Xil_Out32(clear_fifo, 1);
-	Chilipepper_Delay();
-	Xil_Out32(tx_fifo_reset_fifo,0);
 	Xil_Out32(clear_fifo, 0);
+	Xil_Out32(clear_fifo, 1);
+	while (i<200)
+		i++;
+	Xil_Out32(clear_fifo, 0);
+	while (i>0)
+		i--;
 
 	// first three bytes are number of bytes to write to FIFO
 	testBuf[0] = 12;
@@ -748,6 +753,25 @@ int Chilipepper_ReadPacket(unsigned char *rxBuf, unsigned char *id) {
 	return 0;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+// FlushTxFifo
+/////////////////////////////////////////////////////////////////////////////////////////////
+void Chilipepper_FlushTxFifo( void )
+{
+#ifdef TX_PCORE
+	int i = 0;
+
+	Xil_Out32(tx_fifo_reset_fifo, 1);
+	while (i<200)
+		i++;
+	Xil_Out32(tx_fifo_reset_fifo, 0);
+	while (i>0)
+		i--;
+#endif
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 // FlushRxFifo
