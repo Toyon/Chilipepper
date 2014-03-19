@@ -49,12 +49,12 @@ data = tx_fifo(rdIndex);
 
 d_i_out = 0;
 d_q_out = 0;
-% fifo should be empty and the processor says go ahead and transmit
+% if the processor says transmit, start sending what is in the buffer.
 % we stop when we've written all the data out that we wrote to the fifo.
 % This core doesn't care about packet length, just about how many bytes got
 % written to the fifo.
 PAD_BITS = 24;
-if empty_in == 1 && tx_en_in == 1 && txDone == 0
+if tx_en_in == 1 && txDone == 0
     if sentTrain <= PAD_BITS
         if count == 0
             diLatch = mod(sentTrain,2)*2-1;
