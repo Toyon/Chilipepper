@@ -343,8 +343,8 @@ int Chilipepper_ControlAgc(void) {
 		Xil_Out32(chili_agc_en, 0);
 	}
 	//xil_printf("Dir %d, RSSI %d, Gain %d\r\n",dir,rssi,gain);
-#endif
 	Xil_Out32(gain_in, gain);
+#endif
 	return gain;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
