@@ -12,7 +12,7 @@
 //#define TX_PCORE
 //#define TX_FIFO
 #define DC_OFFSET
-//#define RX_PCORE
+#define RX_PCORE
 //#define RX_FIFO
 #define MCU_UART
 
@@ -40,7 +40,7 @@ u32 tx_fifo_bytes_available,tx_fifo_byte_received; // read
 #endif
 #ifdef DC_OFFSET	// DC Offset registers
 u32 chili_agc_en, chili_rssi_low_goal, chili_rssi_high_goal, rx_en; // write
-u32 chili_rssi, chili_rssi_en, chili_dir, chili_dir_en; // read
+u32 chili_rssi, chili_rssi_en, chili_dir, chili_dir_en, gain_in; // read
 #endif
 #ifdef RX_PCORE		// RX registers
 u32 chili_mcu_rx_ready; // write
@@ -100,11 +100,10 @@ int Chilipepper_Initialize(void) {
 	chili_rssi_low_goal = 	XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x104; // write
 	chili_rssi_high_goal = 	XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x108; // write
 	rx_en = 				XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x10C; // write
+	gain_in = 				XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x118; // write
 
 	chili_rssi = 			XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x110; // read
-	chili_rssi_en = 		XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x114; // read
-	chili_dir = 			XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x118; // read
-	chili_dir_en = 			XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x11C; // read
+	chili_dir = 			XPAR_DC_OFFSET_S_AXI_BASEADDR + 0x114; // read
 #endif
 #ifdef RX_PCORE
 	chili_mcu_rx_ready = 		XPAR_QPSK_RX_S_AXI_BASEADDR + 0x100; // write
@@ -334,8 +333,18 @@ int Chilipepper_ControlAgc(void) {
 		Xil_Out32(chili_agc_en, 1);
 		Xil_Out32(chili_agc_en, 0);
 	}
+	if (dir == 3) // salturating!
+	{
+		gain -= 10;
+		if (gain < 0)
+			gain = 0; // don't allow to fall below 0
+		Chilipepper_SetRxGain(gain);
+		Xil_Out32(chili_agc_en, 1);
+		Xil_Out32(chili_agc_en, 0);
+	}
 	//xil_printf("Dir %d, RSSI %d, Gain %d\r\n",dir,rssi,gain);
 #endif
+	Xil_Out32(gain_in, gain);
 	return gain;
 }
 /////////////////////////////////////////////////////////////////////////////////////////////
@@ -705,6 +714,7 @@ void Chilipepper_WriteTestPacket(unsigned char count) {
 /////////////////////////////////////////////////////////////////////////////////////////////
 int Chilipepper_ReadPacket(unsigned char *rxBuf, unsigned char *id) {
 #ifdef RX_PCORE
+#ifdef RX_FIFO
 	int numBytes, i1;
 	int numBytesReady;
 	int retValue;
@@ -749,6 +759,7 @@ int Chilipepper_ReadPacket(unsigned char *rxBuf, unsigned char *id) {
 	Xil_Out32(chili_mcu_rx_ready, 1);
 
 	return retValue;
+#endif
 #endif
 	return 0;
 }
