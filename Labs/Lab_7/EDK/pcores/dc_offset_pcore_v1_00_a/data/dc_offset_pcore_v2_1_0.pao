@@ -1,7 +1,7 @@
 ##############################################################################
 ## File Name:         codegen\ipcore\dc_offset_pcore_v1_00_a\data\dc_offset_pcore_v2_1_0.pao
 ## Description:       Peripheral Analysis Order
-## Created:           2013-12-31 17:34:21
+## Created:           2014-03-19 12:49:25
 ##############################################################################
 
 lib dc_offset_pcore_v1_00_a dc_offset_correction_fixpt_pkg vhdl
