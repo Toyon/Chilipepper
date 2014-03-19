@@ -41,7 +41,6 @@
  PORT tx_clock_generator_LOCKED_pin = tx_clock_generator_LOCKED, DIR = O
  PORT mcu_uart_RX_pin = mcu_uart_RX, DIR = I
  PORT mcu_uart_TX_pin = mcu_uart_TX, DIR = O
- PORT dc_offset_blinky_pin = dc_offset_blinky, DIR = O
 
 
 BEGIN processing_system7
@@ -185,9 +184,6 @@ BEGIN dc_offset_pcore
  PORT q_in = dc_offset_q_in
  PORT IPCORE_RESETN = processing_system7_0_FCLK_RESET0_N
  PORT IPCORE_CLK = rx_clock_generator_CLKOUT1
- PORT blinky = dc_offset_blinky
- PORT i_out = dc_offset_i_out_to_chipscope_ila_0
- PORT q_out = dc_offset_q_out_to_chipscope_ila_0
 END
 
 BEGIN clock_generator
@@ -237,23 +233,5 @@ BEGIN axi_uartlite
  PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
  PORT RX = mcu_uart_RX
  PORT TX = mcu_uart_TX
-END
-
-BEGIN chipscope_ila
- PARAMETER INSTANCE = chipscope_ila_0
- PARAMETER HW_VER = 1.05.a
- PARAMETER C_NUM_DATA_SAMPLES = 4096
- PARAMETER C_TRIG0_UNITS = 1
- PARAMETER C_TRIG0_TRIGGER_IN_WIDTH = 37
- PORT chipscope_ila_control = chipscope_ila_0_icon_control
- PORT CLK = rx_clock_generator_CLKOUT0
- PORT TRIG0 = adc_driver_rxd & adc_driver_rx_iq_sel & dc_offset_i_out_to_chipscope_ila_0 & dc_offset_q_out_to_chipscope_ila_0
-END
-
-BEGIN chipscope_icon
- PARAMETER INSTANCE = chipscope_icon_0
- PARAMETER HW_VER = 1.06.a
- PARAMETER C_NUM_CONTROL_PORTS = 1
- PORT control0 = chipscope_ila_0_icon_control
 END
 

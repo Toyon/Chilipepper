@@ -94,7 +94,7 @@ thead.reportTableHeader {
 <tr>
 <td>IP core generated on
 </td>
-<td class="summaryTableSndColEvenRow">31-Dec-2013 17:34:21
+<td class="summaryTableSndColEvenRow">19-Mar-2014 12:49:26
 </td>
 </tr>
 <tr>
@@ -162,7 +162,7 @@ Target platform interface table:
 </td>
 <td class="distinctCellColor">Inport
 </td>
-<td class="distinctCellColor">ufix24_En0
+<td class="distinctCellColor">ufix30_En0
 </td>
 <td class="distinctCellColor">AXI4-Lite
 </td>
@@ -174,7 +174,7 @@ Target platform interface table:
 </td>
 <td>Inport
 </td>
-<td>ufix24_En0
+<td>ufix30_En0
 </td>
 <td>AXI4-Lite
 </td>
@@ -194,19 +194,19 @@ Target platform interface table:
 </td>
 </tr>
 <tr>
-<td>dc_offset_correction_fixpt/i_out
+<td>dc_offset_correction_fixpt/gain_in
 </td>
-<td>Outport
+<td>Inport
 </td>
-<td>sfix12_En0
+<td>ufix6_En0
 </td>
-<td>External Port
+<td>AXI4-Lite
 </td>
-<td>
+<td>x"118"
 </td>
 </tr>
 <tr>
-<td class="distinctCellColor">dc_offset_correction_fixpt/q_out
+<td class="distinctCellColor">dc_offset_correction_fixpt/i_out
 </td>
 <td class="distinctCellColor">Outport
 </td>
@@ -218,27 +218,27 @@ Target platform interface table:
 </td>
 </tr>
 <tr>
-<td>dc_offset_correction_fixpt/rssi_out
+<td>dc_offset_correction_fixpt/q_out
 </td>
 <td>Outport
 </td>
-<td>ufix24_En0
+<td>sfix12_En0
 </td>
-<td>AXI4-Lite
+<td>External Port
 </td>
-<td>x"110"
+<td>
 </td>
 </tr>
 <tr>
-<td class="distinctCellColor">dc_offset_correction_fixpt/rssi_en_out
+<td class="distinctCellColor">dc_offset_correction_fixpt/rssi_out
 </td>
 <td class="distinctCellColor">Outport
 </td>
-<td class="distinctCellColor">ufix1_En0
+<td class="distinctCellColor">ufix24_En0
 </td>
 <td class="distinctCellColor">AXI4-Lite
 </td>
-<td class="distinctCellColor">x"114"
+<td class="distinctCellColor">x"110"
 </td>
 </tr>
 <tr>
@@ -250,27 +250,123 @@ Target platform interface table:
 </td>
 <td>AXI4-Lite
 </td>
-<td>x"118"
+<td>x"114"
 </td>
 </tr>
 <tr>
-<td class="distinctCellColor">dc_offset_correction_fixpt/dir_en_out
+<td class="distinctCellColor">dc_offset_correction_fixpt/blinky
 </td>
 <td class="distinctCellColor">Outport
 </td>
 <td class="distinctCellColor">ufix1_En0
 </td>
-<td class="distinctCellColor">AXI4-Lite
+<td class="distinctCellColor">External Port
 </td>
-<td class="distinctCellColor">x"11C"
+<td class="distinctCellColor">
 </td>
 </tr>
 <tr>
-<td>dc_offset_correction_fixpt/blinky
+<td>dc_offset_correction_fixpt/d1
+</td>
+<td>Outport
+</td>
+<td>ufix24_En0
+</td>
+<td>External Port
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">dc_offset_correction_fixpt/d2
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">ufix24_En0
+</td>
+<td class="distinctCellColor">External Port
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td>dc_offset_correction_fixpt/d3
+</td>
+<td>Outport
+</td>
+<td>ufix24_En0
+</td>
+<td>External Port
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">dc_offset_correction_fixpt/d4
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">ufix24_En0
+</td>
+<td class="distinctCellColor">External Port
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td>dc_offset_correction_fixpt/d5
+</td>
+<td>Outport
+</td>
+<td>ufix2_En0
+</td>
+<td>External Port
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">dc_offset_correction_fixpt/d6
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">ufix30_En0
+</td>
+<td class="distinctCellColor">External Port
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td>dc_offset_correction_fixpt/d7
 </td>
 <td>Outport
 </td>
 <td>ufix1_En0
+</td>
+<td>External Port
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">dc_offset_correction_fixpt/d8
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">ufix1_En0
+</td>
+<td class="distinctCellColor">External Port
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td>dc_offset_correction_fixpt/gain_out
+</td>
+<td>Outport
+</td>
+<td>ufix6_En0
 </td>
 <td>External Port
 </td>
@@ -345,27 +441,19 @@ The following AXI4-Lite bus accessible registers were generated for this IP core
 </td>
 </tr>
 <tr>
-<td class="distinctCellColor">rssi_en_out_Data
+<td class="distinctCellColor">dir_out_Data
 </td>
 <td class="distinctCellColor">0x114
 </td>
-<td class="distinctCellColor">data register for port rssi_en_out
+<td class="distinctCellColor">data register for port dir_out
 </td>
 </tr>
 <tr>
-<td>dir_out_Data
+<td>gain_in_Data
 </td>
 <td>0x118
 </td>
-<td>data register for port dir_out
-</td>
-</tr>
-<tr>
-<td class="distinctCellColor">dir_en_out_Data
-</td>
-<td class="distinctCellColor">0x11C
-</td>
-<td class="distinctCellColor">data register for port dir_en_out
+<td>data register for port gain_in
 </td>
 </tr>
 </tbody>
