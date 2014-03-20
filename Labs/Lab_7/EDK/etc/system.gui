@@ -74,7 +74,7 @@
   </SET>
 
   <SET CLASS="PROJECT" DISPLAYMODE="TREE" VIEW_ID="PORT">
-    <HEADERS HSCROLL="0" VSCROLL="9">
+    <HEADERS HSCROLL="0" VSCROLL="0">
       <VARIABLE COL_INDEX="0" COL_WIDTH="166" IS_VISIBLE="TRUE" VIEWDISP="Name" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="2" COL_WIDTH="314" IS_VISIBLE="TRUE" VIEWDISP="Connected Port" VIEWTYPE="HEADER"/>
       <VARIABLE COL_INDEX="1" COL_WIDTH="263" IS_VISIBLE="TRUE" VIEWDISP="Net" VIEWTYPE="HEADER"/>
@@ -90,13 +90,8 @@
       <VARIABLE COL_INDEX="11" COL_WIDTH="100" IS_VISIBLE="TRUE" VIEWDISP="Differential Polarity" VIEWTYPE="HEADER"/>
     </HEADERS>
     <SPLITTERS COLLAPSIBLE="1" HANDLEWIDTH="5" MARKER="255" ORIENTATION="1" RESIZE="1" SIZES="62,962,200" VERSION="0"/>
-    <SET ID="tx_clock_generator" IS_EXPANDED="TRUE"/>
-    <SET ID="rx_clock_generator" IS_EXPANDED="TRUE"/>
-    <SET ID="qpsk_rx" IS_EXPANDED="TRUE"/>
     <STATUS>
-      <SELECTIONS>
-        <VARIABLE ID="rx_clock_generator"/>
-      </SELECTIONS>
+      <SELECTIONS/>
     </STATUS>
     <SEQUENCES IS_DEF_SEQUENCES="TRUE">
       <VARIABLE ID="ExternalPorts" ROW_INDEX="0"/>
@@ -105,9 +100,9 @@
       <VARIABLE ID="adc_driver" ROW_INDEX="3"/>
       <VARIABLE ID="mcu_driver" ROW_INDEX="6"/>
       <VARIABLE ID="dc_offset" ROW_INDEX="5"/>
-      <VARIABLE ID="tx_clock_generator" IS_EXPANDED="TRUE" ROW_INDEX="11"/>
-      <VARIABLE ID="rx_clock_generator" IS_EXPANDED="TRUE" ROW_INDEX="10"/>
-      <VARIABLE ID="qpsk_rx" IS_EXPANDED="TRUE" ROW_INDEX="7"/>
+      <VARIABLE ID="tx_clock_generator" ROW_INDEX="11"/>
+      <VARIABLE ID="rx_clock_generator" ROW_INDEX="10"/>
+      <VARIABLE ID="qpsk_rx" ROW_INDEX="7"/>
       <VARIABLE ID="mcu_uart" ROW_INDEX="4"/>
       <VARIABLE ID="chipscope_ila_0" ROW_INDEX="9"/>
       <VARIABLE ID="chipscope_icon_0" ROW_INDEX="8"/>
