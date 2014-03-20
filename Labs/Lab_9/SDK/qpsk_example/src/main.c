@@ -14,7 +14,7 @@ int SetupPeripherals( void );
 int main()
 {
 	int sentCount;
-	int aliveLed = 0, statusLed = 0;;
+	int aliveLed = 0, statusLed = 0;
 	int numBytes;
 	int sw, i1;
 	static int BlinkCount;
