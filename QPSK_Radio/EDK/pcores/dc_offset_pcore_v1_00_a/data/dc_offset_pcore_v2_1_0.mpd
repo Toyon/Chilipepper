@@ -1,7 +1,7 @@
 ##############################################################################
 ## File Name:         codegen\ipcore\dc_offset_pcore_v1_00_a\data\dc_offset_pcore_v2_1_0.mpd
 ## Description:       Microprocessor Peripheral Description
-## Created:           2014-01-16 16:38:02
+## Created:           2014-03-15 17:13:26
 ##############################################################################
 
 BEGIN dc_offset_pcore
@@ -51,4 +51,13 @@ PORT q_in = "", DIR = I, VEC = [11:0]
 PORT i_out = "", DIR = O, VEC = [11:0]
 PORT q_out = "", DIR = O, VEC = [11:0]
 PORT blinky = "", DIR = O
+PORT d1 = "", DIR = O, VEC = [23:0]
+PORT d2 = "", DIR = O, VEC = [23:0]
+PORT d3 = "", DIR = O, VEC = [23:0]
+PORT d4 = "", DIR = O, VEC = [23:0]
+PORT d5 = "", DIR = O, VEC = [1:0]
+PORT d6 = "", DIR = O, VEC = [29:0]
+PORT d7 = "", DIR = O
+PORT d8 = "", DIR = O
+PORT gain_out = "", DIR = O, VEC = [5:0]
 

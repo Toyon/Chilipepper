@@ -1,7 +1,7 @@
 ##############################################################################
 ## File Name:         codegen\ipcore\tx_fifo_pcore_v1_00_a\data\tx_fifo_pcore_v2_1_0.mpd
 ## Description:       Microprocessor Peripheral Description
-## Created:           2014-01-16 16:54:57
+## Created:           2014-01-02 13:50:14
 ##############################################################################
 
 BEGIN tx_fifo_pcore
