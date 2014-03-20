@@ -170,7 +170,7 @@ for i1 = 1:length(r)+200
     r_out(i1) = real(complex(i_in,q_in));
    
     [dc_i_out, dc_q_out, rssi_out, rssi_en_out, dir_out, dir_en_out] = ...
-        dc_offset_correction(i_in, q_in, mod(i1,2), 500, 1500, +(i1>3000));
+        dc_offset_correction(i_in, q_in, mod(i1,2), 500, 1500, +(i1>3000), 0);
     
     [store_byte, byte, num_bytes_ready, clear_fifo_out] =...
         qpsk_rx(dc_i_out, dc_q_out, mcu_rdy);

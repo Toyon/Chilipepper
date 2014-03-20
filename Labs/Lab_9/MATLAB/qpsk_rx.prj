@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.matlabhdlcoder" plugin-version="R2013a">
-  <configuration file="C:\GIT\QPSK_Pcore\Labs\Lab_9\MATLAB\qpsk_rx.prj" location="C:\GIT\QPSK_Pcore\Labs\Lab_9\MATLAB" name="qpsk_rx" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
+  <configuration file="C:\GIT\Chilipepper_Labs\Labs\Lab_9\MATLAB\qpsk_rx.prj" location="C:\GIT\Chilipepper_Labs\Labs\Lab_9\MATLAB" name="qpsk_rx" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
     <param.AutoInferDefaultFile />
     <param.AutoInferUseVariableSize>false</param.AutoInferUseVariableSize>
     <param.AutoInferUseUnboundedSize>false</param.AutoInferUseUnboundedSize>
@@ -13,10 +13,10 @@
     <param.hdl.BuildDirectory>option.hdl.ProjectDirectory</param.hdl.BuildDirectory>
     <param.hdl.BuildSpecifiedDirectory />
     <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\qpsk_rx\fixpt\qpsk_rx_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
-    <param.fixptconv.InstrumentedBuildChecksum>73381453</param.fixptconv.InstrumentedBuildChecksum>
+    <param.fixptconv.InstrumentedBuildChecksum>466154990</param.fixptconv.InstrumentedBuildChecksum>
     <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
-    <param.fixptconv.FixedPointValidationChecksum>269464570</param.fixptconv.FixedPointValidationChecksum>
-    <param.fixptconv.FixedPointSourceCodeChecksum>1471464683</param.fixptconv.FixedPointSourceCodeChecksum>
+    <param.fixptconv.FixedPointValidationChecksum>361170454</param.fixptconv.FixedPointValidationChecksum>
+    <param.fixptconv.FixedPointSourceCodeChecksum>2147628211</param.fixptconv.FixedPointSourceCodeChecksum>
     <param.fixptconv.FixedPointStaticAnalysisChecksum />
     <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}\qpsk_tb.m</param.fixptconv.DefaultTestFile>
     <param.fixptconv.ExcludedFixedPointVerificationFiles />
@@ -260,6 +260,24 @@
           <Variable name="blinky_cnt" />
           <Variable name="byte" />
           <Variable name="clear_fifo_out" />
+          <Variable name="d1">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="d2">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="d3">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="d4">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="d5">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="d6">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
           <Variable name="finish_rx" />
           <Variable name="finish_rx_latch" />
           <Variable name="i_in">
@@ -270,16 +288,24 @@
           <Variable name="q_in">
             <Column property="ProposedType" type="String" value="sfix12" />
           </Variable>
-          <Variable name="s_c_i" />
-          <Variable name="s_c_q" />
+          <Variable name="s_c_i">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="s_c_q">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
           <Variable name="s_f_i">
             <Column property="ProposedType" type="String" value="sfix26_En12" />
           </Variable>
           <Variable name="s_f_q">
             <Column property="ProposedType" type="String" value="sfix26_En12" />
           </Variable>
-          <Variable name="s_t_i" />
-          <Variable name="s_t_q" />
+          <Variable name="s_t_i">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
+          <Variable name="s_t_q">
+            <Column property="ProposedType" type="String" value="sfix26_En12" />
+          </Variable>
           <Variable name="store_byte" />
         </Function>
       </UserEntities>
@@ -1605,6 +1631,84 @@
             <Column property="OverflowMode" type="String" value="wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
+          <Variable name="d1">
+            <Column property="Kind" type="String" value="output" />
+            <Column property="SimMin" type="Double" value="-160.32044179377198" />
+            <Column property="SimMax" type="Double" value="158.90185389719198" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+            <Column property="IsInteger" type="Boolean" value="false" />
+            <Column property="RoundMode" type="String" value="floor" />
+            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="ProposedType" type="String" value="sfix14_En5" />
+          </Variable>
+          <Variable name="d2">
+            <Column property="Kind" type="String" value="output" />
+            <Column property="SimMin" type="Double" value="-160.458904534905" />
+            <Column property="SimMax" type="Double" value="157.84190406761502" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+            <Column property="IsInteger" type="Boolean" value="false" />
+            <Column property="RoundMode" type="String" value="floor" />
+            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="ProposedType" type="String" value="sfix14_En5" />
+          </Variable>
+          <Variable name="d3">
+            <Column property="Kind" type="String" value="output" />
+            <Column property="SimMin" type="Double" value="-96.67954796648482" />
+            <Column property="SimMax" type="Double" value="97.48725666699808" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+            <Column property="IsInteger" type="Boolean" value="false" />
+            <Column property="RoundMode" type="String" value="floor" />
+            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="ProposedType" type="String" value="sfix14_En6" />
+          </Variable>
+          <Variable name="d4">
+            <Column property="Kind" type="String" value="output" />
+            <Column property="SimMin" type="Double" value="-97.22037982126034" />
+            <Column property="SimMax" type="Double" value="96.32167995391893" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+            <Column property="IsInteger" type="Boolean" value="false" />
+            <Column property="RoundMode" type="String" value="floor" />
+            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="ProposedType" type="String" value="sfix14_En6" />
+          </Variable>
+          <Variable name="d5">
+            <Column property="Kind" type="String" value="output" />
+            <Column property="SimMin" type="Double" value="-95.73561539598543" />
+            <Column property="SimMax" type="Double" value="96.23742257334511" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+            <Column property="IsInteger" type="Boolean" value="false" />
+            <Column property="RoundMode" type="String" value="floor" />
+            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="ProposedType" type="String" value="sfix14_En6" />
+          </Variable>
+          <Variable name="d6">
+            <Column property="Kind" type="String" value="output" />
+            <Column property="SimMin" type="Double" value="-96.67100447014373" />
+            <Column property="SimMax" type="Double" value="95.39313625785793" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+            <Column property="IsInteger" type="Boolean" value="false" />
+            <Column property="RoundMode" type="String" value="floor" />
+            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="ProposedType" type="String" value="sfix14_En6" />
+          </Variable>
           <Variable name="finish_rx">
             <Column property="Kind" type="String" value="local" />
             <Column property="SimMin" type="Double" value="0.0" />
@@ -1865,6 +1969,48 @@
           <SelectedInterface>External Port</SelectedInterface>
           <BitRange />
         </Port>
+        <Port>
+          <Name>d1</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(1, 26, 12)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
+        <Port>
+          <Name>d2</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(1, 26, 12)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
+        <Port>
+          <Name>d3</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(1, 26, 12)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
+        <Port>
+          <Name>d4</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(1, 26, 12)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
+        <Port>
+          <Name>d5</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(1, 26, 12)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
+        <Port>
+          <Name>d6</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(1, 26, 12)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
       </TargetInterface>
     </param.hdl.TargetInterface>
     <param.hdl.TargetLanguage>option.hdl.VHDL</param.hdl.TargetLanguage>
@@ -1989,10 +2135,10 @@
     <param.hdl.SimulateFILTestBench>false</param.hdl.SimulateFILTestBench>
     <param.hdl.AdditionalSynthesisProjectFiles />
     <param.hdl.CriticalPathSource>option.hdl.Preroute</param.hdl.CriticalPathSource>
-    <param.hdl.EmbeddedSystemTool />
+    <param.hdl.EmbeddedSystemTool>Xilinx PlanAhead with Embedded Design</param.hdl.EmbeddedSystemTool>
     <param.hdl.ReferenceDesign />
     <param.hdl.ReferenceDesignPath />
-    <param.hdl.EmbeddedSystemProjectFolder />
+    <param.hdl.EmbeddedSystemProjectFolder>codegen/pa_prj</param.hdl.EmbeddedSystemProjectFolder>
     <param.hdl.BitstreamBuildMode>false</param.hdl.BitstreamBuildMode>
     <unset>
       <param.AutoInferDefaultFile />
@@ -2145,7 +2291,6 @@
       <param.hdl.SimulateFILTestBench />
       <param.hdl.AdditionalSynthesisProjectFiles />
       <param.hdl.CriticalPathSource />
-      <param.hdl.EmbeddedSystemTool />
       <param.hdl.ReferenceDesign />
       <param.hdl.ReferenceDesignPath />
       <param.hdl.EmbeddedSystemProjectFolder />

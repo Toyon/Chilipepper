@@ -1,4 +1,3 @@
-clear all
 
 fid = fopen('dc.prn');
 M = textscan(fid,'%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d','Headerlines',1);
@@ -40,16 +39,13 @@ for i1 = 1:length(is)
     i_in = is(i1);
     q_in = qs(i1);
  
-    [i_out, q_out, rssi_out, rssi_en_out, dir_out, dir_en_out] = ...
+    [i_out, q_out, rssi_out, dir_out] = ...
         dc_offset_correction(i_in, q_in, mod(i1,2), ...
-            500, 1500, +(i1>3000));
+            500, 1500, +(i1>3000), 56);
 
     io(i1) = i_out;
     qo(i1) = q_out;
-    if rssi_en_out
-        rssiH = rssi_out;
-    end
-    rssi(i1) = rssiH;
+    rssi(i1) = rssi_out;
 end
 
 figure(2)
