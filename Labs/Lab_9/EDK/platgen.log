@@ -26,16 +26,22 @@ Parse C:/GIT/Chilipepper_Labs/Labs/Lab_9/EDK/system.mhs ...
 Read MPD definitions ...
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: rx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 231 
+   C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 240 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: tx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 247 
+   C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 256 
+WARNING:EDK:4092 - IPNAME: chipscope_icon, INSTANCE: chipscope_icon_0 -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 392 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: rx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 231 
+   C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 240 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: tx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
-   C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 247 
+   C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 256 
+WARNING:EDK:4092 - IPNAME: chipscope_icon, INSTANCE: chipscope_icon_0 -
+   Pre-Production version not verified on hardware for architecture 'zynq' -
+   C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 392 
 
 Overriding IP level properties ...
 INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
@@ -102,6 +108,37 @@ IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 - 1 master(s) : 12
 slave(s) 
 
 Checking port drivers...
+WARNING:EDK:4180 - PORT: tdi_in, CONNECTOR: bscan_tdi - No driver found. Port
+   will be driven to GND -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 101 
+WARNING:EDK:4180 - PORT: reset_in, CONNECTOR: bscan_reset - No driver found.
+   Port will be driven to GND -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 102 
+WARNING:EDK:4180 - PORT: shift_in, CONNECTOR: bscan_shift - No driver found.
+   Port will be driven to GND -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 103 
+WARNING:EDK:4180 - PORT: update_in, CONNECTOR: bscan_update - No driver found.
+   Port will be driven to GND -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 104 
+WARNING:EDK:4180 - PORT: sel_in, CONNECTOR: bscan_sel1 - No driver found. Port
+   will be driven to GND -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 105 
+WARNING:EDK:4180 - PORT: drck_in, CONNECTOR: bscan_drck1 - No driver found. Port
+   will be driven to GND -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 106 
+WARNING:EDK:4180 - PORT: capture_in, CONNECTOR: bscan_capture - No driver found.
+   Port will be driven to GND -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 107 
+WARNING:EDK:4181 - PORT: tdo_out, CONNECTOR: bscan_tdo1 - floating connection -
+   C:\Xilinx\14.7\ISE_DS\EDK\hw\XilinxProcessorIPLib\pcores\chipscope_icon_v1_06
+   _a\data\chipscope_icon_v2_1_0.mpd line 108 
 
 Performing Clock DRCs...
 INFO:EDK - Design contains multiple instances of clock_generator IP, all clock
@@ -139,6 +176,7 @@ Running system level DRCs...
 Performing System level DRCs on properties...
 
 Running DRC Tcl procedures for OPTION SYSLEVEL_DRC_PROC...
+Chipscope Integrate Controller, instance 'chipscope_icon', exists in System 
 
 Running UPDATE Tcl procedures for OPTION PLATGEN_SYSLEVEL_UPDATE_PROC...
 INFO: No asynchronous clock conversions in axi_interconnect axi_interconnect_1.
@@ -153,6 +191,12 @@ Completion time: 0.00 seconds
 Creating hardware output directories ...
 
 Managing hardware (BBD-specified) netlist files ...
+IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 375 - Copying
+(BBD-specified) netlist files.
+IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 392 - Copying
+(BBD-specified) netlist files.
 
 Managing cache ...
 IPNAME:processing_system7 INSTANCE:processing_system7_0 -
@@ -174,33 +218,39 @@ IPNAME:dc_offset_pcore INSTANCE:dc_offset -
 C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 198 - Copying cache
 implementation netlist
 IPNAME:qpsk_rx_pcore INSTANCE:qpsk_rx -
-C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 214 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 223 - Copying cache
 implementation netlist
 IPNAME:axi_uartlite INSTANCE:mcu_uart -
-C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 269 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 278 - Copying cache
 implementation netlist
 IPNAME:axi_gpio INSTANCE:axi_gpio_switch -
-C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 280 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 289 - Copying cache
 implementation netlist
 IPNAME:dac_driver_pcore INSTANCE:dac_driver -
-C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 292 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 301 - Copying cache
 implementation netlist
 IPNAME:qpsk_tx_pcore INSTANCE:qpsk_tx -
-C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 308 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 317 - Copying cache
 implementation netlist
 IPNAME:tx_fifo_pcore INSTANCE:tx_fifo -
-C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 325 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 334 - Copying cache
 implementation netlist
 IPNAME:axi_gpio INSTANCE:axi_gpio_led -
-C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 339 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 348 - Copying cache
 implementation netlist
 IPNAME:axi_gpio INSTANCE:axi_gpio_button -
-C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 353 - Copying cache
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 362 - Copying cache
+implementation netlist
+IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 375 - Copying cache
+implementation netlist
+IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 392 - Copying cache
 implementation netlist
 
 Elaborating instances ...
 IPNAME:clock_generator INSTANCE:rx_clock_generator -
-C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 231 - elaborating IP
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 240 - elaborating IP
 ClkGen elaborate status: PASSED
 WARNING:EDK - : Phase value 180.0000 is converted to 180.0
 
@@ -217,7 +267,7 @@ WARNING:EDK - : Phase value 0.0 is converted to 0.0
 ----------------------------------------
 ----------------------------------------
 IPNAME:clock_generator INSTANCE:tx_clock_generator -
-C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 247 - elaborating IP
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 256 - elaborating IP
 ClkGen elaborate status: PASSED
 WARNING:EDK - : Phase value 0.0000 is converted to 0.0
 
@@ -233,6 +283,14 @@ WARNING:EDK - : Phase value 0.0 is converted to 0.0
 
 ----------------------------------------
 ----------------------------------------
+IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 375 - elaborating IP
+Created elaborate directory hdl/elaborate/chipscope_ila_0_v1_05_a/synhdl/vhdl/
+INFO: Chipscope core parameters not changed. Not regenerating core
+IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 392 - elaborating IP
+Created elaborate directory hdl/elaborate/chipscope_icon_0_v1_06_a/synhdl/vhdl/
+INFO: ChipScope core parameters not changed. Not regenerating core
 
 Writing HDL for elaborated instances ...
 
@@ -261,28 +319,28 @@ INSTANCE:mcu_driver - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 180
 - Running XST synthesis
 INSTANCE:dc_offset - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 198
 - Running XST synthesis
-INSTANCE:qpsk_rx - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 214 -
+INSTANCE:qpsk_rx - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 223 -
 Running XST synthesis
 INSTANCE:rx_clock_generator - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs
-line 231 - Running XST synthesis
+line 240 - Running XST synthesis
 INSTANCE:tx_clock_generator - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs
-line 247 - Running XST synthesis
-INSTANCE:dac_driver - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 292
+line 256 - Running XST synthesis
+INSTANCE:dac_driver - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 301
 - Running XST synthesis
-INSTANCE:qpsk_tx - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 308 -
+INSTANCE:qpsk_tx - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 317 -
 Running XST synthesis
-INSTANCE:tx_fifo - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 325 -
+INSTANCE:tx_fifo - C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 334 -
 Running XST synthesis
 
 Running NGCBUILD ...
 IPNAME:system_rx_clock_generator_wrapper INSTANCE:rx_clock_generator -
-C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 231 - Running NGCBUILD
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 240 - Running NGCBUILD
 IPNAME:system_tx_clock_generator_wrapper INSTANCE:tx_clock_generator -
-C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 247 - Running NGCBUILD
+C:\GIT\Chilipepper_Labs\Labs\Lab_9\EDK\system.mhs line 256 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 177.00 seconds
+Total run time: 198.00 seconds

@@ -209,6 +209,15 @@ BEGIN dc_offset_pcore
  PORT IPCORE_RESETN = processing_system7_0_FCLK_RESET0_N
  PORT IPCORE_CLK = rx_clock_generator_CLKOUT1
  PORT blinky = dc_offset_blinky
+ PORT d1 = dc_offset_d1_to_chipscope_ila_0
+ PORT d2 = dc_offset_d2_to_chipscope_ila_0
+ PORT d3 = dc_offset_d3_to_chipscope_ila_0
+ PORT d4 = dc_offset_d4_to_chipscope_ila_0
+ PORT d5 = dc_offset_d5_to_chipscope_ila_0
+ PORT d6 = dc_offset_d6_to_chipscope_ila_0
+ PORT d7 = dc_offset_d7_to_chipscope_ila_0
+ PORT d8 = dc_offset_d8_to_chipscope_ila_0
+ PORT gain_out = dc_offset_gain_out_to_chipscope_ila_0
 END
 
 BEGIN qpsk_rx_pcore
@@ -361,5 +370,29 @@ BEGIN axi_gpio
  BUS_INTERFACE S_AXI = axi_interconnect_1
  PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
  PORT GPIO_IO_I = axi_gpio_button_GPIO_IO_I
+END
+
+BEGIN chipscope_ila
+ PARAMETER INSTANCE = chipscope_ila_0
+ PARAMETER HW_VER = 1.05.a
+ PARAMETER C_TRIG0_UNITS = 1
+ PARAMETER C_TRIG0_TRIGGER_IN_WIDTH = 12
+ PARAMETER C_NUM_DATA_SAMPLES = 16384
+ PARAMETER C_TRIG1_UNITS = 1
+ PARAMETER C_TRIG1_TRIGGER_IN_WIDTH = 24
+ PARAMETER C_TRIG2_UNITS = 1
+ PARAMETER C_TRIG2_TRIGGER_IN_WIDTH = 160
+ PORT chipscope_ila_control = chipscope_ila_0_icon_control
+ PORT TRIG0 = adc_driver_rxd
+ PORT CLK = rx_clock_generator_CLKOUT1
+ PORT TRIG1 = dc_offset_q_in & dc_offset_i_in
+ PORT TRIG2 = dc_offset_d1_to_chipscope_ila_0 & dc_offset_d2_to_chipscope_ila_0 & dc_offset_d3_to_chipscope_ila_0 & dc_offset_d4_to_chipscope_ila_0 & dc_offset_d5_to_chipscope_ila_0 & dc_offset_d6_to_chipscope_ila_0 & dc_offset_d7_to_chipscope_ila_0 & dc_offset_d8_to_chipscope_ila_0 & dc_offset_gain_out_to_chipscope_ila_0 & dc_offset_i_out & dc_offset_q_out
+END
+
+BEGIN chipscope_icon
+ PARAMETER INSTANCE = chipscope_icon_0
+ PARAMETER HW_VER = 1.06.a
+ PARAMETER C_NUM_CONTROL_PORTS = 1
+ PORT control0 = chipscope_ila_0_icon_control
 END
 
