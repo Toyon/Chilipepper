@@ -1,7 +1,7 @@
 /*
  * File Name:         codegen\ipcore\dc_offset_pcore_v1_00_a\include\dc_offset_pcore_addr.h
  * Description:       C Header File
- * Created:           2013-12-31 17:34:21
+ * Created:           2014-03-15 17:13:26
 */
 
 #ifndef DC_OFFSET_PCORE_H_
@@ -14,8 +14,7 @@
 #define  rssi_high_goal_in_Data_dc_offset_pcore   0x108  //data register for port rssi_high_goal_in
 #define  rx_en_in_Data_dc_offset_pcore            0x10C  //data register for port rx_en_in
 #define  rssi_out_Data_dc_offset_pcore            0x110  //data register for port rssi_out
-#define  rssi_en_out_Data_dc_offset_pcore         0x114  //data register for port rssi_en_out
-#define  dir_out_Data_dc_offset_pcore             0x118  //data register for port dir_out
-#define  dir_en_out_Data_dc_offset_pcore          0x11C  //data register for port dir_en_out
+#define  dir_out_Data_dc_offset_pcore             0x114  //data register for port dir_out
+#define  gain_in_Data_dc_offset_pcore             0x118  //data register for port gain_in
 
 #endif /* DC_OFFSET_PCORE_H_ */
