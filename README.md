@@ -9,6 +9,12 @@ http://www.zedboard.org/
 
 A short description of each release is given below. To checkout a release, first use git clone to obtain the entire repository. You can then checkout a specific tag (release) using git checkout <tagname>.
 
+Rev 1:
+Revision 1 contains the QPSK Demo Labs created using MATLAB HDL Coder and the MATLAB System Generator.
+
+Rev 2:
+Revision 2 contains the QPSK Demo Labs created using the MATLAB HDL Coder IP Core Generation Workflow.
+
 Philosophy
 ----------
 
