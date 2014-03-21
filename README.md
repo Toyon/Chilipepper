@@ -7,6 +7,8 @@ This repository hosts projects related to the Toyon Research Corporation Chilipe
 The labs and examples target the Xilinx ZED board
 http://www.zedboard.org/
 
+A short description of each release is given below. To checkout a release, first use git clone to obtain the entire repository. You can then checkout a specific tag (release) using git checkout <tagname>.
+
 Philosophy
 ----------
 
