@@ -127,7 +127,7 @@ BEGIN rx_fifo_pcore
  PORT byte_in = rx_fifo_pcore_0_byte_in
  PORT IPCORE_CLK = clock_generator_0_CLKOUT0
  PORT IPCORE_RESETN = processing_system7_0_FCLK_RESET0_N
- PORT fifo_enable = rx_fifo_pcore_0_fifo_enable
+ PORT d_1 = rx_fifo_pcore_0_d_1_to_chipscope_ila_0
 END
 
 BEGIN axi_interconnect
@@ -148,7 +148,6 @@ BEGIN tx_fifo_pcore
  PORT dout = rx_fifo_pcore_0_byte_in
  PORT IPCORE_CLK = clock_generator_0_CLKOUT0
  PORT IPCORE_RESETN = processing_system7_0_FCLK_RESET0_N
- PORT dbg_fifo_enable = rx_fifo_pcore_0_fifo_enable
 END
 
 BEGIN clock_generator
@@ -177,5 +176,23 @@ BEGIN axi_uartlite
  PORT S_AXI_ACLK = processing_system7_0_FCLK_CLK0
  PORT RX = axi_uartlite_0_RX
  PORT TX = axi_uartlite_0_TX
+END
+
+BEGIN chipscope_ila
+ PARAMETER INSTANCE = chipscope_ila_0
+ PARAMETER HW_VER = 1.05.a
+ PARAMETER C_TRIG0_UNITS = 1
+ PARAMETER C_TRIG0_TRIGGER_IN_WIDTH = 64
+ PARAMETER C_NUM_DATA_SAMPLES = 8192
+ PORT chipscope_ila_control = chipscope_ila_0_icon_control
+ PORT TRIG0 = rx_fifo_pcore_0_d_1_to_chipscope_ila_0 & rx_fifo_pcore_0_byte_in
+ PORT CLK = clock_generator_0_CLKOUT0
+END
+
+BEGIN chipscope_icon
+ PARAMETER INSTANCE = chipscope_icon_0
+ PARAMETER HW_VER = 1.06.a
+ PARAMETER C_NUM_CONTROL_PORTS = 1
+ PORT control0 = chipscope_ila_0_icon_control
 END
 

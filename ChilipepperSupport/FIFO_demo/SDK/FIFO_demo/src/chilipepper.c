@@ -41,8 +41,8 @@ xc_iface_t *chiliRxIface;
 xc_from_fifo_t *chiliRxFromFifo;
 #endif
 #ifdef RX_FIFO
-u32 rx_fifo_get_byte, rx_fifo_store_byte, rx_fifo_reset_fifo, rx_fifo_enable; // write
-u32 rx_fifo_dout, rx_fifo_empty, rx_fifo_byte_ready, rx_fifo_full, rx_fifo_bytes_available; // read
+u32 rx_fifo_get_byte, rx_fifo_store_byte, rx_fifo_reset_fifo/*, rx_fifo_enable*/; // write
+u32 rx_fifo_dout, rx_fifo_empty, rx_fifo_byte_ready, /*rx_fifo_full,*/ rx_fifo_bytes_available; // read
 #endif
 #ifdef MCU_PCORE	// mcu registers
 u32 *chili_init_done, *chili_pa_en, *chili_tr_sw, *chili_mcu_reset, *chili_rx_en, *chili_tx_en;
@@ -60,8 +60,8 @@ u32 *chili_mcu_rx_ready, *chili_num_bytes_ready, *chili_percent_full;
 u32 *clear_fifo, *tx_en, *tx_done, *tx_fifo;
 #endif
 #ifdef TX_FIFO
-u32 tx_fifo_get_byte, tx_fifo_store_byte, tx_fifo_byte_in, tx_fifo_reset_fifo, tx_fifo_enable; // write
-u32 tx_fifo_empty, tx_fifo_byte_received, tx_fifo_full, tx_fifo_bytes_available; // read
+u32 tx_fifo_get_byte, tx_fifo_store_byte, tx_fifo_byte_in, tx_fifo_reset_fifo/*, tx_fifo_enable*/; // write
+u32 tx_fifo_empty, tx_fifo_byte_received, /*tx_fifo_full,*/ tx_fifo_bytes_available; // read
 #endif
 /////////////////////////////////////////////////////////////////////////////////////////////
 // Initialize
@@ -95,15 +95,14 @@ int Chilipepper_Initialize(void) {
 	chili_percent_full = 		(u32 *) XPAR_RX_AXIW_0_MEMMAP_RX_FIFO_PERCENTFULL;
 #endif
 #if defined (RX_FIFO)
-	rx_fifo_get_byte =		XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x100; //write
-	rx_fifo_store_byte =	XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x104; //write
-	rx_fifo_reset_fifo =	XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x108; //write
+	rx_fifo_reset_fifo =		XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x100; //write
+	rx_fifo_store_byte =		XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x104; //write
+	rx_fifo_get_byte =			XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x108; //write
 
 	rx_fifo_dout = 				XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x10C; //read
-	rx_fifo_empty = 			XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x110; //read
+	rx_fifo_bytes_available = 	XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x110; //read
 	rx_fifo_byte_ready = 		XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x114; //read
-	rx_fifo_full = 				XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x118; //read
-	rx_fifo_bytes_available = 	XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x11C; //read
+	rx_fifo_empty = 			XPAR_RX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x118; //read
 #endif
 #if defined (DC_OFFSET)
 	chili_rssi = 			(u32 *) XPAR_DC_OFFSET_AXIW_0_MEMMAP_RSSI; // read
@@ -120,16 +119,15 @@ int Chilipepper_Initialize(void) {
 	tx_fifo = 		(u32 *) XPAR_TX_AXIW_0_MEMMAP_TX_FIFO;
 #endif
 #if defined (TX_FIFO)
-	tx_fifo_get_byte =		XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x100; //write
-	tx_fifo_store_byte =	XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x104; //write
-	tx_fifo_byte_in =		XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x108; //write
-	tx_fifo_reset_fifo =	XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x10C; //write
-	tx_fifo_enable = 		XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x110; //write
+	tx_fifo_reset_fifo =		XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x100; //write
+	tx_fifo_store_byte =		XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x104; //write
+	tx_fifo_byte_in =			XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x108; //write
+	tx_fifo_get_byte =			XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x10C; //write
 
-	tx_fifo_empty = 				XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x114; //read
-	tx_fifo_byte_received = 		XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x118; //read
-	tx_fifo_full = 					XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x11C; //read
-	tx_fifo_bytes_available = 		XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x120; //read
+	tx_fifo_bytes_available = 		XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x110; //read
+	tx_fifo_byte_received = 		XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x114; //read
+	tx_fifo_empty = 				XPAR_TX_FIFO_PCORE_0_S_AXI_BASEADDR + 0x118; //read
+
 #endif
 #ifdef RX_DRIVER
 	*chili_mcu_rx_ready = 1;	// initialize rx driver

@@ -63,32 +63,34 @@ int main() {
 		Chilipepper_printf(&uartPs,
 				(unsigned char *)"\r\n\r\nWelcome to Toyon's ChiliPepper FIFO Demo\r\n\r\n");
 
-		Xil_Out32(tx_fifo_reset_fifo, 1);
-		Xil_Out32(rx_fifo_reset_fifo, 1);
+
+		//TX Init
+		Xil_Out32(tx_fifo_store_byte, (u32) 0);
+		Xil_Out32(tx_fifo_get_byte, (u32) 0);
+		Xil_Out32(tx_fifo_reset_fifo, (u32) 1);
+
+		//RX Init
+		Xil_Out32(rx_fifo_store_byte, (u32) 0);
+		Xil_Out32(rx_fifo_get_byte, (u32) 0);
+		Xil_Out32(rx_fifo_reset_fifo, (u32) 1);
 
 		Chilipepper_Delay();
 
-		Xil_Out32(tx_fifo_reset_fifo, 0);
-		Xil_Out32(rx_fifo_reset_fifo, 0);
+		Xil_Out32(tx_fifo_reset_fifo, (u32) 0);
+		Xil_Out32(rx_fifo_reset_fifo, (u32) 0);
 
 		NumInputBytes = Chilipepper_cin(&uartPs,txFIFOBuf);
+		//NumInputBytes = scanf("%s",)
 		Chilipepper_printf(&uartPs,	(unsigned char *)"\r\n");
-
-		testval = Xil_In32(tx_fifo_bytes_available);
 
 		///////////////////////////////////////////////////////////////////////////////////
 		// send Bytes to TX_FIFO
-		Xil_Out32(tx_fifo_enable, 1);
 		for (i1=0; i1<NumInputBytes-1; i1++){
-			Xil_Out32(tx_fifo_byte_in, txFIFOBuf[i1]);
-			Xil_Out32(tx_fifo_store_byte, 1);
-			while (Xil_In32(tx_fifo_byte_received) == 0)
-				;
-			Xil_Out32(tx_fifo_store_byte, 0);
-			while (Xil_In32(tx_fifo_byte_received) == 1)
-				;
+			value = txFIFOBuf[i1];
+			Xil_Out32(tx_fifo_byte_in, value);
+			Xil_Out32(tx_fifo_store_byte, (u32) 1);
+			Xil_Out32(tx_fifo_store_byte, (u32) 0);
 		}
-		Xil_Out32(tx_fifo_enable, 0);
 		///////////////////////////////////////////////////////////////////////////////////
 		// verify bytes sent
 		sprintf(bytesAvail, "%u", Xil_In32(tx_fifo_bytes_available));
@@ -100,15 +102,16 @@ int main() {
 
 		///////////////////////////////////////////////////////////////////////////////////
 		// transfer to other FIFO
-		Xil_Out32(rx_fifo_store_byte, 1);
-		Xil_Out32(tx_fifo_get_byte, 1);
-		Xil_Out32(tx_fifo_enable, 1);
-		while (Xil_In32(tx_fifo_empty) == 0)
-			;
-		Xil_Out32(tx_fifo_enable, 0);
-		Xil_Out32(tx_fifo_get_byte, 0);
-		Xil_Out32(rx_fifo_store_byte, 0);
-
+		while (Xil_In32(tx_fifo_empty) == 0){
+			Chilipepper_Delay();
+			Xil_Out32(tx_fifo_get_byte, (u32) 1);
+			Chilipepper_Delay();
+			Xil_Out32(tx_fifo_get_byte, (u32) 0);
+			Chilipepper_Delay();
+			Xil_Out32(rx_fifo_store_byte, (u32) 1);
+			Chilipepper_Delay();
+			Xil_Out32(rx_fifo_store_byte, (u32) 0);
+		};
 		///////////////////////////////////////////////////////////////////////////////////
 		// verify bytes received
 		sprintf(bytesAvail, "%u", Xil_In32(rx_fifo_bytes_available));
@@ -117,31 +120,19 @@ int main() {
 		Chilipepper_printf(&uartPs, bytesAvail);
 		Chilipepper_printf(&uartPs,
 				(unsigned char *)" bytes into the rx_fifo\r\n\r\n");
-
 		///////////////////////////////////////////////////////////////////////////////////
 		// get Bytes from RX_FIFO
 		int numBytesRecvd = Xil_In32(rx_fifo_bytes_available);
-		// get Bytes from RX_FIFO
-		Xil_Out32(tx_fifo_enable, 1); // this is needed because tx_fif_enable is hard coded to rx_fifo_enable
-		while (Xil_In32(rx_fifo_empty) == 0 )
-		{
-			Xil_Out32(rx_fifo_get_byte, 1);
-			int tries = 0;
-			while (Xil_In32(rx_fifo_byte_ready) == 0 && tries < 100)
-				tries++;
-			;
-			Xil_Out32(rx_fifo_get_byte, 0);
-			while (Xil_In32(rx_fifo_byte_ready) == 1)
-				;
-			if (tries < 100){
-				value = Xil_In32(rx_fifo_dout);
-				rxFIFOBuf[i1] = value;
-			}
-			else
-				rxFIFOBuf[i1] = 0;
-			i1++;
+		for (i1=0; i1<numBytesRecvd; i1++){
+			Chilipepper_Delay();
+			Xil_Out32(rx_fifo_get_byte, (u32) 1);
+			Chilipepper_Delay();
+			Xil_Out32(rx_fifo_get_byte, (u32) 0);
+			Chilipepper_Delay();
+			value = Xil_In32(rx_fifo_dout);
+			Chilipepper_Delay();
+			rxFIFOBuf[i1] = value;
 		}
-		Xil_Out32(tx_fifo_enable, 0); // this is needed because tx_fif_enable is hard coded to rx_fifo_enable
 		XUartPs_Send(&uartPs, rxFIFOBuf, numBytesRecvd);
 		Chilipepper_printf(&uartPs,	(unsigned char *)"\r\n");
 	}

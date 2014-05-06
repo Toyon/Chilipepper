@@ -18,7 +18,7 @@ while (numBytesToFifo <= msgLength && ~tx_full)
     % first thing the processor does is clear the internal tx fifo
     if i1 == 1
         tx_reset_fifo = 1;
-        tx_fifo(0, 0, 0, tx_reset_fifo, 1);
+        tx_fifo(tx_reset_fifo, 0, 0, 0);
     else
         tx_reset_fifo = 0;
     end
@@ -27,13 +27,13 @@ while (numBytesToFifo <= msgLength && ~tx_full)
         numBytesToFifo = numBytesToFifo + 1;
         tx_store_byte = 1;
         while (tx_byte_received == 0)
-            [tx_data_out, tx_empty, tx_byte_received, tx_full, tx_bytes_available] = ...
-                tx_fifo(tx_get_byte, tx_store_byte, tx_data_in, tx_reset_fifo, 1);
+            [tx_data_out, tx_bytes_available, tx_byte_received, tx_empty] = ...
+                tx_fifo(tx_reset_fifo, tx_store_byte, tx_data_in, tx_get_byte);
         end
         tx_store_byte = 0;
         while (tx_byte_received == 1)
-            [tx_data_out, tx_empty, tx_byte_received, tx_full, tx_bytes_available] = ...
-                tx_fifo(tx_get_byte, tx_store_byte, tx_data_in, tx_reset_fifo, 1);
+            [tx_data_out, tx_bytes_available, tx_byte_received, tx_empty] = ...
+                tx_fifo(tx_reset_fifo, tx_store_byte, tx_data_in, tx_get_byte);
         end
     end
     i1 = i1 + 1;
@@ -55,20 +55,26 @@ rx_reset_fifo = 0;
 while (tx_bytes_available > 0)
         if i1 == 1
             rx_reset_fifo = 1;
-            rx_fifo(0, 0, 0, rx_reset_fifo, 1);
+            rx_fifo(rx_reset_fifo, 0, 0, 0);
         else
             rx_reset_fifo = 0;
         end
         if (i1 > 1)
             tx_get_byte = 1;
-            rx_store_byte = 1;
-            [tx_data_out, tx_empty, tx_byte_received, tx_full, tx_bytes_available] = ...
-                tx_fifo(tx_get_byte, tx_store_byte, tx_data_in, tx_reset_fifo, 1);
+            [tx_data_out, tx_bytes_available, tx_byte_received, tx_empty] = ...
+                tx_fifo(tx_reset_fifo, tx_store_byte, tx_data_in, tx_get_byte);
+            tx_get_byte = 0;
+            [tx_data_out, tx_bytes_available, tx_byte_received, tx_empty] = ...
+                tx_fifo(tx_reset_fifo, tx_store_byte, tx_data_in, tx_get_byte);
             
             rx_data_in = tx_data_out;
             
-            [rx_data_out, rx_empty, rx_byte_ready, rx_full, rx_bytes_available] = ...
-                rx_fifo(rx_get_byte, rx_store_byte, rx_data_in, rx_reset_fifo, 1);
+            rx_store_byte = 1;
+            [rx_data_out, rx_bytes_available, rx_byte_ready, rx_empty] = ...
+                rx_fifo(rx_reset_fifo, rx_store_byte, rx_data_in, rx_get_byte);
+            rx_store_byte = 0;
+            [rx_data_out, rx_bytes_available, rx_byte_ready, rx_empty] = ...
+                rx_fifo(rx_reset_fifo, rx_store_byte, rx_data_in, rx_get_byte);
         end
         i1 = i1 + 1;
 end
@@ -86,14 +92,14 @@ while (~rx_empty)
     if (i1 > 1)
         rx_get_byte = 1;
         while (rx_byte_ready == 0)
-            [rx_data_out, rx_empty, rx_byte_ready, rx_full, rx_bytes_available] = ...
-                rx_fifo(rx_get_byte, rx_store_byte, rx_data_in, rx_reset_fifo, 1);
+            [rx_data_out, rx_bytes_available, rx_byte_ready, rx_empty] = ...
+                rx_fifo(rx_reset_fifo, rx_store_byte, rx_data_in, rx_get_byte);
         end
         msgBytes(i1-1) = rx_data_out;
         rx_get_byte = 0;
         while (rx_byte_ready == 1)
-            [rx_data_out, rx_empty, rx_byte_ready, rx_full, rx_bytes_available] = ...
-                rx_fifo(rx_get_byte, rx_store_byte, rx_data_in, rx_reset_fifo, 1);
+            [rx_data_out, rx_bytes_available, rx_byte_ready, rx_empty] = ...
+                rx_fifo(rx_reset_fifo, rx_store_byte, rx_data_in, rx_get_byte);
         end
     end
     i1 = i1 + 1;

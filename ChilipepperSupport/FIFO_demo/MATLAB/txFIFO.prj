@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <deployment-project plugin="plugin.matlabhdlcoder" plugin-version="R2013a">
-  <configuration target="target.matlab.hdlcoder" target-name="HDL Code Generation" name="txFIFO" location="C:\GIT\pcore_Examples\FIFO_DEMO\MATLAB" file="C:\GIT\pcore_Examples\FIFO_DEMO\MATLAB\txFIFO.prj">
+  <configuration file="C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\ChilipepperSupport\FIFO_demo\MATLAB\txFIFO.prj" location="C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\ChilipepperSupport\FIFO_demo\MATLAB" name="txFIFO" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
     <param.AutoInferDefaultFile />
     <param.AutoInferUseVariableSize>false</param.AutoInferUseVariableSize>
     <param.AutoInferUseUnboundedSize>false</param.AutoInferUseUnboundedSize>
@@ -14,10 +13,10 @@
     <param.hdl.BuildDirectory>option.hdl.ProjectDirectory</param.hdl.BuildDirectory>
     <param.hdl.BuildSpecifiedDirectory />
     <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\tx_fifo\fixpt\tx_fifo_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
-    <param.fixptconv.InstrumentedBuildChecksum>2400776292</param.fixptconv.InstrumentedBuildChecksum>
+    <param.fixptconv.InstrumentedBuildChecksum>2039906526</param.fixptconv.InstrumentedBuildChecksum>
     <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
-    <param.fixptconv.FixedPointValidationChecksum>374799562</param.fixptconv.FixedPointValidationChecksum>
-    <param.fixptconv.FixedPointSourceCodeChecksum>2375010979</param.fixptconv.FixedPointSourceCodeChecksum>
+    <param.fixptconv.FixedPointValidationChecksum>191072094</param.fixptconv.FixedPointValidationChecksum>
+    <param.fixptconv.FixedPointSourceCodeChecksum>4292128180</param.fixptconv.FixedPointSourceCodeChecksum>
     <param.fixptconv.FixedPointStaticAnalysisChecksum />
     <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}\FIFO_tb.m</param.fixptconv.DefaultTestFile>
     <param.fixptconv.ExcludedFixedPointVerificationFiles />
@@ -25,31 +24,31 @@
     <param.fixptconv.FixptProposalKind>option.fixptconv.ProposeFracLenBasedOnWordLen</param.fixptconv.FixptProposalKind>
     <param.fixptconv.DefaultFixptWordLength>14</param.fixptconv.DefaultFixptWordLength>
     <param.fixptconv.DefaultFixptFractionLength>4</param.fixptconv.DefaultFixptFractionLength>
-    <param.fixptconv.SafetyMargin>4</param.fixptconv.SafetyMargin>
+    <param.fixptconv.ContainerTypes>false</param.fixptconv.ContainerTypes>
+    <param.fixptconv.SafetyMargin>0</param.fixptconv.SafetyMargin>
     <param.fixptconv.ProposeUsingDesignMinMaxAnd>option.fixptconv.ProposeUsingDesignMinMaxAnd.SimAndDerivedMinMax</param.fixptconv.ProposeUsingDesignMinMaxAnd>
     <param.transformedVariables>
-      <ProposedTypesTableAnnotations>
+      <UserEntities>
         <Function file="$(PROJECTDIR)\tx_fifo.m" name="tx_fifo">
           <Variable name="byte_in">
             <Column property="ProposedType" type="String" value="ufix32" />
           </Variable>
           <Variable name="byte_out">
-            <Column property="ProposedType" type="String" value="ufix8" />
+            <Column property="ProposedType" type="String" value="ufix32" />
           </Variable>
           <Variable name="byte_received" />
           <Variable name="bytes_available">
             <Column property="ProposedType" type="String" value="ufix32" />
           </Variable>
-          <Variable name="dbg_fifo_enable" />
           <Variable name="dout">
-            <Column property="ProposedType" type="String" value="ufix8" />
+            <Column property="ProposedType" type="String" value="ufix32" />
           </Variable>
           <Variable name="empty" />
           <Variable name="fifo">
-            <Column property="ProposedType" type="String" value="ufix8" />
+            <Column property="ProposedType" type="String" value="ufix32" />
           </Variable>
-          <Variable name="fifo_enable" />
           <Variable name="full" />
+          <Variable name="gb_handshake" />
           <Variable name="get_byte" />
           <Variable name="handshake" />
           <Variable name="head">
@@ -61,10 +60,10 @@
             <Column property="ProposedType" type="String" value="ufix11" />
           </Variable>
         </Function>
-      </ProposedTypesTableAnnotations>
+      </UserEntities>
     </param.transformedVariables>
     <param.computedVariables>
-      <ComputedFixedPointData>
+      <ComputedEntities>
         <Function file="$(PROJECTDIR)\tx_fifo.m" name="tx_fifo">
           <Variable name="byte_in">
             <Column property="Kind" type="String" value="input" />
@@ -75,8 +74,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix7" />
           </Variable>
           <Variable name="byte_out">
@@ -88,8 +87,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix7" />
           </Variable>
           <Variable name="byte_received">
@@ -101,8 +100,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="bytes_available">
@@ -114,22 +113,9 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix4" />
-          </Variable>
-          <Variable name="dbg_fifo_enable">
-            <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="1.0" />
-            <Column property="SimMax" type="Double" value="1.0" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="dout">
             <Column property="Kind" type="String" value="output" />
@@ -140,8 +126,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix7" />
           </Variable>
           <Variable name="empty">
@@ -153,8 +139,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="fifo">
@@ -166,25 +152,12 @@
               <size>1024</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix7" />
           </Variable>
-          <Variable name="fifo_enable">
-            <Column property="Kind" type="String" value="input" />
-            <Column property="SimMin" type="Double" value="1.0" />
-            <Column property="SimMax" type="Double" value="1.0" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="ufix1" />
-          </Variable>
           <Variable name="full">
-            <Column property="Kind" type="String" value="output" />
+            <Column property="Kind" type="String" value="local" />
             <Column property="SimMin" type="Double" value="0.0" />
             <Column property="SimMax" type="Double" value="0.0" />
             <MATLABType class="double" complex="false">
@@ -192,8 +165,21 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
+            <Column property="ProposedType" type="String" value="ufix1" />
+          </Variable>
+          <Variable name="gb_handshake">
+            <Column property="Kind" type="String" value="persistent" />
+            <Column property="SimMin" type="Double" value="0.0" />
+            <Column property="SimMax" type="Double" value="1.0" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+            <Column property="IsInteger" type="Boolean" value="true" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="get_byte">
@@ -205,8 +191,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="handshake">
@@ -218,8 +204,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="head">
@@ -231,8 +217,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix4" />
           </Variable>
           <Variable name="reset_fifo">
@@ -244,8 +230,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="store_byte">
@@ -257,8 +243,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="tail">
@@ -270,17 +256,18 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix4" />
           </Variable>
         </Function>
-      </ComputedFixedPointData>
+      </ComputedEntities>
     </param.computedVariables>
     <param.fixptconv.FiMathString>fimath('RoundingMethod', 'Floor', 'OverflowAction', 'Wrap', 'ProductMode', 'FullPrecision', 'MaxProductWordLength', 128, 'SumMode', 'FullPrecision', 'MaxSumWordLength', 128)</param.fixptconv.FiMathString>
     <param.fixptconv.DefaultRoundMode>option.fixptconv.proposetypes.floor</param.fixptconv.DefaultRoundMode>
     <param.fixptconv.DefaultOverflowMode>option.fixptconv.proposetypes.wrap</param.fixptconv.DefaultOverflowMode>
     <param.fixptconv.LogAllIOValues>false</param.fixptconv.LogAllIOValues>
+    <param.fixptconv.DetectOverflows>false</param.fixptconv.DetectOverflows>
     <param.fixptconv.LogHistogram>false</param.fixptconv.LogHistogram>
     <param.fixptconv.FixPtFileNameSuffix>_fixpt</param.fixptconv.FixPtFileNameSuffix>
     <param.fixptconv.AutoScaleLoopIndexVariables>false</param.fixptconv.AutoScaleLoopIndexVariables>
@@ -295,21 +282,21 @@
     <param.fixptconv.StaticAnalysisTimeout />
     <param.fixptconv.StaticAnalysisGlobalRangesOnly>false</param.fixptconv.StaticAnalysisGlobalRangesOnly>
     <param.hdl.Workflow>option.workflow.IpCore</param.hdl.Workflow>
-    <param.hdl.TargetPlatform>ZedBoard</param.hdl.TargetPlatform>
-    <param.hdl.SynthesisTool>Xilinx ISE</param.hdl.SynthesisTool>
+    <param.hdl.TargetPlatform>Generic Xilinx Platform</param.hdl.TargetPlatform>
+    <param.hdl.SynthesisTool>No synthesis tool available on system path</param.hdl.SynthesisTool>
     <param.hdl.InputFrequency>100</param.hdl.InputFrequency>
     <param.hdl.TargetFrequency>100</param.hdl.TargetFrequency>
     <param.hdl.IPCoreName>tx_fifo_pcore</param.hdl.IPCoreName>
     <param.hdl.IPCoreVersion>v1.00.a</param.hdl.IPCoreVersion>
     <param.hdl.ExecutionMode>option.hdl.FreeRunning</param.hdl.ExecutionMode>
-    <param.hdl.SynthesisToolChipFamily>Zynq</param.hdl.SynthesisToolChipFamily>
-    <param.hdl.SynthesisToolDeviceName>xc7z020</param.hdl.SynthesisToolDeviceName>
-    <param.hdl.SynthesisToolPackageName>clg484</param.hdl.SynthesisToolPackageName>
-    <param.hdl.SynthesisToolSpeedValue>-1</param.hdl.SynthesisToolSpeedValue>
+    <param.hdl.SynthesisToolChipFamily />
+    <param.hdl.SynthesisToolDeviceName />
+    <param.hdl.SynthesisToolPackageName />
+    <param.hdl.SynthesisToolSpeedValue />
     <param.hdl.TargetInterface>
       <TargetInterface>
         <Port>
-          <Name>get_byte</Name>
+          <Name>reset_fifo</Name>
           <PortType>Inport</PortType>
           <DataType>numerictype(0, 1, 0)</DataType>
           <SelectedInterface>AXI4-Lite</SelectedInterface>
@@ -330,60 +317,39 @@
           <BitRange>x"108"</BitRange>
         </Port>
         <Port>
-          <Name>reset_fifo</Name>
+          <Name>get_byte</Name>
           <PortType>Inport</PortType>
           <DataType>numerictype(0, 1, 0)</DataType>
           <SelectedInterface>AXI4-Lite</SelectedInterface>
           <BitRange>x"10C"</BitRange>
         </Port>
         <Port>
-          <Name>fifo_enable</Name>
-          <PortType>Inport</PortType>
-          <DataType>numerictype(0, 1, 0)</DataType>
-          <SelectedInterface>AXI4-Lite</SelectedInterface>
-          <BitRange>x"110"</BitRange>
-        </Port>
-        <Port>
           <Name>dout</Name>
           <PortType>Outport</PortType>
-          <DataType>numerictype(0, 8, 0)</DataType>
+          <DataType>numerictype(0, 32, 0)</DataType>
           <SelectedInterface>External Port</SelectedInterface>
           <BitRange />
-        </Port>
-        <Port>
-          <Name>empty</Name>
-          <PortType>Outport</PortType>
-          <DataType>numerictype(0, 1, 0)</DataType>
-          <SelectedInterface>AXI4-Lite</SelectedInterface>
-          <BitRange>x"114"</BitRange>
-        </Port>
-        <Port>
-          <Name>byte_received</Name>
-          <PortType>Outport</PortType>
-          <DataType>numerictype(0, 1, 0)</DataType>
-          <SelectedInterface>AXI4-Lite</SelectedInterface>
-          <BitRange>x"118"</BitRange>
-        </Port>
-        <Port>
-          <Name>full</Name>
-          <PortType>Outport</PortType>
-          <DataType>numerictype(0, 1, 0)</DataType>
-          <SelectedInterface>AXI4-Lite</SelectedInterface>
-          <BitRange>x"11C"</BitRange>
         </Port>
         <Port>
           <Name>bytes_available</Name>
           <PortType>Outport</PortType>
           <DataType>numerictype(0, 32, 0)</DataType>
           <SelectedInterface>AXI4-Lite</SelectedInterface>
-          <BitRange>x"120"</BitRange>
+          <BitRange>x"110"</BitRange>
         </Port>
         <Port>
-          <Name>dbg_fifo_enable</Name>
+          <Name>byte_received</Name>
           <PortType>Outport</PortType>
           <DataType>numerictype(0, 1, 0)</DataType>
-          <SelectedInterface>External Port</SelectedInterface>
-          <BitRange />
+          <SelectedInterface>AXI4-Lite</SelectedInterface>
+          <BitRange>x"114"</BitRange>
+        </Port>
+        <Port>
+          <Name>empty</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>AXI4-Lite</SelectedInterface>
+          <BitRange>x"118"</BitRange>
         </Port>
       </TargetInterface>
     </param.hdl.TargetInterface>
@@ -410,10 +376,13 @@
     <param.hdl.PipelinePostfix>_pipe</param.hdl.PipelinePostfix>
     <param.hdl.EnablePrefix>enb</param.hdl.EnablePrefix>
     <param.hdl.InlineConfigurations>true</param.hdl.InlineConfigurations>
+    <param.hdl.UseRisingEdge>false</param.hdl.UseRisingEdge>
+    <param.hdl.UseMatrixTypesInHDL>false</param.hdl.UseMatrixTypesInHDL>
     <param.hdl.ResetType>option.hdl.Asynchronous</param.hdl.ResetType>
     <param.hdl.ResetAssertedLevel>option.hdl.ActiveHigh</param.hdl.ResetAssertedLevel>
     <param.hdl.ResetInputPort>reset</param.hdl.ResetInputPort>
     <param.hdl.ClockInputPort>clk</param.hdl.ClockInputPort>
+    <param.hdl.ClockEdge>option.hdl.Rising</param.hdl.ClockEdge>
     <param.hdl.ClockEnableInputPort>clk_enable</param.hdl.ClockEnableInputPort>
     <param.hdl.Oversampling>1</param.hdl.Oversampling>
     <param.hdl.EnableRate>option.hdl.DutBaseRate</param.hdl.EnableRate>
@@ -427,6 +396,8 @@
     <param.hdl.RegisterInputs>false</param.hdl.RegisterInputs>
     <param.hdl.RegisterOutputs>false</param.hdl.RegisterOutputs>
     <param.hdl.DistributedPipelining>false</param.hdl.DistributedPipelining>
+    <param.hdl.DistributedPipeliningPriority>option.hdl.NumericalIntegrity</param.hdl.DistributedPipeliningPriority>
+    <param.hdl.PreserveDesignDelays>false</param.hdl.PreserveDesignDelays>
     <param.hdl.InputPipeline>0</param.hdl.InputPipeline>
     <param.hdl.OutputPipeline>0</param.hdl.OutputPipeline>
     <param.hdl.PipelineVariables />
@@ -463,7 +434,7 @@
     <param.isHDLVerifierInstalled>false</param.isHDLVerifierInstalled>
     <param.hdl.GenerateHDLTestBench>false</param.hdl.GenerateHDLTestBench>
     <param.hdl.SimulateGeneratedCode>false</param.hdl.SimulateGeneratedCode>
-    <param.hdl.SimulationTool>ISIM</param.hdl.SimulationTool>
+    <param.hdl.SimulationTool>No simulation tool available on system path</param.hdl.SimulationTool>
     <param.hdl.TestBenchPostfix>_tb</param.hdl.TestBenchPostfix>
     <param.hdl.ForceClock>true</param.hdl.ForceClock>
     <param.hdl.ClockHighTime>5</param.hdl.ClockHighTime>
@@ -496,17 +467,17 @@
     <param.hdl.GenerateFILTestBench>false</param.hdl.GenerateFILTestBench>
     <param.hdl.FILLogOutputs>false</param.hdl.FILLogOutputs>
     <param.hdl.FILBoardName>HDL Verifier installation or licnese is not avaialble</param.hdl.FILBoardName>
-    <param.FILShowIPAddressWidgets>true</param.FILShowIPAddressWidgets>
+    <param.hdl.FILConnection />
     <param.hdl.FILBoardIPAddress>192.168.0.2</param.hdl.FILBoardIPAddress>
     <param.hdl.FILBoardMACAddress>00-0A-35-02-21-8A</param.hdl.FILBoardMACAddress>
     <param.hdl.FILAdditionalFiles />
     <param.hdl.SimulateFILTestBench>false</param.hdl.SimulateFILTestBench>
     <param.hdl.AdditionalSynthesisProjectFiles />
     <param.hdl.CriticalPathSource>option.hdl.Preroute</param.hdl.CriticalPathSource>
-    <param.hdl.EmbeddedSystemTool>Xilinx PlanAhead with Embedded Design</param.hdl.EmbeddedSystemTool>
-    <param.hdl.ReferenceDesign>Default system (ISE 14.4)</param.hdl.ReferenceDesign>
+    <param.hdl.EmbeddedSystemTool />
+    <param.hdl.ReferenceDesign />
     <param.hdl.ReferenceDesignPath />
-    <param.hdl.EmbeddedSystemProjectFolder>codegen\pa_prj</param.hdl.EmbeddedSystemProjectFolder>
+    <param.hdl.EmbeddedSystemProjectFolder />
     <param.hdl.BitstreamBuildMode>false</param.hdl.BitstreamBuildMode>
     <unset>
       <param.AutoInferDefaultFile />
@@ -527,12 +498,14 @@
       <param.fixptconv.FixptProposalKind />
       <param.fixptconv.DefaultFixptWordLength />
       <param.fixptconv.DefaultFixptFractionLength />
+      <param.fixptconv.ContainerTypes />
       <param.fixptconv.SafetyMargin />
       <param.fixptconv.ProposeUsingDesignMinMaxAnd />
       <param.fixptconv.FiMathString />
       <param.fixptconv.DefaultRoundMode />
       <param.fixptconv.DefaultOverflowMode />
       <param.fixptconv.LogAllIOValues />
+      <param.fixptconv.DetectOverflows />
       <param.fixptconv.LogHistogram />
       <param.fixptconv.FixPtFileNameSuffix />
       <param.fixptconv.AutoScaleLoopIndexVariables />
@@ -568,10 +541,13 @@
       <param.hdl.PipelinePostfix />
       <param.hdl.EnablePrefix />
       <param.hdl.InlineConfigurations />
+      <param.hdl.UseRisingEdge />
+      <param.hdl.UseMatrixTypesInHDL />
       <param.hdl.ResetType />
       <param.hdl.ResetAssertedLevel />
       <param.hdl.ResetInputPort />
       <param.hdl.ClockInputPort />
+      <param.hdl.ClockEdge />
       <param.hdl.ClockEnableInputPort />
       <param.hdl.Oversampling />
       <param.hdl.InputType />
@@ -584,6 +560,8 @@
       <param.hdl.RegisterInputs />
       <param.hdl.RegisterOutputs />
       <param.hdl.DistributedPipelining />
+      <param.hdl.DistributedPipeliningPriority />
+      <param.hdl.PreserveDesignDelays />
       <param.hdl.InputPipeline />
       <param.hdl.OutputPipeline />
       <param.hdl.PipelineVariables />
@@ -619,6 +597,7 @@
       <param.isHDLVerifierInstalled />
       <param.hdl.GenerateHDLTestBench />
       <param.hdl.SimulateGeneratedCode />
+      <param.hdl.SimulationTool />
       <param.hdl.TestBenchPostfix />
       <param.hdl.ForceClock />
       <param.hdl.ClockHighTime />
@@ -650,21 +629,23 @@
       <param.hdl.CosimResetLength />
       <param.hdl.GenerateFILTestBench />
       <param.hdl.FILLogOutputs />
-      <param.FILShowIPAddressWidgets />
+      <param.hdl.FILConnection />
       <param.hdl.FILBoardIPAddress />
       <param.hdl.FILBoardMACAddress />
       <param.hdl.FILAdditionalFiles />
       <param.hdl.SimulateFILTestBench />
       <param.hdl.AdditionalSynthesisProjectFiles />
       <param.hdl.CriticalPathSource />
+      <param.hdl.EmbeddedSystemTool />
+      <param.hdl.ReferenceDesign />
       <param.hdl.ReferenceDesignPath />
       <param.hdl.EmbeddedSystemProjectFolder />
       <param.hdl.BitstreamBuildMode />
     </unset>
     <fileset.entrypoints>
-      <file value="${PROJECT_ROOT}\tx_fifo.m" custom-data-expanded="false">
+      <file custom-data-expanded="false" value="${PROJECT_ROOT}\tx_fifo.m">
         <Inputs fileName="tx_fifo.m" functionName="tx_fifo">
-          <Input Name="get_byte">
+          <Input Name="reset_fifo">
             <Class>double</Class>
             <UserDefined>false</UserDefined>
             <Size>1 x 1</Size>
@@ -682,13 +663,7 @@
             <Size>1 x 1</Size>
             <Complex>false</Complex>
           </Input>
-          <Input Name="reset_fifo">
-            <Class>double</Class>
-            <UserDefined>false</UserDefined>
-            <Size>1 x 1</Size>
-            <Complex>false</Complex>
-          </Input>
-          <Input Name="fifo_enable">
+          <Input Name="get_byte">
             <Class>double</Class>
             <UserDefined>false</UserDefined>
             <Size>1 x 1</Size>
@@ -727,10 +702,27 @@
       <step key="category.workflow.fpgaturnkeyprogramtargetdevice" skipped="false" />
     </workflow>
     <matlab>
-      <root>C:\Program Files\MATLAB\R2013b</root>
+      <root>C:\Program Files\MATLAB\R2014a</root>
       <toolboxes>
+        <toolbox name="matlabhdlcoder" />
         <toolbox name="fixedpoint" />
+        <toolbox name="matlabcoder" />
       </toolboxes>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
     </matlab>
     <platform>
       <unix>false</unix>
@@ -749,4 +741,3 @@
     </platform>
   </configuration>
 </deployment-project>
-
