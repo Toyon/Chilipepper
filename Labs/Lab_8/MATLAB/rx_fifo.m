@@ -1,4 +1,4 @@
-function [dout, bytes_available, byte_ready] = ...
+function [dout, bytes_available, byte_ready, empty, full, d_1] = ...
     rx_fifo(reset_fifo, store_byte, byte_in, get_byte)
 
 %
@@ -7,13 +7,14 @@ function [dout, bytes_available, byte_ready] = ...
 %  The FIFO is actually a circular buffer.
 %
 
-persistent head tail fifo byte_out handshake
+persistent head tail fifo byte_out handshake sb_handshake
 
 if (reset_fifo || isempty(head))
     head = 1;
     tail = 2;
     byte_out = 0;
     handshake = 0;
+    sb_handshake = 0;
 end
 
 if isempty(fifo)
@@ -31,6 +32,10 @@ elseif (handshake == 1)                 % keep byte ready until users flags they
     byte_ready = 1;                   
 else
     byte_ready = 0;                     % no requests, no byte ready
+end
+
+if store_byte == 0;
+    sb_handshake = 0;
 end
 
 if ((tail == 1 && head == 1024) || ((head + 1) == tail))
@@ -51,8 +56,9 @@ if (get_byte && handshake == 0 && ~empty)
     byte_out = fifo(head);
 end
 %%%%%%%%%%%%%put%%%%%%%%%%%%%%%%%%%%%
-if (store_byte && ~full)
+if (store_byte && ~full && sb_handshake == 0)
     fifo(tail) = byte_in;
+    sb_handshake = 1;
     tail = tail + 1;
     if tail == 1025
         tail = 1;
@@ -67,4 +73,5 @@ else
 end
 
 dout = byte_out;
+d_1 = byte_out;
 end

@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.matlabhdlcoder" plugin-version="R2013a">
-  <configuration file="C:\GIT\Chilipepper_Labs\Labs\Lab_8\MATLAB\rxFIFO.prj" location="C:\GIT\Chilipepper_Labs\Labs\Lab_8\MATLAB" name="rxFIFO" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
+  <configuration file="C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\MATLAB\rxFIFO.prj" location="C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\MATLAB" name="rxFIFO" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
     <param.AutoInferDefaultFile />
     <param.AutoInferUseVariableSize>false</param.AutoInferUseVariableSize>
     <param.AutoInferUseUnboundedSize>false</param.AutoInferUseUnboundedSize>
@@ -13,10 +13,10 @@
     <param.hdl.BuildDirectory>option.hdl.ProjectDirectory</param.hdl.BuildDirectory>
     <param.hdl.BuildSpecifiedDirectory />
     <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\rx_fifo\fixpt\rx_fifo_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
-    <param.fixptconv.InstrumentedBuildChecksum>2180667176</param.fixptconv.InstrumentedBuildChecksum>
+    <param.fixptconv.InstrumentedBuildChecksum>1325080305</param.fixptconv.InstrumentedBuildChecksum>
     <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
-    <param.fixptconv.FixedPointValidationChecksum>3331291887</param.fixptconv.FixedPointValidationChecksum>
-    <param.fixptconv.FixedPointSourceCodeChecksum>1278884593</param.fixptconv.FixedPointSourceCodeChecksum>
+    <param.fixptconv.FixedPointValidationChecksum>1762220618</param.fixptconv.FixedPointValidationChecksum>
+    <param.fixptconv.FixedPointSourceCodeChecksum>3845019868</param.fixptconv.FixedPointSourceCodeChecksum>
     <param.fixptconv.FixedPointStaticAnalysisChecksum />
     <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}\qpsk_tb.m</param.fixptconv.DefaultTestFile>
     <param.fixptconv.ExcludedFixedPointVerificationFiles />
@@ -34,6 +34,7 @@
           <Variable name="byte_out" />
           <Variable name="byte_ready" />
           <Variable name="bytes_available" />
+          <Variable name="d_1" />
           <Variable name="dout">
             <Column property="ProposedType" type="String" value="ufix32" />
           </Variable>
@@ -46,6 +47,7 @@
             <Column property="ProposedType" type="String" value="ufix11" />
           </Variable>
           <Variable name="reset_fifo" />
+          <Variable name="sb_handshake" />
           <Variable name="store_byte" />
           <Variable name="tail">
             <Column property="ProposedType" type="String" value="ufix11" />
@@ -65,8 +67,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix8" />
           </Variable>
           <Variable name="byte_out">
@@ -78,8 +80,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix8" />
           </Variable>
           <Variable name="byte_ready">
@@ -91,8 +93,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="bytes_available">
@@ -104,9 +106,22 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
+          </Variable>
+          <Variable name="d_1">
+            <Column property="Kind" type="String" value="output" />
+            <Column property="SimMin" type="Double" value="0.0" />
+            <Column property="SimMax" type="Double" value="228.0" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+            <Column property="IsInteger" type="Boolean" value="true" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
+            <Column property="ProposedType" type="String" value="ufix8" />
           </Variable>
           <Variable name="dout">
             <Column property="Kind" type="String" value="output" />
@@ -117,12 +132,12 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix8" />
           </Variable>
           <Variable name="empty">
-            <Column property="Kind" type="String" value="local" />
+            <Column property="Kind" type="String" value="output" />
             <Column property="SimMin" type="Double" value="0.0" />
             <Column property="SimMax" type="Double" value="1.0" />
             <MATLABType class="double" complex="false">
@@ -130,8 +145,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="fifo">
@@ -143,12 +158,12 @@
               <size>1024</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix8" />
           </Variable>
           <Variable name="full">
-            <Column property="Kind" type="String" value="local" />
+            <Column property="Kind" type="String" value="output" />
             <Column property="SimMin" type="Double" value="0.0" />
             <Column property="SimMax" type="Double" value="0.0" />
             <MATLABType class="double" complex="false">
@@ -156,8 +171,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="get_byte">
@@ -169,8 +184,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="handshake">
@@ -182,8 +197,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="head">
@@ -195,8 +210,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix5" />
           </Variable>
           <Variable name="reset_fifo">
@@ -208,8 +223,21 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
+            <Column property="ProposedType" type="String" value="ufix1" />
+          </Variable>
+          <Variable name="sb_handshake">
+            <Column property="Kind" type="String" value="persistent" />
+            <Column property="SimMin" type="Double" value="0.0" />
+            <Column property="SimMax" type="Double" value="1.0" />
+            <MATLABType class="double" complex="false">
+              <size>1</size>
+              <size>1</size>
+            </MATLABType>
+            <Column property="IsInteger" type="Boolean" value="true" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="store_byte">
@@ -221,8 +249,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="tail">
@@ -234,8 +262,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix5" />
           </Variable>
         </Function>
@@ -321,6 +349,27 @@
           <DataType>numerictype(0, 1, 0)</DataType>
           <SelectedInterface>AXI4-Lite</SelectedInterface>
           <BitRange>x"10C"</BitRange>
+        </Port>
+        <Port>
+          <Name>empty</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
+        <Port>
+          <Name>full</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(0, 1, 0)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
+        </Port>
+        <Port>
+          <Name>d_1</Name>
+          <PortType>Outport</PortType>
+          <DataType>numerictype(0, 8, 0)</DataType>
+          <SelectedInterface>External Port</SelectedInterface>
+          <BitRange />
         </Port>
       </TargetInterface>
     </param.hdl.TargetInterface>
@@ -439,7 +488,6 @@
     <param.hdl.FILLogOutputs>false</param.hdl.FILLogOutputs>
     <param.hdl.FILBoardName>HDL Verifier installation or licnese is not avaialble</param.hdl.FILBoardName>
     <param.hdl.FILConnection />
-    <param.FILShowIPAddressWidgets>true</param.FILShowIPAddressWidgets>
     <param.hdl.FILBoardIPAddress>192.168.0.2</param.hdl.FILBoardIPAddress>
     <param.hdl.FILBoardMACAddress>00-0A-35-02-21-8A</param.hdl.FILBoardMACAddress>
     <param.hdl.FILAdditionalFiles />
@@ -597,7 +645,6 @@
       <param.hdl.GenerateFILTestBench />
       <param.hdl.FILLogOutputs />
       <param.hdl.FILConnection />
-      <param.FILShowIPAddressWidgets />
       <param.hdl.FILBoardIPAddress />
       <param.hdl.FILBoardMACAddress />
       <param.hdl.FILAdditionalFiles />
