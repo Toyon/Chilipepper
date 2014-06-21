@@ -20,27 +20,27 @@ Read MPD definitions ...
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: rx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
    C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\sys
-   tem.mhs line 234 
+   tem.mhs line 230 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: tx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
    C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\sys
-   tem.mhs line 250 
+   tem.mhs line 246 
 WARNING:EDK:4092 - IPNAME: chipscope_icon, INSTANCE: chipscope_icon_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
    C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\sys
-   tem.mhs line 389 
+   tem.mhs line 337 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: rx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
    C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\sys
-   tem.mhs line 234 
+   tem.mhs line 230 
 WARNING:EDK:4092 - IPNAME: clock_generator, INSTANCE: tx_clock_generator -
    Pre-Production version not verified on hardware for architecture 'zynq' -
    C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\sys
-   tem.mhs line 250 
+   tem.mhs line 246 
 WARNING:EDK:4092 - IPNAME: chipscope_icon, INSTANCE: chipscope_icon_0 -
    Pre-Production version not verified on hardware for architecture 'zynq' -
    C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\sys
-   tem.mhs line 389 
+   tem.mhs line 337 
 
 Overriding IP level properties ...
 INFO:EDK:4130 - IPNAME: processing_system7, INSTANCE:processing_system7_0 - tcl
@@ -92,18 +92,15 @@ Address Map for Processor processing_system7_0
   (0x41280000-0x4128ffff) axi_gpio_button	axi_interconnect_1
   (0x42c00000-0x42c0ffff) mcu_uart	axi_interconnect_1
   (0x67a00000-0x67a0ffff) mcu_driver	axi_interconnect_1
-  (0x69800000-0x6980ffff) tx_fifo	axi_interconnect_1
   (0x6ca00000-0x6ca0ffff) rx_fifo	axi_interconnect_1
-  (0x6fc00000-0x6fc0ffff) dac_driver	axi_interconnect_1
   (0x72800000-0x7280ffff) adc_driver	axi_interconnect_1
   (0x76200000-0x7620ffff) dc_offset	axi_interconnect_1
   (0x7e400000-0x7e40ffff) qpsk_rx	axi_interconnect_1
-  (0x7e420000-0x7e42ffff) qpsk_tx	axi_interconnect_1
 
 Checking platform address map ...
 
 Checking platform configuration ...
-IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 - 1 master(s) : 12
+IPNAME: axi_interconnect, INSTANCE: axi_interconnect_1 - 1 master(s) : 9
 slave(s) 
 
 Checking port drivers...
@@ -192,62 +189,53 @@ Creating hardware output directories ...
 Managing hardware (BBD-specified) netlist files ...
 IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 369 - Copying (BBD-specified) netlist files.
+.mhs line 317 - Copying (BBD-specified) netlist files.
 IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 389 - Copying (BBD-specified) netlist files.
+.mhs line 337 - Copying (BBD-specified) netlist files.
 
 Managing cache ...
 IPNAME:processing_system7 INSTANCE:processing_system7_0 -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 54 - Copying cache implementation netlist
-IPNAME:axi_interconnect INSTANCE:axi_interconnect_1 -
-C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 142 - Copying cache implementation netlist
+.mhs line 50 - Copying cache implementation netlist
 IPNAME:rx_fifo_pcore INSTANCE:rx_fifo -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 150 - Copying cache implementation netlist
+.mhs line 146 - Copying cache implementation netlist
 IPNAME:adc_driver_pcore INSTANCE:adc_driver -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 167 - Copying cache implementation netlist
+.mhs line 163 - Copying cache implementation netlist
 IPNAME:mcu_driver_pcore INSTANCE:mcu_driver -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 183 - Copying cache implementation netlist
+.mhs line 179 - Copying cache implementation netlist
 IPNAME:dc_offset_pcore INSTANCE:dc_offset -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 201 - Copying cache implementation netlist
+.mhs line 197 - Copying cache implementation netlist
 IPNAME:qpsk_rx_pcore INSTANCE:qpsk_rx -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 217 - Copying cache implementation netlist
+.mhs line 213 - Copying cache implementation netlist
 IPNAME:axi_uartlite INSTANCE:mcu_uart -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 272 - Copying cache implementation netlist
+.mhs line 267 - Copying cache implementation netlist
 IPNAME:axi_gpio INSTANCE:axi_gpio_switch -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 283 - Copying cache implementation netlist
-IPNAME:dac_driver_pcore INSTANCE:dac_driver -
-C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 295 - Copying cache implementation netlist
-IPNAME:qpsk_tx_pcore INSTANCE:qpsk_tx -
-C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 311 - Copying cache implementation netlist
-IPNAME:tx_fifo_pcore INSTANCE:tx_fifo -
-C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 328 - Copying cache implementation netlist
+.mhs line 278 - Copying cache implementation netlist
 IPNAME:axi_gpio INSTANCE:axi_gpio_led -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 342 - Copying cache implementation netlist
+.mhs line 290 - Copying cache implementation netlist
 IPNAME:axi_gpio INSTANCE:axi_gpio_button -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 356 - Copying cache implementation netlist
+.mhs line 304 - Copying cache implementation netlist
+IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
+C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
+.mhs line 317 - Copying cache implementation netlist
 IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 389 - Copying cache implementation netlist
+.mhs line 337 - Copying cache implementation netlist
 
 Elaborating instances ...
 IPNAME:clock_generator INSTANCE:rx_clock_generator -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 234 - elaborating IP
+.mhs line 230 - elaborating IP
 ClkGen elaborate status: PASSED
 WARNING:EDK - : Phase value 180.0000 is converted to 180.0
 
@@ -265,13 +253,13 @@ WARNING:EDK - : Phase value 0.0 is converted to 0.0
 ----------------------------------------
 IPNAME:clock_generator INSTANCE:tx_clock_generator -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 250 - elaborating IP
+.mhs line 246 - elaborating IP
 ClkGen elaborate status: PASSED
 WARNING:EDK - : Phase value 0.0000 is converted to 0.0
 
-WARNING:EDK - : Phase value 0.0000 is converted to 0.0
-
 WARNING:EDK - : Phase value 180.0000 is converted to 180.0
+
+WARNING:EDK - : Phase value 0.0000 is converted to 0.0
 
 WARNING:EDK - : Phase value 0.0 is converted to 0.0
 
@@ -283,91 +271,22 @@ WARNING:EDK - : Phase value 0.0 is converted to 0.0
 ----------------------------------------
 IPNAME:chipscope_ila INSTANCE:chipscope_ila_0 -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 369 - elaborating IP
+.mhs line 317 - elaborating IP
 Created elaborate directory hdl/elaborate/chipscope_ila_0_v1_05_a/synhdl/vhdl/
-Generating ChipScope core: chipscope_ila_0 ...
-ChipScope Core Generator command: coregen.exe -b
-C:/Users/D-Money/Desktop/Xilinx_stuff/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/implem
-entation/chipscope_ila_0.xco
-Release 14.7 - Xilinx CORE Generator P.20131013 (nt64)
-Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
-All runtime messages will be recorded in
-C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\implem
-entation\chipscope_ila_0_wrapper\coregen.log
-Updating project device from '7z020' to 'xc7z020'.
-Wrote CGP file for project 'coregen'.
-Resolving generic values...
-Finished resolving generic values.
-Generating IP...
-Configuring files for chipscope_ila_0 root...
-Gathering HDL files for chipscope_ila_0 root...
-Creating XST project for chipscope_ila_0...
-Creating XST script file for chipscope_ila_0...
-Creating XST instantiation file for chipscope_ila_0...
-Running XST for chipscope_ila_0...
-XST: HDL Parsing
-XST: HDL Elaboration
-XST: HDL Synthesis
-XST: Advanced HDL Synthesis
-XST: Low Level Synthesis
-XST: Design Summary
-Not generating VHDL wrapper
-Not generating Verilog wrapper
-Skipping VHDL instantiation template for chipscope_ila_0...
-Skipping Verilog instantiation template for chipscope_ila_0...
-Finished Generation.
-Generating IP instantiation template...
-Generating ASY schematic symbol...
-Generating metadata file...
-Generating ISE project...
-XCO file found: chipscope_ila_0.xco
-XMDF file found: chipscope_ila_0_xmdf.tcl
-WARNING:EDK - : chipscope_ila_0.vhd does not exist, will not be added to ISE
-   project.
-
-WARNING:EDK - : chipscope_ila_0.vho does not exist, will not be added to ISE
-   project.
-
-Adding
-C:/Users/D-Money/Desktop/Xilinx_stuff/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/implem
-entation/chipscope_ila_0_wrapper/tmp/_cg/chipscope_ila_0.asy -view all
--origin_type imported
-Adding
-C:/Users/D-Money/Desktop/Xilinx_stuff/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/implem
-entation/chipscope_ila_0_wrapper/tmp/_cg/chipscope_ila_0.ngc -view all
--origin_type created
-Checking file
-"C:/Users/D-Money/Desktop/Xilinx_stuff/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/imple
-mentation/chipscope_ila_0_wrapper/tmp/_cg/chipscope_ila_0.ngc" for project
-device match ...
-File
-"C:/Users/D-Money/Desktop/Xilinx_stuff/GIT/Chilipepper_Labs/Labs/Lab_8/EDK/imple
-mentation/chipscope_ila_0_wrapper/tmp/_cg/chipscope_ila_0.ngc" device
-information matches project device.
-INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
-   Please set the new top explicitly by running the "project set top" command.
-   To re-calculate the new top automatically, set the "Auto Implementation Top"
-   property to true.
-Top level has been set to "/chipscope_ila_0"
-Generating README file...
-Generating FLIST file...
-Moving files to output directory...
-Finished moving files to output directory
-Saved CGP file for project 'coregen'.
-*************************************************************
+INFO: Chipscope core parameters not changed. Not regenerating core
 IPNAME:chipscope_icon INSTANCE:chipscope_icon_0 -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 389 - elaborating IP
+.mhs line 337 - elaborating IP
 Created elaborate directory hdl/elaborate/chipscope_icon_0_v1_06_a/synhdl/vhdl/
 INFO: ChipScope core parameters not changed. Not regenerating core
 
 Writing HDL for elaborated instances ...
 
 Inserting wrapper level ...
-Completion time: 1.00 seconds
+Completion time: 0.00 seconds
 
 Constructing platform-level connectivity ...
-Completion time: 0.00 seconds
+Completion time: 1.00 seconds
 
 Writing (top-level) BMM ...
 
@@ -380,54 +299,45 @@ Running XST synthesis ...
 INFO:EDK:4211 - The following instances are synthesized with XST. The MPD option
    IMP_NETLIST=TRUE indicates that a NGC file is to be produced using XST
    synthesis. IMP_NETLIST=FALSE (default) instances are not synthesized. 
+INSTANCE:axi_interconnect_1 -
+C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
+.mhs line 138 - Running XST synthesis
 INSTANCE:rx_fifo -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 150 - Running XST synthesis
+.mhs line 146 - Running XST synthesis
 INSTANCE:adc_driver -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 167 - Running XST synthesis
+.mhs line 163 - Running XST synthesis
 INSTANCE:mcu_driver -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 183 - Running XST synthesis
+.mhs line 179 - Running XST synthesis
 INSTANCE:dc_offset -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 201 - Running XST synthesis
+.mhs line 197 - Running XST synthesis
 INSTANCE:qpsk_rx -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 217 - Running XST synthesis
+.mhs line 213 - Running XST synthesis
 INSTANCE:rx_clock_generator -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 234 - Running XST synthesis
+.mhs line 230 - Running XST synthesis
 INSTANCE:tx_clock_generator -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 250 - Running XST synthesis
-INSTANCE:dac_driver -
-C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 295 - Running XST synthesis
-INSTANCE:qpsk_tx -
-C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 311 - Running XST synthesis
-INSTANCE:tx_fifo -
-C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 328 - Running XST synthesis
-INSTANCE:chipscope_ila_0 -
-C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 369 - Running XST synthesis
+.mhs line 246 - Running XST synthesis
 
 Running NGCBUILD ...
+IPNAME:system_axi_interconnect_1_wrapper INSTANCE:axi_interconnect_1 -
+C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
+.mhs line 138 - Running NGCBUILD
 IPNAME:system_rx_clock_generator_wrapper INSTANCE:rx_clock_generator -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 234 - Running NGCBUILD
+.mhs line 230 - Running NGCBUILD
 IPNAME:system_tx_clock_generator_wrapper INSTANCE:tx_clock_generator -
 C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 250 - Running NGCBUILD
-IPNAME:system_chipscope_ila_0_wrapper INSTANCE:chipscope_ila_0 -
-C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\EDK\system
-.mhs line 369 - Running NGCBUILD
+.mhs line 246 - Running NGCBUILD
 INFO:EDK:3509 - NCF files should not be modified as they will be regenerated.
    If any constraint needs to be overridden, this should be done by modifying
    the data/system.ucf file.
 
 Rebuilding cache ...
 
-Total run time: 554.00 seconds
+Total run time: 302.00 seconds
