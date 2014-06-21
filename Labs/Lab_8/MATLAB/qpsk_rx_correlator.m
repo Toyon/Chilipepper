@@ -43,15 +43,18 @@ if isempty(counter)
     mcuHasResetThisCore = 0;
 end
 
-if mcu_rx_ready_in == 0
-    numBytesReady = 0;
-    mcuHasResetThisCore = 1;
-end
-
 byte_out = 0;
 en_out = 0;
 reset_out = 0;
 clear_fifo_out = 0;
+
+if mcu_rx_ready_in == 0
+    numBytesReady = 0;
+    detPacket = 0;
+    mcuHasResetThisCore = 1;
+    clear_fifo_out = 1;
+end
+
 % found a packet, now we're ready to write the data
 % out
 if counter == 0 && detPacket == 1

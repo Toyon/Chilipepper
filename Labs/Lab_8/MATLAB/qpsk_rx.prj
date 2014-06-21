@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.matlabhdlcoder" plugin-version="R2013a">
-  <configuration file="C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\MATLAB\qpsk_rx.prj" location="C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_8\MATLAB" name="qpsk_rx" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
+  <configuration file="C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_9\MATLAB\qpsk_rx.prj" location="C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_9\MATLAB" name="qpsk_rx" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
     <param.AutoInferDefaultFile />
     <param.AutoInferUseVariableSize>false</param.AutoInferUseVariableSize>
     <param.AutoInferUseUnboundedSize>false</param.AutoInferUseUnboundedSize>
@@ -13,10 +13,10 @@
     <param.hdl.BuildDirectory>option.hdl.ProjectDirectory</param.hdl.BuildDirectory>
     <param.hdl.BuildSpecifiedDirectory />
     <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\qpsk_rx\fixpt\qpsk_rx_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
-    <param.fixptconv.InstrumentedBuildChecksum>1604884103</param.fixptconv.InstrumentedBuildChecksum>
+    <param.fixptconv.InstrumentedBuildChecksum>1290625299</param.fixptconv.InstrumentedBuildChecksum>
     <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
-    <param.fixptconv.FixedPointValidationChecksum>2472791266</param.fixptconv.FixedPointValidationChecksum>
-    <param.fixptconv.FixedPointSourceCodeChecksum>3616202213</param.fixptconv.FixedPointSourceCodeChecksum>
+    <param.fixptconv.FixedPointValidationChecksum>1456305751</param.fixptconv.FixedPointValidationChecksum>
+    <param.fixptconv.FixedPointSourceCodeChecksum>1687747574</param.fixptconv.FixedPointSourceCodeChecksum>
     <param.fixptconv.FixedPointStaticAnalysisChecksum />
     <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}\qpsk_tb.m</param.fixptconv.DefaultTestFile>
     <param.fixptconv.ExcludedFixedPointVerificationFiles />
@@ -257,9 +257,7 @@
         </Function>
         <Function file="$(PROJECTDIR)\qpsk_rx.m" name="qpsk_rx">
           <Variable name="blinky" />
-          <Variable name="blinky_cnt">
-            <Column property="ProposedType" type="String" value="ufix25" />
-          </Variable>
+          <Variable name="blinky_cnt" />
           <Variable name="byte" />
           <Variable name="clear_fifo_out" />
           <Variable name="finish_rx" />
