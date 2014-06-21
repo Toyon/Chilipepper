@@ -13,8 +13,7 @@
 % tart of packet.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %#codegen
-function [store_byte, byte, num_bytes_ready, clear_fifo_out, blinky,...
-    d1, d2, d3, d4, d5, d6] =...
+function [store_byte, byte, num_bytes_ready, clear_fifo_out, blinky] =...
     qpsk_rx(i_in, q_in, mcu_rx_ready_in)
 
 persistent finish_rx_latch
@@ -46,10 +45,3 @@ if blinky_cnt == 20000000
 end
 blinky = floor(blinky_cnt/10000000);
 finish_rx_latch = finish_rx;
-
-d1 = s_f_i;
-d2 = s_f_q;
-d3 = s_c_i;
-d4 = s_c_q;
-d5 = s_t_i;
-d6 = s_t_q;

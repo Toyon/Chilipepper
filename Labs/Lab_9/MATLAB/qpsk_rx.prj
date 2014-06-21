@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.matlabhdlcoder" plugin-version="R2013a">
-  <configuration file="C:\GIT\Chilipepper_Labs\Labs\Lab_9\MATLAB\qpsk_rx.prj" location="C:\GIT\Chilipepper_Labs\Labs\Lab_9\MATLAB" name="qpsk_rx" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
+  <configuration file="C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_9\MATLAB\qpsk_rx.prj" location="C:\Users\D-Money\Desktop\Xilinx_stuff\GIT\Chilipepper_Labs\Labs\Lab_9\MATLAB" name="qpsk_rx" target="target.matlab.hdlcoder" target-name="HDL Code Generation">
     <param.AutoInferDefaultFile />
     <param.AutoInferUseVariableSize>false</param.AutoInferUseVariableSize>
     <param.AutoInferUseUnboundedSize>false</param.AutoInferUseUnboundedSize>
@@ -13,10 +13,10 @@
     <param.hdl.BuildDirectory>option.hdl.ProjectDirectory</param.hdl.BuildDirectory>
     <param.hdl.BuildSpecifiedDirectory />
     <param.fixptconv.InstrumentedMexFile>${PROJECT_ROOT}\codegen\qpsk_rx\fixpt\qpsk_rx_float_mex.mexw64</param.fixptconv.InstrumentedMexFile>
-    <param.fixptconv.InstrumentedBuildChecksum>466154990</param.fixptconv.InstrumentedBuildChecksum>
+    <param.fixptconv.InstrumentedBuildChecksum>1290625299</param.fixptconv.InstrumentedBuildChecksum>
     <param.fixptconv.ShowCoverage>true</param.fixptconv.ShowCoverage>
-    <param.fixptconv.FixedPointValidationChecksum>361170454</param.fixptconv.FixedPointValidationChecksum>
-    <param.fixptconv.FixedPointSourceCodeChecksum>2147628211</param.fixptconv.FixedPointSourceCodeChecksum>
+    <param.fixptconv.FixedPointValidationChecksum>1456305751</param.fixptconv.FixedPointValidationChecksum>
+    <param.fixptconv.FixedPointSourceCodeChecksum>1687747574</param.fixptconv.FixedPointSourceCodeChecksum>
     <param.fixptconv.FixedPointStaticAnalysisChecksum />
     <param.fixptconv.DefaultTestFile>${PROJECT_ROOT}\qpsk_tb.m</param.fixptconv.DefaultTestFile>
     <param.fixptconv.ExcludedFixedPointVerificationFiles />
@@ -260,24 +260,6 @@
           <Variable name="blinky_cnt" />
           <Variable name="byte" />
           <Variable name="clear_fifo_out" />
-          <Variable name="d1">
-            <Column property="ProposedType" type="String" value="sfix26_En12" />
-          </Variable>
-          <Variable name="d2">
-            <Column property="ProposedType" type="String" value="sfix26_En12" />
-          </Variable>
-          <Variable name="d3">
-            <Column property="ProposedType" type="String" value="sfix26_En12" />
-          </Variable>
-          <Variable name="d4">
-            <Column property="ProposedType" type="String" value="sfix26_En12" />
-          </Variable>
-          <Variable name="d5">
-            <Column property="ProposedType" type="String" value="sfix26_En12" />
-          </Variable>
-          <Variable name="d6">
-            <Column property="ProposedType" type="String" value="sfix26_En12" />
-          </Variable>
           <Variable name="finish_rx" />
           <Variable name="finish_rx_latch" />
           <Variable name="i_in">
@@ -322,8 +304,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix8" />
           </Variable>
           <Variable name="OS_RATE">
@@ -335,8 +317,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix4" />
           </Variable>
           <Variable name="bits">
@@ -348,8 +330,8 @@
               <size>8</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="byteCount">
@@ -361,8 +343,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix5" />
           </Variable>
           <Variable name="byte_out">
@@ -374,8 +356,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix8" />
           </Variable>
           <Variable name="clear_fifo_out">
@@ -387,8 +369,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="counter">
@@ -400,8 +382,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix4" />
           </Variable>
           <Variable name="detPacket">
@@ -413,8 +395,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="en_out">
@@ -426,8 +408,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="ip">
@@ -439,8 +421,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix8" />
           </Variable>
           <Variable name="mcuHasResetThisCore">
@@ -452,8 +434,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="mcu_rx_ready_in">
@@ -465,8 +447,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="numBytes">
@@ -478,8 +460,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix4" />
           </Variable>
           <Variable name="numBytesReady">
@@ -491,8 +473,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix5" />
           </Variable>
           <Variable name="num_bytes_ready_out">
@@ -504,8 +486,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix5" />
           </Variable>
           <Variable name="op">
@@ -517,8 +499,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix5" />
           </Variable>
           <Variable name="q">
@@ -530,8 +512,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix2" />
           </Variable>
           <Variable name="reset_out">
@@ -543,8 +525,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="sBuf_i">
@@ -556,8 +538,8 @@
               <size>65</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix2" />
           </Variable>
           <Variable name="sBuf_q">
@@ -569,8 +551,8 @@
               <size>65</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix2" />
           </Variable>
           <Variable name="sHard_i">
@@ -582,8 +564,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix2" />
           </Variable>
           <Variable name="sHard_i_t">
@@ -595,8 +577,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix2" />
           </Variable>
           <Variable name="sHard_q">
@@ -608,8 +590,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix2" />
           </Variable>
           <Variable name="sHard_q_t">
@@ -621,8 +603,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix2" />
           </Variable>
           <Variable name="s_i_in">
@@ -634,8 +616,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="s_q_in">
@@ -647,8 +629,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="sc_iWithi">
@@ -660,8 +642,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix8" />
           </Variable>
           <Variable name="sc_iWithq">
@@ -673,8 +655,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix5" />
           </Variable>
           <Variable name="sc_qWithi">
@@ -686,8 +668,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix6" />
           </Variable>
           <Variable name="sc_qWithq">
@@ -699,8 +681,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix8" />
           </Variable>
           <Variable name="ss_i">
@@ -712,8 +694,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix2" />
           </Variable>
           <Variable name="ss_q">
@@ -725,8 +707,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix2" />
           </Variable>
           <Variable name="symCount">
@@ -738,8 +720,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix3" />
           </Variable>
           <Variable name="t_i">
@@ -751,8 +733,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix2" />
           </Variable>
           <Variable name="t_q">
@@ -764,8 +746,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix2" />
           </Variable>
         </Function>
@@ -779,8 +761,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="c">
@@ -792,8 +774,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En19" />
           </Variable>
           <Variable name="e">
@@ -805,8 +787,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix2" />
           </Variable>
           <Variable name="f_i">
@@ -818,8 +800,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En12" />
           </Variable>
           <Variable name="f_q">
@@ -831,8 +813,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En12" />
           </Variable>
           <Variable name="finish_rx">
@@ -844,8 +826,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="lCos">
@@ -857,8 +839,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En12" />
           </Variable>
           <Variable name="lSin">
@@ -870,8 +852,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En12" />
           </Variable>
           <Variable name="phi">
@@ -883,8 +865,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En12" />
           </Variable>
           <Variable name="phi12">
@@ -896,8 +878,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix12" />
           </Variable>
           <Variable name="phiNew">
@@ -909,8 +891,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En12" />
           </Variable>
           <Variable name="tf">
@@ -922,8 +904,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="ti1">
@@ -935,8 +917,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="ti2">
@@ -948,8 +930,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="time_diff">
@@ -961,8 +943,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="tq1">
@@ -974,8 +956,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="tq2">
@@ -987,8 +969,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="y_i">
@@ -1000,8 +982,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix9" />
           </Variable>
           <Variable name="y_q">
@@ -1013,8 +995,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix9" />
           </Variable>
           <Variable name="z_i">
@@ -1026,8 +1008,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="z_i_out">
@@ -1039,8 +1021,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="z_q">
@@ -1052,8 +1034,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="z_q_out">
@@ -1065,8 +1047,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
         </Function>
@@ -1080,8 +1062,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En14" />
           </Variable>
         </Function>
@@ -1095,8 +1077,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En12" />
           </Variable>
         </Function>
@@ -1110,8 +1092,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En12" />
           </Variable>
         </Function>
@@ -1125,8 +1107,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix4" />
           </Variable>
           <Variable name="buf_i">
@@ -1138,8 +1120,8 @@
               <size>17</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="buf_q">
@@ -1151,8 +1133,8 @@
               <size>17</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="d_i_in">
@@ -1164,8 +1146,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="d_i_out">
@@ -1177,8 +1159,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="d_q_in">
@@ -1190,8 +1172,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="d_q_out">
@@ -1203,8 +1185,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="f">
@@ -1216,8 +1198,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En14" />
           </Variable>
         </Function>
@@ -1231,8 +1213,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix4" />
           </Variable>
           <Variable name="counter">
@@ -1244,8 +1226,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix4" />
           </Variable>
           <Variable name="finish_rx">
@@ -1257,8 +1239,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="od_i">
@@ -1270,8 +1252,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="od_r">
@@ -1283,8 +1265,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En7" />
           </Variable>
           <Variable name="oe">
@@ -1296,8 +1278,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix2" />
           </Variable>
           <Variable name="oe_i">
@@ -1309,8 +1291,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14" />
           </Variable>
           <Variable name="oe_r">
@@ -1322,8 +1304,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14" />
           </Variable>
           <Variable name="os">
@@ -1335,8 +1317,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_E1" />
           </Variable>
           <Variable name="rBuf_i">
@@ -1348,8 +1330,8 @@
               <size>32</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="rBuf_q">
@@ -1361,8 +1343,8 @@
               <size>32</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="r_i">
@@ -1374,8 +1356,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="r_q">
@@ -1387,8 +1369,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="s_i">
@@ -1400,8 +1382,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="s_q">
@@ -1413,8 +1395,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="symLatch_i">
@@ -1426,8 +1408,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="symLatch_q">
@@ -1439,8 +1421,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="tau">
@@ -1452,8 +1434,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En10" />
           </Variable>
           <Variable name="taur">
@@ -1465,8 +1447,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix3" />
           </Variable>
           <Variable name="ze_i">
@@ -1478,8 +1460,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="ze_q">
@@ -1491,8 +1473,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="zl_i">
@@ -1504,8 +1486,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="zl_q">
@@ -1517,8 +1499,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="zo_i">
@@ -1530,8 +1512,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="zo_q">
@@ -1543,8 +1525,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
         </Function>
@@ -1558,8 +1540,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix2" />
           </Variable>
         </Function>
@@ -1573,8 +1555,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix2" />
           </Variable>
         </Function>
@@ -1588,8 +1570,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="blinky_cnt">
@@ -1601,8 +1583,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix12" />
           </Variable>
           <Variable name="byte">
@@ -1614,8 +1596,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix8" />
           </Variable>
           <Variable name="clear_fifo_out">
@@ -1627,87 +1609,9 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
-          </Variable>
-          <Variable name="d1">
-            <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="-160.32044179377198" />
-            <Column property="SimMax" type="Double" value="158.90185389719198" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="sfix14_En5" />
-          </Variable>
-          <Variable name="d2">
-            <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="-160.458904534905" />
-            <Column property="SimMax" type="Double" value="157.84190406761502" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="sfix14_En5" />
-          </Variable>
-          <Variable name="d3">
-            <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="-96.67954796648482" />
-            <Column property="SimMax" type="Double" value="97.48725666699808" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="sfix14_En6" />
-          </Variable>
-          <Variable name="d4">
-            <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="-97.22037982126034" />
-            <Column property="SimMax" type="Double" value="96.32167995391893" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="sfix14_En6" />
-          </Variable>
-          <Variable name="d5">
-            <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="-95.73561539598543" />
-            <Column property="SimMax" type="Double" value="96.23742257334511" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="sfix14_En6" />
-          </Variable>
-          <Variable name="d6">
-            <Column property="Kind" type="String" value="output" />
-            <Column property="SimMin" type="Double" value="-96.67100447014373" />
-            <Column property="SimMax" type="Double" value="95.39313625785793" />
-            <MATLABType class="double" complex="false">
-              <size>1</size>
-              <size>1</size>
-            </MATLABType>
-            <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
-            <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="finish_rx">
             <Column property="Kind" type="String" value="local" />
@@ -1718,8 +1622,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="finish_rx_latch">
@@ -1731,8 +1635,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="i_in">
@@ -1744,8 +1648,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix9" />
           </Variable>
           <Variable name="mcu_rx_ready_in">
@@ -1757,8 +1661,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
           <Variable name="num_bytes_ready">
@@ -1770,8 +1674,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix5" />
           </Variable>
           <Variable name="q_in">
@@ -1783,8 +1687,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix9" />
           </Variable>
           <Variable name="s_c_i">
@@ -1796,8 +1700,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="s_c_q">
@@ -1809,8 +1713,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="s_f_i">
@@ -1822,8 +1726,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="s_f_q">
@@ -1835,8 +1739,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En5" />
           </Variable>
           <Variable name="s_t_i">
@@ -1848,8 +1752,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="s_t_q">
@@ -1861,8 +1765,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="false" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="sfix14_En6" />
           </Variable>
           <Variable name="store_byte">
@@ -1874,8 +1778,8 @@
               <size>1</size>
             </MATLABType>
             <Column property="IsInteger" type="Boolean" value="true" />
-            <Column property="RoundMode" type="String" value="floor" />
-            <Column property="OverflowMode" type="String" value="wrap" />
+            <Column property="RoundMode" type="String" value="Floor" />
+            <Column property="OverflowMode" type="String" value="Wrap" />
             <Column property="ProposedType" type="String" value="ufix1" />
           </Variable>
         </Function>
@@ -1966,48 +1870,6 @@
           <Name>blinky</Name>
           <PortType>Outport</PortType>
           <DataType>numerictype(0, 1, 0)</DataType>
-          <SelectedInterface>External Port</SelectedInterface>
-          <BitRange />
-        </Port>
-        <Port>
-          <Name>d1</Name>
-          <PortType>Outport</PortType>
-          <DataType>numerictype(1, 26, 12)</DataType>
-          <SelectedInterface>External Port</SelectedInterface>
-          <BitRange />
-        </Port>
-        <Port>
-          <Name>d2</Name>
-          <PortType>Outport</PortType>
-          <DataType>numerictype(1, 26, 12)</DataType>
-          <SelectedInterface>External Port</SelectedInterface>
-          <BitRange />
-        </Port>
-        <Port>
-          <Name>d3</Name>
-          <PortType>Outport</PortType>
-          <DataType>numerictype(1, 26, 12)</DataType>
-          <SelectedInterface>External Port</SelectedInterface>
-          <BitRange />
-        </Port>
-        <Port>
-          <Name>d4</Name>
-          <PortType>Outport</PortType>
-          <DataType>numerictype(1, 26, 12)</DataType>
-          <SelectedInterface>External Port</SelectedInterface>
-          <BitRange />
-        </Port>
-        <Port>
-          <Name>d5</Name>
-          <PortType>Outport</PortType>
-          <DataType>numerictype(1, 26, 12)</DataType>
-          <SelectedInterface>External Port</SelectedInterface>
-          <BitRange />
-        </Port>
-        <Port>
-          <Name>d6</Name>
-          <PortType>Outport</PortType>
-          <DataType>numerictype(1, 26, 12)</DataType>
           <SelectedInterface>External Port</SelectedInterface>
           <BitRange />
         </Port>
@@ -2128,17 +1990,16 @@
     <param.hdl.FILLogOutputs>false</param.hdl.FILLogOutputs>
     <param.hdl.FILBoardName>HDL Verifier installation or licnese is not avaialble</param.hdl.FILBoardName>
     <param.hdl.FILConnection />
-    <param.FILShowIPAddressWidgets>true</param.FILShowIPAddressWidgets>
     <param.hdl.FILBoardIPAddress>192.168.0.2</param.hdl.FILBoardIPAddress>
     <param.hdl.FILBoardMACAddress>00-0A-35-02-21-8A</param.hdl.FILBoardMACAddress>
     <param.hdl.FILAdditionalFiles />
     <param.hdl.SimulateFILTestBench>false</param.hdl.SimulateFILTestBench>
     <param.hdl.AdditionalSynthesisProjectFiles />
     <param.hdl.CriticalPathSource>option.hdl.Preroute</param.hdl.CriticalPathSource>
-    <param.hdl.EmbeddedSystemTool>Xilinx PlanAhead with Embedded Design</param.hdl.EmbeddedSystemTool>
+    <param.hdl.EmbeddedSystemTool />
     <param.hdl.ReferenceDesign />
     <param.hdl.ReferenceDesignPath />
-    <param.hdl.EmbeddedSystemProjectFolder>codegen/pa_prj</param.hdl.EmbeddedSystemProjectFolder>
+    <param.hdl.EmbeddedSystemProjectFolder />
     <param.hdl.BitstreamBuildMode>false</param.hdl.BitstreamBuildMode>
     <unset>
       <param.AutoInferDefaultFile />
@@ -2284,13 +2145,13 @@
       <param.hdl.GenerateFILTestBench />
       <param.hdl.FILLogOutputs />
       <param.hdl.FILConnection />
-      <param.FILShowIPAddressWidgets />
       <param.hdl.FILBoardIPAddress />
       <param.hdl.FILBoardMACAddress />
       <param.hdl.FILAdditionalFiles />
       <param.hdl.SimulateFILTestBench />
       <param.hdl.AdditionalSynthesisProjectFiles />
       <param.hdl.CriticalPathSource />
+      <param.hdl.EmbeddedSystemTool />
       <param.hdl.ReferenceDesign />
       <param.hdl.ReferenceDesignPath />
       <param.hdl.EmbeddedSystemProjectFolder />
