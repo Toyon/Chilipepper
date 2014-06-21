@@ -159,6 +159,9 @@ BEGIN rx_fifo_pcore
  PORT byte_in = qpsk_rx_byte
  PORT reset_fifo = qpsk_rx_clear_fifo_out
  PORT IPCORE_CLK = rx_clock_generator_CLKOUT1
+ PORT d_1 = rx_fifo_d_1_to_chipscope_ila_0
+ PORT empty = rx_fifo_empty_to_chipscope_ila_0
+ PORT full = rx_fifo_full_to_chipscope_ila_0
 END
 
 BEGIN adc_driver_pcore
@@ -209,15 +212,6 @@ BEGIN dc_offset_pcore
  PORT IPCORE_RESETN = processing_system7_0_FCLK_RESET0_N
  PORT IPCORE_CLK = rx_clock_generator_CLKOUT1
  PORT blinky = dc_offset_blinky
- PORT d1 = dc_offset_d1_to_chipscope_ila_0
- PORT d2 = dc_offset_d2_to_chipscope_ila_0
- PORT d3 = dc_offset_d3_to_chipscope_ila_0
- PORT d4 = dc_offset_d4_to_chipscope_ila_0
- PORT d5 = dc_offset_d5_to_chipscope_ila_0
- PORT d6 = dc_offset_d6_to_chipscope_ila_0
- PORT d7 = dc_offset_d7_to_chipscope_ila_0
- PORT d8 = dc_offset_d8_to_chipscope_ila_0
- PORT gain_out = dc_offset_gain_out_to_chipscope_ila_0
 END
 
 BEGIN qpsk_rx_pcore
@@ -376,17 +370,20 @@ BEGIN chipscope_ila
  PARAMETER INSTANCE = chipscope_ila_0
  PARAMETER HW_VER = 1.05.a
  PARAMETER C_TRIG0_UNITS = 1
- PARAMETER C_TRIG0_TRIGGER_IN_WIDTH = 12
+ PARAMETER C_TRIG0_TRIGGER_IN_WIDTH = 10
  PARAMETER C_NUM_DATA_SAMPLES = 16384
  PARAMETER C_TRIG1_UNITS = 1
- PARAMETER C_TRIG1_TRIGGER_IN_WIDTH = 24
+ PARAMETER C_TRIG1_TRIGGER_IN_WIDTH = 10
  PARAMETER C_TRIG2_UNITS = 1
- PARAMETER C_TRIG2_TRIGGER_IN_WIDTH = 160
+ PARAMETER C_TRIG2_TRIGGER_IN_WIDTH = 24
+ PARAMETER C_TRIG3_UNITS = 1
+ PARAMETER C_TRIG3_TRIGGER_IN_WIDTH = 24
  PORT chipscope_ila_control = chipscope_ila_0_icon_control
- PORT TRIG0 = adc_driver_rxd
+ PORT TRIG0 = rx_fifo_d_1_to_chipscope_ila_0 & rx_fifo_empty_to_chipscope_ila_0 & rx_fifo_full_to_chipscope_ila_0
  PORT CLK = rx_clock_generator_CLKOUT1
- PORT TRIG1 = dc_offset_q_in & dc_offset_i_in
- PORT TRIG2 = dc_offset_d1_to_chipscope_ila_0 & dc_offset_d2_to_chipscope_ila_0 & dc_offset_d3_to_chipscope_ila_0 & dc_offset_d4_to_chipscope_ila_0 & dc_offset_d5_to_chipscope_ila_0 & dc_offset_d6_to_chipscope_ila_0 & dc_offset_d7_to_chipscope_ila_0 & dc_offset_d8_to_chipscope_ila_0 & dc_offset_gain_out_to_chipscope_ila_0 & dc_offset_i_out & dc_offset_q_out
+ PORT TRIG1 = qpsk_rx_byte & qpsk_rx_clear_fifo_out & qpsk_rx_store_byte
+ PORT TRIG2 = dc_offset_q_in & dc_offset_i_in
+ PORT TRIG3 = dc_offset_i_out & dc_offset_q_out
 END
 
 BEGIN chipscope_icon

@@ -1,7 +1,7 @@
 ##############################################################################
 ## File Name:         codegen\ipcore\qpsk_rx_pcore_v1_00_a\data\qpsk_rx_pcore_v2_1_0.mpd
 ## Description:       Microprocessor Peripheral Description
-## Created:           2014-03-15 11:16:46
+## Created:           2014-05-26 15:57:01
 ##############################################################################
 
 BEGIN qpsk_rx_pcore
@@ -52,10 +52,4 @@ PORT store_byte = "", DIR = O
 PORT byte = "", DIR = O, VEC = [7:0]
 PORT clear_fifo_out = "", DIR = O
 PORT blinky = "", DIR = O
-PORT d1 = "", DIR = O, VEC = [25:0]
-PORT d2 = "", DIR = O, VEC = [25:0]
-PORT d3 = "", DIR = O, VEC = [25:0]
-PORT d4 = "", DIR = O, VEC = [25:0]
-PORT d5 = "", DIR = O, VEC = [25:0]
-PORT d6 = "", DIR = O, VEC = [25:0]
 

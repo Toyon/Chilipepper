@@ -1,7 +1,7 @@
 ##############################################################################
 ## File Name:         codegen\ipcore\rx_fifo_pcore_v1_00_a\data\rx_fifo_pcore_v2_1_0.mpd
 ## Description:       Microprocessor Peripheral Description
-## Created:           2013-12-30 11:51:50
+## Created:           2014-05-18 18:30:51
 ##############################################################################
 
 BEGIN rx_fifo_pcore
@@ -49,4 +49,7 @@ PORT AXI_Lite_RREADY = RREADY, DIR = I, BUS = S_AXI
 PORT reset_fifo = "", DIR = I
 PORT store_byte = "", DIR = I
 PORT byte_in = "", DIR = I, VEC = [7:0]
+PORT empty = "", DIR = O
+PORT full = "", DIR = O
+PORT d_1 = "", DIR = O, VEC = [7:0]
 

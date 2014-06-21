@@ -94,7 +94,7 @@ thead.reportTableHeader {
 <tr>
 <td>IP core generated on
 </td>
-<td class="summaryTableSndColEvenRow">30-Dec-2013 11:51:50
+<td class="summaryTableSndColEvenRow">18-May-2014 18:30:51
 </td>
 </tr>
 <tr>
@@ -133,6 +133,18 @@ Target platform interface table:
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>rx_fifo_fixpt/reset_fifo
+</td>
+<td>Inport
+</td>
+<td>ufix1_En0
+</td>
+<td>External Port
+</td>
+<td>
+</td>
+</tr>
 <tr>
 <td class="distinctCellColor">rx_fifo_fixpt/store_byte
 </td>
@@ -205,6 +217,42 @@ Target platform interface table:
 <td>x"10C"
 </td>
 </tr>
+<tr>
+<td class="distinctCellColor">rx_fifo_fixpt/empty
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">ufix1_En0
+</td>
+<td class="distinctCellColor">External Port
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
+<tr>
+<td>rx_fifo_fixpt/full
+</td>
+<td>Outport
+</td>
+<td>ufix1_En0
+</td>
+<td>External Port
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td class="distinctCellColor">rx_fifo_fixpt/d_1
+</td>
+<td class="distinctCellColor">Outport
+</td>
+<td class="distinctCellColor">ufix8_En0
+</td>
+<td class="distinctCellColor">External Port
+</td>
+<td class="distinctCellColor">
+</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -224,6 +272,14 @@ The following AXI4-Lite bus accessible registers were generated for this IP core
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>IPCore_Reset
+</td>
+<td>0x0
+</td>
+<td>write 0x1 to bit 0 to reset IP core
+</td>
+</tr>
 <tr>
 <td class="distinctCellColor">IPCore_Enable
 </td>
