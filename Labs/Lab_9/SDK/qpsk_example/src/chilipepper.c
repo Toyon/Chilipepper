@@ -8,9 +8,9 @@
 #include <stdio.h>
 
 #define MCU_DRIVER
-//#define DAC_DRIVER
-//#define TX_PCORE
-//#define TX_FIFO
+#define DAC_DRIVER
+#define TX_PCORE
+#define TX_FIFO
 #define DC_OFFSET
 #define RX_PCORE
 #define RX_FIFO
