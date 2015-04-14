@@ -1,7 +1,7 @@
 Chilipepper
 ===========
 
-This repository hosts projects related to the Toyon Research Corporation Chilipepper FMC radio board. The board can be purchased here
+This repository hosts projects related to the Toyon Research Corporation Chilipepper FMC radio board. The board has been discontinued
 <http://www.toyon.com/chilipepper.php>. All supporting guides and demonstration files are found off this page on github.
 
 The labs and examples target the Xilinx ZED board
